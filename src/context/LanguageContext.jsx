@@ -16,7 +16,7 @@ export const translations = {
     profile: {
       subtitle: 'Based in Rio de Janeiro',
       heading: 'Product Designer',
-      bio: "Product Designer with 10+ years at the intersection of design, product and technology. From discovery and information architecture to HTML/CSS/JS implementation. I build AI-driven products and vibe code from idea to production.",
+      bio: "Designer with 10+ years of experience — from graphic design roots to a product mindset built since 2019. Today I work at the intersection of design, product and technology, from discovery and information architecture to HTML/CSS/JS implementation.",
       available: 'Open to Work',
       downloadCV: 'Download CV',
       viewProjects: 'View Projects',
@@ -86,7 +86,7 @@ export const translations = {
     },
     about: {
       title: "I'm Pedro Tamburro, Product Designer & Design Engineer.",
-      p1: "I design and build complete digital products. My work spans the full stack of product design: user research, information architecture, UI design, prototyping and usability testing. I take it further by implementing in code.",
+      p1: "My design journey started in 2010 with graphic design and visual communication. The product mindset developed from 2019 onwards, when I began working with UX and interface design in depth. Today my work spans the full cycle: user research, information architecture, UI design, prototyping and implementation in code.",
       p2: "Currently a Product Designer at Editora Globo. I hold a degree in Graphic Design from Senac RJ, an MBA in UX Design from Instituto Infnet, and I'm currently pursuing an MBA in AI-Driven Innovation & UX at UX Unicórnio.",
       p3: "I believe the best designer today is one who can also build. That's the standard I hold myself to.",
       btn: 'Get In Touch',
@@ -132,7 +132,7 @@ export const translations = {
     profile: {
       subtitle: 'Atuando a partir do Rio de Janeiro',
       heading: 'Designer de Produto',
-      bio: 'Product Designer com mais de 10 anos na interseção entre design, produto e tecnologia. Da descoberta e arquitetura de informação à implementação em HTML/CSS/JS. Construo produtos orientados por IA com velocidade e fidelidade.',
+      bio: 'Designer com mais de 10 anos de trajetória — das raízes em design gráfico ao olhar de produto que venho construindo desde 2019. Hoje atuo na interseção entre design, produto e tecnologia, da descoberta e arquitetura de informação à implementação em HTML/CSS/JS.',
       available: 'Aberto a Oportunidades',
       downloadCV: 'Baixar CV',
       viewProjects: 'Ver Projetos',
@@ -202,7 +202,7 @@ export const translations = {
     },
     about: {
       title: 'Sou Pedro Tamburro, Product Designer & Design Engineer.',
-      p1: 'Projeto e construo produtos digitais completos. Meu trabalho abrange todo o ciclo de design de produto: pesquisa com usuários, arquitetura da informação, design de UI, prototipagem e testes de usabilidade. O trabalho vai além, chegando até a implementação em código.',
+      p1: 'Minha trajetória em design começa em 2010, com design gráfico e comunicação visual. O olhar de produto veio se construindo a partir de 2019, quando passei a trabalhar com UX e design de interfaces com mais profundidade. Hoje meu trabalho abrange o ciclo completo: pesquisa com usuários, arquitetura da informação, design de UI, prototipagem e implementação em código.',
       p2: 'Atualmente Product Designer na Editora Globo. Sou graduado em Design Gráfico pelo Senac RJ, tenho MBA em UX Design pelo Instituto Infnet e estou cursando MBA em Inovação Orientada à IA e UX pela UX Unicórnio.',
       p3: 'Acredito que o melhor designer hoje é aquele que também sabe construir. É esse o padrão que busco.',
       btn: 'Entre em Contato',
