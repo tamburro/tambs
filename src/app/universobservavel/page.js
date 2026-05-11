@@ -103,7 +103,7 @@ const TESTIMONIALS = [
 ]
 
 const PROJECTS = [
-    { slug: 'sigil-saas-mvp', src: '/images/projects/sigil/sigil_full.jpg', title: 'Sigil', tag: 'SaaS · Product Design', timeline: '2 dias (1º deploy) · em desenvolvimento' },
+    { slug: 'sigil-saas-mvp', src: '/images/projects/sigil/sigil_full.jpg', title: 'Sigil', tag: 'SaaS · Product Design' },
     { slug: 'zapvida', src: '/images/projects/zapvida.png', title: 'ZapVida', tag: 'Product Design · AI' },
     { slug: 'veradice', src: '/images/projects/veradice_full.jpg', title: 'Veradice', tag: 'Game Design · AI Engineering' },
 ]
@@ -285,7 +285,6 @@ export default function LandingPage() {
                                             <div style={{ padding: '24px' }}>
                                                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--aurora)', marginBottom: '6px' }}>{p.tag}</p>
                                                 <h4 style={{ fontSize: '18px', color: 'var(--moonlight)', fontWeight: 600, margin: 0 }}>{p.title}</h4>
-                                                {p.timeline && <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: 0 }}>{p.timeline}</p>}
                                             </div>
                                         </Link>
                                     </SpotlightCard>
