@@ -20,7 +20,7 @@ const Portfolio = ({ className }) => {
 
     const ordered = DISPLAY_ORDER
         .map(id => projectsData.find(p => p.id === id))
-        .filter(Boolean);
+        .filter(p => p && !p.hidden);
 
     const categories = FILTER_ORDER.filter(tag => ordered.some(p => p.tags?.includes(tag)));
 
