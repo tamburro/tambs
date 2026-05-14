@@ -900,7 +900,6 @@ export const projectsData = [
         ]
     },
     {
-        hidden: true,
         id: 7,
         slug: "zapvida-super-app-ux-research",
         src: "/images/projects/zapvida_full.jpg",
