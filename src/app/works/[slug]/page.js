@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { RiExternalLinkLine, RiArrowLeftLine, RiImageLine, RiArrowUpLine } from '@remixicon/react';
 import { useLanguage } from '@/context/LanguageContext';
+import RichProjectPage from './RichProjectPage';
 
 const SingleProjectPage = ({ params }) => {
     const { slug } = params;
@@ -26,6 +27,10 @@ const SingleProjectPage = ({ params }) => {
 
     if (!project) {
         notFound();
+    }
+
+    if (project.pageType === 'rich') {
+        return <RichProjectPage project={project} />;
     }
 
     const hasLinks = project.prototypeLink || project.prototypeLinks?.length > 0 || project.liveDemoLink;
