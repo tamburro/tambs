@@ -4,7 +4,7 @@ export const projectsData = [
     {
         id: 0,
         slug: "ifood-subida-feature-concept",
-        src: "/images/projects/estiloia_full.jpg",
+        src: "/images/projects/subida_full.jpg",
         category: "Product Design",
         tags: ["Product Design"],
         title: "Subida — iFood",
