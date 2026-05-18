@@ -14,6 +14,13 @@ const DRED = '#C1121F';
 const PGREEN  = '#00C853';
 const PGDARK  = '#009624';
 
+// ─── ZapVida accent ───────────────────────────────────────────────────────────
+const ZVERDE  = '#00C853';
+const ZAZUL   = '#0057FF';
+const ZAMARELO = '#FFD600';
+const ZROSA   = '#FF3CAC';
+const ZLARANJA = '#FF6B00';
+
 // ─── Dados embutidos ─────────────────────────────────────────────────────────
 
 const PERSONAS_DATA = {
@@ -726,6 +733,353 @@ function PixTudoRoadmap() {
     );
 }
 
+// ─── ZapVida Dados ────────────────────────────────────────────────────────────
+
+const ZAP_COMPETITORS = [
+    { nome: 'WhatsApp',   msg: 'g', pag: 'y', del: 'r', gov: 'r', mini: 'r', feed: 'y', dau: '120M' },
+    { nome: 'Nubank',     msg: 'y', pag: 'g', del: 'r', gov: 'r', mini: 'r', feed: 'r', dau: '35M'  },
+    { nome: 'iFood',      msg: 'r', pag: 'y', del: 'g', gov: 'r', mini: 'r', feed: 'r', dau: '20M'  },
+    { nome: 'Instagram',  msg: 'y', pag: 'r', del: 'r', gov: 'r', mini: 'r', feed: 'g', dau: '80M'  },
+    { nome: 'ZapVida ★',  msg: 'g', pag: 'g', del: 'g', gov: 'g', mini: 'g', feed: 'g', dau: 'Meta: 50M', destaque: true },
+];
+
+const ZAP_PERSONAS = [
+    {
+        key: 'bruna', label: 'Bruna — Persona Primária',
+        nome: 'Bruna Ferreira, 28', sub: 'Auxiliar administrativa · São Paulo, Zona Leste',
+        avatar: 'B', cor: ZVERDE,
+        tags: ['Persona Primária', 'CLT', 'Renda fam. R$3.200', 'Ensino Médio'],
+        citacao: '"Eu não tenho tempo pra ficar abrindo 10 apps diferentes. Quero pagar conta, falar com a minha família e pedir a janta — tudo num lugar só."',
+        objetivos: ['Economizar tempo', 'Controlar gastos', 'Falar com família', 'Pagar contas fácil'],
+        frustracoes: ['Muitos apps na memória', 'Fila no banco', 'Medo de golpe', 'App gov complicado'],
+        apps: ['WhatsApp', 'Instagram', 'Nubank', 'iFood', 'YouTube'],
+    },
+    {
+        key: 'caua', label: 'Cauã — Early Adopter',
+        nome: 'Cauã Mendonça, 22', sub: 'Estudante de TI · Fortaleza, CE',
+        avatar: 'C', cor: ZAZUL,
+        tags: ['Early Adopter', 'Freelancer', 'Renda R$800', 'Superior incompleto'],
+        citacao: '"Quero monetizar minha arte no app, ter minha lojinha, e ainda usar como portfólio. O WeChat fez isso — por que o Brasil não tem?"',
+        objetivos: ['Renda extra', 'Construir audiência', 'Vender produtos digitais', 'Networking'],
+        frustracoes: ['Taxa do Instagram Shop', 'Alcance orgânico baixo', 'Falta de integração', 'Sem mini-apps BR'],
+        apps: ['TikTok', 'Discord', 'GitHub', 'Twitter/X', 'Mercado Livre'],
+    },
+    {
+        key: 'geraldo', label: 'Geraldo — Inclusão Digital',
+        nome: 'Seu Geraldo Lima, 62', sub: 'Aposentado · Belo Horizonte, MG',
+        avatar: 'G', cor: ZAMARELO,
+        tags: ['Inclusão Digital', 'Aposentado', 'INSS R$1.412', 'Fund. incompleto'],
+        citacao: '"Minha filha fica mandando link pelo WhatsApp pra eu fazer as coisas, mas eu me perco. Se fosse mais simples, eu mesmo fazia."',
+        objetivos: ['Autonomia digital', 'Serviços do INSS', 'Falar com família', 'Pagar contas'],
+        frustracoes: ['Letras pequenas', 'Menus complexos', 'Medo de vírus', 'Golpe do celular'],
+        apps: ['WhatsApp', 'YouTube', 'Meu INSS'],
+    },
+];
+
+const ZAP_JOURNEY = [
+    {
+        fase: 'Descoberta', cor: ZVERDE,
+        acoes: 'Vê recomendação de amiga no grupo do WhatsApp',
+        touchpoints: 'Boca a boca digital · Play Store',
+        emoji: '🤔', emocao: 50, emocaoCor: '#888',
+        dores: '"Mais um app?" — desconfiança',
+        opor: 'Reputação social + prova de amigo',
+    },
+    {
+        fase: 'Onboarding', cor: ZAZUL,
+        acoes: 'Instala, cria conta com CPF + selfie',
+        touchpoints: 'App · SMS de verificação',
+        emoji: '😬', emocao: 35, emocaoCor: '#ff8c00',
+        dores: 'Selfie travando, formulário longo',
+        opor: 'Onboarding de 60s com gov.br SSO',
+    },
+    {
+        fase: 'Primeiro Uso', cor: ZAMARELO,
+        acoes: 'Manda mensagem pra família, paga conta de água',
+        touchpoints: 'App · Notificação push',
+        emoji: '😊', emocao: 65, emocaoCor: ZVERDE,
+        dores: 'Não sabia que tinha delivery',
+        opor: 'Discovery de features via chat',
+    },
+    {
+        fase: 'Habituação', cor: ZROSA,
+        acoes: 'Usa Pix, pede delivery, vê feed',
+        touchpoints: 'App · Mini-apps · Stories',
+        emoji: '😍', emocao: 90, emocaoCor: ZVERDE,
+        dores: 'Notificações demais',
+        opor: 'Controle fino de notificações',
+    },
+    {
+        fase: 'Evangelização', cor: ZLARANJA,
+        acoes: 'Indica para 5 contatos, ganha R$10 de cashback',
+        touchpoints: 'App · Programa de indicação',
+        emoji: '🤩', emocao: 95, emocaoCor: ZVERDE,
+        dores: '—',
+        opor: 'Gamificação e cashback viral',
+    },
+];
+
+const ZAP_IA = [
+    { emoji: '💬', nome: 'Conversar',   cor: ZVERDE,   itens: ['Chats 1:1', 'Grupos', 'Comunidades', 'Canais', 'Stickers BR', 'Chamadas & vídeo'] },
+    { emoji: '💰', nome: 'Dinheiro',    cor: ZAZUL,    itens: ['Pix', 'Carteira digital', 'Pagar boleto', 'Recarga', 'ZapPay (crédito)', 'Cashback'] },
+    { emoji: '🛍️', nome: 'Serviços',    cor: ZLARANJA, itens: ['Mini-apps', 'Delivery', 'Mobilidade', 'Saúde', 'Educação', 'Emprego'] },
+    { emoji: '🏛️', nome: 'Gov Digital', cor: ZROSA,    itens: ['INSS / Previdência', 'FGTS', 'Detran', 'Nota fiscal', 'CadÚnico', 'Receita Federal'] },
+    { emoji: '🎭', nome: 'Descobrir',   cor: ZAMARELO, itens: ['Feed / Stories', 'Reels BR', 'Marketplace', 'Eventos locais', 'Notícias', 'Jogos'] },
+];
+
+const ZAP_FEATURES = [
+    { num: '01', nome: 'Mensagens + Stickers Culturais', fase: 'MVP', faseCor: ZVERDE,   desc: 'Chat P2P e grupos com stickers temáticos do cotidiano brasileiro (carnaval, futebol, baile funk, sertanejo). Diferencial cultural inimitável.' },
+    { num: '02', nome: 'ZapPay — Pix Nativo + Carteira', fase: 'MVP', faseCor: ZVERDE,   desc: 'Envio de Pix dentro do chat, carteira digital, pagamento de boletos e recargas — sem sair do app.' },
+    { num: '03', nome: 'Gov.br SSO + Serviços Públicos', fase: 'V2',  faseCor: ZAZUL,    desc: 'Login único com gov.br para acessar INSS, FGTS, Detran e CadÚnico dentro do ZapVida. Parceria federal que cria barreira de entrada.' },
+    { num: '04', nome: 'Mini-apps de Terceiros',         fase: 'V2',  faseCor: ZAZUL,    desc: 'SDK aberto para empresas criarem mini-apps dentro do ZapVida — como WeChat com suas 3M+ mini-apps.' },
+    { num: '05', nome: 'Feed & Stories Comunitários',    fase: 'V3',  faseCor: ZAMARELO, desc: 'Conteúdo hiperlocal por bairro, cidade e comunidade. Algoritmo que respeita a diversidade regional do Brasil.' },
+];
+
+const ZAP_ROADMAP = [
+    { cor: ZVERDE,   periodo: 'Mês 1–3 · MVP', nome: 'Mensagens + ZapPay (Pix)',         desc: 'Lançamento fechado beta com 10K usuários em SP e Salvador. Chat P2P, grupos, Pix nativo, onboarding com gov.br.' },
+    { cor: ZAZUL,    periodo: 'Mês 4–8 · V2',  nome: 'Gov Digital + Mini-apps SDK',      desc: 'Integração INSS, FGTS, Detran. Abertura do SDK para parceiros desenvolverem mini-apps. Programa de indicação.' },
+    { cor: ZAMARELO, periodo: 'Mês 9–13 · V3', nome: 'Feed, Marketplace & Entregadores', desc: 'Feed comunitário hiperlocal, marketplace P2P, integração com iFood/Rappi via mini-apps. Expansão nacional.' },
+    { cor: ZROSA,    periodo: 'Mês 14–18 · V4', nome: 'ZapIA + Monetização',             desc: 'IA assistente para serviços, ZapCredit (crédito pessoal), publicidade contextual ética e programa de criadores.' },
+];
+
+// ─── ZapVida Components ───────────────────────────────────────────────────────
+
+function ZapBadge({ type }) {
+    const styles = {
+        g: { text: '✓', color: ZVERDE,    bg: `${ZVERDE}22`   },
+        y: { text: '◑', color: ZAMARELO,  bg: `${ZAMARELO}22` },
+        r: { text: '✗', color: '#444',    bg: 'rgba(255,255,255,0.05)' },
+    };
+    const s = styles[type];
+    return (
+        <span style={{ fontSize: 14, color: s.color }}>{s.text}</span>
+    );
+}
+
+function ZapVidaCompetitors() {
+    const cols = ['Mensagens', 'Pagamentos', 'Delivery', 'Gov. Digital', 'Mini-apps', 'Stories/Feed'];
+    const keys = ['msg', 'pag', 'del', 'gov', 'mini', 'feed'];
+    return (
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', borderRadius: 12, border: '1px solid rgba(255,255,255,0.07)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 680 }}>
+                <thead>
+                    <tr>
+                        {['App', ...cols, 'DAU Est.'].map(h => (
+                            <th key={h} style={{ textAlign: 'left', padding: '10px 14px', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--mist)', borderBottom: '1px solid rgba(255,255,255,0.07)', fontFamily: 'var(--font-mono)', whiteSpace: 'nowrap' }}>{h}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {ZAP_COMPETITORS.map((c, i) => (
+                        <tr key={i} style={{ background: c.destaque ? `${ZVERDE}0A` : 'transparent' }}>
+                            <td style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, color: c.destaque ? ZVERDE : 'var(--moonlight)', borderBottom: '1px solid rgba(255,255,255,0.04)', borderLeft: c.destaque ? `3px solid ${ZVERDE}` : 'none' }}>{c.nome}</td>
+                            {keys.map(k => (
+                                <td key={k} style={{ padding: '12px 14px', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                                    <ZapBadge type={c[k]} />
+                                </td>
+                            ))}
+                            <td style={{ padding: '12px 14px', fontSize: 13, color: c.destaque ? ZVERDE : 'var(--mist)', borderBottom: '1px solid rgba(255,255,255,0.04)', fontFamily: 'var(--font-mono)', fontWeight: c.destaque ? 700 : 400 }}>{c.dau}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+function ZapVidaPersonas() {
+    const [ativa, setAtiva] = useState('bruna');
+    const p = ZAP_PERSONAS.find(x => x.key === ativa);
+    return (
+        <>
+            <ToggleGroup
+                options={ZAP_PERSONAS.map(p => ({ key: p.key, label: p.label, cor: p.cor }))}
+                value={ativa}
+                onChange={setAtiva}
+            />
+            <div style={{ background: 'rgba(255,255,255,0.025)', border: `1px solid ${p.cor}22`, borderRadius: 14, overflow: 'hidden' }}>
+                <div style={{ padding: '22px 26px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', gap: 18, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                    <div style={{ width: 52, height: 52, borderRadius: '50%', background: p.cor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, fontWeight: 700, color: '#000', flexShrink: 0 }}>{p.avatar}</div>
+                    <div style={{ flex: '1 1 200px' }}>
+                        <h3 style={{ margin: '0 0 3px', fontSize: 17, fontWeight: 700, color: 'var(--moonlight)' }}>{p.nome}</h3>
+                        <p style={{ margin: '0 0 10px', fontSize: 13, color: 'var(--mist)' }}>{p.sub}</p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                            {p.tags.map(t => (
+                                <span key={t} style={{ padding: '3px 10px', borderRadius: 100, fontSize: 11, color: p.cor, border: `1px solid ${p.cor}33`, background: `${p.cor}0D`, fontFamily: 'var(--font-mono)', letterSpacing: '0.05em' }}>{t}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div style={{ padding: '16px 26px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                    <blockquote style={{ margin: 0, padding: '12px 16px', borderLeft: `3px solid ${p.cor}`, background: `${p.cor}0D`, borderRadius: '0 8px 8px 0' }}>
+                        <p style={{ margin: 0, fontSize: 14, fontStyle: 'italic', color: 'var(--moonlight)', lineHeight: 1.7 }}>{p.citacao}</p>
+                    </blockquote>
+                </div>
+                <div style={{ padding: '18px 26px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 20 }}>
+                    <div>
+                        <MonoLabel color={p.cor}>Objetivos</MonoLabel>
+                        <ul style={{ listStyle: 'none', margin: '8px 0 0', padding: 0 }}>
+                            {p.objetivos.map(n => (
+                                <li key={n} style={{ fontSize: 13, color: 'var(--mist)', padding: '4px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', gap: 8 }}>
+                                    <span style={{ color: p.cor, flexShrink: 0 }}>✓</span>{n}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <MonoLabel color='#FF3CAC'>Frustrações</MonoLabel>
+                        <ul style={{ listStyle: 'none', margin: '8px 0 0', padding: 0 }}>
+                            {p.frustracoes.map(d => (
+                                <li key={d} style={{ fontSize: 13, color: 'var(--mist)', padding: '4px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', gap: 8 }}>
+                                    <span style={{ color: '#FF3CAC', flexShrink: 0 }}>✕</span>{d}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <MonoLabel>Apps usados</MonoLabel>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
+                            {p.apps.map(a => (
+                                <span key={a} style={{ fontSize: 12, color: 'var(--mist)', padding: '3px 10px', borderRadius: 100, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>{a}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+function ZapVidaJourney() {
+    const rows = [
+        { label: 'Ações',       key: 'acoes',       cor: 'var(--mist)' },
+        { label: 'Touchpoints', key: 'touchpoints',  cor: 'var(--mist)' },
+        { label: 'Emoção',      key: 'emoji',        cor: ZVERDE, special: 'emocao' },
+        { label: 'Dores',       key: 'dores',        cor: ZROSA },
+        { label: 'Opor.',       key: 'opor',         cor: ZVERDE },
+    ];
+    return (
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 700 }}>
+                <thead>
+                    <tr>
+                        <td style={{ width: 90 }} />
+                        {ZAP_JOURNEY.map(s => (
+                            <th key={s.fase} style={{ padding: '10px 12px', textAlign: 'center', fontSize: 11, fontWeight: 700, letterSpacing: '0.05em', color: s.cor, background: `${s.cor}12`, fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>{s.fase}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {rows.map(row => (
+                        <tr key={row.key}>
+                            <td style={{ padding: '8px', fontSize: 10, fontWeight: 700, color: row.cor, textTransform: 'uppercase', letterSpacing: '0.05em', fontFamily: 'var(--font-mono)', verticalAlign: 'top', whiteSpace: 'nowrap' }}>{row.label}</td>
+                            {ZAP_JOURNEY.map(s => (
+                                <td key={s.fase} style={{ padding: '10px 12px', fontSize: 12, color: 'var(--mist)', verticalAlign: 'top', border: '1px solid rgba(255,255,255,0.06)' }}>
+                                    {row.special === 'emocao' ? (
+                                        <>
+                                            <div style={{ fontSize: 18, marginBottom: 6 }}>{s.emoji}</div>
+                                            <div style={{ height: 6, background: 'rgba(255,255,255,0.07)', borderRadius: 3, overflow: 'hidden' }}>
+                                                <div style={{ height: '100%', width: `${s.emocao}%`, background: s.emocaoCor, borderRadius: 3, transition: 'width 1s ease' }} />
+                                            </div>
+                                        </>
+                                    ) : (
+                                        s[row.key]
+                                    )}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+function ZapVidaIA() {
+    return (
+        <div>
+            <div style={{ textAlign: 'center', marginBottom: 24 }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 24px', borderRadius: 12, background: ZVERDE, color: '#000', fontSize: 14, fontWeight: 700 }}>
+                    🇧🇷 ZapVida — Raiz
+                </span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
+                {ZAP_IA.map((pilar, i) => (
+                    <div key={i} style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 14, overflow: 'hidden' }}>
+                        <div style={{ padding: '12px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)', background: `${pilar.cor}12`, display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <span style={{ fontSize: 16 }}>{pilar.emoji}</span>
+                            <span style={{ fontSize: 13, fontWeight: 700, color: pilar.cor }}>{pilar.nome}</span>
+                        </div>
+                        <div style={{ padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            {pilar.itens.map(item => (
+                                <div key={item} style={{ fontSize: 12, color: 'var(--mist)', display: 'flex', alignItems: 'center', gap: 6, padding: '2px 0' }}>
+                                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: pilar.cor, flexShrink: 0 }} />
+                                    {item}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function ZapVidaFeatures() {
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+            {ZAP_FEATURES.map((f, i) => (
+                <div key={i} style={{ display: 'flex', gap: 16, padding: '18px 0', borderBottom: i < ZAP_FEATURES.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none', alignItems: 'flex-start' }}>
+                    <div style={{ fontSize: 28, fontWeight: 900, color: ZVERDE, opacity: 0.35, minWidth: 44, lineHeight: 1, fontFamily: 'var(--font-body)' }}>{f.num}</div>
+                    <div style={{ flex: 1 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, flexWrap: 'wrap' }}>
+                            <h4 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: 'var(--moonlight)' }}>{f.nome}</h4>
+                            <span style={{ padding: '2px 8px', borderRadius: 100, fontSize: 10, fontWeight: 700, color: f.faseCor, background: `${f.faseCor}1A`, letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)', whiteSpace: 'nowrap' }}>{f.fase}</span>
+                        </div>
+                        <p style={{ margin: 0, fontSize: 13, color: 'var(--mist)', lineHeight: 1.6 }}>{f.desc}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function ZapVidaKPIsRoadmap() {
+    return (
+        <>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14, marginBottom: 40 }}>
+                {[
+                    { icon: '📈', cor: ZVERDE,   label: 'North Star — TDAU',  target: '≥ 4,2x',  sub: 'Transações Diárias Ativas por usuário ao mês 12' },
+                    { icon: '🎯', cor: ZAZUL,    label: 'Retenção D30',       target: '≥ 58%',   sub: 'Benchmark WhatsApp: 72%' },
+                    { icon: '💬', cor: ZAMARELO, label: 'NPS Alvo',           target: '≥ 65',    sub: 'Com foco especial na classe C/D e Nordeste' },
+                ].map((k, i) => (
+                    <div key={i} style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)', borderTop: `3px solid ${k.cor}`, borderRadius: 12, padding: '20px 18px' }}>
+                        <div style={{ fontSize: 20, marginBottom: 10 }}>{k.icon}</div>
+                        <p style={{ margin: '0 0 3px', fontSize: 11, color: 'var(--mist)', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{k.label}</p>
+                        <div style={{ fontSize: 28, fontWeight: 700, color: k.cor, fontFamily: 'var(--font-mono)', lineHeight: 1, marginBottom: 6 }}>{k.target}</div>
+                        <p style={{ margin: 0, fontSize: 12, color: 'var(--mist)', lineHeight: 1.5 }}>{k.sub}</p>
+                    </div>
+                ))}
+            </div>
+
+            <MonoLabel>Roadmap — 18 meses</MonoLabel>
+            <div style={{ marginTop: 16, position: 'relative', paddingLeft: 32 }}>
+                <div style={{ position: 'absolute', left: 8, top: 0, bottom: 0, width: 2, background: `linear-gradient(to bottom, ${ZVERDE}, transparent)`, opacity: 0.3 }} />
+                {ZAP_ROADMAP.map((fase, i) => (
+                    <div key={i} style={{ position: 'relative', paddingBottom: i < ZAP_ROADMAP.length - 1 ? 0 : 0, paddingTop: 0 }}>
+                        <div style={{ position: 'absolute', left: -24, top: 20, width: 16, height: 16, borderRadius: '50%', background: fase.cor, border: '3px solid var(--bg, #0d0d0d)', zIndex: 1 }} />
+                        <div style={{ padding: '18px 0', borderBottom: i < ZAP_ROADMAP.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
+                            <MonoLabel color={fase.cor}>{fase.periodo}</MonoLabel>
+                            <h4 style={{ margin: '6px 0 4px', fontSize: 15, fontWeight: 700, color: 'var(--moonlight)' }}>{fase.nome}</h4>
+                            <p style={{ margin: 0, fontSize: 13, color: 'var(--mist)', lineHeight: 1.6 }}>{fase.desc}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+}
+
 // ─── Registry ────────────────────────────────────────────────────────────────
 
 const SECTION_COMPONENTS = {
@@ -738,6 +1092,12 @@ const SECTION_COMPONENTS = {
     PixTudoPrinciples:   PixTudoPrinciples,
     PixTudoKPIs:         PixTudoKPIs,
     PixTudoRoadmap:      PixTudoRoadmap,
+    ZapVidaCompetitors:  ZapVidaCompetitors,
+    ZapVidaPersonas:     ZapVidaPersonas,
+    ZapVidaJourney:      ZapVidaJourney,
+    ZapVidaIA:           ZapVidaIA,
+    ZapVidaFeatures:     ZapVidaFeatures,
+    ZapVidaKPIsRoadmap:  ZapVidaKPIsRoadmap,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

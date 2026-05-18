@@ -1019,6 +1019,8 @@ export const projectsData = [
         client: "Projeto Pessoal",
         tools: ["Figma", "Miro"],
         prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/zap-ux-research.html" }],
+        pageType: "rich",
+        accentColor: "#00C853",
         sections: [
             {
                 title: "O Problema",
@@ -1028,99 +1030,34 @@ export const projectsData = [
                 content_en: "Brazil has Latin America's largest fintech market, 170 million active smartphones, and the world's most app-engaged users — averaging 5.4 daily hours in apps, the global #1. But no super-app dominates. Brazilians use WhatsApp to chat, Nubank to pay, iFood to order food, Instagram to entertain themselves, and the INSS app (when it works) for government services. 78% of interviewees use 4+ apps for tasks that could be unified. 64% of the C/D income bracket has never used a government app and doesn't know how to access public digital services. The problem isn't a lack of infrastructure or users — it's the absence of a product that understands Brazilian culture and socioeconomic reality."
             },
             {
-                title: "Pesquisa de Mercado",
-                title_en: "Market Research",
-                type: "research",
-                methods: ["Pesquisa primária: 40 entrevistas + survey com 1.200 respondentes", "Análise TAM/SAM/SOM", "Benchmarking competitivo (WhatsApp, Nubank, iFood, Instagram)", "Dados IBGE, App Annie e BCB"],
-                methods_en: ["Primary research: 40 interviews + survey with 1,200 respondents", "TAM/SAM/SOM analysis", "Competitive benchmarking (WhatsApp, Nubank, iFood, Instagram)", "IBGE, App Annie and BCB data"],
-                content: "O mercado endereçável é imenso: TAM de R$890 bilhões (economia digital brasileira), SAM de R$490 bilhões (fintechs + mensagens + serviços) e SOM capturável de R$38 bilhões em 5 anos. Volume Pix: R$2 trilhões transacionados por ano, crescendo 40% ao ano. Análise competitiva revelou o gap completo: nenhum player entrega simultaneamente mensagens + pagamentos + delivery + gov digital + mini-apps + stories/feed. WhatsApp domina mensagens (120M DAU) mas não tem pagamentos nativos completos. Nubank domina UX financeira (35M DAU) mas não tem mensagens nem serviços. O ZapVida é o único concorrente com todos os seis pilares.",
-                content_en: "The addressable market is enormous: R$890 billion TAM (Brazilian digital economy), R$490 billion SAM (fintechs + messaging + services), and R$38 billion capturable SOM in 5 years. Pix volume: R$2 trillion transacted per year, growing 40% annually. Competitive analysis revealed the complete gap: no player simultaneously delivers messaging + payments + delivery + digital gov + mini-apps + stories/feed. WhatsApp dominates messaging (120M DAU) but lacks full native payments. Nubank dominates financial UX (35M DAU) but has no messaging or services. ZapVida is the only competitor with all six pillars.",
-                highlights: [
-                    "170 milhões de smartphones ativos e 5,4h/dia de uso — maior engajamento com apps do mundo",
-                    "91% dos entrevistados usam Pix diariamente e querem cashback e serviços financeiros integrados",
-                    "78% usam 4+ apps para tarefas que poderiam ser unificadas em uma única plataforma",
-                    "64% da classe C/D nunca usou app de governo — oportunidade enorme de inclusão digital",
-                    "Nenhum player brasileiro tem mini-apps — brecha direta para replicar o modelo WeChat/Alipay"
-                ],
-                highlights_en: [
-                    "170 million active smartphones and 5.4h/day usage — world's highest app engagement",
-                    "91% of interviewees use Pix daily and want integrated cashback and financial services",
-                    "78% use 4+ apps for tasks that could be unified in a single platform",
-                    "64% of the C/D income bracket has never used a government app — huge digital inclusion opportunity",
-                    "No Brazilian player has mini-apps — a direct gap to replicate the WeChat/Alipay model"
-                ]
+                title: "Análise Competitiva",
+                title_en: "Competitive Analysis",
+                type: "component",
+                component: "ZapVidaCompetitors"
             },
             {
                 title: "Personas",
                 title_en: "Personas",
-                type: "research",
-                methods: ["Pesquisa qualitativa com 40 entrevistas", "Análise demográfica IBGE e App Annie", "Card sorting para validação de categorias"],
-                methods_en: ["Qualitative research with 40 interviews", "IBGE and App Annie demographic analysis", "Card sorting for category validation"],
-                content: "3 personas construídas para cobrir o espectro socioeconômico e demográfico do Brasil.",
-                content_en: "3 personas built to cover Brazil's socioeconomic and demographic spectrum.",
-                highlights: [
-                    "Bruna Ferreira, 28, Auxiliar administrativa, São Paulo Zona Leste (renda familiar R$3.200, Ensino Médio) — Persona Primária. \"Eu não tenho tempo pra ficar abrindo 10 apps diferentes. Quero pagar conta, falar com a minha família e pedir a janta — tudo num lugar só.\" Usa: WhatsApp, Instagram, Nubank, iFood, YouTube.",
-                    "Cauã Mendonça, 22, Estudante de TI, Fortaleza (R$800 freelancer, Superior incompleto) — Early Adopter. \"Quero monetizar minha arte no app, ter minha lojinha, e ainda usar como portfólio. O WeChat fez isso — por que o Brasil não tem?\" Usa: TikTok, Discord, GitHub, Twitter/X, Mercado Livre.",
-                    "Seu Geraldo Lima, 62, Aposentado, Belo Horizonte (R$1.412 INSS, Fundamental incompleto) — Inclusão Digital. \"Minha filha fica mandando link pelo WhatsApp pra eu fazer as coisas, mas eu me perco. Se fosse mais simples, eu mesmo fazia.\" Usa: WhatsApp, YouTube, Meu INSS."
-                ],
-                highlights_en: [
-                    "Bruna Ferreira, 28, Administrative assistant, São Paulo East Zone (household income R$3,200, High School) — Primary Persona. \"I don't have time to keep opening 10 different apps. I want to pay bills, talk to my family and order dinner — all in one place.\" Uses: WhatsApp, Instagram, Nubank, iFood, YouTube.",
-                    "Cauã Mendonça, 22, IT student, Fortaleza (R$800 freelancer, incomplete college) — Early Adopter. \"I want to monetize my art in the app, have my own shop, and use it as a portfolio. WeChat did this — why doesn't Brazil have it?\" Uses: TikTok, Discord, GitHub, Twitter/X, Mercado Livre.",
-                    "Seu Geraldo Lima, 62, Retired, Belo Horizonte (R$1,412 INSS pension, incomplete elementary) — Digital Inclusion. \"My daughter keeps sending WhatsApp links for me to do things, but I get lost. If it were simpler, I could do it myself.\" Uses: WhatsApp, YouTube, Meu INSS."
-                ]
+                type: "component",
+                component: "ZapVidaPersonas"
             },
             {
                 title: "Jornada do Usuário",
                 title_en: "User Journey",
-                type: "text",
-                content: "Jornada completa da persona primária Bruna, do primeiro acesso até usuária recorrente avançada. Descoberta: vê recomendação de amiga no grupo do WhatsApp — emoção: curiosidade/ceticismo (\"Mais um app?\"). Touchpoint: boca a boca digital + Play Store. Oportunidade: reputação social e prova de amigo. Onboarding: instala, cria conta com CPF + selfie — emoção: ansiedade (selfie travando, formulário longo). Touchpoint: app + SMS de verificação. Oportunidade: onboarding de 60s com gov.br SSO. Primeiro uso: manda mensagem para a família, paga conta de água — emoção: satisfação crescente. Oportunidade: discovery de features via chat assistente. Habituação: usa Pix, pede delivery, vê feed — emoção: encantamento (😍). Dor: notificações demais. Oportunidade: controle fino de notificações. Evangelização: indica para 5 contatos, ganha R$10 de cashback — emoção: orgulho e diversão (🤩). Touchpoint: programa de indicação com gamificação.",
-                content_en: "Complete journey of primary persona Bruna, from first access to advanced recurring user. Discovery: sees a friend's recommendation in a WhatsApp group — emotion: curiosity/skepticism ('Another app?'). Touchpoint: digital word-of-mouth + Play Store. Opportunity: social reputation and friend proof. Onboarding: installs, creates account with CPF + selfie — emotion: anxiety (selfie freezing, long form). Touchpoint: app + SMS verification. Opportunity: 60-second onboarding with gov.br SSO. First use: messages family, pays water bill — emotion: growing satisfaction. Opportunity: feature discovery via assistant chat. Habituation: uses Pix, orders delivery, views feed — emotion: delight (😍). Pain: too many notifications. Opportunity: granular notification controls. Evangelization: refers 5 contacts, earns R$10 cashback — emotion: pride and fun (🤩). Touchpoint: gamified referral program."
+                type: "component",
+                component: "ZapVidaJourney"
             },
             {
                 title: "Arquitetura de Informação",
                 title_en: "Information Architecture",
-                type: "research",
-                methods: ["Card sorting com 35 participantes", "Análise de árvore (tree testing)", "Hierarquia de 5 pilares raiz"],
-                methods_en: ["Card sorting with 35 participants", "Tree testing", "5-pillar root hierarchy"],
-                content: "Hierarquia de navegação com 5 pilares raiz, cada um com 6 sub-features. Baseada em card sorting com 35 participantes e análise de árvore para validar agrupamentos.",
-                content_en: "Navigation hierarchy with 5 root pillars, each with 6 sub-features. Based on card sorting with 35 participants and tree testing to validate groupings.",
-                highlights: [
-                    "💬 Conversar: chats 1:1, grupos, comunidades, canais, stickers BR, chamadas e vídeo",
-                    "💰 Dinheiro: Pix, carteira digital, pagar boleto, recarga, ZapPay (crédito), cashback",
-                    "🛍️ Serviços: mini-apps, delivery, mobilidade, saúde, educação, emprego",
-                    "🏛️ Gov Digital: INSS/Previdência, FGTS, Detran, nota fiscal, CadÚnico, Receita Federal",
-                    "🎭 Descobrir: feed/stories, Reels BR, marketplace, eventos locais, notícias, jogos"
-                ],
-                highlights_en: [
-                    "💬 Chat: 1:1 chats, groups, communities, channels, BR stickers, calls and video",
-                    "💰 Money: Pix, digital wallet, bill payment, top-up, ZapPay (credit), cashback",
-                    "🛍️ Services: mini-apps, delivery, mobility, health, education, employment",
-                    "🏛️ Digital Gov: INSS/Social Security, FGTS, Detran, fiscal receipt, CadÚnico, Federal Revenue",
-                    "🎭 Discover: feed/stories, BR Reels, marketplace, local events, news, games"
-                ]
+                type: "component",
+                component: "ZapVidaIA"
             },
             {
                 title: "Features Prioritárias",
                 title_en: "Priority Features",
-                type: "research",
-                methods: ["MVP", "V2", "V3"],
-                methods_en: ["MVP", "V2", "V3"],
-                content: "5 features priorizadas por impacto no usuário × viabilidade técnica, organizadas em roadmap de 3 versões.",
-                content_en: "5 features prioritized by user impact × technical feasibility, organized into a 3-version roadmap.",
-                highlights: [
-                    "[MVP] Mensagens + Stickers Culturais: chat P2P e grupos com stickers temáticos do cotidiano brasileiro (carnaval, futebol, baile funk, sertanejo). Diferencial cultural inimitável por players globais.",
-                    "[MVP] ZapPay — Pix Nativo + Carteira: envio de Pix dentro do chat, carteira digital, pagamento de boletos e recargas sem sair do app.",
-                    "[V2] Gov.br SSO + Serviços Públicos: login único com gov.br para acessar INSS, FGTS, Detran e CadÚnico dentro do ZapVida. Parceria federal que cria barreira de entrada.",
-                    "[V2] Mini-apps de Terceiros: SDK aberto para empresas criarem mini-apps dentro do ZapVida — replicando o modelo WeChat com suas 3M+ mini-apps.",
-                    "[V3] Feed & Stories Comunitários: conteúdo hiperlocal por bairro, cidade e comunidade, com algoritmo que respeita a diversidade regional do Brasil."
-                ],
-                highlights_en: [
-                    "[MVP] Messaging + Cultural Stickers: P2P chat and groups with stickers themed around Brazilian daily life (carnival, football, baile funk, sertanejo). Cultural differentiator impossible for global players to replicate.",
-                    "[MVP] ZapPay — Native Pix + Wallet: send Pix within chat, digital wallet, bill payments and top-ups without leaving the app.",
-                    "[V2] Gov.br SSO + Public Services: single sign-on with gov.br to access INSS, FGTS, Detran and CadÚnico inside ZapVida. Federal partnership creating a moat.",
-                    "[V2] Third-party Mini-apps: open SDK for companies to build mini-apps inside ZapVida — replicating WeChat's 3M+ mini-app model.",
-                    "[V3] Community Feed & Stories: hyperlocal content by neighborhood, city, and community, with an algorithm that respects Brazil's regional diversity."
-                ]
+                type: "component",
+                component: "ZapVidaFeatures"
             },
             {
                 title: "Como Poderíamos…",
@@ -1146,6 +1083,12 @@ export const projectsData = [
                     "How might we use the culture of gossip and community to grow organically?",
                     "How might we guarantee trust and security in a country with high digital fraud?"
                 ]
+            },
+            {
+                title: "KPIs & Roadmap",
+                title_en: "KPIs & Roadmap",
+                type: "component",
+                component: "ZapVidaKPIsRoadmap"
             },
             {
                 title: "Resultados & Entregáveis",
