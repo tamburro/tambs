@@ -19,7 +19,7 @@ export const projectsData = [
         team: "Solo",
         client: "Feature Concept · iFood",
         tools: ["Figma", "React", "Vercel"],
-        liveDemoLink: "https://ifood-subida.vercel.app/",
+        liveDemoLink: "https://prototype-lac-xi.vercel.app/",
         sections: [
             {
                 title: "O Problema",
