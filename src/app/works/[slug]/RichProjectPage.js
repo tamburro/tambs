@@ -6,9 +6,13 @@ import Image from 'next/image';
 import { RiExternalLinkLine, RiArrowLeftLine } from '@remixicon/react';
 import { useLanguage } from '@/context/LanguageContext';
 
-// ─── iFood accent (usado apenas nesta página) ────────────────────────────────
+// ─── iFood accent ─────────────────────────────────────────────────────────────
 const RED  = '#E8471A';
 const DRED = '#C1121F';
+
+// ─── PixTudo accent ───────────────────────────────────────────────────────────
+const PGREEN  = '#00C853';
+const PGDARK  = '#009624';
 
 // ─── Dados embutidos ─────────────────────────────────────────────────────────
 
@@ -121,6 +125,94 @@ const DECISOES_UI = [
             { q: 'Por que automática e não confirmação do usuário?',
               a: 'Histórico mostra baixa adesão em ações pós-entrega. O pagamento do trabalhador não pode ser refém da inércia de terceiro. Presunção de boa-fé com janela de contestação.' },
         ],
+    },
+];
+
+// ─── PixTudo Dados ────────────────────────────────────────────────────────────
+
+const PIXTUDO_PERSONAS = [
+    {
+        key: 'camila', label: 'Camila — Millennial',
+        nome: 'Camila, 28', sub: 'Analista de Marketing · São Paulo · CLT',
+        avatar: 'C', cor: PGREEN,
+        tags: ['Millennials', 'Já bancarizada', 'Nubank + Itaú', 'iOS', 'R$4.500/mês'],
+        citacao: '"Odeio ter que abrir 4 apps diferentes pra resolver uma coisa só. Queria que tudo ficasse num lugar."',
+        necessidades: ['Pagamentos rápidos sem burocracia', 'Investimentos automáticos e simples', 'Controle de gastos com amigos', 'Ofertas e cashback relevantes'],
+        dores: ['Apps bancários lentos e confusos', 'Rateio manual de contas (restaurantes, viagens)', 'Promoções irrelevantes e spam', 'Medo de golpe financeiro digital'],
+        contexto: ['No transporte (metrô/ônibus) — rápido, 1 mão', 'Almoço — dividir conta na hora', 'À noite — revisar gastos do dia'],
+    },
+    {
+        key: 'jonas', label: 'Jonas — MEI',
+        nome: 'Jonas, 42', sub: 'Eletricista autônomo · Recife · MEI',
+        avatar: 'J', cor: '#FFD600',
+        tags: ['Trabalhador informal', 'Semi-bancarizado', 'Android', 'Renda variável', '3 filhos'],
+        citacao: '"Preciso de crédito pra comprar material, mas banco não me empresta. E cobrar cliente é um estresse."',
+        necessidades: ['Cobrar clientes sem máquina cara', 'Crédito rápido pra capital de giro', 'Guardar dinheiro da renda variável', 'Nota fiscal e gestão simples (MEI)'],
+        dores: ['Negado em todo crédito bancário', 'Taxa alta da maquininha de cartão', 'Dificuldade de separar conta pessoal/empresa', 'Medo de golpe do Pix falso'],
+        contexto: ['Na obra — mostrar QR pra cliente pagar', 'Entre serviços — checar o saldo', 'Fim do mês — organizar faturamento MEI'],
+    },
+    {
+        key: 'beatriz', label: 'Beatriz — Gen Z',
+        nome: 'Beatriz, 19', sub: 'Estudante universitária · Porto Alegre · Estagiária',
+        avatar: 'B', cor: '#FF4081',
+        tags: ['Gen Z', 'Digital native', 'Primeiro emprego', 'iOS/Android', 'R$1.200/mês'],
+        citacao: '"Nunca fui em agência bancária. Faço tudo pelo celular. Mas ainda não entendo de investimentos."',
+        necessidades: ['Entender finanças de forma simples', 'Vaquinhas e grupos de pagamento com amigos', 'Primeiros investimentos com pouco dinheiro', 'Ofertas e benefícios do seu estilo de vida'],
+        dores: ['Linguagem financeira inacessível', 'Cobrar amigos sem parecer chata', 'Gastos por impulso sem consciência', 'Desconfiança: "meu dinheiro tá seguro?"'],
+        contexto: ['Redes sociais → descoberta de ofertas', 'Social — pagar e cobrar amigos da faculdade', 'Gamificação — metas de economia com recompensas'],
+    },
+];
+
+const PIXTUDO_COMPETITORS = [
+    { nome: 'Nubank',        pag: 'g', inv: 'g', cred: 'y', mini: 'r', social: 'r', ux: '4.2/5', gap: 'Ecossistema fechado' },
+    { nome: 'Mercado Pago',  pag: 'g', inv: 'y', cred: 'g', mini: 'r', social: 'r', ux: '3.8/5', gap: 'Vinculado ao ML' },
+    { nome: 'PicPay',        pag: 'g', inv: 'y', cred: 'y', mini: 'y', social: 'g', ux: '3.5/5', gap: 'Sem ancoragem financeira' },
+    { nome: 'Itaú/Bradesco', pag: 'g', inv: 'g', cred: 'g', mini: 'r', social: 'r', ux: '2.7/5', gap: 'UX péssima, sem inovação' },
+    { nome: 'PayPal',        pag: 'y', inv: 'r', cred: 'r', mini: 'r', social: 'r', ux: '3.1/5', gap: 'Global, sem localização' },
+    { nome: 'PixTudo ✦',     pag: 'g', inv: 'g', cred: 'g', mini: 'g', social: 'g', ux: '—',     gap: 'A proposta', destaque: true },
+];
+
+const PIXTUDO_JOURNEY = [
+    { num: '01', etapa: 'Consciência',  titulo: 'Descoberta',           emoji: '😐', emocao: 'Neutra / Curiosa',        desc: 'Camila vê post de uma amiga no Instagram sobre cashback no PixTudo. Clica curiosa.',                                         ativo: false },
+    { num: '02', etapa: 'Consideração', titulo: 'Download & Onboarding', emoji: '😮', emocao: 'Surpresa positiva',       desc: 'Cadastro com CPF + selfie. Em 90 segundos tem conta, Pix e cartão virtual ativos.',                                         ativo: false },
+    { num: '03', etapa: 'Primeiro uso', titulo: 'Primeira Transação',    emoji: '😄', emocao: 'Satisfeita / Encantada',  desc: 'Manda R$32 pelo Pix pra amiga do almoço. Recebe notificação de cashback de R$1,60 em 3 segundos.',                          ativo: true  },
+    { num: '04', etapa: 'Exploração',   titulo: 'Descobre Serviços',     emoji: '🤩', emocao: 'Muito satisfeita',         desc: 'Vê aba de serviços. Paga Netflix com desconto. Configura investimento automático de R$50/mês.',                              ativo: true  },
+    { num: '05', etapa: 'Fidelização',  titulo: 'Hábito & Rotina',       emoji: '😍', emocao: 'Encantada / Fiel',         desc: '30 dias depois: usa PixTudo diariamente. Convida 3 amigas com cashback. Score sobe.',                                        ativo: false },
+    { num: '06', etapa: 'Advocacia',    titulo: 'Promotora',              emoji: '🏆', emocao: 'Orgulhosa / Embaixadora', desc: 'Posta stories mostrando o app, entra em grupo de usuários. NPS: promotora ativa.',                                          ativo: false },
+];
+
+const PIXTUDO_PRINCIPLES = [
+    { num: '01', nome: 'Brasileiro-Primeiro',    desc: 'Cada decisão considera a realidade local: língua coloquial, cashback em vez de pontos, Pix como ação primária, WhatsApp como canal de suporte.' },
+    { num: '02', nome: 'Zero Burocracia',         desc: 'Qualquer tarefa crítica em ≤3 toques. Onboarding em ≤2 minutos. Formulários com o menor número possível de campos.' },
+    { num: '03', nome: 'Confiança Progressiva',   desc: 'Conquistar a confiança do usuário gradualmente. Começar simples, expandir à medida que o relacionamento cresce.' },
+    { num: '04', nome: 'Social by Design',        desc: 'Funcionalidades financeiras com camada social nativa: dividir contas, vaquinhas, missões em grupo. O dinheiro no Brasil é coletivo.' },
+    { num: '05', nome: 'Segurança Visível',       desc: 'A segurança precisa ser sentida, não só existir. Feedback imediato, biometria clara, alertas antifraude em linguagem humana.' },
+    { num: '06', nome: 'Inclusão por Padrão',     desc: 'UI que funciona offline parcialmente, carrega rápido em 3G, usa linguagem acessível e considera baixa literacia financeira como ponto de partida.' },
+];
+
+const PIXTUDO_KPIS = [
+    { icon: '⏱️', label: 'Time to First Transaction', target: '< 3 min',   desc: 'Do download até o primeiro Pix enviado ou recebido' },
+    { icon: '📊', label: 'DAU / MAU Ratio',             target: '> 40%',    desc: 'Stickiness — usuários ativos diários vs mensais' },
+    { icon: '❤️', label: 'NPS Alvo',                    target: '> 70',     desc: 'Net Promoter Score (benchmark Nubank ~87)' },
+    { icon: '💳', label: 'Produtos por Usuário',         target: '> 2,5',   desc: 'Média de produtos financeiros ativos por conta após 90 dias' },
+    { icon: '🌱', label: 'Inclusão Financeira',          target: '20%',     desc: '% de usuários sem histórico bancário que acessam crédito' },
+    { icon: '🔁', label: 'Retenção D30',                 target: '> 60%',   desc: 'Usuários que ainda usam o app 30 dias após o download' },
+    { icon: '⚡', label: 'Task Success Rate',            target: '> 95%',   desc: 'Taxa de sucesso em tarefas críticas (pagar, receber, investir)' },
+    { icon: '🛡️', label: 'Fraude Evitada',               target: '< 0,01%', desc: 'Taxa de transações fraudulentas não detectadas' },
+];
+
+const PIXTUDO_ROADMAP = [
+    {
+        fase: 'Fase 1 · Q1–Q2 2026', nome: 'Core Financeiro', ativo: true,
+        itens: ['Conta digital + Pix completo', 'Cartão virtual Mastercard', 'Onboarding biométrico', 'Cashback em parceiros selecionados', 'Extrato e notificações em tempo real', 'Suporte via WhatsApp'],
+    },
+    {
+        fase: 'Fase 2 · Q3–Q4 2026', nome: 'Ecossistema', ativo: false,
+        itens: ['Mini Apps SDK público', 'Investimentos CDB/Tesouro', 'Crédito IA para MEI/autônomos', 'Vaquinhas e rateio social', 'Score PixTudo proprietário', 'Seguros (vida, auto, residencial)'],
+    },
+    {
+        fase: 'Fase 3 · 2027+', nome: 'Super App', ativo: false,
+        itens: ['Cartão físico + Open Finance', 'Marketplace de serviços', 'IA financeira pessoal (coach)', 'Benefícios corporativos B2B', 'Identidade digital integrada', 'Expansão para América Latina'],
     },
 ];
 
@@ -404,7 +496,7 @@ function FluxoTelasSection() {
 
 // ─── Section shell ────────────────────────────────────────────────────────────
 
-function SectionShell({ num, title, children }) {
+function SectionShell({ num, title, children, accent = RED }) {
     return (
         <div className="container" style={{ marginTop: 64 }}>
             <div style={{
@@ -419,7 +511,7 @@ function SectionShell({ num, title, children }) {
                     fontFamily: 'var(--font-mono)',
                     fontSize: 10,
                     letterSpacing: '0.12em',
-                    color: RED,
+                    color: accent,
                     flexShrink: 0,
                 }}>{num}</span>
                 <h2 style={{
@@ -435,12 +527,217 @@ function SectionShell({ num, title, children }) {
     );
 }
 
+// ─── PixTudo Components ───────────────────────────────────────────────────────
+
+function PtBadge({ type }) {
+    const styles = {
+        g: { bg: `${PGREEN}22`, color: PGREEN,    text: '✓ Sim'     },
+        y: { bg: 'rgba(255,214,0,0.15)',  color: '#FFD600', text: '~ Parcial' },
+        r: { bg: 'rgba(255,64,129,0.15)', color: '#FF4081', text: '✕ Não'    },
+    };
+    const s = styles[type];
+    return (
+        <span style={{ display: 'inline-block', padding: '2px 8px', borderRadius: 100, fontSize: 11, fontWeight: 600, background: s.bg, color: s.color }}>
+            {s.text}
+        </span>
+    );
+}
+
+function PixTudoPersonas() {
+    const [ativa, setAtiva] = useState('camila');
+    const p = PIXTUDO_PERSONAS.find(x => x.key === ativa);
+    return (
+        <>
+            <ToggleGroup
+                options={PIXTUDO_PERSONAS.map(p => ({ key: p.key, label: p.label, cor: p.cor }))}
+                value={ativa}
+                onChange={setAtiva}
+            />
+            <div style={{ background: 'rgba(255,255,255,0.025)', border: `1px solid ${p.cor}22`, borderRadius: 14, overflow: 'hidden' }}>
+                <div style={{ padding: '22px 26px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', gap: 18, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                    <div style={{ width: 52, height: 52, borderRadius: '50%', background: p.cor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, fontWeight: 700, color: '#000', flexShrink: 0 }}>
+                        {p.avatar}
+                    </div>
+                    <div style={{ flex: '1 1 200px' }}>
+                        <h3 style={{ margin: '0 0 3px', fontSize: 17, fontWeight: 700, color: 'var(--moonlight)' }}>{p.nome}</h3>
+                        <p style={{ margin: '0 0 10px', fontSize: 13, color: 'var(--mist)' }}>{p.sub}</p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                            {p.tags.map(t => (
+                                <span key={t} style={{ padding: '3px 10px', borderRadius: 100, fontSize: 11, color: p.cor, border: `1px solid ${p.cor}33`, background: `${p.cor}0D`, fontFamily: 'var(--font-mono)', letterSpacing: '0.05em' }}>{t}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div style={{ padding: '16px 26px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                    <blockquote style={{ margin: 0, padding: '12px 16px', borderLeft: `3px solid ${p.cor}`, background: `${p.cor}0D`, borderRadius: '0 8px 8px 0' }}>
+                        <p style={{ margin: 0, fontSize: 14, fontStyle: 'italic', color: 'var(--moonlight)', lineHeight: 1.7 }}>{p.citacao}</p>
+                    </blockquote>
+                </div>
+                <div style={{ padding: '18px 26px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+                    <div>
+                        <MonoLabel color={PGREEN}>Necessidades</MonoLabel>
+                        <ul style={{ listStyle: 'none', margin: '8px 0 0', padding: 0 }}>
+                            {p.necessidades.map(n => (
+                                <li key={n} style={{ fontSize: 13, color: 'var(--mist)', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', gap: 8 }}>
+                                    <span style={{ color: PGREEN, flexShrink: 0 }}>✓</span>{n}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <MonoLabel color='#FF4081'>Dores</MonoLabel>
+                        <ul style={{ listStyle: 'none', margin: '8px 0 0', padding: 0 }}>
+                            {p.dores.map(d => (
+                                <li key={d} style={{ fontSize: 13, color: 'var(--mist)', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', gap: 8 }}>
+                                    <span style={{ color: '#FF4081', flexShrink: 0 }}>✕</span>{d}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div style={{ padding: '0 26px 18px' }}>
+                    <MonoLabel>Contexto de Uso</MonoLabel>
+                    <ul style={{ listStyle: 'none', margin: '8px 0 0', padding: 0, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                        {p.contexto.map(c => (
+                            <li key={c} style={{ fontSize: 12, color: 'var(--mist)', padding: '4px 12px', borderRadius: 100, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>{c}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </>
+    );
+}
+
+function PixTudoCompetitors() {
+    const cols = ['Pagamento', 'Investimento', 'Crédito', 'Mini Apps', 'Social'];
+    const keys = ['pag', 'inv', 'cred', 'mini', 'social'];
+    return (
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', borderRadius: 12, border: '1px solid rgba(255,255,255,0.07)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 640 }}>
+                <thead>
+                    <tr>
+                        {['Concorrente', ...cols, 'UX Score', 'Gap Principal'].map(h => (
+                            <th key={h} style={{ textAlign: 'left', padding: '10px 14px', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--mist)', borderBottom: '1px solid rgba(255,255,255,0.07)', fontFamily: 'var(--font-mono)', whiteSpace: 'nowrap' }}>{h}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {PIXTUDO_COMPETITORS.map((c, i) => (
+                        <tr key={i} style={{ background: c.destaque ? `${PGREEN}0A` : 'transparent' }}>
+                            <td style={{ padding: '11px 14px', fontSize: 13, fontWeight: 600, color: c.destaque ? PGREEN : 'var(--moonlight)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>{c.nome}</td>
+                            {keys.map(k => (
+                                <td key={k} style={{ padding: '11px 14px', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                                    <PtBadge type={c[k]} />
+                                </td>
+                            ))}
+                            <td style={{ padding: '11px 14px', fontSize: 13, color: 'var(--mist)', borderBottom: '1px solid rgba(255,255,255,0.04)', fontFamily: 'var(--font-mono)' }}>{c.ux}</td>
+                            <td style={{ padding: '11px 14px', fontSize: 13, color: c.destaque ? PGREEN : 'var(--mist)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>{c.gap}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+function PixTudoJourney() {
+    return (
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, minmax(150px, 1fr))', gap: 8, minWidth: 900 }}>
+                {PIXTUDO_JOURNEY.map((s, i) => (
+                    <div key={i} style={{
+                        borderTop: `3px solid ${s.ativo ? PGREEN : 'rgba(255,255,255,0.1)'}`,
+                        padding: '18px 14px',
+                        background: s.ativo ? `${PGREEN}08` : 'transparent',
+                        borderRadius: '0 0 10px 10px',
+                    }}>
+                        <MonoLabel color={s.ativo ? PGREEN : 'var(--mist)'}>{s.num} · {s.etapa}</MonoLabel>
+                        <h4 style={{ margin: '7px 0 8px', fontSize: 13, fontWeight: 700, color: 'var(--moonlight)' }}>{s.titulo}</h4>
+                        <p style={{ margin: '0 0 14px', fontSize: 12, color: 'var(--mist)', lineHeight: 1.55 }}>{s.desc}</p>
+                        <div style={{ fontSize: 20, marginBottom: 4 }}>{s.emoji}</div>
+                        <MonoLabel color={s.ativo ? PGREEN : 'var(--mist)'}>{s.emocao}</MonoLabel>
+                    </div>
+                ))}
+            </div>
+            <div style={{ display: 'flex', gap: 20, marginTop: 14, flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ width: 7, height: 7, borderRadius: '50%', background: PGREEN }} />
+                    <MonoLabel color={PGREEN}>Momento-chave</MonoLabel>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function PixTudoPrinciples() {
+    return (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 14 }}>
+            {PIXTUDO_PRINCIPLES.map((p, i) => (
+                <div key={i} style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 14, padding: '26px 22px', textAlign: 'center' }}>
+                    <div style={{ fontSize: 52, fontWeight: 800, lineHeight: 1, color: `${PGREEN}22`, marginBottom: -6, fontFamily: 'var(--font-body)' }}>{p.num}</div>
+                    <h3 style={{ margin: '0 0 10px', fontSize: 15, fontWeight: 700, color: 'var(--moonlight)' }}>{p.nome}</h3>
+                    <p style={{ margin: 0, fontSize: 13, color: 'var(--mist)', lineHeight: 1.65 }}>{p.desc}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function PixTudoKPIs() {
+    return (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+            {PIXTUDO_KPIS.map((k, i) => (
+                <div key={i} style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 12, padding: '18px 16px' }}>
+                    <div style={{ fontSize: 20, marginBottom: 10 }}>{k.icon}</div>
+                    <p style={{ margin: '0 0 3px', fontSize: 11, color: 'var(--mist)', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{k.label}</p>
+                    <div style={{ fontSize: 22, fontWeight: 700, color: PGREEN, fontFamily: 'var(--font-mono)', lineHeight: 1, marginBottom: 6 }}>{k.target}</div>
+                    <p style={{ margin: 0, fontSize: 12, color: 'var(--mist)', lineHeight: 1.5 }}>{k.desc}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function PixTudoRoadmap() {
+    return (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 24, paddingTop: 4 }}>
+            {PIXTUDO_ROADMAP.map((fase, i) => (
+                <div key={i} style={{ position: 'relative' }}>
+                    <div style={{
+                        width: 16, height: 16, borderRadius: '50%',
+                        background: fase.ativo ? PGREEN : 'rgba(255,255,255,0.08)',
+                        border: `2px solid ${fase.ativo ? PGREEN : 'rgba(255,255,255,0.15)'}`,
+                        boxShadow: fase.ativo ? `0 0 0 4px ${PGREEN}22` : 'none',
+                        marginBottom: 18,
+                    }} />
+                    <MonoLabel color={fase.ativo ? PGREEN : 'var(--mist)'}>{fase.fase}</MonoLabel>
+                    <h3 style={{ margin: '7px 0 14px', fontSize: 17, fontWeight: 700, color: 'var(--moonlight)' }}>{fase.nome}</h3>
+                    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                        {fase.itens.map((item, j) => (
+                            <li key={j} style={{ fontSize: 13, color: 'var(--mist)', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', gap: 8 }}>
+                                <span style={{ color: fase.ativo ? PGREEN : 'rgba(255,255,255,0.2)', flexShrink: 0 }}>{fase.ativo ? '●' : '○'}</span>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    );
+}
+
 // ─── Registry ────────────────────────────────────────────────────────────────
 
 const SECTION_COMPONENTS = {
-    SubidaPersonas:   PersonasSection,
-    SubidaJourneyMap: JourneyMapSection,
-    SubidaFluxoTelas: FluxoTelasSection,
+    SubidaPersonas:      PersonasSection,
+    SubidaJourneyMap:    JourneyMapSection,
+    SubidaFluxoTelas:    FluxoTelasSection,
+    PixTudoPersonas:     PixTudoPersonas,
+    PixTudoCompetitors:  PixTudoCompetitors,
+    PixTudoJourney:      PixTudoJourney,
+    PixTudoPrinciples:   PixTudoPrinciples,
+    PixTudoKPIs:         PixTudoKPIs,
+    PixTudoRoadmap:      PixTudoRoadmap,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -458,6 +755,7 @@ const RichProjectPage = ({ project }) => {
     }, []);
 
     const hasLinks = project.prototypeLink || project.prototypeLinks?.length > 0 || project.liveDemoLink;
+    const accent = project.accentColor || RED;
 
     return (
         <div className="single-project-page-design">
@@ -547,7 +845,7 @@ const RichProjectPage = ({ project }) => {
                     const Component = SECTION_COMPONENTS[section.component];
                     if (!Component) return null;
                     return (
-                        <SectionShell key={i} num={num} title={title}>
+                        <SectionShell key={i} num={num} title={title} accent={accent}>
                             <Component />
                         </SectionShell>
                     );
@@ -558,7 +856,7 @@ const RichProjectPage = ({ project }) => {
                 const metrics    = pick(section.metrics,    section.metrics_en);
 
                 return (
-                    <SectionShell key={i} num={num} title={title}>
+                    <SectionShell key={i} num={num} title={title} accent={accent}>
                         {section.type === 'research' && methods?.length > 0 && (
                             <div className="cs-methods">
                                 {methods.map((m, j) => <span key={j} className="cs-method-chip">{m}</span>)}
