@@ -1084,6 +1084,7 @@ export const projectsData = [
     },
     {
         id: 8,
+        hidden: true,
         slug: "palavra-selvagem",
         liveDemoLink: "https://palavraselvagem.vercel.app/",
         src: "/images/projects/palavraselvagem_full2.jpg",
@@ -1234,6 +1235,7 @@ export const projectsData = [
     },
     {
         id: 10,
+        hidden: true,
         slug: "veradice",
         liveDemoLink: "https://veradice.vercel.app/",
         src: "/images/projects/veradice_full.jpg",
