@@ -179,15 +179,6 @@ export const projectsData = [
                     "Most indie hackers rely on guesswork: they choose colors without a token system",
                     "The barrier isn't conceptual, it's operational: no one wants to learn another complex tool",
                     "Product Hunt and Reddit show high demand for 'Tailwind palette generator' and 'brand kit for devs'"
-                ],
-                images: [
-                    {
-                        src: "/images/projects/sigil/landing-hero.png",
-                        caption: "Landing page com a proposta de valor para quem constrói sozinho",
-                        fullWidth: true,
-                        width: 1898,
-                        height: 712
-                    }
                 ]
             },
             {
@@ -195,16 +186,7 @@ export const projectsData = [
                 title_en: "Solution & Product",
                 type: "text",
                 content: "O Sigil fecha o ciclo em um fluxo de três passos: escolha uma cor primária, nomeie sua marca, exporte. Internamente, o app gera paleta harmônica com modos claro/escuro, cria um Brand Brief com logo, cores, tipografia e tom de voz, e disponibiliza todos os tokens no Export Hub em múltiplos formatos. O Component Preview exibe os tokens aplicados em botões, cards e inputs reais, permitindo que o usuário veja o sistema funcionando antes de escrever uma linha de código.",
-                content_en: "Sigil closes the loop in a three-step flow: pick a primary color, name your brand, export. Internally, the app generates a harmonic palette with light/dark modes, creates a Brand Brief with logo, colors, typography, and tone of voice, and makes all tokens available in the Export Hub in multiple formats. The Component Preview shows tokens applied to real buttons, cards, and inputs, so the user can see the system working before writing a line of code.",
-                images: [
-                    {
-                        src: "/images/projects/sigil/features.png",
-                        caption: "Features: Token Studio, Palette Generator, Brand Brief, Component Preview e Export Hub",
-                        fullWidth: true,
-                        width: 1895,
-                        height: 702
-                    }
-                ]
+                content_en: "Sigil closes the loop in a three-step flow: pick a primary color, name your brand, export. Internally, the app generates a harmonic palette with light/dark modes, creates a Brand Brief with logo, colors, typography, and tone of voice, and makes all tokens available in the Export Hub in multiple formats. The Component Preview shows tokens applied to real buttons, cards, and inputs, so the user can see the system working before writing a line of code."
             },
             {
                 title: "Funcionalidades",
@@ -234,16 +216,7 @@ export const projectsData = [
                 title_en: "Business Model & Architecture",
                 type: "text",
                 content: "Construído inteiramente com AI coding (Claude como pair programmer do scaffolding ao deploy). Stack: Next.js 14 (App Router), Prisma + PostgreSQL para persistência de BrandSystems, Palettes, ExportLogs e SharedPages, Claude API para geração de sugestões de tokens e Brand Brief, Vercel para deploy contínuo. O modelo freemium limita o Free a 1 brand system e 3 paletas sem export, o que é suficiente para experimentar, mas insuficiente para escalar. O PRO (R$39/mês) libera tudo: brand systems ilimitados, Export Hub completo e SharedPages públicas.",
-                content_en: "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 14 (App Router), Prisma + PostgreSQL for BrandSystems, Palettes, ExportLogs, and SharedPages persistence, Claude API for token suggestions and Brand Brief generation, Vercel for continuous deployment. The freemium model limits Free to 1 brand system and 3 palettes without export, which is enough to experiment, not enough to scale. PRO (R$39/month) unlocks everything: unlimited brand systems, full Export Hub, and public SharedPages.",
-                images: [
-                    {
-                        src: "/images/projects/sigil/pricing.png",
-                        caption: "Modelo de preços: Free R$0 com limites, PRO R$39/mês com trial de 14 dias",
-                        fullWidth: true,
-                        width: 1135,
-                        height: 595
-                    }
-                ]
+                content_en: "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 14 (App Router), Prisma + PostgreSQL for BrandSystems, Palettes, ExportLogs, and SharedPages persistence, Claude API for token suggestions and Brand Brief generation, Vercel for continuous deployment. The freemium model limits Free to 1 brand system and 3 palettes without export, which is enough to experiment, not enough to scale. PRO (R$39/month) unlocks everything: unlimited brand systems, full Export Hub, and public SharedPages."
             },
             {
                 title: "Resultados & Aprendizados",

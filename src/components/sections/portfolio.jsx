@@ -51,13 +51,6 @@ const Portfolio = ({ className }) => {
                         </div>
                     </div>
 
-                    <div className="portfolio-filters">
-                        <FilterBtn active={activeFilter === 'all'} onClick={() => handleFilter('all')}>{t.portfolio.filterAll}</FilterBtn>
-                        {categories.map(cat => (
-                            <FilterBtn key={cat} active={activeFilter === cat} onClick={() => handleFilter(cat)}>{cat}</FilterBtn>
-                        ))}
-                    </div>
-
                     <div className="row project-masonry-active">
                         {visible.map(({ id, category, src, title, slug, tagline, tagline_en, externalLink }) => (
                             <Card
