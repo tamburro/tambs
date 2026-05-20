@@ -238,6 +238,135 @@ export const projectsData = [
         ]
     },
     {
+        id: 6,
+        slug: "pixtudo-super-app-ux-research",
+        pageType: "rich",
+        accentColor: "#00C853",
+        liveDemoLink: "https://app-src-two.vercel.app/",
+        src: "/images/projects/pixtudo_full.jpg",
+        category: "Product & AI Engineering",
+        tags: ["Product Design", "AI Engineering"],
+        title: "PixTudo (SaaS MVP)",
+        tagline: "Do documento de pesquisa ao MVP funcional: super-app financeiro com Pix, cashback e score inteligente.",
+        tagline_en: "From research to working MVP: financial super-app with Pix, cashback and smart score.",
+        description: "Pesquisa completa de UX e MVP funcional do PixTudo, um super-app financeiro brasileiro. A pesquisa cobre mercado, análise competitiva, 3 personas, jornada, arquitetura de informação e princípios de design. O MVP entrega Pix simulado com cashback, extrato inteligente, Score PixTudo com gamificação, hub de serviços e rateio social.",
+        description_en: "Full UX research and working MVP of PixTudo, a Brazilian financial super-app. Research covers market analysis, competitive benchmarking, 3 personas, user journey, information architecture and design principles. The MVP delivers simulated Pix with cashback, smart statement, gamified PixTudo Score, services hub and social bill-splitting.",
+        year: "2026",
+        role: "UX Researcher & Design Engineer",
+        timeline: "3 dias (1º deploy)",
+        timeline_en: "3 days (1st deploy)",
+        team: "Solo",
+        client: "Projeto Pessoal",
+        tools: ["Figma", "Miro", "Next.js", "Claude API", "Prisma", "Vercel"],
+        prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/pix-tudo-ux.html" }],
+        sections: [
+            {
+                title: "O Problema",
+                title_en: "The Problem",
+                type: "text",
+                content: "O Brasil tem características únicas no mundo que criam o momento ideal para um super-app financeiro: o Pix atingiu 153 milhões de usuários únicos em 2024 com volume de R$4,7 trilhões transacionados, superando cartões em número de operações. O brasileiro usa em média 4,2 apps para pagamento, banco, investimento e benefícios — apps bancários dos grandes bancos têm satisfação média de 2,8/5. Autônomos e MEIs (40% da força de trabalho) não têm acesso a crédito, e os juros do rotativo chegam a 440% ao ano. A fragmentação é total e nenhum player entregou a experiência unificada que o Alipay representa na China.",
+                content_en: "Brazil has unique global characteristics creating the ideal moment for a financial super-app: Pix reached 153 million unique users in 2024 with R$4.7 trillion transacted. Brazilians use an average of 4.2 apps for tasks that could be unified — major bank apps average 2.8/5 satisfaction. Freelancers and MEIs (40% of the workforce) can't access credit, and credit card revolving interest reaches 440% per year. Fragmentation is total and no player has delivered the unified experience that Alipay represents in China.",
+                highlights: [
+                    "153 milhões de usuários de Pix em 2024 — maior adoção de pagamento instantâneo do mundo",
+                    "Brasileiro usa em média 4,2 apps para tarefas que poderiam ser unificadas",
+                    "68% dos brasileiros desconfiam de bancos tradicionais (Febraban 2024) — fintechs têm NPS 2× maior",
+                    "Mercado de fintechs brasileiro estimado em R$312 bilhões para 2026, crescendo 23% ao ano",
+                ],
+                highlights_en: [
+                    "153 million Pix users in 2024 — the world's largest instant payment adoption",
+                    "Brazilians use an average of 4.2 apps for tasks that could be unified",
+                    "68% of Brazilians distrust traditional banks (Febraban 2024) — fintechs have 2× higher NPS",
+                    "Brazilian fintech market estimated at R$312 billion for 2026, growing 23% per year",
+                ],
+            },
+            {
+                title: "Análise Competitiva",
+                title_en: "Competitive Analysis",
+                type: "component",
+                component: "PixTudoCompetitors",
+            },
+            {
+                title: "Personas",
+                title_en: "Personas",
+                type: "component",
+                component: "PixTudoPersonas",
+            },
+            {
+                title: "Jornada do Usuário",
+                title_en: "User Journey",
+                type: "component",
+                component: "PixTudoJourney",
+            },
+            {
+                title: "Como Poderíamos…",
+                title_en: "How Might We…",
+                type: "research",
+                methods: ["HMW · Inclusão Financeira", "HMW · Fragmentação", "HMW · Social & Cultura", "HMW · Educação Financeira", "HMW · Segurança", "HMW · Ecossistema"],
+                methods_en: ["HMW · Financial Inclusion", "HMW · Fragmentation", "HMW · Social & Culture", "HMW · Financial Education", "HMW · Security", "HMW · Ecosystem"],
+                content: "Transformamos os insights da pesquisa em questões de design que abrem espaço para soluções criativas.",
+                content_en: "We transformed research insights into design questions that open space for creative solutions.",
+                highlights: [
+                    "Como poderíamos tornar o crédito acessível para autônomos e MEIs sem histórico bancário, usando dados de comportamento como alternativa ao score tradicional?",
+                    "Como poderíamos fazer o brasileiro substituir 4 apps financeiros por um único, sem sentir que está perdendo funcionalidade ou segurança?",
+                    "Como poderíamos transformar o momento de pagar e cobrar amigos — socialmente constrangedor — em algo leve e até divertido?",
+                    "Como poderíamos ensinar conceitos financeiros para a geração Z de forma contextual, sem interromper o fluxo da tarefa principal?",
+                    "Como poderíamos proteger usuários de golpes do Pix em tempo real sem criar fricção excessiva nas transações legítimas?",
+                    "Como poderíamos criar um ecossistema de mini-apps que faça sentido para o contexto brasileiro, sem virar uma bagunça difícil de navegar?",
+                ],
+                highlights_en: [
+                    "How might we make credit accessible to freelancers and MEIs without banking history, using behavioral data as an alternative to traditional scoring?",
+                    "How might we get Brazilians to replace 4 financial apps with one, without losing functionality or security?",
+                    "How might we transform the moment of paying and charging friends — socially awkward — into something light and even fun?",
+                    "How might we teach financial concepts to Gen Z contextually, without interrupting the main task flow?",
+                    "How might we protect users from Pix scams in real time without creating excessive friction in legitimate transactions?",
+                    "How might we create a mini-app ecosystem that makes sense for the Brazilian context without becoming a hard-to-navigate mess?",
+                ],
+            },
+            {
+                title: "Princípios de Design",
+                title_en: "Design Principles",
+                type: "component",
+                component: "PixTudoPrinciples",
+            },
+            {
+                title: "KPIs & Métricas",
+                title_en: "KPIs & Metrics",
+                type: "component",
+                component: "PixTudoKPIs",
+            },
+            {
+                title: "Roadmap de Produto",
+                title_en: "Product Roadmap",
+                type: "component",
+                component: "PixTudoRoadmap",
+            },
+            {
+                title: "MVP",
+                title_en: "MVP",
+                type: "text",
+                content: "A pesquisa não ficou no papel. Construí um MVP funcional com as features priorizadas na fase de discovery: Pix simulado com cashback automático de 1,5%, extrato com categorização inteligente de gastos, Score PixTudo com gamificação e metas financeiras, hub de serviços (recarga de celular, vale-transporte, pagamento de contas) e rateio social com amigos. O produto tem plano PRO por R$19,90/mês com trial gratuito de 14 dias.",
+                content_en: "The research didn't stay on paper. I built a working MVP with the features prioritized during discovery: simulated Pix with automatic 1.5% cashback, statement with intelligent spending categorization, PixTudo Score with gamification and financial goals, services hub (mobile top-up, transit pass, bill payments) and social bill-splitting. The product has a PRO plan at R$19.90/month with a 14-day free trial.",
+            },
+            {
+                title: "Resultados & Entregáveis",
+                title_en: "Results & Deliverables",
+                type: "outcomes",
+                metrics: [
+                    { value: "10",  label: "entregáveis de UX research" },
+                    { value: "3",   label: "personas baseadas em pesquisa real" },
+                    { value: "1",   label: "MVP funcional lançado e deployado" },
+                ],
+                metrics_en: [
+                    { value: "10",  label: "UX research deliverables" },
+                    { value: "3",   label: "personas based on real research" },
+                    { value: "1",   label: "working MVP launched and deployed" },
+                ],
+                content: "O projeto percorreu o ciclo completo: pesquisa de mercado, análise competitiva, personas, jornada do usuário, HMW, princípios de design, KPIs e roadmap — seguidos da construção do MVP. O principal aprendizado: no Brasil, as decisões de design financeiro são inseparáveis de comportamentos sociais como o pagamento coletivo, a desconfiança histórica em bancos e a centralidade do WhatsApp.",
+                content_en: "The project covered the full cycle: market research, competitive analysis, personas, user journey, HMW, design principles, KPIs and roadmap — followed by building the MVP. The key learning: in Brazil, financial design decisions are inseparable from social behaviors like collective payment, historical distrust of banks, and WhatsApp's centrality.",
+            },
+        ]
+    },
+    {
         id: 2,
         slug: "listaai-gerador-de-descricoes",
         src: "/images/projects/listaai/listaai_cover.png",
@@ -411,246 +540,111 @@ export const projectsData = [
         ]
     },
     {
-        id: 3,
-        slug: "sustenta-plus-app-ux-design",
-        src: "/images/projects/sustentamais_full2.jpg",
+        id: 7,
+        slug: "zapvida-super-app-ux-research",
+        src: "/images/projects/zapvida_full.jpg",
         category: "Product Design",
         tags: ["Product Design"],
-        title: "Sustenta+",
-        tagline: "App mobile com IA para reduzir desperdício e planejar a alimentação.",
-        tagline_en: "AI-powered mobile app to reduce food waste and plan meals smarter.",
-        description: "Aplicativo mobile com IA para gerenciamento inteligente de compras e consumo de alimentos. O app prevê necessidades, reduz o desperdício e promove uma alimentação mais saudável e econômica, conectando tecnologia ao dia a dia da cozinha.",
-        description_en: "AI-powered mobile app for intelligent food shopping and consumption management. The app predicts needs, reduces waste, and promotes healthier, more economical eating, connecting technology to everyday kitchen routines.",
-        year: "2023",
-        role: "UX Designer & Researcher",
-        timeline: "3 meses",
-        timeline_en: "3 months",
-        team: "7 integrantes",
-        client: "Projeto Acadêmico · Pós-graduação Infnet",
+        title: "ZapVida",
+        tagline: "Pesquisa e design de um super-app nacional com Pix nativo, gov digital e mini-apps.",
+        tagline_en: "Research and design of a national super-app with native Pix, digital gov and mini-apps.",
+        description: "Documento de UX Research & Design para o ZapVida — o WeChat do Brasil. O projeto une mensagens, pagamentos, serviços governamentais, delivery e entretenimento numa única plataforma pensada para a realidade brasileira. Abrange pesquisa primária (40 entrevistas, 1.200 respondentes), 3 personas, jornada, arquitetura de informação, wireframes e sistema de design.",
+        description_en: "UX Research & Design document for ZapVida — the Brazilian WeChat. The project unifies messaging, payments, government services, delivery, and entertainment in a single platform built for Brazilian reality. Covers primary research (40 interviews, 1,200 survey respondents), 3 personas, journey mapping, information architecture, wireframes, and design system.",
+        year: "2026",
+        role: "UX Researcher",
+        timeline: "3 dias",
+        timeline_en: "3 days",
+        team: "Solo",
+        client: "Projeto Pessoal",
         tools: ["Figma", "Miro"],
-        prototypeLink: "https://www.figma.com/proto/IEQMzJVFMRJ5gMPQ7lAsX2/Prot%C3%B3tipo?node-id=62-1369&starting-point-node-id=62%3A1369&t=N0QqFqUBLfg7T0Y9-1",
+        prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/zap-ux-research.html" }],
+        pageType: "rich",
+        accentColor: "#00C853",
         sections: [
             {
                 title: "O Problema",
                 title_en: "The Problem",
                 type: "text",
-                content: "O Brasil está entre os 10 países que mais desperdiçam alimentos no mundo. No dia a dia, o problema é ainda mais concreto: geladeiras cheias de itens esquecidos, compras impulsivas sem planejamento e dificuldade em manter uma dieta equilibrada em rotinas corridas. A falta de uma ferramenta que centralizasse o controle do que se compra, consome e descarta tornava o gerenciamento da alimentação algo invisível e caro.",
-                content_en: "Brazil is among the top 10 food-wasting countries in the world. In daily life, the problem is even more concrete: fridges full of forgotten items, impulse purchases without planning, and difficulty maintaining a balanced diet in busy routines. The lack of a tool to centralize what is bought, consumed, and discarded made food management invisible and costly."
+                content: "O Brasil tem o maior mercado de fintechs da América Latina, 170 milhões de smartphones ativos e os usuários mais engajados em apps do mundo — média de 5,4 horas diárias em apps, o maior do planeta. Mas nenhum super-app domina. O brasileiro usa WhatsApp para falar, Nubank para pagar, iFood para pedir comida, Instagram para se entreter e o app do INSS (quando consegue) para serviços públicos. 78% dos entrevistados usam 4 ou mais apps para tarefas que poderiam ser unificadas. 64% da classe C/D nunca usou um app de governo e não sabe como acessar serviços públicos digitais. O problema não é falta de infraestrutura ou de usuários — é a ausência de um produto que entenda a cultura e a realidade socioeconômica brasileira.",
+                content_en: "Brazil has Latin America's largest fintech market, 170 million active smartphones, and the world's most app-engaged users — averaging 5.4 daily hours in apps, the global #1. But no super-app dominates. Brazilians use WhatsApp to chat, Nubank to pay, iFood to order food, Instagram to entertain themselves, and the INSS app (when it works) for government services. 78% of interviewees use 4+ apps for tasks that could be unified. 64% of the C/D income bracket has never used a government app and doesn't know how to access public digital services. The problem isn't a lack of infrastructure or users — it's the absence of a product that understands Brazilian culture and socioeconomic reality."
             },
             {
-                title: "Pesquisa & Descoberta",
-                title_en: "Research & Discovery",
+                title: "Análise Competitiva",
+                title_en: "Competitive Analysis",
+                type: "component",
+                component: "ZapVidaCompetitors"
+            },
+            {
+                title: "Personas",
+                title_en: "Personas",
+                type: "component",
+                component: "ZapVidaPersonas"
+            },
+            {
+                title: "Jornada do Usuário",
+                title_en: "User Journey",
+                type: "component",
+                component: "ZapVidaJourney"
+            },
+            {
+                title: "Arquitetura de Informação",
+                title_en: "Information Architecture",
+                type: "component",
+                component: "ZapVidaIA"
+            },
+            {
+                title: "Features Prioritárias",
+                title_en: "Priority Features",
+                type: "component",
+                component: "ZapVidaFeatures"
+            },
+            {
+                title: "Como Poderíamos…",
+                title_en: "How Might We…",
                 type: "research",
-                methods: ["Entrevistas com usuários", "Benchmark competitivo", "Mapa de empatia", "Proto-persona"],
-                methods_en: ["User interviews", "Competitive benchmark", "Empathy map", "Proto-persona"],
-                content: "Realizamos pesquisa qualitativa com usuários de diferentes perfis para entender os padrões de compra e consumo de alimentos. O benchmark mapeou apps como Kitchee It, No Waste, Mealime e Nosh, identificando lacunas no mercado brasileiro. A partir das entrevistas, construímos uma proto-persona (Ana, dona de casa, 40 anos, São Paulo) e um mapa de empatia que revelou o gap entre intenção e comportamento real na cozinha.",
-                content_en: "We conducted qualitative research with users of different profiles to understand food buying and consumption patterns. The benchmark mapped apps like Kitchee It, No Waste, Mealime, and Nosh, identifying gaps in the Brazilian market. From the interviews, we built a proto-persona (Ana, housewife, 40, São Paulo) and an empathy map that revealed the gap between intention and real behavior in the kitchen.",
+                methods: ["HMW · Gov Digital", "HMW · Recompensas", "HMW · Inclusão Digital", "HMW · Mini-apps", "HMW · Crescimento Orgânico", "HMW · Segurança"],
+                methods_en: ["HMW · Digital Gov", "HMW · Rewards", "HMW · Digital Inclusion", "HMW · Mini-apps", "HMW · Organic Growth", "HMW · Security"],
+                content: "Perguntas HMW derivadas dos insights de pesquisa primária.",
+                content_en: "HMW questions derived from primary research insights.",
                 highlights: [
-                    "Usuários não sabem o que têm na geladeira ao fazer a lista de compras",
-                    "Datas de validade são ignoradas até o alimento estragar",
-                    "Dietas fracassam por falta de planejamento prático, não de vontade",
-                    "A barreira de entrada (registrar compras) precisa ser mínima para o app ser adotado"
+                    "Como poderíamos tornar o acesso a serviços públicos tão fácil quanto mandar uma mensagem no ZapVida?",
+                    "Como poderíamos criar um sistema de recompensas que incentive o brasileiro a usar o app no dia a dia?",
+                    "Como poderíamos incluir usuários com baixa escolaridade digital sem infantilizar a experiência?",
+                    "Como poderíamos criar mini-apps de terceiros que se integrem nativamente à identidade do ZapVida?",
+                    "Como poderíamos usar a cultura da fofoca e da comunidade para crescer organicamente?",
+                    "Como poderíamos garantir confiança e segurança em um país com alta fraude digital?"
                 ],
                 highlights_en: [
-                    "Users don't know what's in the fridge when making the shopping list",
-                    "Expiration dates are ignored until food goes bad",
-                    "Diets fail due to lack of practical planning, not willpower",
-                    "The entry barrier (registering purchases) must be minimal for the app to be adopted"
-                ],
-                images: [
-                    {
-                        src: "/images/projects/sustenta/benchmark.png",
-                        caption: "Benchmark competitivo: Kitchee It, No Waste, Mealime e Nosh",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 800
-                    }
+                    "How might we make accessing public services as easy as sending a message on ZapVida?",
+                    "How might we create a rewards system that motivates Brazilians to use the app daily?",
+                    "How might we include users with low digital literacy without infantilizing the experience?",
+                    "How might we create third-party mini-apps that integrate natively with ZapVida's identity?",
+                    "How might we use the culture of gossip and community to grow organically?",
+                    "How might we guarantee trust and security in a country with high digital fraud?"
                 ]
             },
             {
-                title: "Processo de Design",
-                title_en: "Design Process",
-                type: "text",
-                content: "Partimos das descobertas de pesquisa para construir a proto-persona e o mapa de empatia que guiaram todas as decisões de design. O mapa revelou que Ana precisa de organização, não de motivação, pois ela já quer evitar desperdício e só falta uma ferramenta que reduza o atrito do planejamento. O fluxo principal foi definido priorizando o menor atrito no registro de itens: câmera para ler nota fiscal, listas pré-populadas e sugestões inteligentes.",
-                content_en: "We moved from research findings to build the proto-persona and empathy map that guided all design decisions. The map revealed that Ana needs organization, not motivation, since she already wants to avoid waste and just lacks a tool that reduces planning friction. The main flow was defined prioritizing the lowest friction in item registration: camera to read fiscal receipts, pre-populated lists, and smart suggestions.",
-                images: [
-                    {
-                        src: "/images/projects/sustenta/persona.png",
-                        caption: "Proto-persona: Ana, Dona de Casa, 40 anos",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 800
-                    },
-                    {
-                        src: "/images/projects/sustenta/mapa-empatia.png",
-                        caption: "Mapa de empatia: dores, ganhos, comportamentos e necessidades",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 900
-                    }
-                ]
+                title: "KPIs & Roadmap",
+                title_en: "KPIs & Roadmap",
+                type: "component",
+                component: "ZapVidaKPIsRoadmap"
             },
             {
-                title: "Solução",
-                title_en: "Solution",
-                type: "text",
-                content: "O Sustenta+ atua como um assistente de alimentação que aprende com o usuário ao longo do tempo. O app permite registrar compras por leitura de nota fiscal, monitora o estoque em casa, alerta sobre vencimentos, sugere receitas com o que já está disponível e gera listas de compra personalizadas baseadas no histórico e na dieta do usuário.",
-                content_en: "Sustenta+ acts as a food assistant that learns from the user over time. The app allows registering purchases by reading fiscal receipts, monitors home inventory, alerts on expiration dates, suggests recipes from available items, and generates personalized shopping lists based on the user's history and diet.",
-                images: [
-                    {
-                        src: "/images/projects/sustenta/telas-dark.png",
-                        caption: "Telas do protótipo: lista de alimentos, adição por nota fiscal e detalhes de item",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 800
-                    }
-                ]
-            },
-            {
-                title: "Resultados & Aprendizados",
-                title_en: "Results & Learnings",
+                title: "Resultados & Entregáveis",
+                title_en: "Results & Deliverables",
                 type: "outcomes",
                 metrics: [
-                    { value: "4", label: "integrantes na equipe" },
-                    { value: "2", label: "rodadas de refinamento" },
-                    { value: "1", label: "protótipo navegável validado" }
+                    { value: "40", label: "entrevistas em profundidade realizadas" },
+                    { value: "1.200", label: "respondentes no survey quantitativo" },
+                    { value: "8", label: "seções de entregáveis (pesquisa ao design system)" }
                 ],
                 metrics_en: [
-                    { value: "4", label: "team members" },
-                    { value: "2", label: "refinement rounds" },
-                    { value: "1", label: "validated navigable prototype" }
+                    { value: "40", label: "in-depth interviews conducted" },
+                    { value: "1,200", label: "quantitative survey respondents" },
+                    { value: "8", label: "deliverable sections (research to design system)" }
                 ],
-                content: "O protótipo foi validado com usuários e apresentado para banca avaliadora. O principal aprendizado foi sobre o trade-off entre riqueza de dados e facilidade de onboarding: quanto mais o app sabe sobre o usuário, mais inteligente ele fica, mas isso exige um esforço inicial de cadastro. A solução foi dividir o onboarding em etapas progressivas, com valor entregue desde o primeiro acesso.",
-                content_en: "The prototype was validated with users and presented to an evaluation panel. The key learning was about the trade-off between data richness and onboarding ease: the more the app knows about the user, the smarter it becomes, but it requires an initial registration effort. The solution was to split onboarding into progressive steps, delivering value from the first access."
-            }
-        ]
-    },
-    {
-        id: 4,
-        slug: "website-makeup-design",
-        src: "/images/projects/estiloia_full.jpg",
-        category: "Product Design",
-        tags: ["Product Design"],
-        title: "Estilo.ia",
-        tagline: "Consultoria de moda personalizada por IA, testada em A/B com usuários reais.",
-        tagline_en: "AI-powered fashion consulting, A/B tested with real users.",
-        description: "App de consultoria de moda personalizada guiada por inteligência artificial. O projeto explorou como capturar o estilo pessoal de forma envolvente e não-intrusiva, testando dois modelos de questionário visual em formato A/B com usuários reais.",
-        description_en: "AI-guided personalized fashion consulting app. The project explored how to capture personal style in an engaging and non-intrusive way, testing two visual questionnaire models in A/B format with real users.",
-        year: "2023",
-        role: "UX Designer & Researcher",
-        timeline: "3 meses",
-        timeline_en: "3 months",
-        team: "6 integrantes",
-        client: "Projeto Acadêmico · Pós-graduação Infnet",
-        tools: ["Figma", "Miro"],
-        prototypeLinks: [
-            {
-                label: "Modelo A: Moodboard",
-                url: "https://www.figma.com/proto/ovtO7x2ujV4hFpAWhESfRi/estiloIA?page-id=0%3A1&type=design&node-id=244-2467"
-            },
-            {
-                label: "Modelo B: Escolha Binária",
-                url: "https://www.figma.com/proto/ovtO7x2ujV4hFpAWhESfRi/estiloIA?page-id=52%3A2&type=design&node-id=244-3324"
-            }
-        ],
-        sections: [
-            {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "Muitas pessoas têm dificuldade com seu estilo pessoal e gostariam de orientação para se vestir melhor, mas consultoria de moda profissional é muitas vezes cara e inacessível. Em pesquisa com potenciais usuários: 69% gostariam de ajuda para se vestir, 69% valorizariam uma avaliação personalizada e 61% veem consultoria como boa ideia. O desafio de design era outro: como uma IA aprende o estilo de alguém de forma natural, visual e sem fricção?",
-                content_en: "Many people struggle with their personal style and would like guidance on dressing better, but professional fashion consulting is often expensive and inaccessible. In research with potential users: 69% would like help with dressing, 69% would value a personalized evaluation, and 61% see consulting as a good idea. The design challenge was different: how does an AI learn someone's style in a natural, visual, frictionless way?"
-            },
-            {
-                title: "Escopo & Hipóteses",
-                title_en: "Scope & Hypotheses",
-                type: "research",
-                methods: ["Benchmarking (Pinterest, Stitch Fix, Zalando)", "Análise de padrões de onboarding com IA"],
-                methods_en: ["Benchmarking (Pinterest, Stitch Fix, Zalando)", "AI onboarding pattern analysis"],
-                content: "A jornada completa do app envolve: questionário → cadastro de roupas → sugestões de looks → provador virtual → compra externa. Nosso foco foi exclusivamente o questionário inicial, que é a etapa que alimenta toda a personalização da IA. Para coletar dados de qualidade (intenção, estilo pessoal, medidas), precisávamos que o usuário não percebesse isso como coleta de dados, mas como autodescoberta de estilo.",
-                content_en: "The complete app journey involves: questionnaire → wardrobe registration → look suggestions → virtual fitting room → external purchase. Our focus was exclusively on the initial questionnaire, the step that feeds all AI personalization. To collect quality data (intent, personal style, measurements), we needed the user to experience it not as data collection, but as style self-discovery.",
-                highlights: [
-                    "Imagens funcionam melhor que texto para transmitir a ideia de um estilo",
-                    "Respostas não binárias (grau de compatibilidade) dão mais segurança ao usuário",
-                    "Entender a intenção de uso (trabalho, festa, autoconhecimento) é tão importante quanto as preferências estéticas"
-                ],
-                highlights_en: [
-                    "Images work better than text to convey the idea of a style",
-                    "Non-binary responses (compatibility degree) give the user more confidence",
-                    "Understanding usage intent (work, party, self-knowledge) is as important as aesthetic preferences"
-                ]
-            },
-            {
-                title: "Teste A/B com Usuários Reais",
-                title_en: "A/B Test with Real Users",
-                type: "research",
-                methods: ["Testes moderados gravados", "5 participantes por modelo", "Análise qualitativa pós-teste"],
-                methods_en: ["Recorded moderated tests", "5 participants per model", "Post-test qualitative analysis"],
-                content: "Desenvolvemos dois protótipos navegáveis. Modelo A: moodboard interativo, onde o usuário arrasta peças que vão sendo sugeridas de acordo com suas escolhas. Modelo B: escolha binária estilo Tinder, curtindo ou descartando looks, com novos modelos sendo sugeridos adaptativamente. 10 usuários testaram os protótipos, 5 por modelo.",
-                content_en: "We developed two navigable prototypes. Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido. A variedade de categorias, que inclui paletas, estampas e objetos, deu segurança ao usuário de que seu estilo seria compreendido. Visualizar o resumo de todas as escolhas ao final foi valorizado em ambos os modelos. Usuários do Modelo A relataram dificuldade em entender o funcionamento, já que a curva de aprendizado foi um obstáculo.",
-                highlights: [
-                    "Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido",
-                    "Imagens grandes (Modelo B) foram mais valorizadas do que peças em miniatura (Modelo A)",
-                    "A variedade de categorias, que inclui paletas, estampas e objetos, deu segurança ao usuário de que seu estilo seria compreendido",
-                    "Visualizar o resumo de todas as escolhas ao final foi valorizado em ambos os modelos",
-                    "Usuários do Modelo A relataram dificuldade em entender o funcionamento, já que a curva de aprendizado foi um obstáculo"
-                ],
-                highlights_en: [
-                    "Model B was more intuitive, as the swipe mechanism is already an established mental model",
-                    "Large images (Model B) were more valued than miniature pieces (Model A)",
-                    "The variety of categories, including palettes, patterns, and objects, gave users confidence that their style would be understood",
-                    "Seeing a summary of all choices at the end was valued in both models",
-                    "Model A users reported difficulty understanding how it worked, as the learning curve was an obstacle"
-                ],
-                images: [
-                    {
-                        src: "/images/projects/estiloia/comparacao-ab.png",
-                        caption: "Modelo A (moodboard) × Modelo B (escolha binária), um comparativo dos protótipos testados",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 900
-                    }
-                ]
-            },
-            {
-                title: "Fluxo Recomendado",
-                title_en: "Recommended Flow",
-                type: "text",
-                content: "O fluxo validado combina o melhor dos dois modelos: onboarding com perguntas de intenção (buscar referências, autoconhecimento, me sentir mais confiante, destaque profissional), seguido de escolha binária visual para estilo (paleta de cores, estampas, peças específicas, objetos associados ao estilo) e coleta progressiva de medidas corporais. A jornada transforma coleta de dados em autodescoberta, onde o usuário não apenas responde a perguntas, mas constrói seu perfil de estilo.",
-                content_en: "The validated flow combines the best of both models: onboarding with intent questions (find references, self-knowledge, feel more confident, professional standout), followed by visual binary style choice (color palette, patterns, specific pieces, style-associated objects), and progressive body measurement collection. The journey transforms data collection into self-discovery, so the user doesn't just answer questions, they build their style profile.",
-                images: [
-                    {
-                        src: "/images/projects/estiloia/fluxo-tinder.png",
-                        caption: "Fluxo recomendado com splash, intenção, objetivo, paleta de cor e estampa",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 900
-                    },
-                    {
-                        src: "/images/projects/estiloia/fluxo-medidas.png",
-                        caption: "Continuação do fluxo com a seleção de peças, moodboard final e coleta de medidas",
-                        fullWidth: true,
-                        width: 1400,
-                        height: 900
-                    }
-                ]
-            },
-            {
-                title: "Resultados & Aprendizados",
-                title_en: "Results & Learnings",
-                type: "outcomes",
-                metrics: [
-                    { value: "10", label: "usuários testados" },
-                    { value: "2", label: "modelos A/B comparados" },
-                    { value: "69%", label: "dos usuários querem ajuda com estilo" }
-                ],
-                metrics_en: [
-                    { value: "10", label: "users tested" },
-                    { value: "2", label: "A/B models compared" },
-                    { value: "69%", label: "of users want style help" }
-                ],
-                content: "O projeto demonstrou que o design do processo de coleta de dados é, ele mesmo, um produto. A principal recomendação resultante: usar imagens em vez de palavras para entender preferências; possibilitar ao usuário ver todas as suas escolhas juntas; usar grande variedade de categorias além de roupas; questionar sobre intenção antes de estilo; e permitir ao usuário colocar suas medidas para sugestões mais precisas.",
-                content_en: "The project demonstrated that the design of the data collection process is itself a product. The main resulting recommendation: use images instead of words to understand preferences; let users see all their choices together; use a wide variety of categories beyond clothing; ask about intent before style; and allow users to input their measurements for more precise suggestions."
+                content: "O projeto resultou em um documento completo cobrindo todas as fases do processo UX, desde a pesquisa de mercado até wireframes e sistema de design. O principal aprendizado foi sobre a necessidade de um produto genuinamente brasileiro — não uma adaptação de modelos globais. A decisão de incluir gov digital como pilar raiz (não como serviço secundário) foi o insight mais contraintuitivo e, possivelmente, o maior diferencial competitivo: nenhum super-app global tem incentivo para integrar serviços públicos brasileiros, mas esse é exatamente o lock-in que cria adoção na classe C/D e em usuários mais velhos. A arquitetura de 5 pilares nasceu diretamente do card sorting, que revelou que \"dinheiro\" e \"serviços\" são categorias mentais distintas para o brasileiro — ao contrário do que modelos ocidentais costumam assumir.",
+                content_en: "The project resulted in a complete document covering all UX process phases, from market research to wireframes and design system. The key learning was about the need for a genuinely Brazilian product — not an adaptation of global models. The decision to include digital gov as a root pillar (not a secondary service) was the most counterintuitive insight and possibly the biggest competitive differentiator: no global super-app has an incentive to integrate Brazilian public services, but this is exactly the lock-in that drives adoption among the C/D class and older users. The 5-pillar architecture emerged directly from the card sorting, which revealed that 'money' and 'services' are distinct mental categories for Brazilians — contrary to what Western models typically assume."
             }
         ]
     },
@@ -845,240 +839,246 @@ export const projectsData = [
         ]
     },
     {
-        id: 6,
-        slug: "pixtudo-super-app-ux-research",
-        pageType: "rich",
-        accentColor: "#00C853",
-        liveDemoLink: "https://app-src-two.vercel.app/",
-        src: "/images/projects/pixtudo_full.jpg",
-        category: "Product & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
-        title: "PixTudo (SaaS MVP)",
-        tagline: "Do documento de pesquisa ao MVP funcional: super-app financeiro com Pix, cashback e score inteligente.",
-        tagline_en: "From research to working MVP: financial super-app with Pix, cashback and smart score.",
-        description: "Pesquisa completa de UX e MVP funcional do PixTudo, um super-app financeiro brasileiro. A pesquisa cobre mercado, análise competitiva, 3 personas, jornada, arquitetura de informação e princípios de design. O MVP entrega Pix simulado com cashback, extrato inteligente, Score PixTudo com gamificação, hub de serviços e rateio social.",
-        description_en: "Full UX research and working MVP of PixTudo, a Brazilian financial super-app. Research covers market analysis, competitive benchmarking, 3 personas, user journey, information architecture and design principles. The MVP delivers simulated Pix with cashback, smart statement, gamified PixTudo Score, services hub and social bill-splitting.",
-        year: "2026",
-        role: "UX Researcher & Design Engineer",
-        timeline: "3 dias (1º deploy)",
-        timeline_en: "3 days (1st deploy)",
-        team: "Solo",
-        client: "Projeto Pessoal",
-        tools: ["Figma", "Miro", "Next.js", "Claude API", "Prisma", "Vercel"],
-        prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/pix-tudo-ux.html" }],
-        sections: [
-            {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "O Brasil tem características únicas no mundo que criam o momento ideal para um super-app financeiro: o Pix atingiu 153 milhões de usuários únicos em 2024 com volume de R$4,7 trilhões transacionados, superando cartões em número de operações. O brasileiro usa em média 4,2 apps para pagamento, banco, investimento e benefícios — apps bancários dos grandes bancos têm satisfação média de 2,8/5. Autônomos e MEIs (40% da força de trabalho) não têm acesso a crédito, e os juros do rotativo chegam a 440% ao ano. A fragmentação é total e nenhum player entregou a experiência unificada que o Alipay representa na China.",
-                content_en: "Brazil has unique global characteristics creating the ideal moment for a financial super-app: Pix reached 153 million unique users in 2024 with R$4.7 trillion transacted. Brazilians use an average of 4.2 apps for tasks that could be unified — major bank apps average 2.8/5 satisfaction. Freelancers and MEIs (40% of the workforce) can't access credit, and credit card revolving interest reaches 440% per year. Fragmentation is total and no player has delivered the unified experience that Alipay represents in China.",
-                highlights: [
-                    "153 milhões de usuários de Pix em 2024 — maior adoção de pagamento instantâneo do mundo",
-                    "Brasileiro usa em média 4,2 apps para tarefas que poderiam ser unificadas",
-                    "68% dos brasileiros desconfiam de bancos tradicionais (Febraban 2024) — fintechs têm NPS 2× maior",
-                    "Mercado de fintechs brasileiro estimado em R$312 bilhões para 2026, crescendo 23% ao ano",
-                ],
-                highlights_en: [
-                    "153 million Pix users in 2024 — the world's largest instant payment adoption",
-                    "Brazilians use an average of 4.2 apps for tasks that could be unified",
-                    "68% of Brazilians distrust traditional banks (Febraban 2024) — fintechs have 2× higher NPS",
-                    "Brazilian fintech market estimated at R$312 billion for 2026, growing 23% per year",
-                ],
-            },
-            {
-                title: "Análise Competitiva",
-                title_en: "Competitive Analysis",
-                type: "component",
-                component: "PixTudoCompetitors",
-            },
-            {
-                title: "Personas",
-                title_en: "Personas",
-                type: "component",
-                component: "PixTudoPersonas",
-            },
-            {
-                title: "Jornada do Usuário",
-                title_en: "User Journey",
-                type: "component",
-                component: "PixTudoJourney",
-            },
-            {
-                title: "Como Poderíamos…",
-                title_en: "How Might We…",
-                type: "research",
-                methods: ["HMW · Inclusão Financeira", "HMW · Fragmentação", "HMW · Social & Cultura", "HMW · Educação Financeira", "HMW · Segurança", "HMW · Ecossistema"],
-                methods_en: ["HMW · Financial Inclusion", "HMW · Fragmentation", "HMW · Social & Culture", "HMW · Financial Education", "HMW · Security", "HMW · Ecosystem"],
-                content: "Transformamos os insights da pesquisa em questões de design que abrem espaço para soluções criativas.",
-                content_en: "We transformed research insights into design questions that open space for creative solutions.",
-                highlights: [
-                    "Como poderíamos tornar o crédito acessível para autônomos e MEIs sem histórico bancário, usando dados de comportamento como alternativa ao score tradicional?",
-                    "Como poderíamos fazer o brasileiro substituir 4 apps financeiros por um único, sem sentir que está perdendo funcionalidade ou segurança?",
-                    "Como poderíamos transformar o momento de pagar e cobrar amigos — socialmente constrangedor — em algo leve e até divertido?",
-                    "Como poderíamos ensinar conceitos financeiros para a geração Z de forma contextual, sem interromper o fluxo da tarefa principal?",
-                    "Como poderíamos proteger usuários de golpes do Pix em tempo real sem criar fricção excessiva nas transações legítimas?",
-                    "Como poderíamos criar um ecossistema de mini-apps que faça sentido para o contexto brasileiro, sem virar uma bagunça difícil de navegar?",
-                ],
-                highlights_en: [
-                    "How might we make credit accessible to freelancers and MEIs without banking history, using behavioral data as an alternative to traditional scoring?",
-                    "How might we get Brazilians to replace 4 financial apps with one, without losing functionality or security?",
-                    "How might we transform the moment of paying and charging friends — socially awkward — into something light and even fun?",
-                    "How might we teach financial concepts to Gen Z contextually, without interrupting the main task flow?",
-                    "How might we protect users from Pix scams in real time without creating excessive friction in legitimate transactions?",
-                    "How might we create a mini-app ecosystem that makes sense for the Brazilian context without becoming a hard-to-navigate mess?",
-                ],
-            },
-            {
-                title: "Princípios de Design",
-                title_en: "Design Principles",
-                type: "component",
-                component: "PixTudoPrinciples",
-            },
-            {
-                title: "KPIs & Métricas",
-                title_en: "KPIs & Metrics",
-                type: "component",
-                component: "PixTudoKPIs",
-            },
-            {
-                title: "Roadmap de Produto",
-                title_en: "Product Roadmap",
-                type: "component",
-                component: "PixTudoRoadmap",
-            },
-            {
-                title: "MVP",
-                title_en: "MVP",
-                type: "text",
-                content: "A pesquisa não ficou no papel. Construí um MVP funcional com as features priorizadas na fase de discovery: Pix simulado com cashback automático de 1,5%, extrato com categorização inteligente de gastos, Score PixTudo com gamificação e metas financeiras, hub de serviços (recarga de celular, vale-transporte, pagamento de contas) e rateio social com amigos. O produto tem plano PRO por R$19,90/mês com trial gratuito de 14 dias.",
-                content_en: "The research didn't stay on paper. I built a working MVP with the features prioritized during discovery: simulated Pix with automatic 1.5% cashback, statement with intelligent spending categorization, PixTudo Score with gamification and financial goals, services hub (mobile top-up, transit pass, bill payments) and social bill-splitting. The product has a PRO plan at R$19.90/month with a 14-day free trial.",
-            },
-            {
-                title: "Resultados & Entregáveis",
-                title_en: "Results & Deliverables",
-                type: "outcomes",
-                metrics: [
-                    { value: "10",  label: "entregáveis de UX research" },
-                    { value: "3",   label: "personas baseadas em pesquisa real" },
-                    { value: "1",   label: "MVP funcional lançado e deployado" },
-                ],
-                metrics_en: [
-                    { value: "10",  label: "UX research deliverables" },
-                    { value: "3",   label: "personas based on real research" },
-                    { value: "1",   label: "working MVP launched and deployed" },
-                ],
-                content: "O projeto percorreu o ciclo completo: pesquisa de mercado, análise competitiva, personas, jornada do usuário, HMW, princípios de design, KPIs e roadmap — seguidos da construção do MVP. O principal aprendizado: no Brasil, as decisões de design financeiro são inseparáveis de comportamentos sociais como o pagamento coletivo, a desconfiança histórica em bancos e a centralidade do WhatsApp.",
-                content_en: "The project covered the full cycle: market research, competitive analysis, personas, user journey, HMW, design principles, KPIs and roadmap — followed by building the MVP. The key learning: in Brazil, financial design decisions are inseparable from social behaviors like collective payment, historical distrust of banks, and WhatsApp's centrality.",
-            },
-        ]
-    },
-    {
-        id: 7,
-        slug: "zapvida-super-app-ux-research",
-        src: "/images/projects/zapvida_full.jpg",
+        id: 4,
+        slug: "website-makeup-design",
+        src: "/images/projects/estiloia_full.jpg",
         category: "Product Design",
         tags: ["Product Design"],
-        title: "ZapVida",
-        tagline: "Pesquisa e design de um super-app nacional com Pix nativo, gov digital e mini-apps.",
-        tagline_en: "Research and design of a national super-app with native Pix, digital gov and mini-apps.",
-        description: "Documento de UX Research & Design para o ZapVida — o WeChat do Brasil. O projeto une mensagens, pagamentos, serviços governamentais, delivery e entretenimento numa única plataforma pensada para a realidade brasileira. Abrange pesquisa primária (40 entrevistas, 1.200 respondentes), 3 personas, jornada, arquitetura de informação, wireframes e sistema de design.",
-        description_en: "UX Research & Design document for ZapVida — the Brazilian WeChat. The project unifies messaging, payments, government services, delivery, and entertainment in a single platform built for Brazilian reality. Covers primary research (40 interviews, 1,200 survey respondents), 3 personas, journey mapping, information architecture, wireframes, and design system.",
-        year: "2026",
-        role: "UX Researcher",
-        timeline: "3 dias",
-        timeline_en: "3 days",
-        team: "Solo",
-        client: "Projeto Pessoal",
+        title: "Estilo.ia",
+        tagline: "Consultoria de moda personalizada por IA, testada em A/B com usuários reais.",
+        tagline_en: "AI-powered fashion consulting, A/B tested with real users.",
+        description: "App de consultoria de moda personalizada guiada por inteligência artificial. O projeto explorou como capturar o estilo pessoal de forma envolvente e não-intrusiva, testando dois modelos de questionário visual em formato A/B com usuários reais.",
+        description_en: "AI-guided personalized fashion consulting app. The project explored how to capture personal style in an engaging and non-intrusive way, testing two visual questionnaire models in A/B format with real users.",
+        year: "2023",
+        role: "UX Designer & Researcher",
+        timeline: "3 meses",
+        timeline_en: "3 months",
+        team: "6 integrantes",
+        client: "Projeto Acadêmico · Pós-graduação Infnet",
         tools: ["Figma", "Miro"],
-        prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/zap-ux-research.html" }],
-        pageType: "rich",
-        accentColor: "#00C853",
+        prototypeLinks: [
+            {
+                label: "Modelo A: Moodboard",
+                url: "https://www.figma.com/proto/ovtO7x2ujV4hFpAWhESfRi/estiloIA?page-id=0%3A1&type=design&node-id=244-2467"
+            },
+            {
+                label: "Modelo B: Escolha Binária",
+                url: "https://www.figma.com/proto/ovtO7x2ujV4hFpAWhESfRi/estiloIA?page-id=52%3A2&type=design&node-id=244-3324"
+            }
+        ],
         sections: [
             {
                 title: "O Problema",
                 title_en: "The Problem",
                 type: "text",
-                content: "O Brasil tem o maior mercado de fintechs da América Latina, 170 milhões de smartphones ativos e os usuários mais engajados em apps do mundo — média de 5,4 horas diárias em apps, o maior do planeta. Mas nenhum super-app domina. O brasileiro usa WhatsApp para falar, Nubank para pagar, iFood para pedir comida, Instagram para se entreter e o app do INSS (quando consegue) para serviços públicos. 78% dos entrevistados usam 4 ou mais apps para tarefas que poderiam ser unificadas. 64% da classe C/D nunca usou um app de governo e não sabe como acessar serviços públicos digitais. O problema não é falta de infraestrutura ou de usuários — é a ausência de um produto que entenda a cultura e a realidade socioeconômica brasileira.",
-                content_en: "Brazil has Latin America's largest fintech market, 170 million active smartphones, and the world's most app-engaged users — averaging 5.4 daily hours in apps, the global #1. But no super-app dominates. Brazilians use WhatsApp to chat, Nubank to pay, iFood to order food, Instagram to entertain themselves, and the INSS app (when it works) for government services. 78% of interviewees use 4+ apps for tasks that could be unified. 64% of the C/D income bracket has never used a government app and doesn't know how to access public digital services. The problem isn't a lack of infrastructure or users — it's the absence of a product that understands Brazilian culture and socioeconomic reality."
+                content: "Muitas pessoas têm dificuldade com seu estilo pessoal e gostariam de orientação para se vestir melhor, mas consultoria de moda profissional é muitas vezes cara e inacessível. Em pesquisa com potenciais usuários: 69% gostariam de ajuda para se vestir, 69% valorizariam uma avaliação personalizada e 61% veem consultoria como boa ideia. O desafio de design era outro: como uma IA aprende o estilo de alguém de forma natural, visual e sem fricção?",
+                content_en: "Many people struggle with their personal style and would like guidance on dressing better, but professional fashion consulting is often expensive and inaccessible. In research with potential users: 69% would like help with dressing, 69% would value a personalized evaluation, and 61% see consulting as a good idea. The design challenge was different: how does an AI learn someone's style in a natural, visual, frictionless way?"
             },
             {
-                title: "Análise Competitiva",
-                title_en: "Competitive Analysis",
-                type: "component",
-                component: "ZapVidaCompetitors"
-            },
-            {
-                title: "Personas",
-                title_en: "Personas",
-                type: "component",
-                component: "ZapVidaPersonas"
-            },
-            {
-                title: "Jornada do Usuário",
-                title_en: "User Journey",
-                type: "component",
-                component: "ZapVidaJourney"
-            },
-            {
-                title: "Arquitetura de Informação",
-                title_en: "Information Architecture",
-                type: "component",
-                component: "ZapVidaIA"
-            },
-            {
-                title: "Features Prioritárias",
-                title_en: "Priority Features",
-                type: "component",
-                component: "ZapVidaFeatures"
-            },
-            {
-                title: "Como Poderíamos…",
-                title_en: "How Might We…",
+                title: "Escopo & Hipóteses",
+                title_en: "Scope & Hypotheses",
                 type: "research",
-                methods: ["HMW · Gov Digital", "HMW · Recompensas", "HMW · Inclusão Digital", "HMW · Mini-apps", "HMW · Crescimento Orgânico", "HMW · Segurança"],
-                methods_en: ["HMW · Digital Gov", "HMW · Rewards", "HMW · Digital Inclusion", "HMW · Mini-apps", "HMW · Organic Growth", "HMW · Security"],
-                content: "Perguntas HMW derivadas dos insights de pesquisa primária.",
-                content_en: "HMW questions derived from primary research insights.",
+                methods: ["Benchmarking (Pinterest, Stitch Fix, Zalando)", "Análise de padrões de onboarding com IA"],
+                methods_en: ["Benchmarking (Pinterest, Stitch Fix, Zalando)", "AI onboarding pattern analysis"],
+                content: "A jornada completa do app envolve: questionário → cadastro de roupas → sugestões de looks → provador virtual → compra externa. Nosso foco foi exclusivamente o questionário inicial, que é a etapa que alimenta toda a personalização da IA. Para coletar dados de qualidade (intenção, estilo pessoal, medidas), precisávamos que o usuário não percebesse isso como coleta de dados, mas como autodescoberta de estilo.",
+                content_en: "The complete app journey involves: questionnaire → wardrobe registration → look suggestions → virtual fitting room → external purchase. Our focus was exclusively on the initial questionnaire, the step that feeds all AI personalization. To collect quality data (intent, personal style, measurements), we needed the user to experience it not as data collection, but as style self-discovery.",
                 highlights: [
-                    "Como poderíamos tornar o acesso a serviços públicos tão fácil quanto mandar uma mensagem no ZapVida?",
-                    "Como poderíamos criar um sistema de recompensas que incentive o brasileiro a usar o app no dia a dia?",
-                    "Como poderíamos incluir usuários com baixa escolaridade digital sem infantilizar a experiência?",
-                    "Como poderíamos criar mini-apps de terceiros que se integrem nativamente à identidade do ZapVida?",
-                    "Como poderíamos usar a cultura da fofoca e da comunidade para crescer organicamente?",
-                    "Como poderíamos garantir confiança e segurança em um país com alta fraude digital?"
+                    "Imagens funcionam melhor que texto para transmitir a ideia de um estilo",
+                    "Respostas não binárias (grau de compatibilidade) dão mais segurança ao usuário",
+                    "Entender a intenção de uso (trabalho, festa, autoconhecimento) é tão importante quanto as preferências estéticas"
                 ],
                 highlights_en: [
-                    "How might we make accessing public services as easy as sending a message on ZapVida?",
-                    "How might we create a rewards system that motivates Brazilians to use the app daily?",
-                    "How might we include users with low digital literacy without infantilizing the experience?",
-                    "How might we create third-party mini-apps that integrate natively with ZapVida's identity?",
-                    "How might we use the culture of gossip and community to grow organically?",
-                    "How might we guarantee trust and security in a country with high digital fraud?"
+                    "Images work better than text to convey the idea of a style",
+                    "Non-binary responses (compatibility degree) give the user more confidence",
+                    "Understanding usage intent (work, party, self-knowledge) is as important as aesthetic preferences"
                 ]
             },
             {
-                title: "KPIs & Roadmap",
-                title_en: "KPIs & Roadmap",
-                type: "component",
-                component: "ZapVidaKPIsRoadmap"
+                title: "Teste A/B com Usuários Reais",
+                title_en: "A/B Test with Real Users",
+                type: "research",
+                methods: ["Testes moderados gravados", "5 participantes por modelo", "Análise qualitativa pós-teste"],
+                methods_en: ["Recorded moderated tests", "5 participants per model", "Post-test qualitative analysis"],
+                content: "Desenvolvemos dois protótipos navegáveis. Modelo A: moodboard interativo, onde o usuário arrasta peças que vão sendo sugeridas de acordo com suas escolhas. Modelo B: escolha binária estilo Tinder, curtindo ou descartando looks, com novos modelos sendo sugeridos adaptativamente. 10 usuários testaram os protótipos, 5 por modelo.",
+                content_en: "We developed two navigable prototypes. Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido. A variedade de categorias, que inclui paletas, estampas e objetos, deu segurança ao usuário de que seu estilo seria compreendido. Visualizar o resumo de todas as escolhas ao final foi valorizado em ambos os modelos. Usuários do Modelo A relataram dificuldade em entender o funcionamento, já que a curva de aprendizado foi um obstáculo.",
+                highlights: [
+                    "Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido",
+                    "Imagens grandes (Modelo B) foram mais valorizadas do que peças em miniatura (Modelo A)",
+                    "A variedade de categorias, que inclui paletas, estampas e objetos, deu segurança ao usuário de que seu estilo seria compreendido",
+                    "Visualizar o resumo de todas as escolhas ao final foi valorizado em ambos os modelos",
+                    "Usuários do Modelo A relataram dificuldade em entender o funcionamento, já que a curva de aprendizado foi um obstáculo"
+                ],
+                highlights_en: [
+                    "Model B was more intuitive, as the swipe mechanism is already an established mental model",
+                    "Large images (Model B) were more valued than miniature pieces (Model A)",
+                    "The variety of categories, including palettes, patterns, and objects, gave users confidence that their style would be understood",
+                    "Seeing a summary of all choices at the end was valued in both models",
+                    "Model A users reported difficulty understanding how it worked, as the learning curve was an obstacle"
+                ],
+                images: [
+                    {
+                        src: "/images/projects/estiloia/comparacao-ab.png",
+                        caption: "Modelo A (moodboard) × Modelo B (escolha binária), um comparativo dos protótipos testados",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 900
+                    }
+                ]
             },
             {
-                title: "Resultados & Entregáveis",
-                title_en: "Results & Deliverables",
+                title: "Fluxo Recomendado",
+                title_en: "Recommended Flow",
+                type: "text",
+                content: "O fluxo validado combina o melhor dos dois modelos: onboarding com perguntas de intenção (buscar referências, autoconhecimento, me sentir mais confiante, destaque profissional), seguido de escolha binária visual para estilo (paleta de cores, estampas, peças específicas, objetos associados ao estilo) e coleta progressiva de medidas corporais. A jornada transforma coleta de dados em autodescoberta, onde o usuário não apenas responde a perguntas, mas constrói seu perfil de estilo.",
+                content_en: "The validated flow combines the best of both models: onboarding with intent questions (find references, self-knowledge, feel more confident, professional standout), followed by visual binary style choice (color palette, patterns, specific pieces, style-associated objects), and progressive body measurement collection. The journey transforms data collection into self-discovery, so the user doesn't just answer questions, they build their style profile.",
+                images: [
+                    {
+                        src: "/images/projects/estiloia/fluxo-tinder.png",
+                        caption: "Fluxo recomendado com splash, intenção, objetivo, paleta de cor e estampa",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 900
+                    },
+                    {
+                        src: "/images/projects/estiloia/fluxo-medidas.png",
+                        caption: "Continuação do fluxo com a seleção de peças, moodboard final e coleta de medidas",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 900
+                    }
+                ]
+            },
+            {
+                title: "Resultados & Aprendizados",
+                title_en: "Results & Learnings",
                 type: "outcomes",
                 metrics: [
-                    { value: "40", label: "entrevistas em profundidade realizadas" },
-                    { value: "1.200", label: "respondentes no survey quantitativo" },
-                    { value: "8", label: "seções de entregáveis (pesquisa ao design system)" }
+                    { value: "10", label: "usuários testados" },
+                    { value: "2", label: "modelos A/B comparados" },
+                    { value: "69%", label: "dos usuários querem ajuda com estilo" }
                 ],
                 metrics_en: [
-                    { value: "40", label: "in-depth interviews conducted" },
-                    { value: "1,200", label: "quantitative survey respondents" },
-                    { value: "8", label: "deliverable sections (research to design system)" }
+                    { value: "10", label: "users tested" },
+                    { value: "2", label: "A/B models compared" },
+                    { value: "69%", label: "of users want style help" }
                 ],
-                content: "O projeto resultou em um documento completo cobrindo todas as fases do processo UX, desde a pesquisa de mercado até wireframes e sistema de design. O principal aprendizado foi sobre a necessidade de um produto genuinamente brasileiro — não uma adaptação de modelos globais. A decisão de incluir gov digital como pilar raiz (não como serviço secundário) foi o insight mais contraintuitivo e, possivelmente, o maior diferencial competitivo: nenhum super-app global tem incentivo para integrar serviços públicos brasileiros, mas esse é exatamente o lock-in que cria adoção na classe C/D e em usuários mais velhos. A arquitetura de 5 pilares nasceu diretamente do card sorting, que revelou que \"dinheiro\" e \"serviços\" são categorias mentais distintas para o brasileiro — ao contrário do que modelos ocidentais costumam assumir.",
-                content_en: "The project resulted in a complete document covering all UX process phases, from market research to wireframes and design system. The key learning was about the need for a genuinely Brazilian product — not an adaptation of global models. The decision to include digital gov as a root pillar (not a secondary service) was the most counterintuitive insight and possibly the biggest competitive differentiator: no global super-app has an incentive to integrate Brazilian public services, but this is exactly the lock-in that drives adoption among the C/D class and older users. The 5-pillar architecture emerged directly from the card sorting, which revealed that 'money' and 'services' are distinct mental categories for Brazilians — contrary to what Western models typically assume."
+                content: "O projeto demonstrou que o design do processo de coleta de dados é, ele mesmo, um produto. A principal recomendação resultante: usar imagens em vez de palavras para entender preferências; possibilitar ao usuário ver todas as suas escolhas juntas; usar grande variedade de categorias além de roupas; questionar sobre intenção antes de estilo; e permitir ao usuário colocar suas medidas para sugestões mais precisas.",
+                content_en: "The project demonstrated that the design of the data collection process is itself a product. The main resulting recommendation: use images instead of words to understand preferences; let users see all their choices together; use a wide variety of categories beyond clothing; ask about intent before style; and allow users to input their measurements for more precise suggestions."
+            }
+        ]
+    },
+    {
+        id: 3,
+        slug: "sustenta-plus-app-ux-design",
+        src: "/images/projects/sustentamais_full2.jpg",
+        category: "Product Design",
+        tags: ["Product Design"],
+        title: "Sustenta+",
+        tagline: "App mobile com IA para reduzir desperdício e planejar a alimentação.",
+        tagline_en: "AI-powered mobile app to reduce food waste and plan meals smarter.",
+        description: "Aplicativo mobile com IA para gerenciamento inteligente de compras e consumo de alimentos. O app prevê necessidades, reduz o desperdício e promove uma alimentação mais saudável e econômica, conectando tecnologia ao dia a dia da cozinha.",
+        description_en: "AI-powered mobile app for intelligent food shopping and consumption management. The app predicts needs, reduces waste, and promotes healthier, more economical eating, connecting technology to everyday kitchen routines.",
+        year: "2023",
+        role: "UX Designer & Researcher",
+        timeline: "3 meses",
+        timeline_en: "3 months",
+        team: "7 integrantes",
+        client: "Projeto Acadêmico · Pós-graduação Infnet",
+        tools: ["Figma", "Miro"],
+        prototypeLink: "https://www.figma.com/proto/IEQMzJVFMRJ5gMPQ7lAsX2/Prot%C3%B3tipo?node-id=62-1369&starting-point-node-id=62%3A1369&t=N0QqFqUBLfg7T0Y9-1",
+        sections: [
+            {
+                title: "O Problema",
+                title_en: "The Problem",
+                type: "text",
+                content: "O Brasil está entre os 10 países que mais desperdiçam alimentos no mundo. No dia a dia, o problema é ainda mais concreto: geladeiras cheias de itens esquecidos, compras impulsivas sem planejamento e dificuldade em manter uma dieta equilibrada em rotinas corridas. A falta de uma ferramenta que centralizasse o controle do que se compra, consome e descarta tornava o gerenciamento da alimentação algo invisível e caro.",
+                content_en: "Brazil is among the top 10 food-wasting countries in the world. In daily life, the problem is even more concrete: fridges full of forgotten items, impulse purchases without planning, and difficulty maintaining a balanced diet in busy routines. The lack of a tool to centralize what is bought, consumed, and discarded made food management invisible and costly."
+            },
+            {
+                title: "Pesquisa & Descoberta",
+                title_en: "Research & Discovery",
+                type: "research",
+                methods: ["Entrevistas com usuários", "Benchmark competitivo", "Mapa de empatia", "Proto-persona"],
+                methods_en: ["User interviews", "Competitive benchmark", "Empathy map", "Proto-persona"],
+                content: "Realizamos pesquisa qualitativa com usuários de diferentes perfis para entender os padrões de compra e consumo de alimentos. O benchmark mapeou apps como Kitchee It, No Waste, Mealime e Nosh, identificando lacunas no mercado brasileiro. A partir das entrevistas, construímos uma proto-persona (Ana, dona de casa, 40 anos, São Paulo) e um mapa de empatia que revelou o gap entre intenção e comportamento real na cozinha.",
+                content_en: "We conducted qualitative research with users of different profiles to understand food buying and consumption patterns. The benchmark mapped apps like Kitchee It, No Waste, Mealime, and Nosh, identifying gaps in the Brazilian market. From the interviews, we built a proto-persona (Ana, housewife, 40, São Paulo) and an empathy map that revealed the gap between intention and real behavior in the kitchen.",
+                highlights: [
+                    "Usuários não sabem o que têm na geladeira ao fazer a lista de compras",
+                    "Datas de validade são ignoradas até o alimento estragar",
+                    "Dietas fracassam por falta de planejamento prático, não de vontade",
+                    "A barreira de entrada (registrar compras) precisa ser mínima para o app ser adotado"
+                ],
+                highlights_en: [
+                    "Users don't know what's in the fridge when making the shopping list",
+                    "Expiration dates are ignored until food goes bad",
+                    "Diets fail due to lack of practical planning, not willpower",
+                    "The entry barrier (registering purchases) must be minimal for the app to be adopted"
+                ],
+                images: [
+                    {
+                        src: "/images/projects/sustenta/benchmark.png",
+                        caption: "Benchmark competitivo: Kitchee It, No Waste, Mealime e Nosh",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 800
+                    }
+                ]
+            },
+            {
+                title: "Processo de Design",
+                title_en: "Design Process",
+                type: "text",
+                content: "Partimos das descobertas de pesquisa para construir a proto-persona e o mapa de empatia que guiaram todas as decisões de design. O mapa revelou que Ana precisa de organização, não de motivação, pois ela já quer evitar desperdício e só falta uma ferramenta que reduza o atrito do planejamento. O fluxo principal foi definido priorizando o menor atrito no registro de itens: câmera para ler nota fiscal, listas pré-populadas e sugestões inteligentes.",
+                content_en: "We moved from research findings to build the proto-persona and empathy map that guided all design decisions. The map revealed that Ana needs organization, not motivation, since she already wants to avoid waste and just lacks a tool that reduces planning friction. The main flow was defined prioritizing the lowest friction in item registration: camera to read fiscal receipts, pre-populated lists, and smart suggestions.",
+                images: [
+                    {
+                        src: "/images/projects/sustenta/persona.png",
+                        caption: "Proto-persona: Ana, Dona de Casa, 40 anos",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 800
+                    },
+                    {
+                        src: "/images/projects/sustenta/mapa-empatia.png",
+                        caption: "Mapa de empatia: dores, ganhos, comportamentos e necessidades",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 900
+                    }
+                ]
+            },
+            {
+                title: "Solução",
+                title_en: "Solution",
+                type: "text",
+                content: "O Sustenta+ atua como um assistente de alimentação que aprende com o usuário ao longo do tempo. O app permite registrar compras por leitura de nota fiscal, monitora o estoque em casa, alerta sobre vencimentos, sugere receitas com o que já está disponível e gera listas de compra personalizadas baseadas no histórico e na dieta do usuário.",
+                content_en: "Sustenta+ acts as a food assistant that learns from the user over time. The app allows registering purchases by reading fiscal receipts, monitors home inventory, alerts on expiration dates, suggests recipes from available items, and generates personalized shopping lists based on the user's history and diet.",
+                images: [
+                    {
+                        src: "/images/projects/sustenta/telas-dark.png",
+                        caption: "Telas do protótipo: lista de alimentos, adição por nota fiscal e detalhes de item",
+                        fullWidth: true,
+                        width: 1400,
+                        height: 800
+                    }
+                ]
+            },
+            {
+                title: "Resultados & Aprendizados",
+                title_en: "Results & Learnings",
+                type: "outcomes",
+                metrics: [
+                    { value: "4", label: "integrantes na equipe" },
+                    { value: "2", label: "rodadas de refinamento" },
+                    { value: "1", label: "protótipo navegável validado" }
+                ],
+                metrics_en: [
+                    { value: "4", label: "team members" },
+                    { value: "2", label: "refinement rounds" },
+                    { value: "1", label: "validated navigable prototype" }
+                ],
+                content: "O protótipo foi validado com usuários e apresentado para banca avaliadora. O principal aprendizado foi sobre o trade-off entre riqueza de dados e facilidade de onboarding: quanto mais o app sabe sobre o usuário, mais inteligente ele fica, mas isso exige um esforço inicial de cadastro. A solução foi dividir o onboarding em etapas progressivas, com valor entregue desde o primeiro acesso.",
+                content_en: "The prototype was validated with users and presented to an evaluation panel. The key learning was about the trade-off between data richness and onboarding ease: the more the app knows about the user, the smarter it becomes, but it requires an initial registration effort. The solution was to split onboarding into progressive steps, delivering value from the first access."
             }
         ]
     },
