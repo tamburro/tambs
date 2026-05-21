@@ -21,6 +21,9 @@ const ZAMARELO = '#FFD600';
 const ZROSA   = '#FF3CAC';
 const ZLARANJA = '#FF6B00';
 
+// ─── Globo accent ─────────────────────────────────────────────────────────────
+const GBLUE = '#1B4FD8';
+
 // ─── Dados embutidos ─────────────────────────────────────────────────────────
 
 const PERSONAS_DATA = {
@@ -1080,6 +1083,63 @@ function ZapVidaKPIsRoadmap() {
     );
 }
 
+// ─── Globo LP Comparison ─────────────────────────────────────────────────────
+
+function GloboLPComparison() {
+    const variants = [
+        {
+            label: 'A',
+            title: 'Padrão',
+            sub: 'LP institucional vigente',
+            src: '/images/projects/ab_test/A.png',
+        },
+        {
+            label: 'B',
+            title: 'NYT',
+            sub: 'Abordagem editorial direta',
+            src: '/images/projects/ab_test/B.png',
+        },
+    ];
+
+    return (
+        <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+            {variants.map((v) => (
+                <div key={v.label} style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <span style={{
+                            width: 28, height: 28, borderRadius: 6,
+                            background: GBLUE,
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            fontSize: 13, fontWeight: 700, color: '#fff',
+                            fontFamily: 'var(--font-mono)',
+                            flexShrink: 0,
+                        }}>{v.label}</span>
+                        <div>
+                            <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: 'var(--moonlight)' }}>{v.title}</p>
+                            <p style={{ margin: 0, fontSize: 11, color: 'var(--mist)' }}>{v.sub}</p>
+                        </div>
+                    </div>
+                    <div style={{
+                        borderRadius: 10,
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.08)',
+                        maxHeight: 520,
+                        overflowY: 'auto',
+                    }}>
+                        <Image
+                            src={v.src}
+                            alt={`Variante ${v.label} — ${v.title}`}
+                            width={1638}
+                            height={2368}
+                            style={{ width: '100%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
+
 // ─── Registry ────────────────────────────────────────────────────────────────
 
 const SECTION_COMPONENTS = {
@@ -1098,6 +1158,7 @@ const SECTION_COMPONENTS = {
     ZapVidaIA:           ZapVidaIA,
     ZapVidaFeatures:     ZapVidaFeatures,
     ZapVidaKPIsRoadmap:  ZapVidaKPIsRoadmap,
+    GloboLPComparison:   GloboLPComparison,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
