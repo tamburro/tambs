@@ -1103,7 +1103,7 @@ function GloboLPComparison() {
 
 function EnsinemeDevices() {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '8px 0' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', padding: '8px 0' }}>
             <img
                 src="/images/projects/ensineme/ensineme_animado.gif"
                 alt="Plataforma Ensineme em diferentes dispositivos"
