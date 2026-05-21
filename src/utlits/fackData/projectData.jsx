@@ -7,7 +7,7 @@ export const projectsData = [
         src: "/images/projects/subida_full.jpg",
         category: "Product Design",
         tags: ["Product Design"],
-        title: "Subida — iFood",
+        title: "Subida · Feature Concept",
         tagline: "A gorjeta contextual que torna visível o trabalho invisível dos entregadores.",
         tagline_en: "The contextual tip that makes delivery workers' invisible effort visible — and pays for it.",
         description: "Feature concept para o iFood que resolve um problema sistêmico: entregadores que sobem andares com carga pesada, sem nenhuma remuneração adicional. A 'Subida' é uma gorjeta opt-in no checkout que vai 100% direto ao entregador — e que ele vê antes de aceitar a corrida, transformando recompensa em incentivo real. O projeto cobre discovery completo, pesquisa de mercado, personas baseadas em dados reais, journey map antes/depois, decisões de UI documentadas e protótipo interativo.",
