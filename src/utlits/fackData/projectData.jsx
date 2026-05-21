@@ -1494,8 +1494,8 @@ export const projectsData = [
     {
         id: 12,
         slug: "ensineme-plataforma-ead-estacio",
-        src: "/images/projects/ensineme/prints/capa_algoritmos.jpg",
-        pageSrc: "/images/projects/ensineme/prints/capa_algoritmos.jpg",
+        src: "/images/projects/ensineme/ensineme_full.jpg",
+        pageSrc: "/images/projects/ensineme/ensineme_full.jpg",
         category: "Product Design",
         tags: ["Product Design"],
         title: "Ensineme · Plataforma EAD",
@@ -1550,6 +1550,12 @@ export const projectsData = [
                     "Each discipline needed its own visual identity, yet recognizable within the same system: Shakespeare has a different palette and rhythm than Algorithms in Journalism, but the interaction patterns needed to be the same",
                     "Components like tabs, timelines, fill-in exercises and quizzes were designed to keep students active and reduce cognitive load for dense content",
                 ],
+            },
+            {
+                title: "A Plataforma",
+                title_en: "The Platform",
+                type: "component",
+                component: "EnsinemeDevices",
             },
             {
                 title: "Diversidade de Conteúdo",

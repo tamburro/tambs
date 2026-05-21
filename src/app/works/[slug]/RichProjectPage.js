@@ -1099,6 +1099,20 @@ function GloboLPComparison() {
     );
 }
 
+// ─── Ensineme Devices ────────────────────────────────────────────────────────
+
+function EnsinemeDevices() {
+    return (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '8px 0' }}>
+            <img
+                src="/images/projects/ensineme/ensineme_animado.gif"
+                alt="Plataforma Ensineme em diferentes dispositivos"
+                style={{ width: '100%', maxWidth: 720, height: 'auto', display: 'block', borderRadius: 10 }}
+            />
+        </div>
+    );
+}
+
 // ─── Ensineme Covers ─────────────────────────────────────────────────────────
 
 function EnsinemeCovers() {
@@ -1171,6 +1185,7 @@ const SECTION_COMPONENTS = {
     ZapVidaFeatures:     ZapVidaFeatures,
     ZapVidaKPIsRoadmap:  ZapVidaKPIsRoadmap,
     GloboLPComparison:   GloboLPComparison,
+    EnsinemeDevices:     EnsinemeDevices,
     EnsinemeCovers:      EnsinemeCovers,
     EnsinemeComponents:  EnsinemeComponents,
 };
