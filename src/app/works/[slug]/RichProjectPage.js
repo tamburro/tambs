@@ -1099,6 +1099,59 @@ function GloboLPComparison() {
     );
 }
 
+// ─── Ensineme Covers ─────────────────────────────────────────────────────────
+
+function EnsinemeCovers() {
+    const covers = [
+        { src: '/images/projects/ensineme/prints/capa_shakespeare.jpg',         alt: 'Elizabethan Society and Shakespeare\'s Theatre' },
+        { src: '/images/projects/ensineme/prints/capa_artes_marciais.jpg',       alt: 'Diferentes abordagens das lutas, artes marciais e esportes de combate' },
+        { src: '/images/projects/ensineme/prints/capa_algoritmos.jpg',           alt: 'Algoritmos no Jornalismo' },
+        { src: '/images/projects/ensineme/prints/capa_processo_legislativo.jpg', alt: 'Processo Legislativo' },
+    ];
+    return (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, borderRadius: 10, overflow: 'hidden' }}>
+            {covers.map((c, i) => (
+                <div key={i} style={{ borderRadius: 6, overflow: 'hidden' }}>
+                    <Image src={c.src} alt={c.alt} width={720} height={450} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                </div>
+            ))}
+        </div>
+    );
+}
+
+// ─── Ensineme Components ──────────────────────────────────────────────────────
+
+function EnsinemeComponents() {
+    const top = [
+        { src: '/images/projects/ensineme/prints/componentes_cards.jpg', alt: 'Grade de objetivos por modulo' },
+        { src: '/images/projects/ensineme/prints/comp_timeline.jpg',     alt: 'Timeline historica com icones' },
+    ];
+    const bottom = [
+        { src: '/images/projects/ensineme/prints/comp_cards_comparacao.jpg', alt: 'Cards de comparacao' },
+        { src: '/images/projects/ensineme/prints/comp_tabs.jpg',             alt: 'Tabs interativas' },
+        { src: '/images/projects/ensineme/prints/comp_exercicio.jpg',        alt: 'Exercicio de preenchimento' },
+    ];
+    const cell = { borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' };
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                {top.map((c, i) => (
+                    <div key={i} style={cell}>
+                        <Image src={c.src} alt={c.alt} width={720} height={450} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    </div>
+                ))}
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+                {bottom.map((c, i) => (
+                    <div key={i} style={cell}>
+                        <Image src={c.src} alt={c.alt} width={480} height={300} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 // ─── Registry ────────────────────────────────────────────────────────────────
 
 const SECTION_COMPONENTS = {
@@ -1118,6 +1171,8 @@ const SECTION_COMPONENTS = {
     ZapVidaFeatures:     ZapVidaFeatures,
     ZapVidaKPIsRoadmap:  ZapVidaKPIsRoadmap,
     GloboLPComparison:   GloboLPComparison,
+    EnsinemeCovers:      EnsinemeCovers,
+    EnsinemeComponents:  EnsinemeComponents,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
