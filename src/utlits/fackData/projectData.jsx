@@ -1380,7 +1380,7 @@ export const projectsData = [
         role: "Product Designer",
         timeline: "Teste · 2 semanas",
         timeline_en: "Test · 2 weeks",
-        team: "Equipe",
+        team: "Multidisciplinar",
         client: "Editora Globo",
         tools: ["Figma", "Google Ads"],
         pageType: "rich",
