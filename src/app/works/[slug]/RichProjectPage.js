@@ -1136,32 +1136,21 @@ function EnsinemeCovers() {
 // ─── Ensineme Components ──────────────────────────────────────────────────────
 
 function EnsinemeComponents() {
-    const top = [
-        { src: '/images/projects/ensineme/prints/componentes_cards.jpg', alt: 'Grade de objetivos por modulo' },
-        { src: '/images/projects/ensineme/prints/comp_timeline.jpg',     alt: 'Timeline historica com icones' },
+    const items = [
+        { src: '/images/projects/ensineme/prints/mockup_artes_marciais.jpg',           alt: 'Artes Marciais' },
+        { src: '/images/projects/ensineme/prints/mockup_relacoes_internacionais.jpg',   alt: 'Relacoes Internacionais' },
+        { src: '/images/projects/ensineme/prints/mockup_comunidades_sinalizantes.jpg',  alt: 'Comunidades Sinalizantes' },
+        { src: '/images/projects/ensineme/prints/mockup_ciberarte.jpg',                 alt: 'Ciberarte e Ciberpoesia' },
+        { src: '/images/projects/ensineme/prints/mockup_atos_administrativos.jpg',      alt: 'Atos Administrativos' },
+        { src: '/images/projects/ensineme/prints/mockup_linguagem_jornalistica.jpg',    alt: 'Linguagem Jornalistica no Audiovisual' },
     ];
-    const bottom = [
-        { src: '/images/projects/ensineme/prints/comp_cards_comparacao.jpg', alt: 'Cards de comparacao' },
-        { src: '/images/projects/ensineme/prints/comp_tabs.jpg',             alt: 'Tabs interativas' },
-        { src: '/images/projects/ensineme/prints/comp_exercicio.jpg',        alt: 'Exercicio de preenchimento' },
-    ];
-    const cell = { borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' };
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-                {top.map((c, i) => (
-                    <div key={i} style={cell}>
-                        <Image src={c.src} alt={c.alt} width={720} height={450} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                    </div>
-                ))}
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
-                {bottom.map((c, i) => (
-                    <div key={i} style={cell}>
-                        <Image src={c.src} alt={c.alt} width={480} height={300} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                    </div>
-                ))}
-            </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+            {items.map((c, i) => (
+                <div key={i} style={{ borderRadius: 8, overflow: 'hidden' }}>
+                    <Image src={c.src} alt={c.alt} width={600} height={450} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                </div>
+            ))}
         </div>
     );
 }
