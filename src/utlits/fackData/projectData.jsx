@@ -1368,6 +1368,7 @@ export const projectsData = [
         id: 11,
         slug: "globo-ab-test-landing-page-aquisicao",
         src: "/images/projects/ab_test/oglb_full.jpg",
+        pageSrc: "/images/projects/ab_test/oglb_full_intern.jpg",
         category: "Product Design",
         tags: ["Product Design"],
         title: "O Globo · Teste A/B",
