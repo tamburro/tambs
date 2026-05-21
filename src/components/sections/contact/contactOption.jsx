@@ -29,7 +29,7 @@ const ContactOption = () => {
                             </div>
                             <h2>{t.contact.phoneLabel}</h2>
                             <p>
-                                <a href="https://wa.me/5521969018110" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                <a href="https://wa.me/5521969018110?text=Olá%20Pedro%2C%20gostaria%20de%20conversar%20sobre..." target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                                     +55 21 96901-8110
                                 </a>
                             </p>
