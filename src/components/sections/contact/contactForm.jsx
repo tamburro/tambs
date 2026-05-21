@@ -54,7 +54,7 @@ const ContactForm = () => {
                             <div className="col-md-12">
                                 <div className="form-group">
                                     <label htmlFor="message">{t.contact.messageLabel}</label>
-                                    <textarea name="message" id="message" className="form-control" rows="4" placeholder="..." value={form.message} onChange={handleChange} required />
+                                    <textarea name="message" id="message" className="form-control" rows="4" placeholder="Olá Pedro, gostaria de conversar sobre..." value={form.message} onChange={handleChange} required />
                                 </div>
                             </div>
                             <div className="col-md-12">

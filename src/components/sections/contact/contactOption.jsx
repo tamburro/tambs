@@ -28,7 +28,11 @@ const ContactOption = () => {
                                 <i><RiPhoneLine size={20} /></i>
                             </div>
                             <h2>{t.contact.phoneLabel}</h2>
-                            <p>+55 21 96901-8110</p>
+                            <p>
+                                <a href="https://wa.me/5521969018110" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                    +55 21 96901-8110
+                                </a>
+                            </p>
                         </div>
                     </SlideUp>
                     <SlideUp delay={4}>

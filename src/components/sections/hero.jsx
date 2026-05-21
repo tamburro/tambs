@@ -59,9 +59,9 @@ const Hero = () => {
 
             {/* Spline 3D background */}
             <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'auto' }}>
-                <ErrorBoundary fallback={<div style={{ width: '100%', height: '100vh', background: '#0D0D18' }} />}>
+                <ErrorBoundary fallback={<div style={{ width: '100%', height: '100vh', background: 'radial-gradient(ellipse at 65% 40%, rgba(130,0,219,0.18) 0%, #080810 65%)' }} />}>
                     <Suspense fallback={
-                        <div style={{ width: '100%', height: '100vh', background: '#0D0D18' }} />
+                        <div style={{ width: '100%', height: '100vh', background: 'radial-gradient(ellipse at 65% 40%, rgba(130,0,219,0.18) 0%, #080810 65%)' }} />
                     }>
                         {isVisible && (
                             <Spline
