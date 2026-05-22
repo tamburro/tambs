@@ -3,6 +3,7 @@
 export const projectsData = [
     {
         id: 0,
+        hidden: true,
         slug: "ifood-subida-feature-concept",
         src: "/images/projects/subida_full.jpg",
         category: "Product Design",
