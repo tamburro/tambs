@@ -1239,7 +1239,7 @@ export const projectsData = [
         pageSrc: "/images/projects/ab_test/oglb_full_intern.jpg",
         category: "Product Design",
         tags: ["Product Design"],
-        title: "O Globo · Teste A/B",
+        title: "Product Designer · Conversão & Aquisição",
         tagline: "Uma LP densa com múltiplos argumentos de venda. Outra limpa, que chega ao preço mais rápido. Qual converte melhor não era óbvio.",
         tagline_en: "One dense LP with multiple sales arguments. One clean, getting to the price faster. Which converts better wasn't obvious.",
         description: "Teste A/B conduzido em equipe nas páginas de aquisição de assinatura d'O Globo, comparando a landing page institucional vigente contra uma variante mais focada, inspirada na hierarquia editorial do NYT. O projeto envolveu hipótese de design, estruturação do teste e análise de resultados, incluindo a tensão entre métricas de plataforma e dados de CRM.",
