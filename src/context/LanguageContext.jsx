@@ -25,7 +25,7 @@ export const translations = {
     resume: {
       experience: 'Experience',
       education: 'Education',
-      exp1: 'Creation and management of campaigns, landing pages, email marketing, videos and digital and print materials for brands such as O Globo, Valor Econômico and Globo Condé Nast. Landing page implementation in HTML/CSS/JS and constant collaboration with marketing and digital channel teams.',
+      exp1: 'Design of acquisition pages and subscription flows focused on conversion and revenue growth for Editora Globo\'s digital products. Co-creation of acquisition strategy with marketing and digital channel teams, landing page implementation in HTML/CSS/JS, conversion journey optimization based on performance metrics (CRO), and responsive email marketing focused on retention.',
       exp2: 'Design of educational interfaces for Estácio\'s distance learning platform, focused on pedagogical clarity and consistency. Front-end implementation with HTML, CSS and JS. Redesign of educational infographics to improve comprehension of complex content.',
       exp3: 'Design of educational interfaces for Estácio\'s distance learning platform. HTML, CSS and JS implementation in collaboration with product and technology teams. Redesign of educational infographics.',
       exp4: 'Responsible for editing and finishing photographic and video materials for various independent productions.',
@@ -146,7 +146,7 @@ export const translations = {
     resume: {
       experience: 'Experiência',
       education: 'Formação',
-      exp1: 'Criação e gestão de campanhas, landing pages, email marketing, vídeos e materiais digitais e impressos para marcas como O Globo, Valor Econômico e Globo Condé Nast. Implementação de landing pages em HTML/CSS/JS e troca constante com times de marketing e canais digitais.',
+      exp1: 'Design de páginas de aquisição e fluxos de assinatura orientados a conversão e crescimento de receita para os produtos digitais da Editora Globo. Co-criação da estratégia de aquisição com times de marketing e canais digitais, implementação de landing pages em HTML/CSS/JS, otimização de jornadas com base em métricas de performance (CRO) e email marketing responsivo focado em retenção.',
       exp2: 'Design de interfaces educacionais para a plataforma EAD da Estácio, com foco em clareza pedagógica e consistência. Implementação Front End com HTML, CSS e JS. Redesign de infográficos educacionais, melhorando a compreensão de conteúdos complexos.',
       exp3: 'Design de interfaces educacionais para a plataforma EAD da Estácio. Implementação em HTML, CSS e JS em colaboração com times de produto e tecnologia. Redesign de infográficos educacionais.',
       exp4: 'Responsável pela edição e finalização de materiais fotográficos e em vídeo para diversas produções independentes.',
