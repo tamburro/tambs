@@ -11,7 +11,7 @@ import { MagicCard, useSpotlight } from '@/components/ui/MagicCard';
 
 const DISPLAY_ORDER = [11, 12, 1, 6, 2, 7, 5, 4, 3, 8, 9, 10];
 const VISIBLE_COUNT = 6;
-const FILTER_ORDER = ["Product Design", "AI Engineering", "Game Design"];
+const FILTER_ORDER = ["Product Design", "AI Engineering", "Game Design", "Data Viz"];
 
 const Portfolio = ({ className }) => {
     const { t, lang } = useLanguage();
