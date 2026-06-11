@@ -7,8 +7,12 @@ Carregado client-side via `src/components/ui/bootstrapForBrowser.tsx` — propos
 Não mover para import global no layout.
 
 ### i18n
-Sem biblioteca externa. Toggle PT/EN feito com objetos de tradução inline por página.
-`LanguageContext` está em `src/app/layout.js`.
+Sem biblioteca externa. Todas as traduções PT/EN vivem em `src/context/LanguageContext.jsx`.
+
+### Identidade (redesign phantom.land, jun/2026)
+- Home = galeria 3D esférica (`SphereGallery`), sem hero/menu tradicional
+- Estilos do chrome novo em `src/assets/css/phantom.css` (prefixo `ph-`); `style.css` permanece só para as páginas de projeto (`/works/[slug]`)
+- `/gallery` e `/works` são redirects para `/` — links antigos dependem disso
 
 ### Arquivos
 - Componentes em `.js`, não `.tsx` (exceto bootstrapForBrowser)

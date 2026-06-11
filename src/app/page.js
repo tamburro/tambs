@@ -1,24 +1,10 @@
-import React from 'react'
-import Hero from '../components/sections/hero'
-import ProfileSection from '../components/sections/profileSection'
-import Portfolio from '../components/sections/portfolio'
-import Resume from '../components/sections/resume'
-import ScrollSnap from '../components/ui/ScrollSnap'
-import SkillsSection from '../components/sections/skillsSection'
-import CallToAction from '../components/sections/callToAction'
+import GalleryHome from '@/components/gallery/GalleryHome'
 
-const Home = () => {
-    return (
-        <>
-            <ScrollSnap />
-            <Hero />
-            <ProfileSection />
-            <SkillsSection />
-            <Resume />
-            <Portfolio />
-            <CallToAction />
-        </>
-    )
+export const metadata = {
+    title: 'Pedro Tambs — Product Designer & Design Engineer',
+    description: 'Immersive 3D gallery of selected works.',
 }
 
-export default Home
+export default function Home() {
+    return <GalleryHome />
+}

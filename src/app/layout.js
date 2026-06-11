@@ -1,8 +1,8 @@
 import Preloader from "@/components/ui/preloader";
 import "./global.css"
 import BootstrapForBrowser from "@/components/ui/bootstrapForBrowser";
-import Header from "@/components/sections/header";
-import Footer from "@/components/sections/footer";
+import PhantomHeader from "@/components/layout/PhantomHeader";
+import BottomNav from "@/components/layout/BottomNav";
 import Providers from "@/components/ui/Providers";
 
 export const metadata = {
@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <BootstrapForBrowser />
           <Preloader />
-          <Header />
+          <PhantomHeader />
           {children}
-          <Footer />
+          <BottomNav />
         </Providers>
       </body>
     </html>

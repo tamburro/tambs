@@ -6,7 +6,13 @@ import gsap from 'gsap'
 import { projectsData } from '@/utlits/fackData/projectData'
 import { useLanguage } from '@/context/LanguageContext'
 
-const GALLERY_ORDER = [11, 12, 13, 14, 1, 6, 2, 7, 5, 4, 3, 8, 9, 10]
+export const GALLERY_ORDER = [11, 12, 13, 14, 1, 6, 2, 7, 5, 4, 3, 8, 9, 10]
+
+export function getGalleryProjects() {
+    return GALLERY_ORDER
+        .map(id => projectsData.find(p => p.id === id))
+        .filter(Boolean)
+}
 
 const RADIUS = 30
 const ROWS = [-0.62, -0.31, 0, 0.31, 0.62] // latitudes in radians
@@ -14,19 +20,18 @@ const COLS = 12
 const TILE_PHI = 0.42   // tile width (radians of longitude)
 const TILE_THETA = 0.26 // tile height (radians of latitude)
 
-export default function SphereGallery() {
+export default function SphereGallery({ activeFilter = null }) {
     const mountRef = useRef(null)
     const labelRef = useRef(null)
     const overlayRef = useRef(null)
     const overlayTitleRef = useRef(null)
+    const tilesRef = useRef([])
     const router = useRouter()
-    const { t, lang } = useLanguage()
+    const { t } = useLanguage()
     const [ready, setReady] = useState(false)
 
     useEffect(() => {
-        const projects = GALLERY_ORDER
-            .map(id => projectsData.find(p => p.id === id))
-            .filter(Boolean)
+        const projects = getGalleryProjects()
 
         const mount = mountRef.current
         const scene = new THREE.Scene()
@@ -36,7 +41,7 @@ export default function SphereGallery() {
         const renderer = new THREE.WebGLRenderer({ antialias: true })
         renderer.setSize(mount.clientWidth, mount.clientHeight)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-        renderer.setClearColor(0x0d0d18)
+        renderer.setClearColor(0x161616)
         mount.appendChild(renderer.domElement)
 
         const group = new THREE.Group()
@@ -60,22 +65,59 @@ export default function SphereGallery() {
             group.add(line)
         })
 
-        function makeLabelTexture(text) {
+        // label strips: top = category + title, bottom = tag chips + year
+        const LABEL_W = 1024
+        const LABEL_H = 64
+        function makeStripTexture(draw) {
             const cv = document.createElement('canvas')
-            cv.width = 512
-            cv.height = 48
+            cv.width = LABEL_W
+            cv.height = LABEL_H
             const ctx = cv.getContext('2d')
-            ctx.fillStyle = 'rgba(255,255,255,0.55)'
-            ctx.font = '500 19px "Space Mono", monospace'
-            ctx.textBaseline = 'middle'
-            ctx.fillText(text.toUpperCase(), 4, 24)
+            draw(ctx)
             const tex = new THREE.CanvasTexture(cv)
             tex.colorSpace = THREE.SRGBColorSpace
             tex.wrapS = THREE.RepeatWrapping
             tex.repeat.x = -1
             return tex
         }
-        const labelTexCache = {}
+
+        function makeTopTexture(project) {
+            return makeStripTexture(ctx => {
+                ctx.textBaseline = 'middle'
+                ctx.font = '400 26px "Space Mono", monospace'
+                ctx.fillStyle = 'rgba(255,255,255,0.6)'
+                ctx.fillText((project.category || '').toUpperCase(), 4, LABEL_H / 2)
+                ctx.font = '700 30px "Space Mono", monospace'
+                ctx.fillStyle = 'rgba(255,255,255,0.95)'
+                const title = (project.title || '').toUpperCase()
+                ctx.fillText(title, LABEL_W - ctx.measureText(title).width - 4, LABEL_H / 2)
+            })
+        }
+
+        function makeBottomTexture(project) {
+            return makeStripTexture(ctx => {
+                ctx.textBaseline = 'middle'
+                let x = 4
+                const tags = (project.tags || []).slice(0, 2)
+                tags.forEach(tag => {
+                    const text = tag.toUpperCase()
+                    ctx.font = '400 24px "Space Mono", monospace'
+                    const w = ctx.measureText(text).width + 36
+                    ctx.strokeStyle = 'rgba(255,255,255,0.4)'
+                    ctx.lineWidth = 2
+                    ctx.beginPath()
+                    ctx.roundRect(x, 4, w, LABEL_H - 8, (LABEL_H - 8) / 2)
+                    ctx.stroke()
+                    ctx.fillStyle = 'rgba(255,255,255,0.78)'
+                    ctx.fillText(text, x + 18, LABEL_H / 2 + 1)
+                    x += w + 12
+                })
+                ctx.font = '400 26px "Space Mono", monospace'
+                ctx.fillStyle = 'rgba(255,255,255,0.6)'
+                const year = project.year || ''
+                ctx.fillText(year, LABEL_W - ctx.measureText(year).width - 4, LABEL_H / 2)
+            })
+        }
 
         const loader = new THREE.TextureLoader()
         const tiles = []
@@ -96,6 +138,24 @@ export default function SphereGallery() {
                 assignments[rowIdx][c] = idx
             }
         })
+
+        const topTexCache = {}
+        const bottomTexCache = {}
+
+        function makeStripMesh(tex, lon, thetaStart, height) {
+            const geo = new THREE.SphereGeometry(
+                RADIUS, 12, 2,
+                lon - TILE_PHI / 2, TILE_PHI * 0.92,
+                thetaStart, height
+            )
+            const mat = new THREE.MeshBasicMaterial({
+                map: tex,
+                side: THREE.BackSide,
+                transparent: true,
+                opacity: 0,
+            })
+            return new THREE.Mesh(geo, mat)
+        }
 
         ROWS.forEach((lat, rowIdx) => {
             const rowOffset = rowIdx % 2 === 0 ? 0 : Math.PI / COLS
@@ -129,34 +189,28 @@ export default function SphereGallery() {
                 mesh.userData = {
                     project,
                     lat,
-                    lon: lon + TILE_PHI / 2 - TILE_PHI / 2,
                     centerDir: new THREE.Vector3().setFromSphericalCoords(1, thetaCenter, lon).normalize(),
                     baseOpacity: 0,
                     hoverBoost: 0,
+                    filterDim: 1,
+                    filterActive: true,
                     introDone: false,
                 }
                 group.add(mesh)
                 tiles.push(mesh)
 
-                // micro-label below the tile
-                const labelText = `${project.year || ''} · ${project.category || ''}`
-                if (!labelTexCache[labelText]) labelTexCache[labelText] = makeLabelTexture(labelText)
-                const labelGeo = new THREE.SphereGeometry(
-                    RADIUS, 12, 2,
-                    lon - TILE_PHI / 2, TILE_PHI * 0.9,
-                    thetaCenter + TILE_THETA / 2 + 0.012, 0.022
-                )
-                const labelMat = new THREE.MeshBasicMaterial({
-                    map: labelTexCache[labelText],
-                    side: THREE.BackSide,
-                    transparent: true,
-                    opacity: 0,
-                })
-                const labelMesh = new THREE.Mesh(labelGeo, labelMat)
-                mesh.userData.labelMesh = labelMesh
-                group.add(labelMesh)
+                if (!topTexCache[project.id]) topTexCache[project.id] = makeTopTexture(project)
+                if (!bottomTexCache[project.id]) bottomTexCache[project.id] = makeBottomTexture(project)
+
+                const STRIP_H = 0.028
+                const topMesh = makeStripMesh(topTexCache[project.id], lon, thetaCenter - TILE_THETA / 2 - 0.014 - STRIP_H, STRIP_H)
+                const bottomMesh = makeStripMesh(bottomTexCache[project.id], lon, thetaCenter + TILE_THETA / 2 + 0.014, STRIP_H)
+                mesh.userData.labelMeshes = [topMesh, bottomMesh]
+                group.add(topMesh)
+                group.add(bottomMesh)
             }
         })
+        tilesRef.current = tiles
 
         // ---- interaction state ----
         const rot = { x: 0, y: 0 }          // current
@@ -345,7 +399,7 @@ export default function SphereGallery() {
             if (!dragging && !transitioning) {
                 raycaster.setFromCamera(pointer, camera)
                 const hits = raycaster.intersectObjects(tiles)
-                const hit = hits.length ? hits[0].object : null
+                const hit = hits.length && hits[0].object.userData.filterActive ? hits[0].object : null
                 if (hit !== hovered) {
                     if (hovered) {
                         gsap.to(hovered.userData, { hoverBoost: 0, duration: 0.4, ease: 'power2.out' })
@@ -371,9 +425,11 @@ export default function SphereGallery() {
                 tileWorldDir.copy(tile.userData.centerDir).applyQuaternion(group.quaternion)
                 const dot = tileWorldDir.dot(forward)
                 const falloff = THREE.MathUtils.smoothstep(dot, -0.1, 0.75)
-                const base = tile.userData.baseOpacity * (0.18 + falloff * 0.82)
+                const base = tile.userData.baseOpacity * (0.18 + falloff * 0.82) * tile.userData.filterDim
                 tile.material.opacity = Math.min(1, base + tile.userData.hoverBoost * 0.35)
-                tile.userData.labelMesh.material.opacity = tile.material.opacity * 0.85
+                tile.userData.labelMeshes.forEach(label => {
+                    label.material.opacity = tile.material.opacity * 0.85
+                })
             })
 
             renderer.render(scene, camera)
@@ -390,18 +446,34 @@ export default function SphereGallery() {
                 tile.geometry.dispose()
                 if (tile.material.map) tile.material.map.dispose()
                 tile.material.dispose()
-                tile.userData.labelMesh.geometry.dispose()
-                tile.userData.labelMesh.material.dispose()
+                tile.userData.labelMeshes.forEach(label => {
+                    label.geometry.dispose()
+                    label.material.dispose()
+                })
             })
-            Object.values(labelTexCache).forEach(tex => tex.dispose())
+            Object.values(topTexCache).forEach(tex => tex.dispose())
+            Object.values(bottomTexCache).forEach(tex => tex.dispose())
             renderer.dispose()
             if (renderer.domElement.parentNode === mount) mount.removeChild(renderer.domElement)
+            tilesRef.current = []
         }
     }, [router])
 
-    const hint = lang === 'en'
-        ? 'Drag to explore · Click to open'
-        : 'Arraste para explorar · Clique para abrir'
+    // dim tiles that don't match the active filter
+    useEffect(() => {
+        tilesRef.current.forEach(tile => {
+            const { project } = tile.userData
+            const match = !activeFilter
+                || project.category === activeFilter
+                || (project.tags || []).includes(activeFilter)
+            tile.userData.filterActive = match
+            gsap.to(tile.userData, {
+                filterDim: match ? 1 : 0.06,
+                duration: 0.7,
+                ease: 'power2.inOut',
+            })
+        })
+    }, [activeFilter])
 
     return (
         <div className="sphere-gallery-root">
@@ -412,8 +484,8 @@ export default function SphereGallery() {
 
             {/* heading */}
             <div className={`sphere-gallery-ui ${ready ? 'is-ready' : ''}`}>
-                <p className="sphere-gallery-eyebrow">{t.portfolio.title}</p>
-                <p className="sphere-gallery-hint">{hint}</p>
+                <p className="sphere-gallery-eyebrow">{t.gallery.eyebrow}</p>
+                <p className="sphere-gallery-hint">{t.gallery.hint}</p>
             </div>
 
             {/* cursor label */}
