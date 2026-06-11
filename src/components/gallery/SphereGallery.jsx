@@ -15,7 +15,7 @@ export function getGalleryProjects() {
 }
 
 const RADIUS = 30
-const ROWS = [-0.62, -0.31, 0, 0.31, 0.62] // latitudes in radians
+const ROWS = [-0.68, -0.34, 0, 0.34, 0.68] // latitudes in radians
 const COLS = 12
 const TILE_PHI = 0.42   // tile width (radians of longitude)
 const TILE_THETA = 0.26 // tile height (radians of latitude)
@@ -202,9 +202,9 @@ export default function SphereGallery({ activeFilter = null }) {
                 if (!topTexCache[project.id]) topTexCache[project.id] = makeTopTexture(project)
                 if (!bottomTexCache[project.id]) bottomTexCache[project.id] = makeBottomTexture(project)
 
-                const STRIP_H = 0.028
-                const topMesh = makeStripMesh(topTexCache[project.id], lon, thetaCenter - TILE_THETA / 2 - 0.014 - STRIP_H, STRIP_H)
-                const bottomMesh = makeStripMesh(bottomTexCache[project.id], lon, thetaCenter + TILE_THETA / 2 + 0.014, STRIP_H)
+                const STRIP_H = 0.022
+                const topMesh = makeStripMesh(topTexCache[project.id], lon, thetaCenter - TILE_THETA / 2 - 0.008 - STRIP_H, STRIP_H)
+                const bottomMesh = makeStripMesh(bottomTexCache[project.id], lon, thetaCenter + TILE_THETA / 2 + 0.008, STRIP_H)
                 mesh.userData.labelMeshes = [topMesh, bottomMesh]
                 group.add(topMesh)
                 group.add(bottomMesh)
@@ -283,11 +283,11 @@ export default function SphereGallery({ activeFilter = null }) {
             lastY = e.clientY
 
             const speed = 0.0035
-            target.y += dx * speed
-            target.x += dy * speed
+            target.y -= dx * speed
+            target.x -= dy * speed
             target.x = THREE.MathUtils.clamp(target.x, -MAX_PITCH, MAX_PITCH)
-            velocity.y = dx * speed
-            velocity.x = dy * speed
+            velocity.y = -dx * speed
+            velocity.x = -dy * speed
         }
 
         function onPointerUp(e) {
