@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import { projectsData } from '@/utlits/fackData/projectData'
 import { useLanguage } from '@/context/LanguageContext'
 
-const GALLERY_ORDER = [11, 12, 13, 14, 1, 6, 2, 7, 5, 4, 3]
+const GALLERY_ORDER = [11, 12, 13, 14, 1, 6, 2, 7, 5, 4, 3, 8, 9, 10]
 
 const RADIUS = 30
 const ROWS = [-0.62, -0.31, 0, 0.31, 0.62] // latitudes in radians
