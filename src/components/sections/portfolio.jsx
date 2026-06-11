@@ -65,16 +65,19 @@ const Portfolio = ({ className }) => {
                             />
                         ))}
                     </div>
-                    {hasMore && (
-                        <div className="portfolio-show-more">
+                    <div className="portfolio-show-more">
+                        {hasMore && (
                             <button
                                 className="theme-btn theme-btn--outline"
                                 onClick={() => setExpanded(v => !v)}
                             >
                                 {expanded ? t.portfolio.showLess : t.portfolio.showMore}
                             </button>
-                        </div>
-                    )}
+                        )}
+                        <Link href="/gallery" className="theme-btn theme-btn--outline">
+                            {t.portfolio.view3d}
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

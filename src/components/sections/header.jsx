@@ -105,7 +105,7 @@ const Header = () => {
     setisSticky(window.scrollY > 85)
   }
 
-  const navLabels = [t.nav.home, t.nav.about, t.nav.works, t.nav.services, t.nav.contact]
+  const navLabels = [t.nav.home, t.nav.about, t.nav.works, t.nav.gallery, t.nav.services, t.nav.contact]
 
   return (
     <header className={`main-header ${isSticky ? "fixed-header" : ""}`}>

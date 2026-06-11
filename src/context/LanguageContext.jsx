@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 // ─── Translations ──────────────────────────────────────────────────────────────
 export const translations = {
   en: {
-    nav: { home: 'Home', about: 'About', services: 'Services', works: 'Projects', contact: 'Contact' },
+    nav: { home: 'Home', about: 'About', services: 'Services', works: 'Projects', gallery: 'Gallery', contact: 'Contact' },
     hireMe: 'Get In Touch',
     hero: {
       tagline: 'Product Designer',
@@ -63,6 +63,7 @@ export const translations = {
       sub: 'From user research to production code. Complete projects, not just screens.',
       showMore: 'View more projects',
       showLess: 'Show less',
+      view3d: 'Explore in 3D',
       filterAll: 'All',
     },
     skills: {
@@ -125,7 +126,7 @@ export const translations = {
     footerCrafted: 'Crafted with ❤️ in Rio de Janeiro',
   },
   pt: {
-    nav: { home: 'Início', about: 'Sobre', services: 'Serviços', works: 'Projetos', contact: 'Contato' },
+    nav: { home: 'Início', about: 'Sobre', services: 'Serviços', works: 'Projetos', gallery: 'Galeria', contact: 'Contato' },
     hireMe: 'Entrar em Contato',
     hero: {
       tagline: 'Designer de Produto',
@@ -184,6 +185,7 @@ export const translations = {
       sub: 'Da pesquisa com usuários ao código em produção. Projetos completos, não só telas.',
       showMore: 'Ver mais projetos',
       showLess: 'Ver menos',
+      view3d: 'Explorar em 3D',
       filterAll: 'Todos',
     },
     skills: {

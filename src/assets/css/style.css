@@ -3755,6 +3755,10 @@ ul.blog_pagination li a:hover {
 .portfolio-show-more {
     text-align: center;
     margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .portfolio-filters {
@@ -3828,4 +3832,107 @@ ul.blog_pagination li a:hover {
     overflow: hidden;
     border-top: 1px solid rgba(255,255,255,0.06);
     border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+/*** Sphere Gallery ***/
+.sphere-gallery-root {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: var(--void);
+    overflow: hidden;
+}
+
+.sphere-gallery-canvas {
+    position: absolute;
+    inset: 0;
+}
+
+.sphere-gallery-canvas canvas {
+    display: block;
+}
+
+.sphere-gallery-vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 52%, rgba(13, 13, 24, 0.78) 100%);
+}
+
+.sphere-gallery-ui {
+    position: absolute;
+    left: 40px;
+    bottom: 36px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.9s ease 0.4s, transform 0.9s ease 0.4s;
+}
+
+.sphere-gallery-ui.is-ready {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sphere-gallery-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--aurora);
+    margin: 0 0 6px;
+}
+
+.sphere-gallery-hint {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(240, 240, 250, 0.45);
+    margin: 0;
+}
+
+.sphere-gallery-label {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 20;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(13, 13, 24, 0.82);
+    border: 1px solid var(--stardust);
+    padding: 7px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    white-space: nowrap;
+}
+
+.sphere-gallery-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    background: var(--void);
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sphere-gallery-overlay-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 72px);
+    color: #fff;
+    opacity: 0;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .sphere-gallery-ui {
+        left: 20px;
+        bottom: 24px;
+    }
 }
