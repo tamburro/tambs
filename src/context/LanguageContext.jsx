@@ -25,7 +25,7 @@ export const translations = {
       toggleProfile: 'Profile',
       toggleApproach: 'Approach',
       eyebrow: 'About',
-      headline: ['Design that', 'speaks before', 'words®'],
+      headline: ['Pedro', 'Tamburro'],
       statement: "I'm Pedro Tamburro, a product designer with 16 years of experience, 7 in digital product. I design and build complete digital products — from user research, information architecture and UI design to production code. I build AI-driven products and ship from idea to deploy.",
       sub: "Currently a Product Designer at Editora Globo. Graduate in Graphic Design from Senac RJ, MBA in UX Design from Instituto Infnet, currently pursuing an MBA in AI-Driven Innovation & UX at UX Unicórnio. I believe the best designer today is one who can also build. That's the standard I hold myself to.",
       stats: [
@@ -73,7 +73,7 @@ export const translations = {
     },
     contact: {
       eyebrow: 'Contact',
-      headline: ["Let's", 'Talk®'],
+      headline: ["Let's", 'Talk'],
       intro: "Open to full-time and contract roles. I cover the full product design cycle, from user research to shipped code.",
       locationLabel: 'Location',
       locationValue: 'Rio de Janeiro, Brazil',
@@ -104,7 +104,7 @@ export const translations = {
       backToProjects: 'Back to Works',
     },
     footer: {
-      cta: "Let's Talk®",
+      cta: "Let's Talk",
       rights: 'All Rights Reserved.',
       crafted: 'Crafted with ❤️ in Rio de Janeiro',
     },
@@ -131,7 +131,7 @@ export const translations = {
       toggleProfile: 'Perfil',
       toggleApproach: 'Abordagem',
       eyebrow: 'Sobre',
-      headline: ['Design que', 'fala antes', 'das palavras®'],
+      headline: ['Pedro', 'Tamburro'],
       statement: 'Sou Pedro Tamburro, product designer com 16 anos de carreira, 7 em produto digital. Projeto e construo produtos digitais completos — da pesquisa com usuários, arquitetura de informação e design de UI até o código em produção. Construo produtos orientados por IA e entrego da ideia ao deploy.',
       sub: 'Atualmente Product Designer na Editora Globo. Graduado em Design Gráfico pelo Senac RJ, MBA em UX Design pelo Instituto Infnet e cursando MBA em Inovação Orientada à IA e UX pela UX Unicórnio. Acredito que o melhor designer hoje é aquele que também sabe construir. É esse o padrão que busco.',
       stats: [
@@ -179,7 +179,7 @@ export const translations = {
     },
     contact: {
       eyebrow: 'Contato',
-      headline: ['Vamos', 'Conversar®'],
+      headline: ['Vamos', 'Conversar'],
       intro: 'Disponível para vagas CLT e PJ. Cubro o ciclo completo de design de produto, da pesquisa com usuários ao código em produção.',
       locationLabel: 'Localização',
       locationValue: 'Rio de Janeiro, Brasil',
@@ -210,7 +210,7 @@ export const translations = {
       backToProjects: 'Voltar aos Trabalhos',
     },
     footer: {
-      cta: 'Vamos Conversar®',
+      cta: 'Vamos Conversar',
       rights: 'Todos os Direitos Reservados.',
       crafted: 'Feito com ❤️ no Rio de Janeiro',
     },
