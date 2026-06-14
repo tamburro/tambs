@@ -6,7 +6,7 @@ import { getProjectBySlug } from '@/utlits/fackData/projectData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiExternalLinkLine, RiArrowLeftLine, RiImageLine, RiArrowUpLine } from '@remixicon/react';
+import { RiExternalLinkLine, RiImageLine, RiArrowUpLine } from '@remixicon/react';
 import { useLanguage } from '@/context/LanguageContext';
 import RichProjectPage from './RichProjectPage';
 
@@ -269,13 +269,19 @@ const SingleProjectPage = ({ params }) => {
                     </div>
                 )}
 
-                {/* Botão Voltar */}
-                <div className="project-back-btn">
-                    <Link href="/works" className="theme-btn theme-btn--outline">
-                        <i><RiArrowLeftLine size={16} /></i> {t.project.backToProjects}
-                    </Link>
-                </div>
             </div>
+
+            <footer className="ph-footer ph-proj-footer">
+                <div className="ph-container">
+                    <Link href="/contact" className="ph-footer-cta">
+                        <span className="ph-display ph-display--hero">{t.footer.cta}</span>
+                    </Link>
+                    <div className="ph-footer-meta">
+                        <Link href="/">← {t.project.backToProjects}</Link>
+                        <span>© {new Date().getFullYear()} Pedro Tamburro</span>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

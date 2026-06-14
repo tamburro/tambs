@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiExternalLinkLine, RiArrowLeftLine } from '@remixicon/react';
+import { RiExternalLinkLine } from '@remixicon/react';
 import { useLanguage } from '@/context/LanguageContext';
 
 // ─── iFood accent ─────────────────────────────────────────────────────────────
@@ -512,24 +512,27 @@ function SectionShell({ num, title, children, accent = RED }) {
             <div style={{
                 display: 'flex',
                 alignItems: 'baseline',
-                gap: 10,
+                gap: 16,
                 marginBottom: 28,
-                paddingBottom: 14,
-                borderBottom: '1px solid rgba(255,255,255,0.07)',
+                paddingBottom: 22,
+                borderBottom: '1px solid var(--ph-hairline)',
             }}>
                 <span style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: 10,
+                    fontFamily: 'var(--ph-mono)',
+                    fontSize: 11,
                     letterSpacing: '0.12em',
                     color: accent,
                     flexShrink: 0,
                 }}>{num}</span>
                 <h2 style={{
                     margin: 0,
-                    fontSize: 'clamp(1.1rem, 2.5vw, 1.35rem)',
-                    fontWeight: 600,
-                    color: 'var(--moonlight)',
-                    letterSpacing: '-0.02em',
+                    fontFamily: 'var(--ph-display)',
+                    fontSize: 'clamp(1.6rem, 3.4vw, 2.5rem)',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    color: 'var(--ph-paper)',
+                    letterSpacing: '-0.025em',
+                    lineHeight: 1.02,
                 }}>{title}</h2>
             </div>
             {children}
@@ -1325,14 +1328,17 @@ const RichProjectPage = ({ project }) => {
                 );
             })}
 
-            {/* Botão Voltar */}
-            <div className="container">
-                <div className="project-back-btn">
-                    <Link href="/works" className="theme-btn theme-btn--outline">
-                        <i><RiArrowLeftLine size={16} /></i> {t.project.backToProjects}
+            <footer className="ph-footer ph-proj-footer">
+                <div className="ph-container">
+                    <Link href="/contact" className="ph-footer-cta">
+                        <span className="ph-display ph-display--hero">{t.footer.cta}</span>
                     </Link>
+                    <div className="ph-footer-meta">
+                        <Link href="/">← {t.project.backToProjects}</Link>
+                        <span>© {new Date().getFullYear()} Pedro Tamburro</span>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
     );
 };
