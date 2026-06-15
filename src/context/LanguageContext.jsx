@@ -31,7 +31,7 @@ export const translations = {
       stats: [
         { value: '16', label: 'Years in design' },
         { value: '07', label: 'Years in digital product' },
-        { value: '14', label: 'Projects in the gallery' },
+        { value: '15', label: 'Projects in the gallery' },
       ],
       approachEyebrow: 'Approach',
       approachHeadline: ['Design.', 'Build.', 'Ship.'],
@@ -137,7 +137,7 @@ export const translations = {
       stats: [
         { value: '16', label: 'Anos em design' },
         { value: '07', label: 'Anos em produto digital' },
-        { value: '14', label: 'Projetos na galeria' },
+        { value: '15', label: 'Projetos na galeria' },
       ],
       approachEyebrow: 'Abordagem',
       approachHeadline: ['Design.', 'Código.', 'Entrega.'],

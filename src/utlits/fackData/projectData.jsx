@@ -106,6 +106,109 @@ export const projectsData = [
         ]
     },
     {
+        id: 15,
+        slug: "notafacil-emissor-nfse-mei",
+        src: "/images/projects/notafacil/notafacil.jpg",
+        category: "Product & AI Engineering",
+        tags: ["Product Design", "AI Engineering"],
+        title: "Nota Fácil",
+        tagline: "Emita NFS-e, receba via Pix e mantenha o DAS em dia — sem virar contador.",
+        tagline_en: "Issue invoices, get paid via Pix and keep taxes current — without becoming an accountant.",
+        description: "SaaS para microempreendedores individuais (MEI) e autônomos emitirem NFS-e, cobrarem via Pix e acompanharem obrigações fiscais como o DAS — tudo em um fluxo único, dark-first e sem jargão contábil. Da emissão em três cliques à confirmação automática do pagamento, o Nota Fácil cobre o ciclo de faturar para quem trabalha por conta própria.",
+        description_en: "SaaS for Brazilian solo entrepreneurs (MEI) and freelancers to issue service invoices (NFS-e), charge via Pix and track tax obligations like the monthly DAS — all in a single, dark-first flow with no accounting jargon. From three-click issuing to automatic payment confirmation, Nota Fácil covers the whole billing cycle for the self-employed.",
+        year: "2026",
+        role: "Product Designer & AI Engineer",
+        timeline: "MVP · iteração contínua",
+        timeline_en: "MVP · continuous iteration",
+        team: "Solo",
+        client: "Produto próprio",
+        tools: ["Next.js", "Prisma", "Stripe", "Claude API", "Vercel"],
+        sections: [
+            {
+                title: "O Problema",
+                title_en: "The Problem",
+                type: "text",
+                content: "O MEI é a maior classe de contribuintes individuais do Brasil, mas a rotina de faturar é hostil. Emitir NFS-e exige navegar portais municipais diferentes em cada cidade; cobrar significa gerar Pix na mão e conferir o extrato; e o DAS vence todo mês, com multa para quem esquece. As ferramentas existentes são sistemas contábeis caros e complexos ou planilhas soltas. Quem trabalha por conta própria acaba virando contador a contragosto, perdendo horas em uma burocracia que deveria ser invisível.",
+                content_en: "The MEI (individual micro-entrepreneur) is Brazil's largest class of solo taxpayers, yet billing is hostile. Issuing an NFS-e means navigating a different municipal portal in every city; charging means generating Pix by hand and checking your bank statement; and the monthly DAS tax comes with a fine if you forget. Existing tools are either expensive, complex accounting suites or loose spreadsheets. The self-employed end up reluctantly becoming accountants, losing hours to bureaucracy that should be invisible."
+            },
+            {
+                title: "Pesquisa de Mercado",
+                title_en: "Market Research",
+                type: "research",
+                methods: ["Análise do ecossistema MEI e das fintechs de PJ digital", "Benchmark de emissores de NFS-e e contas PJ", "Mapeamento de dores de faturamento em comunidades de autônomos"],
+                methods_en: ["MEI ecosystem and digital business-account fintech analysis", "Benchmark of NFS-e issuers and business accounts", "Billing pain mapping across freelancer communities"],
+                content: "O mercado de PJ digital cresceu com contas como Cora, Conta Simples e os apps PJ dos grandes bancos, mas a emissão de NFS-e segue fragmentada por município e descolada da cobrança. Emissores dedicados resolvem a nota, mas não fecham o ciclo com Pix nem com o DAS. A oportunidade é clara: unir nota, recebimento e imposto em um produto enxuto, com a linguagem de quem não é contador.",
+                content_en: "The digital business-account market grew with players like Cora, Conta Simples and the big banks' PJ apps, but NFS-e issuing remains fragmented by municipality and disconnected from charging. Dedicated issuers solve the invoice but never close the loop with Pix or the DAS tax. The opportunity is clear: unite invoice, payment and tax in one lean product, in the language of someone who is not an accountant.",
+                highlights: [
+                    "A emissão de NFS-e é municipal e fragmentada — não há padrão nacional único de UX",
+                    "MEIs misturam cobrança no app do banco, nota no portal e controle em planilha",
+                    "Esquecer o DAS gera multa — cálculo e lembrete automáticos têm valor imediato",
+                    "A barreira é operacional, não conceitual: ninguém quer aprender um ERP contábil"
+                ],
+                highlights_en: [
+                    "NFS-e issuing is municipal and fragmented — there is no single national UX standard",
+                    "MEIs juggle charging in the bank app, invoicing in a portal and tracking in a spreadsheet",
+                    "Missing the DAS means a fine — automatic calculation and reminders deliver instant value",
+                    "The barrier is operational, not conceptual: nobody wants to learn an accounting ERP"
+                ]
+            },
+            {
+                title: "Solução & Produto",
+                title_en: "Solution & Product",
+                type: "text",
+                content: "O Nota Fácil fecha o ciclo em um fluxo único: cadastre o cliente uma vez, emita a NFS-e em três cliques, gere a cobrança Pix vinculada à nota e receba a confirmação automática quando o pagamento cai. O painel de recebimentos mostra notas emitidas, pagas, pendentes e vencidas com alertas; o módulo de DAS calcula o valor da competência e avisa antes do vencimento; e, no fim do ano, o sistema preenche o DASN-SIMEI com os dados já registrados. Tudo em um design dark-first, editorial e sem jargão.",
+                content_en: "Nota Fácil closes the loop in a single flow: register the client once, issue the NFS-e in three clicks, generate a Pix charge linked to the invoice and get automatic confirmation when payment lands. The receivables panel shows invoices issued, paid, pending and overdue with alerts; the DAS module computes the monthly amount and warns before the due date; and at year-end the system fills out the DASN-SIMEI report from the data already recorded. All in a dark-first, editorial design with no jargon."
+            },
+            {
+                title: "Funcionalidades",
+                title_en: "Features",
+                type: "research",
+                methods: ["Emissor de NFS-e", "Cobranças Pix", "Controle de Recebimentos", "DAS Automático", "Relatório Anual (DASN-SIMEI)"],
+                methods_en: ["NFS-e Issuer", "Pix Charges", "Receivables Control", "Automatic DAS", "Annual Report (DASN-SIMEI)"],
+                content: "Cada feature elimina uma etapa manual do faturamento do autônomo, do primeiro cadastro à declaração anual. O foco foi reduzir cada tarefa ao menor número de passos possível e manter o histórico financeiro sempre conectado à nota que o originou.",
+                content_en: "Each feature eliminates a manual step from the freelancer's billing, from the first client record to the annual return. The focus was reducing every task to the fewest possible steps and keeping the financial history always connected to the invoice that originated it.",
+                highlights: [
+                    "Emissor de NFS-e: integração nacional, emite em 3 cliques com cliente e serviço salvos",
+                    "Cobranças Pix: QR Code vinculado à nota com confirmação automática de pagamento",
+                    "Controle de Recebimentos: notas emitidas, pagas, pendentes e vencidas com alertas",
+                    "DAS Automático: calcula o valor mensal e lembra do prazo de pagamento",
+                    "Relatório Anual: preenche o DASN-SIMEI automaticamente com os dados do sistema"
+                ],
+                highlights_en: [
+                    "NFS-e Issuer: national integration, issues in 3 clicks with saved client and service",
+                    "Pix Charges: QR Code linked to the invoice with automatic payment confirmation",
+                    "Receivables Control: invoices issued, paid, pending and overdue with alerts",
+                    "Automatic DAS: computes the monthly amount and reminds you of the deadline",
+                    "Annual Report: fills out the DASN-SIMEI automatically from system data"
+                ]
+            },
+            {
+                title: "Modelo de Negócio & Arquitetura",
+                title_en: "Business Model & Architecture",
+                type: "text",
+                content: "Construído inteiramente com AI coding (Claude como par de programação, do schema ao deploy). Stack: Next.js 16 (App Router) e React 19, Prisma + PostgreSQL para Clientes, Notas, Cobranças e DAS, Auth.js v5 para autenticação, Stripe para assinaturas e Resend para e-mails transacionais. O modelo freemium oferece o plano Grátis (5 notas/mês, sem Pix e sem DAS), um trial de 14 dias com tudo liberado e o PRO a R$29/mês com notas ilimitadas, cobranças Pix e DAS automático. Um design system dark-first próprio dá a base visual: tokens semânticos, superfícies flat e tipografia display de tracking apertado.",
+                content_en: "Built entirely with AI coding (Claude as pair programmer, from schema to deploy). Stack: Next.js 16 (App Router) and React 19, Prisma + PostgreSQL for Clients, Invoices, Charges and DAS, Auth.js v5 for authentication, Stripe for subscriptions and Resend for transactional email. The freemium model offers a Free plan (5 invoices/month, no Pix, no DAS), a 14-day fully unlocked trial and PRO at R$29/month with unlimited invoices, Pix charges and automatic DAS. A bespoke dark-first design system sets the visual base: semantic tokens, flat surfaces and tight-tracked display type."
+            },
+            {
+                title: "Resultados & Aprendizados",
+                title_en: "Results & Learnings",
+                type: "outcomes",
+                metrics: [
+                    { value: "3", label: "cliques para emitir uma nota" },
+                    { value: "R$29", label: "PRO mensal com tudo ilimitado" },
+                    { value: "5", label: "módulos no ciclo de faturar" }
+                ],
+                metrics_en: [
+                    { value: "3", label: "clicks to issue an invoice" },
+                    { value: "R$29", label: "monthly PRO, everything unlimited" },
+                    { value: "5", label: "modules in the billing cycle" }
+                ],
+                content: "O principal aprendizado foi que, para o MEI, o valor não está em emitir a nota isolada, mas em fechar o ciclo até o dinheiro cair e o imposto ficar em dia. Vincular a cobrança Pix à nota e confirmar o pagamento automaticamente foi a decisão que transformou um emissor em um controle financeiro. O segundo aprendizado foi de linguagem: cada termo contábil removido da interface reduziu a fricção. O trial de 14 dias com tudo liberado existe para o usuário chegar ao 'aha' — a primeira nota paga via Pix dentro do app.",
+                content_en: "The key learning was that, for the MEI, value is not in issuing the invoice alone but in closing the loop until the money lands and the tax is paid. Linking the Pix charge to the invoice and confirming payment automatically was the decision that turned an issuer into a financial control tool. The second learning was about language: every accounting term removed from the interface reduced friction. The 14-day fully unlocked trial exists so users reach the 'aha' moment — their first invoice paid via Pix inside the app."
+            }
+        ]
+    },
+    {
         id: 6,
         slug: "pixtudo-super-app-ux-research",
         pageType: "rich",
