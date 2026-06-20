@@ -2,6 +2,110 @@
 
 export const projectsData = [
     {
+        id: 16,
+        slug: "drop-marketplace-de-lancamentos",
+        src: "/images/projects/drop/drop_capa.jpeg",
+        category: "Product & AI Engineering",
+        tags: ["Product Design", "AI Engineering"],
+        title: "Drop",
+        tagline: "Lance drops. Venda para quem realmente quer.",
+        tagline_en: "Launch drops. Sell to the people who really want them.",
+        description: "Plataforma de loja para criadores que lançam produtos limitados com lista de espera prioritária, contagem regressiva e checkout próprio com Pix. Cada criador ganha uma vitrine com marca leve, sem precisar montar um site do zero.",
+        description_en: "Storefront platform for creators who launch limited-edition products with a priority waitlist, countdown, and their own checkout with Pix. Each creator gets a lightly branded storefront, without building a site from scratch.",
+        year: "2026",
+        role: "Product Designer & AI Engineer",
+        timeline: "MVP · iteração contínua",
+        timeline_en: "MVP · continuous iteration",
+        team: "Solo",
+        client: "Produto próprio",
+        tools: ["Next.js", "Prisma", "Stripe", "Vercel"],
+        liveDemoLink: "https://lancedrop.vercel.app/",
+        sections: [
+            {
+                title: "O Problema",
+                title_en: "The Problem",
+                type: "text",
+                content: "Criadores que vendem produtos limitados (roupas, objetos, digitais) dependem de Instagram para anunciar e de planilhas, DMs e links soltos para gerenciar pedidos. Não há senso de escassez controlada, nem lista de espera, nem checkout próprio. No lançamento, o resultado é caos: estoque vendido para quem chegou primeiro no story, comentários perdidos, cobranças manuais via Pix e nenhuma página que faça jus à marca. Ferramentas como Shopify são pesadas demais para um drop pontual, e marketplaces genéricos diluem a identidade do criador no meio de milhares de produtos.",
+                content_en: "Creators selling limited-edition products (apparel, objects, digital) rely on Instagram to announce and on spreadsheets, DMs, and loose links to manage orders. There's no controlled scarcity, no waitlist, no dedicated checkout. At launch, the result is chaos: stock sold to whoever saw the story first, lost comments, manual Pix charges, and no page that does the brand justice. Tools like Shopify are too heavy for a one-off drop, and generic marketplaces dilute the creator's identity among thousands of products."
+            },
+            {
+                title: "Pesquisa de Mercado",
+                title_en: "Market Research",
+                type: "research",
+                methods: ["Benchmark de plataformas de creator commerce (Fourthwall, Big Cartel, Gumroad)", "Análise de lançamentos de marcas independentes no Instagram e TikTok", "Mapeamento de dores de criadores em comunidades e fóruns"],
+                methods_en: ["Creator commerce platform benchmark (Fourthwall, Big Cartel, Gumroad)", "Analysis of independent brand launches on Instagram and TikTok", "Pain point mapping in creator communities and forums"],
+                content: "O Fourthwall provou que criadores querem uma vitrine bonita sem virar webdesigner, mas é focado no mercado americano e não tem Pix, o meio de pagamento dominante no Brasil. Gumroad e Big Cartel resolvem o checkout, mas não criam o ritual de lançamento, a escassez, a contagem regressiva, a lista de espera, que é justamente o que move a venda de edições limitadas. A oportunidade está em combinar a mecânica de drop (hype + escassez) com pagamento local (Pix) e uma vitrine de marca leve, voltada ao criador brasileiro.",
+                content_en: "Fourthwall proved that creators want a beautiful storefront without becoming web designers, but it's focused on the US market and lacks Pix, the dominant payment method in Brazil. Gumroad and Big Cartel solve checkout, but don't create the launch ritual, the scarcity, the countdown, the waitlist, which is exactly what drives limited-edition sales. The opportunity is to combine drop mechanics (hype + scarcity) with local payment (Pix) and a lightly branded storefront, built for the Brazilian creator.",
+                highlights: [
+                    "Pix é o meio de pagamento preferido para compras online no Brasil, mas raro em plataformas de creator commerce",
+                    "Lançamentos de edição limitada vendem por escassez e urgência, não por catálogo permanente",
+                    "Criadores rejeitam construtores de site complexos: querem publicar um drop em minutos",
+                    "Lista de espera prioritária transforma seguidores em compradores qualificados antes do lançamento"
+                ],
+                highlights_en: [
+                    "Pix is the preferred online payment method in Brazil, yet rare in creator commerce platforms",
+                    "Limited-edition launches sell on scarcity and urgency, not on a permanent catalog",
+                    "Creators reject complex site builders: they want to publish a drop in minutes",
+                    "A priority waitlist turns followers into qualified buyers before launch"
+                ]
+            },
+            {
+                title: "Solução & Produto",
+                title_en: "Solution & Product",
+                type: "text",
+                content: "O Drop entrega ao criador uma vitrine de marca leve (templates + branding, não um construtor de site) onde cada lançamento vira uma página de drop com capa, descrição, preço, estoque, contagem regressiva e lista de espera. O comprador entra na lista, é avisado no lançamento, compra com Pix e acompanha o pedido. O criador gerencia tudo de um dashboard: cria o drop em minutos, define estoque e data, acompanha pedidos por status e personaliza sua vitrine com cor de acento e identidade própria. A escassez é real: estoque limitado, e o ritual de lançamento (espera → drop ao vivo → esgotou) é o coração do produto.",
+                content_en: "Drop gives creators a lightly branded storefront (templates + branding, not a site builder) where each launch becomes a drop page with cover, description, price, stock, countdown, and waitlist. Buyers join the list, get notified at launch, pay with Pix, and track their order. Creators manage everything from a dashboard: create a drop in minutes, set stock and date, track orders by status, and customize their storefront with an accent color and their own identity. Scarcity is real: limited stock, and the launch ritual (waitlist → live drop → sold out) is the heart of the product."
+            },
+            {
+                title: "Funcionalidades",
+                title_en: "Features",
+                type: "research",
+                methods: ["Vitrine do criador", "Página de drop", "Lista de espera", "Checkout com Pix", "Gestão de pedidos"],
+                methods_en: ["Creator storefront", "Drop page", "Waitlist", "Pix checkout", "Order management"],
+                content: "Cada funcionalidade foi desenhada em torno do ritual de lançamento. A Vitrine do criador é uma página de marca com avatar, bio, cor de acento e todos os drops. A Página de drop traz capa, contagem regressiva, estoque e CTA de compra ou lista de espera. A Lista de espera prioritária qualifica compradores antes do go-live. O Checkout com Pix permite pagamento local instantâneo. A Gestão de pedidos dá ao criador controle por status (pendente, pago, enviado) em um painel simples.",
+                content_en: "Each feature was designed around the launch ritual. The Creator storefront is a brand page with avatar, bio, accent color, and all drops. The Drop page brings cover, countdown, stock, and a buy or waitlist CTA. The priority Waitlist qualifies buyers before go-live. Pix checkout enables instant local payment. Order management gives the creator status-based control (pending, paid, shipped) in a simple dashboard.",
+                highlights: [
+                    "Vitrine de marca com cor de acento, avatar, bio e links sociais por criador",
+                    "Página de drop com contagem regressiva, estoque limitado e estados ao vivo / esgotado",
+                    "Lista de espera prioritária que avisa o comprador no momento do lançamento",
+                    "Checkout próprio com Pix, o meio de pagamento preferido no Brasil",
+                    "Dashboard de gestão de pedidos por status, com criação de drop em minutos"
+                ],
+                highlights_en: [
+                    "Branded storefront with accent color, avatar, bio, and social links per creator",
+                    "Drop page with countdown, limited stock, and live / sold-out states",
+                    "Priority waitlist that notifies the buyer at the moment of launch",
+                    "Own checkout with Pix, the preferred payment method in Brazil",
+                    "Status-based order management dashboard, with drop creation in minutes"
+                ]
+            },
+            {
+                title: "Modelo de Negócio & Arquitetura",
+                title_en: "Business Model & Architecture",
+                type: "text",
+                content: "Construído inteiramente com AI coding (Claude como pair programmer do scaffolding ao deploy). Stack: Next.js 16 (App Router), Prisma + PostgreSQL para criadores, drops, listas de espera e pedidos, Auth.js para login com Google e magic link, Stripe para pagamentos (com Pix via conta BR), Resend para e-mails transacionais e Vercel para deploy contínuo. O modelo freemium limita o plano Free a 5 drops por mês, sem Pix, o suficiente para experimentar. O trial de 14 dias libera tudo, e o PRO (R$29/mês) mantém drops e vendas ilimitados com Pix ativo.",
+                content_en: "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 16 (App Router), Prisma + PostgreSQL for creators, drops, waitlists, and orders, Auth.js for Google and magic-link login, Stripe for payments (with Pix via a BR account), Resend for transactional emails, and Vercel for continuous deployment. The freemium model limits the Free plan to 5 drops per month, without Pix, enough to experiment. The 14-day trial unlocks everything, and PRO (R$29/month) keeps drops and sales unlimited with Pix active."
+            },
+            {
+                title: "Resultados & Aprendizados",
+                title_en: "Results & Learnings",
+                type: "outcomes",
+                metrics: [
+                    { value: "Pix", label: "checkout local nativo, raro no creator commerce" },
+                    { value: "5", label: "drops/mês no plano gratuito" },
+                    { value: "R$29", label: "PRO com drops e vendas ilimitados" }
+                ],
+                metrics_en: [
+                    { value: "Pix", label: "native local checkout, rare in creator commerce" },
+                    { value: "5", label: "drops/month on the free plan" },
+                    { value: "R$29", label: "PRO with unlimited drops and sales" }
+                ],
+                content: "O principal aprendizado foi que o produto não vende um checkout, vende um ritual. As decisões de design mais importantes foram a lista de espera prioritária e a contagem regressiva, que transformam o lançamento em evento e o seguidor em comprador. A escolha de templates + branding leve (em vez de um construtor de site) foi deliberada: criadores querem publicar rápido e manter coerência visual, não aprender a desenhar páginas. Apostar em Pix desde o início, mesmo com a complexidade de uma conta Stripe BR, foi o diferencial competitivo frente a plataformas internacionais como o Fourthwall.",
+                content_en: "The key learning was that the product doesn't sell a checkout, it sells a ritual. The most important design decisions were the priority waitlist and the countdown, which turn the launch into an event and the follower into a buyer. Choosing templates + light branding (instead of a site builder) was deliberate: creators want to publish fast and keep visual coherence, not learn to design pages. Betting on Pix from day one, despite the complexity of a Stripe BR account, was the competitive edge against international platforms like Fourthwall."
+            }
+        ]
+    },
+    {
         id: 1,
         slug: "sigil-design-system-builder",
         src: "/images/projects/sigil/sigil_full.jpg",
