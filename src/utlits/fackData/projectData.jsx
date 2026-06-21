@@ -4,7 +4,7 @@ export const projectsData = [
     {
         id: 16,
         slug: "drop-marketplace-de-lancamentos",
-        src: "/images/projects/drop/drop_capa.jpeg",
+        src: "/images/projects/drop/drop_capa.jpg",
         category: "Product & AI Engineering",
         tags: ["Product Design", "AI Engineering"],
         title: "Drop",
