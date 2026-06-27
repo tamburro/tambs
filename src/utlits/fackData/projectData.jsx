@@ -4,9 +4,10 @@ export const projectsData = [
     {
         id: 16,
         slug: "drop-marketplace-de-lancamentos",
+        pageType: "rich",
         src: "/images/projects/drop/drop_capa.jpg",
-        category: "Product & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
+        category: "Product Design & Full-Stack",
+        tags: ["Product Design", "Full-Stack"],
         title: "Drop",
         tagline: "Lance drops. Venda para quem realmente quer.",
         tagline_en: "Launch drops. Sell to the people who really want them.",
@@ -27,6 +28,14 @@ export const projectsData = [
                 type: "text",
                 content: "Criadores que vendem produtos limitados (roupas, objetos, digitais) dependem de Instagram para anunciar e de planilhas, DMs e links soltos para gerenciar pedidos. Não há senso de escassez controlada, nem lista de espera, nem checkout próprio. No lançamento, o resultado é caos: estoque vendido para quem chegou primeiro no story, comentários perdidos, cobranças manuais via Pix e nenhuma página que faça jus à marca. Ferramentas como Shopify são pesadas demais para um drop pontual, e marketplaces genéricos diluem a identidade do criador no meio de milhares de produtos.",
                 content_en: "Creators selling limited-edition products (apparel, objects, digital) rely on Instagram to announce and on spreadsheets, DMs, and loose links to manage orders. There's no controlled scarcity, no waitlist, no dedicated checkout. At launch, the result is chaos: stock sold to whoever saw the story first, lost comments, manual Pix charges, and no page that does the brand justice. Tools like Shopify are too heavy for a one-off drop, and generic marketplaces dilute the creator's identity among thousands of products."
+            },
+            {
+                title: "Diretório de criadores",
+                title_en: "Creator directory",
+                type: "image",
+                src: "/images/projects/drop/explorar.png",
+                caption: "Diretório de criadores: cada marca com sua vitrine e drops ao vivo",
+                caption_en: "Creator directory: each brand with its own storefront and live drops"
             },
             {
                 title: "Pesquisa de Mercado",
@@ -57,6 +66,14 @@ export const projectsData = [
                 content_en: "Drop gives creators a lightly branded storefront (templates + branding, not a site builder) where each launch becomes a drop page with cover, description, price, stock, countdown, and waitlist. Buyers join the list, get notified at launch, pay with Pix, and track their order. Creators manage everything from a dashboard: create a drop in minutes, set stock and date, track orders by status, and customize their storefront with an accent color and their own identity. Scarcity is real: limited stock, and the launch ritual (waitlist → live drop → sold out) is the heart of the product."
             },
             {
+                title: "Landing",
+                title_en: "Landing",
+                type: "image",
+                src: "/images/projects/drop/landing-hero.png",
+                caption: "Landing dark com tipografia display e hero animado",
+                caption_en: "Dark landing with display typography and animated hero"
+            },
+            {
                 title: "Funcionalidades",
                 title_en: "Features",
                 type: "research",
@@ -77,6 +94,16 @@ export const projectsData = [
                     "Priority waitlist that notifies the buyer at the moment of launch",
                     "Own checkout with Pix, the preferred payment method in Brazil",
                     "Status-based order management dashboard, with drop creation in minutes"
+                ]
+            },
+            {
+                title: "Vitrine & Página de drop",
+                title_en: "Storefront & Drop page",
+                type: "gallery",
+                columns: 2,
+                images: [
+                    { src: "/images/projects/drop/vitrine.png", caption: "Vitrine do criador com cor de acento e drops por status", caption_en: "Creator storefront with accent color and drops by status" },
+                    { src: "/images/projects/drop/drop-page.png", caption: "Página de drop: galeria, preço, estoque e checkout próprio", caption_en: "Drop page: gallery, price, stock and in-house checkout" }
                 ]
             },
             {
@@ -108,8 +135,9 @@ export const projectsData = [
     {
         id: 1,
         slug: "sigil-design-system-builder",
+        pageType: "rich",
         src: "/images/projects/sigil/sigil_full.jpg",
-        category: "Product & AI Engineering",
+        category: "Product Design & AI Engineering",
         tags: ["Product Design", "AI Engineering"],
         title: "Sigil",
         tagline: "De uma cor seed a um design system completo, pronto para exportar.",
@@ -131,6 +159,24 @@ export const projectsData = [
                 type: "text",
                 content: "Founders, desenvolvedores e criadores independentes constroem produtos sem designer, e sentem isso a cada tela inconsistente, botão fora do padrão ou paleta improvisada. Ferramentas como Figma, Tokens Studio e Brand.ai foram criadas para designers. Quem constrói sozinho não tem tempo para aprender esses fluxos, nem budget para terceirizar. O resultado prático: projetos com identidade visual fragmentada, ausência de design tokens e incapacidade de escalar o sistema sem retrabalho. O mercado de ferramentas de design system é grande, mas todas as soluções assumem que existe um designer no processo.",
                 content_en: "Founders, developers, and independent creators build products without a designer, and feel it in every inconsistent screen, off-pattern button, or improvised palette. Tools like Figma, Tokens Studio, and Brand.ai were built for designers. Solo builders don't have time to learn these workflows, nor the budget to outsource. The practical result: projects with fragmented visual identity, absent design tokens, and no way to scale the system without rework. The design system tooling market is large, but every solution assumes there is a designer in the loop."
+            },
+            {
+                title: "Visão Geral",
+                title_en: "Overview",
+                type: "image",
+                src: "/images/projects/sigil/sigil_visao_geral1.png",
+                caption: "Visão geral: dashboard de brand systems.",
+                caption_en: "Overview: brand systems dashboard."
+            },
+            {
+                title: "O editor de um brand system",
+                title_en: "The brand system editor",
+                type: "gallery",
+                columns: 2,
+                images: [
+                    { src: "/images/projects/sigil/sigil_visao_geral2.png", caption: "Editor de um brand system", caption_en: "Brand system editor" },
+                    { src: "/images/projects/sigil/sigil_visao_geral_dark.png", caption: "O mesmo editor em modo escuro", caption_en: "The same editor in dark mode" }
+                ]
             },
             {
                 title: "Pesquisa de Mercado",
@@ -206,6 +252,18 @@ export const projectsData = [
                 ],
                 content: "O principal aprendizado foi sobre o valor de fechar o ciclo. Ferramentas de paleta existem aos montes, mas o diferencial do Sigil é conectar cor seed → tokens → exportação em código em um fluxo único. A decisão de incluir Component Preview foi a mais importante: ver os tokens funcionando em componentes reais, antes de exportar, reduziu drasticamente a fricção de adoção. O modelo de 14 dias de trial ilimitado foi escolhido para garantir que o usuário chegue ao 'aha moment', que só acontece quando ele exporta e vê o Tailwind config funcionando no projeto dele.",
                 content_en: "The key learning was about the value of closing the loop. Palette tools are a dime a dozen, but Sigil's differentiator is connecting seed color, tokens, and code export in a single flow. The decision to include Component Preview was the most important one: seeing tokens working in real components, before exporting, dramatically reduced adoption friction. The 14-day unlimited trial model was chosen to ensure users reach the 'aha moment', which only happens when they export and see the Tailwind config working in their own project."
+            },
+            {
+                title: "Design System",
+                title_en: "Design System",
+                type: "gallery",
+                columns: 2,
+                images: [
+                    { src: "/images/projects/sigil/sigil_ds_colors_light.png", caption: "Paleta em modo claro", caption_en: "Palette in light mode" },
+                    { src: "/images/projects/sigil/sigil_ds_colors.png", caption: "Paleta em modo escuro", caption_en: "Palette in dark mode" },
+                    { src: "/images/projects/sigil/sigil_ds_components_light.png", caption: "Componentes em modo claro", caption_en: "Components in light mode" },
+                    { src: "/images/projects/sigil/sigil_ds_components.png", caption: "Componentes em modo escuro", caption_en: "Components in dark mode" }
+                ]
             }
         ]
     },
@@ -213,8 +271,8 @@ export const projectsData = [
         id: 15,
         slug: "notafacil-emissor-nfse-mei",
         src: "/images/projects/notafacil/notafacil.jpg",
-        category: "Product & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
+        category: "Product Design & Full-Stack",
+        tags: ["Product Design", "Full-Stack"],
         title: "Nota Fácil",
         tagline: "Emita NFS-e, receba via Pix e mantenha o DAS em dia — sem virar contador.",
         tagline_en: "Issue invoices, get paid via Pix and keep taxes current — without becoming an accountant.",
@@ -319,8 +377,8 @@ export const projectsData = [
         accentColor: "#00C853",
         liveDemoLink: "https://app-src-two.vercel.app/",
         src: "/images/projects/pixtudo_full.jpg",
-        category: "Product & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
+        category: "Product Design & Full-Stack",
+        tags: ["Product Design", "Full-Stack"],
         title: "PixTudo",
         tagline: "Do documento de pesquisa ao MVP funcional: super-app financeiro com Pix, cashback e score inteligente.",
         tagline_en: "From research to working MVP: financial super-app with Pix, cashback and smart score.",
@@ -423,6 +481,20 @@ export const projectsData = [
                 content_en: "The research didn't stay on paper. I built a working MVP with the features prioritized during discovery: simulated Pix with automatic 1.5% cashback, statement with intelligent spending categorization, PixTudo Score with gamification and financial goals, services hub (mobile top-up, transit pass, bill payments) and social bill-splitting. The product has a PRO plan at R$19.90/month with a 14-day free trial.",
             },
             {
+                title: "Telas do app",
+                title_en: "App screens",
+                type: "gallery",
+                columns: 3,
+                images: [
+                    { src: "/images/projects/pixtudo/pixtudo_mob_01.jpg", caption: "Início — resumo financeiro e cashback", caption_en: "Home — financial summary & cashback" },
+                    { src: "/images/projects/pixtudo/pixtudo_mob_02.jpg", caption: "Pix — envio com cashback automático", caption_en: "Pix — send with automatic cashback" },
+                    { src: "/images/projects/pixtudo/pixtudo_mob_03.jpg", caption: "Extrato — histórico e gráfico de movimentações", caption_en: "Statement — history & spending chart" },
+                    { src: "/images/projects/pixtudo/pixtudo_mob_04.jpg", caption: "Score — pontuação gamificada com níveis e metas", caption_en: "Score — gamified rating with levels & goals" },
+                    { src: "/images/projects/pixtudo/pixtudo_mob_05.jpg", caption: "Serviços — contas, recarga e transporte", caption_en: "Services — bills, top-up & transit" },
+                    { src: "/images/projects/pixtudo/pixtudo_mob_06.jpg", caption: "Social — rateio e vaquinhas via Pix", caption_en: "Social — split bills & group payments" }
+                ]
+            },
+            {
                 title: "Resultados & Entregáveis",
                 title_en: "Results & Deliverables",
                 type: "outcomes",
@@ -444,8 +516,9 @@ export const projectsData = [
     {
         id: 2,
         slug: "listaai-gerador-de-descricoes",
+        pageType: "rich",
         src: "/images/projects/listaai/listaai_cover.png",
-        category: "Product & AI Engineering",
+        category: "Product Design & AI Engineering",
         tags: ["Product Design", "AI Engineering"],
         title: "ListaAI",
         tagline: "Títulos e descrições para marketplace gerados por IA em segundos.",
@@ -489,38 +562,31 @@ export const projectsData = [
                     "Most sellers don't know which keywords to use and don't have time to research",
                     "ChatGPT is already used by some sellers, but the free-form prompt friction is a real barrier",
                     "Mercado Livre and Shopee have distinct rules and formats, so a tool that understands this has a clear advantage"
-                ],
-                images: [
-                    {
-                        src: "/images/projects/listaai/landing-hero.png",
-                        caption: "Landing page com a proposta de valor para vendedores brasileiros",
-                        fullWidth: true,
-                        width: 1350,
-                        height: 734
-                    }
                 ]
+            },
+            {
+                type: "image",
+                title: "Landing Page",
+                title_en: "Landing Page",
+                src: "/images/projects/listaai/landing-hero.png",
+                caption: "Landing page com a proposta de valor para vendedores brasileiros",
+                caption_en: "Landing page with the value proposition for Brazilian marketplace sellers"
             },
             {
                 title: "Solução & Produto",
                 title_en: "Solution & Product",
                 type: "text",
                 content: "O ListaAI foi construído com um fluxo de uso minimalista: o vendedor informa nome do produto, especificações técnicas, plataforma alvo (Mercado Livre ou Shopee) e tom de voz preferido. A IA gera título otimizado com palavras-chave de alto volume e uma descrição completa formatada para a plataforma escolhida. O resultado pode ser regenerado com um clique, copiado diretamente e fica salvo no histórico. Cada detalhe do produto foi pensado para reduzir o atrito ao máximo, para que o vendedor não precise entender de IA para usar.",
-                content_en: "ListaAI was built with a minimalist usage flow: the seller provides the product name, technical specs, target platform (Mercado Livre or Shopee), and preferred tone of voice. The AI generates an optimized title with high-volume keywords and a complete description formatted for the chosen platform. The result can be regenerated with one click, copied directly, and is saved in history. Every detail was designed to minimize friction, so the seller doesn't need to understand AI to use it.",
+                content_en: "ListaAI was built with a minimalist usage flow: the seller provides the product name, technical specs, target platform (Mercado Livre or Shopee), and preferred tone of voice. The AI generates an optimized title with high-volume keywords and a complete description formatted for the chosen platform. The result can be regenerated with one click, copied directly, and is saved in history. Every detail was designed to minimize friction, so the seller doesn't need to understand AI to use it."
+            },
+            {
+                type: "gallery",
+                title: "Features & Como Funciona",
+                title_en: "Features & How It Works",
+                columns: 1,
                 images: [
-                    {
-                        src: "/images/projects/listaai/features.png",
-                        caption: "Funcionalidades: geração por plataforma, tom de voz, SEO embutido e mais",
-                        fullWidth: true,
-                        width: 1343,
-                        height: 704
-                    },
-                    {
-                        src: "/images/projects/listaai/como-funciona.png",
-                        caption: "Como funciona: 3 passos entre specs, plataforma/tom e publicar",
-                        fullWidth: true,
-                        width: 1338,
-                        height: 441
-                    }
+                    { src: "/images/projects/listaai/features.png", caption: "Funcionalidades: geração por plataforma, tom de voz, SEO embutido e mais", caption_en: "Features: platform generation, voice tone, built-in SEO and more" },
+                    { src: "/images/projects/listaai/como-funciona.png", caption: "Como funciona: 3 passos entre specs, plataforma/tom e publicar", caption_en: "How it works: 3 steps from specs, platform/tone to publish" }
                 ]
             },
             {
@@ -544,56 +610,47 @@ export const projectsData = [
                     "Built-in SEO, with high-volume keywords automatically embedded in the title",
                     "Smart regeneration, providing a new result with one click, no need to rewrite data",
                     "Full history, where all descriptions are saved and accessible in the dashboard"
-                ],
+                ]
+            },
+            {
+                type: "gallery",
+                title: "Interface",
+                title_en: "Interface",
+                columns: 2,
                 images: [
-                    {
-                        src: "/images/projects/listaai/dashboard.png",
-                        caption: "Dashboard com plano, descrições do mês e histórico recente",
-                        width: 1400,
-                        height: 745
-                    },
-                    {
-                        src: "/images/projects/listaai/nova-descricao.png",
-                        caption: "Nova descrição com nome, specs, plataforma e tom de voz",
-                        width: 1100,
-                        height: 760
-                    },
-                    {
-                        src: "/images/projects/listaai/historico.png",
-                        caption: "Histórico com todas as descrições geradas com badges de plataforma",
-                        width: 1100,
-                        height: 760
-                    },
-                    {
-                        src: "/images/projects/listaai/perfil.png",
-                        caption: "Perfil com informações da conta e plano atual",
-                        width: 1100,
-                        height: 760
-                    },
-                    {
-                        src: "/images/projects/listaai/assinatura.png",
-                        caption: "Assinatura: upgrade para PRO direto pelo app",
-                        width: 495,
-                        height: 849
-                    }
-                ],
-                imageLayout: "screens"
+                    { src: "/images/projects/listaai/dashboard.png", caption: "Dashboard com plano, descrições do mês e histórico recente", caption_en: "Dashboard with plan, monthly descriptions and recent history" },
+                    { src: "/images/projects/listaai/nova-descricao.png", caption: "Nova descrição com nome, specs, plataforma e tom de voz", caption_en: "New description with name, specs, platform and voice tone" },
+                    { src: "/images/projects/listaai/historico.png", caption: "Histórico com todas as descrições geradas com badges de plataforma", caption_en: "History with all generated descriptions with platform badges" },
+                    { src: "/images/projects/listaai/perfil.png", caption: "Perfil com informações da conta e plano atual", caption_en: "Profile with account info and current plan" }
+                ]
+            },
+            {
+                type: "gallery",
+                title: "Versão Mobile",
+                title_en: "Mobile Version",
+                columns: 3,
+                images: [
+                    { src: "/images/projects/listaai/mob_01.jpg" },
+                    { src: "/images/projects/listaai/mob_02.jpg" },
+                    { src: "/images/projects/listaai/mob_03.jpg" },
+                    { src: "/images/projects/listaai/mob_04.jpg" },
+                    { src: "/images/projects/listaai/mob_05.jpg" }
+                ]
             },
             {
                 title: "Arquitetura & Tecnologia",
                 title_en: "Architecture & Technology",
                 type: "text",
                 content: "O produto foi inteiramente construído com AI coding, usando o Claude como pair programmer em todas as etapas, do scaffolding ao deploy. Stack: Next.js 14 (App Router) no frontend, API Routes para o backend, Prisma + PostgreSQL para persistência de dados e histórico, Claude API (claude-sonnet) para geração de conteúdo, e Vercel para deploy contínuo. O prompt de geração foi o artefato mais iterado: cada versão foi testada com produtos reais de diferentes categorias, como eletrônicos, moda e casa, até atingir consistência na qualidade do output.",
-                content_en: "The product was entirely built with AI coding, with Claude as pair programmer at every stage, from scaffolding to deployment. Stack: Next.js 14 (App Router) on the frontend, API Routes for the backend, Prisma + PostgreSQL for data persistence and history, Claude API (claude-sonnet) for content generation, and Vercel for continuous deployment. The generation prompt was the most iterated artifact: each version was tested with real products across different categories, including electronics, fashion, and home, until output quality became consistent.",
-                images: [
-                    {
-                        src: "/images/projects/listaai/pricing.png",
-                        caption: "Modelo freemium: Free R$0 com 5 descrições/mês, e PRO R$39/mês ilimitado",
-                        fullWidth: true,
-                        width: 1340,
-                        height: 559
-                    }
-                ]
+                content_en: "The product was entirely built with AI coding, with Claude as pair programmer at every stage, from scaffolding to deployment. Stack: Next.js 14 (App Router) on the frontend, API Routes for the backend, Prisma + PostgreSQL for data persistence and history, Claude API (claude-sonnet) for content generation, and Vercel for continuous deployment. The generation prompt was the most iterated artifact: each version was tested with real products across different categories, including electronics, fashion, and home, until output quality became consistent."
+            },
+            {
+                type: "image",
+                title: "Modelo de Negócio",
+                title_en: "Business Model",
+                src: "/images/projects/listaai/pricing.png",
+                caption: "Modelo freemium: Free R$0 com 5 descrições/mês, e PRO R$39/mês ilimitado",
+                caption_en: "Freemium model: Free R$0 with 5 descriptions/month, PRO R$39/month unlimited"
             },
             {
                 title: "Resultados & Aprendizados",
@@ -619,7 +676,7 @@ export const projectsData = [
         slug: "zapvida-super-app-ux-research",
         src: "/images/projects/zapvida_full.jpg",
         category: "Product Design",
-        tags: ["Product Design"],
+        tags: ["Product Design", "UX Research"],
         title: "ZapVida",
         tagline: "Pesquisa e design de um super-app nacional com Pix nativo, gov digital e mini-apps.",
         tagline_en: "Research and design of a national super-app with native Pix, digital gov and mini-apps.",
@@ -728,7 +785,7 @@ export const projectsData = [
         slug: "roteiro-de-viagens-colaborativo",
         src: "/images/projects/roteiro_viagens_full.jpg",
         category: "Product Design",
-        tags: ["Product Design"],
+        tags: ["Product Design", "UX Research"],
         title: "Rotera",
         tagline: "Planejamento colaborativo de viagens em grupo, do wireframe ao protótipo.",
         tagline_en: "Collaborative group trip planning, from wireframe to navigable prototype.",
@@ -918,7 +975,7 @@ export const projectsData = [
         slug: "website-makeup-design",
         src: "/images/projects/estiloia_full.jpg",
         category: "Product Design",
-        tags: ["Product Design"],
+        tags: ["Product Design", "UX Research"],
         title: "Estilo.ia",
         tagline: "Consultoria de moda personalizada por IA, testada em A/B com usuários reais.",
         tagline_en: "AI-powered fashion consulting, A/B tested with real users.",
@@ -1047,7 +1104,7 @@ export const projectsData = [
         slug: "sustenta-plus-app-ux-design",
         src: "/images/projects/sustentamais_full2.jpg",
         category: "Product Design",
-        tags: ["Product Design"],
+        tags: ["Product Design", "UX Research"],
         title: "Sustenta+",
         tagline: "App mobile com IA para reduzir desperdício e planejar a alimentação.",
         tagline_en: "AI-powered mobile app to reduce food waste and plan meals smarter.",
@@ -1164,8 +1221,8 @@ export const projectsData = [
         liveDemoLink: "https://palavraselvagem.vercel.app/",
         src: "/images/projects/palavraselvagem_full2.jpg",
         pageSrc: "/images/projects/palavraselvagem_full.jpg",
-        category: "Game Design",
-        tags: ["Game Design", "AI Engineering"],
+        category: "Game Design & Full-Stack",
+        tags: ["Game Design", "Full-Stack"],
         title: "Palavra Selvagem",
         tagline: "Jogo educativo onde crianças montam nomes de animais, aprendem curiosidades e treinam alfabetização.",
         tagline_en: "Educational game where children build animal names, learn fun facts and practice literacy skills.",
@@ -1239,8 +1296,8 @@ export const projectsData = [
         slug: "orbinum",
         liveDemoLink: "https://orbinum.vercel.app/",
         src: "/images/projects/orbinum_full.jpg",
-        category: "Game Design",
-        tags: ["Game Design", "AI Engineering"],
+        category: "Game Design & Full-Stack",
+        tags: ["Game Design", "Full-Stack"],
         title: "OrbiNum",
         tagline: "Missão espacial onde operações matemáticas abastecem um foguete e desbloqueiam planetas.",
         tagline_en: "Space mission where math operations fuel a rocket and unlock planets across the solar system.",
@@ -1315,8 +1372,8 @@ export const projectsData = [
         liveDemoLink: "https://veradice.vercel.app/",
         src: "/images/projects/veradice_full.jpg",
         pageSrc: "/images/projects/veradice_full2.jpg",
-        category: "Game Design",
-        tags: ["Game Design", "AI Engineering"],
+        category: "Game Design & Full-Stack",
+        tags: ["Game Design", "Full-Stack"],
         title: "Veradice",
         tagline: "RPG de fantasia no navegador com narrativa híbrida, combate tático e múltiplos finais.",
         tagline_en: "Browser fantasy RPG with hybrid narrative, tactical combat and multiple endings.",
@@ -1444,7 +1501,7 @@ export const projectsData = [
         slug: "globo-ab-test-landing-page-aquisicao",
         src: "/images/projects/ab_test/oglb_full.jpg",
         pageSrc: "/images/projects/ab_test/oglb_full_intern.jpg",
-        category: "Product Design",
+        category: "Product Design · Conversão & Aquisição",
         tags: ["Product Design"],
         title: "O Globo · Teste A/B",
         tagline: "Uma LP densa com múltiplos argumentos de venda. Outra limpa, que chega ao preço mais rápido. Qual converte melhor não era óbvio.",
@@ -1649,10 +1706,11 @@ export const projectsData = [
     {
         id: 13,
         slug: "tradeview-plataforma-negociacao",
+        pageType: "rich",
         liveDemoLink: "https://orderbookfinancas.vercel.app",
         src: "/images/projects/tradeview_full2.jpg",
         pageSrc: "/images/projects/tradeview_full2.jpg",
-        category: "Data Visualization",
+        category: "React · Data Visualization",
         tags: ["React", "Data Viz", "Fintech"],
         title: "TradeView",
         tagline: "Plataforma de negociação com orderbook em tempo real, candlestick chart e depth chart.",
@@ -1709,6 +1767,28 @@ export const projectsData = [
                     "Interactive onboarding with step-by-step tour",
                 ],
             },
+            {
+                title: "Interface principal",
+                title_en: "Main interface",
+                type: "gallery",
+                columns: 2,
+                images: [
+                    { src: "/images/projects/tradeview/main.png", caption: "Interface principal com candlestick e orderbook", caption_en: "Main interface with candlestick and order book" },
+                    { src: "/images/projects/tradeview/orderbook.png", caption: "Orderbook com bid/ask em tempo real", caption_en: "Order book with real-time bid/ask" },
+                    { src: "/images/projects/tradeview/portfolio.png", caption: "Gestão de portfolio com posições e P&L", caption_en: "Portfolio management with positions and P&L" }
+                ]
+            },
+            {
+                title: "Versão mobile",
+                title_en: "Mobile version",
+                type: "gallery",
+                columns: 3,
+                images: [
+                    { src: "/images/projects/tradeview/mobile_1.jpg", caption: "Home — resumo do portfolio", caption_en: "Home — portfolio summary" },
+                    { src: "/images/projects/tradeview/mobile_2.jpg", caption: "Gráfico candlestick em mobile", caption_en: "Candlestick chart on mobile" },
+                    { src: "/images/projects/tradeview/mobile_3.jpg", caption: "Orderbook em mobile", caption_en: "Order book on mobile" }
+                ]
+            },
         ],
     },
     {
@@ -1717,7 +1797,7 @@ export const projectsData = [
         liveDemoLink: "https://market-analytics-alpha.vercel.app",
         src: "/images/projects/market_analytics_full2.jpg",
         pageSrc: "/images/projects/market_analytics_full2.jpg",
-        category: "Data Visualization",
+        category: "React · Data Visualization",
         tags: ["React", "Data Viz", "Fintech"],
         title: "Market Analytics",
         tagline: "Dashboard de indicadores macroeconômicos brasileiros com dados em tempo real do Banco Central.",

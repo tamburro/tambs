@@ -1293,6 +1293,53 @@ const RichProjectPage = ({ project }) => {
                     );
                 }
 
+                if (section.type === 'image') {
+                    return (
+                        <SectionShell key={i} num={num} title={title} accent={accent}>
+                            <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+                                <Image
+                                    src={section.src}
+                                    alt={title}
+                                    width={1920}
+                                    height={1080}
+                                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                                />
+                            </div>
+                            {section.caption && (
+                                <p style={{ margin: '10px 0 0', fontSize: 12, color: 'var(--mist)', fontFamily: 'var(--ph-mono)', letterSpacing: '0.05em' }}>
+                                    {pick(section.caption, section.caption_en)}
+                                </p>
+                            )}
+                        </SectionShell>
+                    );
+                }
+
+                if (section.type === 'gallery') {
+                    const cols = section.columns || 2;
+                    return (
+                        <SectionShell key={i} num={num} title={title} accent={accent}>
+                            <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 12 }}>
+                                {section.images?.map((img, j) => (
+                                    <div key={j} style={{ borderRadius: 10, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+                                        <Image
+                                            src={img.src}
+                                            alt={pick(img.caption, img.caption_en) || title}
+                                            width={900}
+                                            height={600}
+                                            style={{ width: '100%', height: 'auto', display: 'block' }}
+                                        />
+                                        {img.caption && (
+                                            <p style={{ margin: '8px 10px', fontSize: 11, color: 'var(--mist)', fontFamily: 'var(--ph-mono)', letterSpacing: '0.04em' }}>
+                                                {pick(img.caption, img.caption_en)}
+                                            </p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </SectionShell>
+                    );
+                }
+
                 const methods    = pick(section.methods,    section.methods_en);
                 const highlights = pick(section.highlights, section.highlights_en);
                 const metrics    = pick(section.metrics,    section.metrics_en);
