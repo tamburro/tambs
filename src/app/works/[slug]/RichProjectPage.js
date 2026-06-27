@@ -1314,6 +1314,34 @@ const RichProjectPage = ({ project }) => {
                     );
                 }
 
+                if (section.type === 'screens') {
+                    return (
+                        <SectionShell key={i} num={num} title={title} accent={accent}>
+                            <div className="cs-screens-row">
+                                {section.images?.map((img, j) => (
+                                    <figure key={j} className="cs-screen-figure">
+                                        <div className="cs-phone-frame">
+                                            <div className="cs-phone-notch" />
+                                            <div className="cs-phone-screen">
+                                                <Image
+                                                    src={img.src}
+                                                    alt={img.caption || title}
+                                                    width={img.width || 390}
+                                                    height={img.height || 844}
+                                                    sizes="(max-width: 768px) 50vw, 14vw"
+                                                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                                                />
+                                            </div>
+                                            <div className="cs-phone-bar" />
+                                        </div>
+                                        {img.caption && <figcaption style={{ fontSize: 11, color: 'var(--mist)', textAlign: 'center', marginTop: 8 }}>{img.caption}</figcaption>}
+                                    </figure>
+                                ))}
+                            </div>
+                        </SectionShell>
+                    );
+                }
+
                 if (section.type === 'gallery') {
                     const cols = section.columns || 2;
                     return (

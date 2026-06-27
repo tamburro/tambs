@@ -1857,6 +1857,8 @@ export const projectsData = [
     {
         id: 17,
         slug: "meu-sus-digital-agendamento-fila",
+        pageType: "rich",
+        accentColor: "#1351B4",
         src: "/images/projects/sus/sus_fila_capa.jpg",
         pageSrc: "/images/projects/sus/sus_fila_capa.jpg",
         category: "UX Research & Product Design",
@@ -1939,7 +1941,7 @@ export const projectsData = [
             {
                 title: "Telas do Protótipo",
                 title_en: "Prototype Screens",
-                imageLayout: "screens",
+                type: "screens",
                 images: [
                     { src: "/images/projects/sus/exp-login.png", caption: "Login", width: 390, height: 844 },
                     { src: "/images/projects/sus/exp-home.png", caption: "Início", width: 390, height: 844 },
@@ -1952,10 +1954,10 @@ export const projectsData = [
             {
                 title: "Comparativo Antes/Depois",
                 title_en: "Before/After Comparison",
-                columns: 1,
-                images: [
-                    { src: "/images/projects/sus/montagem.png", caption: "8 dores do fluxo atual redesenhadas", caption_en: "8 original flow pain points redesigned" },
-                ],
+                type: "image",
+                src: "/images/projects/sus/montagem.png",
+                caption: "8 dores do fluxo atual redesenhadas",
+                caption_en: "8 original flow pain points redesigned",
             },
         ],
     },
