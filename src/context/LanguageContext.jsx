@@ -90,6 +90,9 @@ export const translations = {
     },
     project: {
       overview: 'Overview',
+      tldrProblem: 'The problem',
+      tldrRole: 'My role',
+      tldrOutcome: 'The outcome',
       year: 'Year',
       role: 'Role',
       duration: 'Duration',
@@ -196,6 +199,9 @@ export const translations = {
     },
     project: {
       overview: 'Visão Geral',
+      tldrProblem: 'O problema',
+      tldrRole: 'Meu papel',
+      tldrOutcome: 'O resultado',
       year: 'Ano',
       role: 'Papel',
       duration: 'Duração',

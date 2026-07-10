@@ -1268,9 +1268,29 @@ const RichProjectPage = ({ project }) => {
                 </div>
             </div>
 
+            {/* TL;DR */}
+            {project.tldr && (
+                <div className="container pt-30">
+                    <div className="cs-tldr" style={{ borderLeftColor: accent }}>
+                        <div className="cs-tldr-item">
+                            <span className="cs-tldr-label" style={{ color: accent }}>{t.project.tldrProblem}</span>
+                            <p>{pick(project.tldr.problem, project.tldr.problem_en)}</p>
+                        </div>
+                        <div className="cs-tldr-item">
+                            <span className="cs-tldr-label" style={{ color: accent }}>{t.project.tldrRole}</span>
+                            <p>{pick(project.tldr.role, project.tldr.role_en)}</p>
+                        </div>
+                        <div className="cs-tldr-item">
+                            <span className="cs-tldr-label" style={{ color: accent }}>{t.project.tldrOutcome}</span>
+                            <p>{pick(project.tldr.outcome, project.tldr.outcome_en)}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Overview */}
             {project.description && (
-                <div className="container pt-30">
+                <div className={`container ${project.tldr ? '' : 'pt-30'}`}>
                     <div className="project-section project-section--first">
                         <h3>{t.project.overview}</h3>
                         <p>{pick(project.description, project.description_en)}</p>

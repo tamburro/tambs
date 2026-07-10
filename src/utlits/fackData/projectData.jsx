@@ -150,6 +150,14 @@ export const projectsData = [
     {
         id: 19,
         slug: "maestria-avaliacao-competencias-ux",
+            tldr: {
+                problem: "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível' — e gestores calibram senioridade no feeling, com planilhas soltas.",
+                problem_en: "Brazilian designers can't answer 'where am I and what's missing for the next level' — and managers calibrate seniority by gut feeling, with loose spreadsheets.",
+                role: "Product Designer & Full-Stack, solo: pesquisa de mercado, PRD, design system, código, infra e monetização, do zero ao deploy.",
+                role_en: "Product Designer & Full-Stack, solo: market research, PRD, design system, code, infra and monetization, from zero to deploy.",
+                outcome: "SaaS completo no ar em 3 dias: autoavaliação de ~88 habilidades, radar, gap autoavaliação × gestor, PDI por pessoa e assinaturas com Stripe.",
+                outcome_en: "Full SaaS live in 3 days: ~88-skill self-assessment, radar, self × manager gap, per-person development plan and Stripe subscriptions.",
+            },
         pageType: "rich",
         src: "/images/projects/maestria/maestria_landing_hero.png",
         category: "Product Design & Full-Stack",
@@ -277,6 +285,14 @@ export const projectsData = [
     {
         id: 16,
         slug: "drop-marketplace-de-lancamentos",
+            tldr: {
+                problem: "Criadores que lançam drops limitados remendam e-commerce genérico com apps avulsos, sem waitlist priorizada, escassez real nem Pix.",
+                problem_en: "Creators launching limited drops patch together generic e-commerce and one-off apps, with no priority waitlist, real scarcity or Pix.",
+                role: "Product Designer & Full-Stack, solo, da análise competitiva ao deploy.",
+                role_en: "Product Designer & Full-Stack, solo, from competitive analysis to deploy.",
+                outcome: "MVP no ar: vitrine própria por criador, waitlist priorizada, countdown e checkout próprio com cartão e Pix.",
+                outcome_en: "Live MVP: a storefront per creator, priority waitlist, countdown and in-house checkout with card and Pix.",
+            },
         pageType: "rich",
         src: "/images/projects/drop/drop_capa.jpg",
         category: "Product Design & Full-Stack",
@@ -408,6 +424,14 @@ export const projectsData = [
     {
         id: 1,
         slug: "sigil-design-system-builder",
+            tldr: {
+                problem: "Founders e devs solo constroem produtos sem designer e acabam com identidade visual fragmentada, sem tokens nem sistema.",
+                problem_en: "Founders and solo devs build products without a designer and end up with fragmented visual identity, no tokens, no system.",
+                role: "Product Designer & AI Engineer, solo: pesquisa de mercado, produto, design system e código, do zero ao deploy.",
+                role_en: "Product Designer & AI Engineer, solo: market research, product, design system and code, from zero to deploy.",
+                outcome: "MVP no ar em 3 dias: de uma cor seed a paleta, tokens e guia de estilo exportáveis, com preview em componentes reais.",
+                outcome_en: "MVP live in 3 days: from a seed color to exportable palette, tokens and style guide, previewed on real components.",
+            },
         pageType: "rich",
         src: "/images/projects/sigil/sigil_full.jpg",
         category: "Product Design & AI Engineering",
@@ -543,6 +567,14 @@ export const projectsData = [
     {
         id: 15,
         slug: "notafacil-emissor-nfse-mei",
+            tldr: {
+                problem: "14 milhões de MEIs emitem nota no site da prefeitura, cobram por WhatsApp e perdem o prazo do DAS, sem uma ferramenta que una tudo isso.",
+                problem_en: "14 million Brazilian MEIs issue invoices on city-hall sites, charge clients over WhatsApp and miss tax deadlines, with no tool connecting it all.",
+                role: "Product Designer & Full-Stack, solo, do discovery ao produto no ar.",
+                role_en: "Product Designer & Full-Stack, solo, from discovery to live product.",
+                outcome: "MVP funcional que une emissão de NFS-e, cobrança Pix vinculada à nota, controle de recebimento e DAS automatizado num só fluxo.",
+                outcome_en: "A working MVP uniting NFS-e issuance, invoice-linked Pix charges, receivables tracking and automated DAS in a single flow.",
+            },
         src: "/images/projects/notafacil/notafacil.jpg",
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack"],
@@ -646,6 +678,14 @@ export const projectsData = [
     {
         id: 6,
         slug: "pixtudo-super-app-ux-research",
+            tldr: {
+                problem: "O brasileiro abre vários apps diferentes para pagar, investir, pedir crédito e dividir contas.",
+                problem_en: "Brazilians open several different apps just to pay, invest, apply for credit and split bills.",
+                role: "Product Designer & Full-Stack, solo: pesquisa de mercado, personas, jornada, arquitetura de informação e MVP.",
+                role_en: "Product Designer & Full-Stack, solo: market research, personas, journey, information architecture and MVP.",
+                outcome: "Pesquisa completa + MVP funcional com Pix simulado, cashback, extrato inteligente, score gamificado e rateio social.",
+                outcome_en: "Full research document + working MVP with simulated Pix, cashback, smart statement, gamified score and social bill-splitting.",
+            },
         pageType: "rich",
         accentColor: "#00C853",
         liveDemoLink: "https://app-src-two.vercel.app/",
@@ -789,6 +829,14 @@ export const projectsData = [
     {
         id: 2,
         slug: "listaai-gerador-de-descricoes",
+            tldr: {
+                problem: "Vendedores de marketplace perdem horas escrevendo títulos e descrições que não performam na busca.",
+                problem_en: "Marketplace sellers lose hours writing titles and descriptions that underperform in search.",
+                role: "Product Designer & AI Engineer, solo, do problema ao produto no ar.",
+                role_en: "Product Designer & AI Engineer, solo, from problem to live product.",
+                outcome: "Gerador com IA que entrega título com palavras-chave de alto volume e descrição pronta para publicar em segundos.",
+                outcome_en: "An AI generator that delivers keyword-optimized titles and publish-ready descriptions in seconds.",
+            },
         pageType: "rich",
         src: "/images/projects/listaai/listaai_cover.png",
         category: "Product Design & AI Engineering",
@@ -1056,6 +1104,14 @@ export const projectsData = [
     {
         id: 5,
         slug: "roteiro-de-viagens-colaborativo",
+            tldr: {
+                problem: "Planejar viagem em grupo espalha decisões entre WhatsApp, planilhas e mapas; nenhum app resolve colaboração com permissões.",
+                problem_en: "Group trip planning scatters decisions across WhatsApp, spreadsheets and maps; no app solves collaboration with permissions.",
+                role: "Product Designer, solo: projeto de pós (2024) reconstruído do zero em 2026, com design system próprio.",
+                role_en: "Product Designer, solo: a post-grad project (2024) rebuilt from scratch in 2026 with its own design system.",
+                outcome: "Fluxo colaborativo completo em alta fidelidade, ligado em um protótipo navegável no Figma.",
+                outcome_en: "The full collaborative flow in high fidelity, wired into a navigable Figma prototype.",
+            },
         src: "/images/projects/roteiro_viagens_full.jpg",
         category: "Product Design",
         tags: ["Product Design", "UX Research"],
@@ -1772,6 +1828,14 @@ export const projectsData = [
     {
         id: 11,
         slug: "globo-ab-test-landing-page-aquisicao",
+            tldr: {
+                problem: "Páginas de aquisição de assinaturas mudavam por opinião, sem evidência de qual versão convertia mais.",
+                problem_en: "Subscription acquisition pages changed based on opinion, with no evidence of which version converted better.",
+                role: "Product Designer & Front-end: dono do design e da implementação das variantes em HTML/CSS/JS, dentro de um programa cross-funcional com Canais Digitais e marketing.",
+                role_en: "Product Designer & Front-end: owner of the design and implementation of the variants in HTML/CSS/JS, within a cross-functional program with Digital Channels and marketing.",
+                outcome: "Programa contínuo de testes A/B validado no Google Ads; variantes vencedoras viram padrão nos canais das marcas, sem sacrificar o LTV.",
+                outcome_en: "A continuous A/B testing program validated on Google Ads; winning variants become the standard across brand channels without sacrificing LTV.",
+            },
         src: "/images/projects/ab_test/oglb_full.jpg",
         pageSrc: "/images/projects/ab_test/oglb_full_intern.jpg",
         category: "Product Design · Conversão & Aquisição",
@@ -1908,6 +1972,14 @@ export const projectsData = [
     {
         id: 12,
         slug: "ensineme-plataforma-ead-estacio",
+            tldr: {
+                problem: "Dezenas de disciplinas simultâneas, com conteúdos radicalmente diferentes, precisavam virar módulos EAD claros e consistentes.",
+                problem_en: "Dozens of simultaneous disciplines, with radically different content, had to become clear and consistent e-learning modules.",
+                role: "Product Designer & Front-end em squads multidisciplinares: protótipos no Figma, implementação em HTML/CSS/JS e evolução do Design System.",
+                role_en: "Product Designer & Front-end in multidisciplinary squads: Figma prototypes, HTML/CSS/JS implementation and Design System evolution.",
+                outcome: "Módulos entregues em escala por 2 anos e meio, com alta fidelidade ao protótipo e consistência garantida pelo Design System.",
+                outcome_en: "Modules delivered at scale over 2.5 years, with high prototype fidelity and consistency guaranteed by the Design System.",
+            },
         src: "/images/projects/ensineme/ensineme_full.jpg",
         pageSrc: "/images/projects/ensineme/ensineme_full.jpg",
         category: "Product Design",
@@ -1988,6 +2060,14 @@ export const projectsData = [
     {
         id: 13,
         slug: "tradeview-plataforma-negociacao",
+            tldr: {
+                problem: "Interfaces de trading concentram dados densos em tempo real; o desafio era torná-las legíveis sem perder profundidade.",
+                problem_en: "Trading interfaces pack dense real-time data; the challenge was making them readable without losing depth.",
+                role: "Product Designer & Front-end, solo, do design à implementação em Next.js.",
+                role_en: "Product Designer & Front-end, solo, from design to Next.js implementation.",
+                outcome: "Plataforma funcional com orderbook ao vivo, candlestick, depth chart, watchlist, alertas e onboarding interativo.",
+                outcome_en: "A working platform with live order book, candlestick, depth chart, watchlist, alerts and interactive onboarding.",
+            },
         pageType: "rich",
         liveDemoLink: "https://orderbookfinancas.vercel.app",
         src: "/images/projects/tradeview_full2.jpg",
@@ -2139,6 +2219,14 @@ export const projectsData = [
     {
         id: 17,
         slug: "meu-sus-digital-agendamento-fila",
+            tldr: {
+                problem: "O paciente do SUS entra na fila sem saber a posição, sem previsão e sem lembrete; a única forma de acompanhar é ligar para a UBS.",
+                problem_en: "SUS patients join the queue without knowing their position, predicted date or reminders; the only way to follow up is calling the clinic.",
+                role: "UX Researcher & Product Designer, solo: pesquisa, benchmark, personas e redesign do fluxo de agendamento.",
+                role_en: "UX Researcher & Product Designer, solo: research, benchmarking, personas and scheduling flow redesign.",
+                outcome: "Protótipo navegável com 12 telas e código em React, sobre o design system gov.br auditado em WCAG, focado em idosos e classes C/D.",
+                outcome_en: "Navigable 12-screen prototype with React code, on a WCAG-audited gov.br design system, focused on elderly and lower-income users.",
+            },
         pageType: "rich",
         accentColor: "#1351B4",
         src: "/images/projects/sus/sus_fila_capa.jpg",
