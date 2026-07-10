@@ -42,6 +42,10 @@ body {
     gap: 24px;
     padding: 18px 24px;
     pointer-events: none;
+    background: rgba(22, 22, 22, 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .ph-header > * {
