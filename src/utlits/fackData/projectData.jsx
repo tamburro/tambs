@@ -2,6 +2,152 @@
 
 export const projectsData = [
     {
+        id: 18,
+        slug: "profissoes-teste-de-conhecimentos",
+        pageType: "rich",
+        src: "/images/projects/profissoes/capa.jpg",
+        category: "Product Design & Full-Stack",
+        tags: ["Product Design", "Full-Stack", "Game Design"],
+        title: "Profissões",
+        tagline: "Teste o quanto você realmente sabe da sua profissão — jogando.",
+        tagline_en: "Test how much you really know about your profession — by playing.",
+        description: "Um Duolingo para profissões: você testa seus conhecimentos de UX, front-end ou marketing em desafios diários de cinco minutos, vê seu nível real por competência num mapa visual e volta todo dia para subir esse nível. Feedback imediato, gamificação de verdade (XP, ofensiva, conquistas, ranking) e 100% gratuito, sem paywall nem limite diário.",
+        description_en: "A Duolingo for professions: you test your knowledge of UX, front-end, or marketing in five-minute daily challenges, see your real level per competency on a visual map, and come back every day to raise it. Immediate feedback, real gamification (XP, streak, achievements, leaderboard), and 100% free — no paywall, no daily limit.",
+        year: "2026",
+        role: "Product Designer & AI Engineer",
+        timeline: "Concept a produção · pivô para gratuito",
+        timeline_en: "Concept to production · pivot to free",
+        team: "Solo",
+        client: "Produto próprio",
+        tools: ["Next.js", "Prisma", "Auth.js", "Three.js"],
+        liveDemoLink: "https://duolingo-profissoes.vercel.app/",
+        sections: [
+            {
+                title: "O Problema",
+                title_en: "The Problem",
+                type: "text",
+                content: "Quem estuda ou já atua numa profissão não sabe o quanto realmente domina dela. Cursos de quarenta horas morrem no módulo dois, certificados atestam presença e não competência, e a maioria dos produtos de aprendizado esconde o conteúdo mais útil atrás de paywall. Falta um jeito rápido, honesto e gratuito de responder uma pergunta simples: onde estão as minhas lacunas? O desafio de design era transformar autoavaliação em algo que a pessoa quisesse fazer todo dia, sem a fadiga de vídeo-aulas nem a culpa de mais uma assinatura parada no cartão.",
+                content_en: "People studying or already working in a profession don't know how much they truly master it. Forty-hour courses die at module two, certificates attest to attendance rather than competence, and most learning products hide the most useful content behind a paywall. What's missing is a fast, honest, and free way to answer one simple question: where are my gaps? The design challenge was to turn self-assessment into something people would want to do every day, without the fatigue of video lessons or the guilt of yet another idle subscription on the card."
+            },
+            {
+                title: "Landing",
+                title_en: "Landing",
+                type: "image",
+                src: "/images/projects/profissoes/capa.jpg",
+                caption: "Landing dark com orb WebGL (Three.js) e tipografia display animada em GSAP",
+                caption_en: "Dark landing with a WebGL orb (Three.js) and GSAP-animated display typography"
+            },
+            {
+                title: "Pesquisa & Direção",
+                title_en: "Research & Direction",
+                type: "research",
+                methods: ["Benchmark de apps de microlearning e hábito (Duolingo, Sololearn, Brilliant)", "Análise de trilhas e certificações de UX, front-end e marketing", "Mapeamento do loop de hábito: gatilho, ação, recompensa variável"],
+                methods_en: ["Benchmark of microlearning and habit apps (Duolingo, Sololearn, Brilliant)", "Analysis of UX, front-end, and marketing tracks and certifications", "Habit-loop mapping: trigger, action, variable reward"],
+                content: "O Duolingo provou que a ofensiva diária e o feedback imediato viciam mais que qualquer curso longo, mas trata idioma como trilha linear. Para profissão, competência não é linear: alguém pode mandar bem em UI e patinar em pesquisa. A direção foi um mapa de competências (não uma trilha), onde cada skill tem uma barra de domínio de 0 a 100 que é a própria medida de quanto você sabe. A escolha de abrir tudo de graça foi deliberada: conhecimento não devia ter catraca, e a retenção viria do hábito e do progresso visível, não de um gate.",
+                content_en: "Duolingo proved that the daily streak and immediate feedback are more addictive than any long course, but it treats language as a linear track. For a profession, competence isn't linear: someone can nail UI and struggle with research. The direction was a competency map (not a track), where each skill has a 0-to-100 mastery bar that is itself the measure of how much you know. Making everything free was deliberate: knowledge shouldn't have a turnstile, and retention would come from habit and visible progress, not from a gate.",
+                highlights: [
+                    "Competência não é linear: o produto é um mapa de skills, não uma trilha única",
+                    "A barra de domínio (0–100) por skill É a métrica de quanto a pessoa sabe",
+                    "Ofensiva, XP e conquistas movem o hábito diário sem depender de conteúdo novo",
+                    "100% gratuito por princípio: sem paywall, sem limite diário, sem plano pago"
+                ],
+                highlights_en: [
+                    "Competence isn't linear: the product is a skill map, not a single track",
+                    "The per-skill mastery bar (0–100) IS the metric of how much you know",
+                    "Streak, XP, and achievements drive the daily habit without needing new content",
+                    "Free by principle: no paywall, no daily limit, no paid plan"
+                ]
+            },
+            {
+                title: "Solução & Produto",
+                title_en: "Solution & Product",
+                type: "text",
+                content: "Profissões entrega um loop diário curto: o mapa mostra suas competências com barra de domínio, ofensiva e XP; você escolhe uma skill, encara um desafio de cinco minutos e recebe feedback na hora a cada resposta; ao concluir, vê o XP somar, o domínio subir e a ofensiva avançar. O onboarding é uma autoavaliação leve que posiciona o ponto de partida de cada skill, então ninguém começa do zero absoluto. Toda a UI do app adota uma direção editorial em papel (fundo creme, tipografia display Unbounded, hairlines e micro-labels verdes), em contraste proposital com a landing dark e cinética.",
+                content_en: "Profissões delivers a short daily loop: the map shows your competencies with a mastery bar, streak, and XP; you pick a skill, take a five-minute challenge, and get feedback on the spot with every answer; on completion, you watch XP add up, mastery rise, and the streak advance. Onboarding is a light self-assessment that positions each skill's starting point, so no one begins from absolute zero. The whole app UI adopts an editorial paper direction (cream background, Unbounded display type, hairlines, and green micro-labels), a deliberate contrast to the dark, kinetic landing."
+            },
+            {
+                title: "Mapa de competências",
+                title_en: "Competency map",
+                type: "image",
+                src: "/images/projects/profissoes/dashboard.png",
+                caption: "Dashboard editorial em papel: nível, meta diária, ofensiva e domínio por competência",
+                caption_en: "Editorial paper dashboard: level, daily goal, streak, and per-competency mastery"
+            },
+            {
+                title: "Onboarding & autoavaliação",
+                title_en: "Onboarding & self-assessment",
+                type: "image",
+                src: "/images/projects/profissoes/onboarding.png",
+                caption: "Autoavaliação posiciona o domínio inicial de cada skill no mapa",
+                caption_en: "Self-assessment positions each skill's initial mastery on the map"
+            },
+            {
+                title: "Cinco formatos de desafio",
+                title_en: "Five challenge formats",
+                type: "research",
+                methods: ["Escolha única", "Múltipla (crítica/decisão)", "Ordenar (drag-and-drop)", "Combinar pares", "Verdadeiro ou falso"],
+                methods_en: ["Single choice", "Multiple (critique/decision)", "Order (drag-and-drop)", "Match pairs", "True or false"],
+                content: "Cada formato testa um tipo diferente de conhecimento e mantém o ritmo variado ao longo dos passos de um desafio. A avaliação é imediata e client-side (a resposta correta vem no payload do passo), enquanto XP, domínio e ofensiva são aplicados no servidor ao concluir. Um combo de acertos consecutivos dá aquele empurrão extra de dopamina. São 3 profissões, 10 competências e 30 desafios em três níveis (iniciante, intermediário e avançado).",
+                content_en: "Each format tests a different kind of knowledge and keeps the pace varied across a challenge's steps. Evaluation is immediate and client-side (the correct answer ships in the step payload), while XP, mastery, and streak are applied on the server upon completion. A combo of consecutive correct answers delivers that extra dopamine push. There are 3 professions, 10 competencies, and 30 challenges across three levels (beginner, intermediate, and advanced).",
+                highlights: [
+                    "Feedback imediato com explicação a cada resposta, dentro do próprio passo",
+                    "Ordenar usa drag-and-drop nativo com alternativa por setas (acessível no toque)",
+                    "Combo de acertos e ofensiva diária como recompensa variável",
+                    "30 desafios em 3 níveis, do iniciante ao avançado, por competência"
+                ],
+                highlights_en: [
+                    "Immediate feedback with an explanation on every answer, within the step itself",
+                    "Order uses native drag-and-drop with an arrow fallback (touch-accessible)",
+                    "Answer combo and daily streak as a variable reward",
+                    "30 challenges across 3 levels, beginner to advanced, per competency"
+                ]
+            },
+            {
+                title: "Player & celebração",
+                title_en: "Player & celebration",
+                type: "gallery",
+                columns: 2,
+                images: [
+                    { src: "/images/projects/profissoes/player.png", caption: "Player do desafio: enunciado display, opções em hairline e barra de progresso", caption_en: "Challenge player: display prompt, hairline options, and progress bar" },
+                    { src: "/images/projects/profissoes/resultado.png", caption: "Tela de resultado: XP, domínio e ofensiva animados, com confete no acerto total", caption_en: "Result screen: animated XP, mastery, and streak, with confetti on a perfect run" }
+                ]
+            },
+            {
+                title: "No celular",
+                title_en: "On mobile",
+                type: "screens",
+                images: [
+                    { src: "/images/projects/profissoes/m_dashboard.png", caption: "Mapa" , caption_en: "Map" },
+                    { src: "/images/projects/profissoes/m_player.png", caption: "Desafio", caption_en: "Challenge" }
+                ]
+            },
+            {
+                title: "Arquitetura & IA",
+                title_en: "Architecture & AI",
+                type: "text",
+                content: "Construído com AI coding (Claude como pair programmer, do shaping ao deploy). Stack: Next.js 16 (App Router, Turbopack), Prisma + PostgreSQL (Neon) para profissões, skills, desafios e progresso, Auth.js v5 para login, TanStack Query no cliente, Three.js e GSAP na landing. O produto nasceu de um processo de shaping (requisitos, breadboard e fatias verticais) documentado no repositório, e passou por um pivô importante: começou freemium com Stripe e virou 100% gratuito, o que exigiu arrancar o paywall, o limite diário e o enum de planos sem quebrar o loop central. Deploy contínuo na Vercel, com um modo demo que abre o app inteiro via login de visitante.",
+                content_en: "Built with AI coding (Claude as pair programmer, from shaping to deployment). Stack: Next.js 16 (App Router, Turbopack), Prisma + PostgreSQL (Neon) for professions, skills, challenges, and progress, Auth.js v5 for login, TanStack Query on the client, Three.js and GSAP on the landing. The product grew out of a shaping process (requirements, breadboard, and vertical slices) documented in the repo, and went through a major pivot: it started freemium with Stripe and became 100% free, which required ripping out the paywall, the daily limit, and the plan enum without breaking the core loop. Continuous deployment on Vercel, with a demo mode that opens the whole app via guest login."
+            },
+            {
+                title: "Resultados & Aprendizados",
+                title_en: "Results & Learnings",
+                type: "outcomes",
+                metrics: [
+                    { value: "R$ 0", label: "gratuito de verdade, sem paywall nem limite diário" },
+                    { value: "5", label: "formatos de desafio, em 3 níveis de dificuldade" },
+                    { value: "30", label: "desafios em 10 competências e 3 profissões" }
+                ],
+                metrics_en: [
+                    { value: "R$ 0", label: "truly free, no paywall or daily limit" },
+                    { value: "5", label: "challenge formats, across 3 difficulty levels" },
+                    { value: "30", label: "challenges across 10 competencies and 3 professions" }
+                ],
+                content: "O aprendizado central foi que o produto não vende conteúdo, vende autoconhecimento com hábito. A decisão mais importante foi medir domínio por competência num mapa, em vez de empilhar aulas numa trilha, e deixar a gamificação (ofensiva, combo, conquistas) carregar a retenção. O pivô para gratuito reforçou a proposta: sem a fricção de um paywall, a única razão para voltar é o próprio progresso, o que elevou a régua do design de feedback e recompensa. Tecnicamente, separar avaliação imediata no cliente da aplicação de XP no servidor manteve o feedback instantâneo sem abrir mão de um placar confiável.",
+                content_en: "The core learning was that the product doesn't sell content, it sells self-knowledge with a habit. The most important decision was to measure mastery per competency on a map, instead of stacking lessons on a track, and to let gamification (streak, combo, achievements) carry retention. The pivot to free reinforced the proposition: without the friction of a paywall, the only reason to return is progress itself, which raised the bar for feedback and reward design. Technically, separating immediate client-side evaluation from server-side XP application kept feedback instant without giving up a trustworthy scoreboard."
+            }
+        ]
+    },
+    {
         id: 16,
         slug: "drop-marketplace-de-lancamentos",
         pageType: "rich",
