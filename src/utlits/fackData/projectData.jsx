@@ -296,7 +296,7 @@ export const projectsData = [
     },
     {
         id: 19,
-        slug: "maestria-avaliacao-competencias-ux",
+        slug: "proficia-avaliacao-competencias-ux",
             tldr: {
                 problem: "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível' — e gestores calibram senioridade no feeling, com planilhas soltas.",
                 problem_en: "Brazilian designers can't answer 'where am I and what's missing for the next level' — and managers calibrate seniority by gut feeling, with loose spreadsheets.",
@@ -309,7 +309,7 @@ export const projectsData = [
         src: "/images/projects/maestria_full.jpg",
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack"],
-        title: "Maestria",
+        title: "Proficia",
         tagline: "SaaS B2B de avaliação de competências: radar, senioridade e PDI 70-20-10 para designers e times de UX.",
         tagline_en: "B2B SaaS for competency assessment: radar, seniority and 70-20-10 development plans for UX designers and teams.",
         description: "SaaS português-first de avaliação e desenvolvimento de competências de UX/Product Design. A pessoa se avalia contra um framework de 14 competências e ~88 habilidades na escala Dreyfus de 6 níveis, recebe um radar, uma estimativa de senioridade na régua brasileira e um plano de desenvolvimento 70-20-10. O mesmo framework serve ao gestor: gap autoavaliação × gestor, radar agregado do time e PDI por pessoa.",
@@ -321,7 +321,7 @@ export const projectsData = [
         team: "Solo",
         client: "Produto próprio",
         tools: ["Next.js", "Prisma", "Stripe", "GSAP"],
-        liveDemoLink: "https://maestria-eta.vercel.app/",
+        liveDemoLink: "https://proficia.com.br/",
         accent: "#6A4CF5",
         accentColor: "#6A4CF5",
         sections: [
