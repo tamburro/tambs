@@ -1,7 +1,7 @@
 // src/works/[slug]/page.js
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, use } from 'react';
 import { getProjectBySlug } from '@/utlits/fackData/projectData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -11,7 +11,8 @@ import { useLanguage } from '@/context/LanguageContext';
 import RichProjectPage from './RichProjectPage';
 
 const SingleProjectPage = ({ params }) => {
-    const { slug } = params;
+    // Next 15+ entrega params como Promise; em client component, use().
+    const { slug } = use(params);
     const project = getProjectBySlug(slug);
     const parallaxRef = useRef(null);
     const [offsetY, setOffsetY] = useState(0);
