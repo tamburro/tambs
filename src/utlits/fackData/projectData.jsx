@@ -306,7 +306,7 @@ export const projectsData = [
                 outcome_en: "Full SaaS live in 3 days: ~88-skill self-assessment, radar, self × manager gap, per-person development plan and Stripe subscriptions.",
             },
         pageType: "rich",
-        src: "/images/projects/maestria_full.jpg",
+        src: "/images/projects/proficia_full.jpg",
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack"],
         title: "Proficia",
