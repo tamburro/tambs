@@ -722,6 +722,7 @@ export const projectsData = [
                 outcome: "MVP funcional que une emissão de NFS-e, cobrança Pix vinculada à nota, controle de recebimento e DAS automatizado num só fluxo.",
                 outcome_en: "A working MVP uniting NFS-e issuance, invoice-linked Pix charges, receivables tracking and automated DAS in a single flow.",
             },
+        liveDemoLink: "https://nota-facil-psi.vercel.app/",
         src: "/images/projects/notafacil/notafacil.jpg",
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack"],
