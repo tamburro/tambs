@@ -13,6 +13,7 @@ export const translations = {
     gallery: {
       eyebrow: 'Selected Works',
       hint: 'Drag to explore · Click to open',
+      hintTouch: 'Swipe to explore · Tap to open',
       filter: 'Filter',
       all: 'All',
       works: 'Works',
@@ -121,6 +122,7 @@ export const translations = {
     gallery: {
       eyebrow: 'Trabalhos Selecionados',
       hint: 'Arraste para explorar · Clique para abrir',
+      hintTouch: 'Deslize para explorar · Toque para abrir',
       filter: 'Filtrar',
       all: 'Todos',
       works: 'Trabalhos',

@@ -29,6 +29,11 @@ export default function SphereGallery({ activeFilter = null }) {
     const router = useRouter()
     const { t } = useLanguage()
     const [ready, setReady] = useState(false)
+    const [coarse, setCoarse] = useState(false)
+
+    useEffect(() => {
+        setCoarse(window.matchMedia('(pointer: coarse)').matches)
+    }, [])
 
     useEffect(() => {
         const projects = getGalleryProjects()
@@ -217,6 +222,7 @@ export default function SphereGallery({ activeFilter = null }) {
         const target = { x: 0, y: 0 }       // target
         const velocity = { x: 0, y: 0 }
         let dragging = false
+        let touchDrag = false
         let moved = 0
         let lastX = 0, lastY = 0
         let downX = 0, downY = 0, downTime = 0
@@ -252,11 +258,14 @@ export default function SphereGallery({ activeFilter = null }) {
         function onPointerDown(e) {
             if (transitioning) return
             dragging = true
+            touchDrag = e.pointerType !== 'mouse'
             moved = 0
             lastX = downX = e.clientX
             lastY = downY = e.clientY
             downTime = performance.now()
             velocity.x = velocity.y = 0
+            updatePointer(e)
+            try { mount.setPointerCapture(e.pointerId) } catch {}
             mount.style.cursor = 'grabbing'
             if (introComplete) {
                 gsap.to(camera, {
@@ -266,12 +275,16 @@ export default function SphereGallery({ activeFilter = null }) {
             }
         }
 
-        function onPointerMove(e) {
+        function updatePointer(e) {
             const rect = mount.getBoundingClientRect()
             pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
             pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1
+        }
 
-            if (labelRef.current) {
+        function onPointerMove(e) {
+            updatePointer(e)
+
+            if (labelRef.current && e.pointerType === 'mouse') {
                 labelRef.current.style.transform = `translate(${e.clientX + 18}px, ${e.clientY + 18}px)`
             }
 
@@ -282,12 +295,13 @@ export default function SphereGallery({ activeFilter = null }) {
             lastX = e.clientX
             lastY = e.clientY
 
-            const speed = 0.0035
+            const speed = touchDrag ? 0.005 : 0.0035
+            const speedY = touchDrag ? 0.0028 : 0.0035
             target.y -= dx * speed
-            target.x -= dy * speed
+            target.x -= dy * speedY
             target.x = THREE.MathUtils.clamp(target.x, -MAX_PITCH, MAX_PITCH)
             velocity.y = -dx * speed
-            velocity.x = -dy * speed
+            velocity.x = -dy * speedY
         }
 
         function onPointerUp(e) {
@@ -308,9 +322,26 @@ export default function SphereGallery({ activeFilter = null }) {
             // click detection
             const dist = Math.abs(e.clientX - downX) + Math.abs(e.clientY - downY)
             const dt = performance.now() - downTime
-            if (dist < 8 && dt < 350 && hovered && introComplete && !transitioning) {
-                openProject(hovered)
+            let picked = hovered
+            if (touchDrag) {
+                updatePointer(e)
+                raycaster.setFromCamera(pointer, camera)
+                const hits = raycaster.intersectObjects(tiles)
+                picked = hits.length && hits[0].object.userData.filterActive ? hits[0].object : null
             }
+            const slop = touchDrag ? 16 : 8
+            const maxTime = touchDrag ? 500 : 350
+            if (dist < slop && dt < maxTime && picked && introComplete && !transitioning) {
+                openProject(picked)
+            }
+            touchDrag = false
+        }
+
+        function onPointerCancel() {
+            if (!dragging) return
+            dragging = false
+            touchDrag = false
+            mount.style.cursor = 'grab'
         }
 
         function openProject(tile) {
@@ -353,6 +384,7 @@ export default function SphereGallery({ activeFilter = null }) {
         mount.addEventListener('pointerdown', onPointerDown)
         window.addEventListener('pointermove', onPointerMove)
         window.addEventListener('pointerup', onPointerUp)
+        window.addEventListener('pointercancel', onPointerCancel)
 
         function onResize() {
             camera.aspect = mount.clientWidth / mount.clientHeight
@@ -396,7 +428,7 @@ export default function SphereGallery({ activeFilter = null }) {
             group.rotation.y = rot.y
 
             // hover raycast
-            if (!dragging && !transitioning) {
+            if (!dragging && !transitioning && !touchDrag) {
                 raycaster.setFromCamera(pointer, camera)
                 const hits = raycaster.intersectObjects(tiles)
                 const hit = hits.length && hits[0].object.userData.filterActive ? hits[0].object : null
@@ -441,6 +473,7 @@ export default function SphereGallery({ activeFilter = null }) {
             mount.removeEventListener('pointerdown', onPointerDown)
             window.removeEventListener('pointermove', onPointerMove)
             window.removeEventListener('pointerup', onPointerUp)
+            window.removeEventListener('pointercancel', onPointerCancel)
             window.removeEventListener('resize', onResize)
             tiles.forEach(tile => {
                 tile.geometry.dispose()
@@ -485,7 +518,7 @@ export default function SphereGallery({ activeFilter = null }) {
             {/* heading */}
             <div className={`sphere-gallery-ui ${ready ? 'is-ready' : ''}`}>
                 <p className="sphere-gallery-eyebrow">{t.gallery.eyebrow}</p>
-                <p className="sphere-gallery-hint">{t.gallery.hint}</p>
+                <p className="sphere-gallery-hint">{coarse ? t.gallery.hintTouch : t.gallery.hint}</p>
             </div>
 
             {/* cursor label */}

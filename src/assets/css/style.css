@@ -3929,11 +3929,16 @@ ul.blog_pagination li a:hover {
     z-index: 10;
     background: var(--void);
     overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .sphere-gallery-canvas {
     position: absolute;
     inset: 0;
+    touch-action: none;
+    -webkit-touch-callout: none;
 }
 
 .sphere-gallery-canvas canvas {
