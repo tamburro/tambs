@@ -2,151 +2,182 @@
 
 export const projectsData = [
     {
-        id: 20,
-        slug: "detetives-digitais-letramento-ia",
-        pageType: "rich",
-        src: "/images/projects/detetives_full.jpg",
-        category: "Product Design & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
-        title: "Detetives Digitais",
-        tagline: "Um fluxo end-to-end de edtech: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o resultado realimenta a próxima aula.",
-        tagline_en: "An end-to-end ed-tech flow: the teacher describes the goal, AI builds the mission, the student plays offline, and results feed the next lesson.",
-        tldr: {
-            problem: "Crianças brasileiras estão entre as mais conectadas do mundo, mas vivem num país que virou vitrine de golpes por WhatsApp, SMS e Pix. Pesquisas como a TIC Kids Online Brasil mostram o descompasso: acesso altíssimo, repertório crítico baixo. A BNCC tornou cultura digital competência obrigatória, mas faltam ao professor tempo e material engajante para ensiná-la.",
-            problem_en: "Brazilian children are among the most connected in the world, yet live in a country that became a showcase for WhatsApp, SMS and Pix scams. Surveys like TIC Kids Online Brasil expose the gap: very high access, low critical skills. Brazil's BNCC curriculum made digital literacy a required competency, but teachers lack the time and engaging material to teach it.",
-            role: "Product Designer & AI Engineer, solo: shaping, design system, código, integração de IA e deploy, do zero ao ar.",
-            role_en: "Product Designer & AI Engineer, solo: shaping, design system, code, AI integration and deploy, from zero to live.",
-            outcome: "Um produto jogável dos dois lados no ar: o professor gera uma missão com IA real, o aluno joga no modo avião e o professor vê onde a turma tropeçou — e gera reforço a partir disso.",
-            outcome_en: "A playable two-sided product, live: the teacher generates a mission with real AI, the student plays in airplane mode, and the teacher sees where the class stumbled — then generates reinforcement from it.",
+      "id": 20,
+      "slug": "detetives-digitais-letramento-ia",
+      "src": "/images/projects/detetives_full.jpg",
+      "category": "Product Design & AI Engineering",
+      "tags": [
+        "Product Design",
+        "AI Engineering"
+      ],
+      "title": "Detetives Digitais",
+      "tagline": "Um fluxo end-to-end de edtech: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o resultado realimenta a próxima aula.",
+      "tagline_en": "An end-to-end ed-tech flow: the teacher describes the goal, AI builds the mission, the student plays offline, and results feed the next lesson.",
+      "tldr": {
+        "problem": "Crianças brasileiras estão entre as mais conectadas do mundo, mas vivem num país que virou vitrine de golpes por WhatsApp, SMS e Pix. Pesquisas como a TIC Kids Online Brasil mostram o descompasso: acesso altíssimo, repertório crítico baixo. A BNCC tornou cultura digital competência obrigatória, mas faltam ao professor tempo e material engajante para ensiná-la.",
+        "problem_en": "Brazilian children are among the most connected in the world, yet live in a country that became a showcase for WhatsApp, SMS and Pix scams. Surveys like TIC Kids Online Brasil expose the gap: very high access, low critical skills. Brazil's BNCC curriculum made digital literacy a required competency, but teachers lack the time and engaging material to teach it.",
+        "role": "Product Designer & AI Engineer, solo: shaping, design system, código, integração de IA e deploy, do zero ao ar.",
+        "role_en": "Product Designer & AI Engineer, solo: shaping, design system, code, AI integration and deploy, from zero to live.",
+        "outcome": "Um produto jogável dos dois lados no ar: o professor gera uma missão com IA real, o aluno joga no modo avião e o professor vê onde a turma tropeçou — e gera reforço a partir disso.",
+        "outcome_en": "A playable two-sided product, live: the teacher generates a mission with real AI, the student plays in airplane mode, and the teacher sees where the class stumbled — then generates reinforcement from it."
+      },
+      "description": "Produto edtech que reúne, num único fluxo, a tese inteira de uma plataforma: o professor descreve um objetivo pedagógico em linguagem natural, a IA (Gemini) gera uma missão gamificada de letramento digital alinhada à BNCC, o professor revisa e aprova, o responsável autoriza sem expor dados da criança, o aluno joga offline como um PWA, e os resultados sincronizam e viram insight. Um design system de duas vozes veste a mesma base para o professor (sóbrio) e para o aluno (lúdico), sem nunca trocar de produto.",
+      "description_en": "An ed-tech product that brings a platform's entire thesis together in a single flow: the teacher describes a pedagogical goal in natural language, AI (Gemini) generates a gamified digital-literacy mission aligned to Brazil's BNCC curriculum, the teacher reviews and approves, the guardian consents without exposing the child's data, the student plays offline as a PWA, and results sync and turn into insight. A two-voice design system dresses the same base for the teacher (sober) and the student (playful), without ever switching products.",
+      "year": "2026",
+      "role": "Product Designer & AI Engineer",
+      "timeline": "End-to-end · 8 slices verticais",
+      "timeline_en": "End-to-end · 8 vertical slices",
+      "team": "Solo",
+      "client": "Projeto próprio",
+      "tools": [
+        "Next.js",
+        "Gemini API",
+        "GSAP",
+        "PWA / IndexedDB"
+      ],
+      "liveDemoLink": "https://edtech-psi-ochre.vercel.app",
+      "pageType": "rich",
+      "accent": "#5645d4",
+      "accentColor": "#5645d4",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "content": "Crianças brasileiras crescem hiperconectadas, mas num ambiente hostil. O Brasil é um dos países que mais sofre golpes digitais, e fraudes por WhatsApp, SMS e Pix chegam todo dia ao celular da família — muitas vezes operado pela própria criança. Pesquisas como a TIC Kids Online Brasil (Cetic.br) mostram o mesmo descompasso ano após ano: acesso altíssimo, repertório crítico baixo. A criança sabe usar o aplicativo, mas não aprendeu a desconfiar dele.\n\nA BNCC respondeu tornando cultura digital uma competência obrigatória, mas jogou a conta no professor — que já está sobrecarregado e não tem tempo, material pronto nem repertório técnico para transformar 'ensinar a identificar um golpe' numa atividade que prenda uma turma do fundamental. Ainda por cima, boa parte das escolas públicas convive com internet instável ou inexistente, o que elimina a maioria das ferramentas online, e LGPD e ECA exigem proteção reforçada para dados de menores. A necessidade é enorme, e as ferramentas existentes ou são genéricas, ou dependem de conexão, ou tratam a criança como um cadastro.",
+          "content_en": "Brazilian children grow up hyperconnected, but in a hostile environment. Brazil is among the countries most hit by digital scams, and WhatsApp, SMS and Pix fraud reaches the family phone every day — often the very phone a child is using. Surveys like TIC Kids Online Brasil (Cetic.br) show the same gap year after year: very high access, low critical skills. The child knows how to use the app, but never learned to distrust it.\n\nBrazil's BNCC curriculum responded by making digital literacy a required competency, but pushed the burden onto the teacher — already overloaded, with no time, no ready-made material and no technical repertoire to turn 'teach how to spot a scam' into an activity that holds a primary-school class. On top of that, many public schools live with unstable or nonexistent internet, which rules out most online tools, and LGPD and the ECA (child statute) demand heightened protection for minors' data. The need is enormous, and existing tools are either generic, or depend on connectivity, or treat the child as a database record."
         },
-        description: "Produto edtech que reúne, num único fluxo, a tese inteira de uma plataforma: o professor descreve um objetivo pedagógico em linguagem natural, a IA (Gemini) gera uma missão gamificada de letramento digital alinhada à BNCC, o professor revisa e aprova, o responsável autoriza sem expor dados da criança, o aluno joga offline como um PWA, e os resultados sincronizam e viram insight. Um design system de duas vozes veste a mesma base para o professor (sóbrio) e para o aluno (lúdico), sem nunca trocar de produto.",
-        description_en: "An ed-tech product that brings a platform's entire thesis together in a single flow: the teacher describes a pedagogical goal in natural language, AI (Gemini) generates a gamified digital-literacy mission aligned to Brazil's BNCC curriculum, the teacher reviews and approves, the guardian consents without exposing the child's data, the student plays offline as a PWA, and results sync and turn into insight. A two-voice design system dresses the same base for the teacher (sober) and the student (playful), without ever switching products.",
-        year: "2026",
-        role: "Product Designer & AI Engineer",
-        timeline: "End-to-end · 8 slices verticais",
-        timeline_en: "End-to-end · 8 vertical slices",
-        team: "Solo",
-        client: "Projeto próprio",
-        tools: ["Next.js", "Gemini API", "GSAP", "PWA / IndexedDB"],
-        liveDemoLink: "https://edtech-psi-ochre.vercel.app",
-        accent: "#5645d4",
-        accentColor: "#5645d4",
-        sections: [
+        {
+          "type": "image",
+          "src": "/images/projects/detetives/detetives_cover.png",
+          "caption": "A landing conta a tese em uma frase: a IA prepara, o professor aprova, a turma aprende — até sem internet.",
+          "caption_en": "The landing tells the thesis in one line: AI prepares, the teacher approves, the class learns — even offline."
+        },
+        {
+          "type": "text",
+          "title": "A tese em um fluxo",
+          "title_en": "The thesis in one flow",
+          "content": "A resposta é um fluxo único que conecta os dois lados do produto: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o professor vê o resultado. É a tese inteira de uma plataforma de letramento digital num percurso só. E o tema é também o conteúdo: uma missão no formato 'esse recado é seguro? caça ao golpe', onde a criança avalia mensagens reais de SMS, WhatsApp e e-mail e decide o que é golpe e o que é seguro — praticando, na brincadeira, exatamente a desconfiança que a pesquisa aponta como o que falta.",
+          "content_en": "The answer is a single flow connecting both sides of the product: the teacher describes the goal, AI generates the mission, the student plays offline, and the teacher sees the result. It's the entire thesis of a digital-literacy platform in one journey. And the theme is also the content: a mission in a 'is this message safe? scam hunt' format, where the child evaluates real SMS, WhatsApp and email messages and decides what's a scam and what's safe — practicing, through play, exactly the distrust research points to as the missing skill."
+        },
+        {
+          "type": "text",
+          "title": "Decisões de produto",
+          "title_en": "Product Decisions",
+          "highlights": [
+            "Conversa, não formulário: O professor descreve a aula em linguagem natural — como contaria a um colega — em vez de preencher doze campos. O nível da turma é a única configuração.",
+            "Human-in-the-loop: A IA propõe; o professor decide. Nada vai ao aluno sem revisão: editar o texto, trocar o nível e, se a IA errar a classificação, inverter golpe/seguro com um toque.",
+            "Zero-PII vira mecânica: Em vez de pedir o nome da criança, o jogo pede um codinome de detetive. A exigência de LGPD deixou de ser fricção e virou parte da brincadeira."
+          ],
+          "highlights_en": [
+            "Conversation, not a form: The teacher describes the lesson in natural language — as they'd tell a colleague — instead of filling twelve fields. The class level is the only setting.",
+            "Human-in-the-loop: AI proposes; the teacher decides. Nothing reaches the student without review: edit the text, change the level and, if the AI mislabels, flip scam/safe with one tap.",
+            "Zero-PII becomes mechanic: Instead of asking for the child's name, the game asks for a detective codename. The LGPD requirement stopped being friction and became part of the play."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/detetives/detetives_professor_briefing.png",
+          "caption": "O briefing conversacional: o objetivo pedagógico entra em linguagem natural, com estados de 'IA pensando' que reduzem a ansiedade da espera.",
+          "caption_en": "The conversational briefing: the pedagogical goal enters in natural language, with 'AI thinking' states that reduce the anxiety of waiting."
+        },
+        {
+          "type": "text",
+          "title": "A palavra final é do professor",
+          "title_en": "The teacher has the final word",
+          "content": "O Gemini devolve uma missão completa em JSON estruturado — recados, pistas, feedback e alinhamento BNCC — mas o design trata a IA como copiloto, não como piloto automático. A tela de revisão deixa o professor editar cada recado, regenerar por nível e, o gesto que mais conta, inverter a classificação da IA com um toque quando discorda dela. É a diferença entre 'a IA fez por você' e 'a IA fez com você'.",
+          "content_en": "Gemini returns a complete mission as structured JSON — messages, clues, feedback and BNCC alignment — but the design treats AI as a copilot, not autopilot. The review screen lets the teacher edit each message, regenerate by level and, the gesture that matters most, flip the AI's classification with one tap when they disagree. It's the difference between 'the AI did it for you' and 'the AI did it with you'."
+        },
+        {
+          "type": "gallery",
+          "title": "Do outro lado da tela: o aluno",
+          "title_en": "On the other side of the screen: the student",
+          "columns": 2,
+          "images": [
             {
-                type: "text",
-                title: "O Problema",
-                title_en: "The Problem",
-                content: "Crianças brasileiras crescem hiperconectadas, mas num ambiente hostil. O Brasil é um dos países que mais sofre golpes digitais, e fraudes por WhatsApp, SMS e Pix chegam todo dia ao celular da família — muitas vezes operado pela própria criança. Pesquisas como a TIC Kids Online Brasil (Cetic.br) mostram o mesmo descompasso ano após ano: acesso altíssimo, repertório crítico baixo. A criança sabe usar o aplicativo, mas não aprendeu a desconfiar dele.\n\nA BNCC respondeu tornando cultura digital uma competência obrigatória, mas jogou a conta no professor — que já está sobrecarregado e não tem tempo, material pronto nem repertório técnico para transformar 'ensinar a identificar um golpe' numa atividade que prenda uma turma do fundamental. Ainda por cima, boa parte das escolas públicas convive com internet instável ou inexistente, o que elimina a maioria das ferramentas online, e LGPD e ECA exigem proteção reforçada para dados de menores. A necessidade é enorme, e as ferramentas existentes ou são genéricas, ou dependem de conexão, ou tratam a criança como um cadastro.",
-                content_en: "Brazilian children grow up hyperconnected, but in a hostile environment. Brazil is among the countries most hit by digital scams, and WhatsApp, SMS and Pix fraud reaches the family phone every day — often the very phone a child is using. Surveys like TIC Kids Online Brasil (Cetic.br) show the same gap year after year: very high access, low critical skills. The child knows how to use the app, but never learned to distrust it.\n\nBrazil's BNCC curriculum responded by making digital literacy a required competency, but pushed the burden onto the teacher — already overloaded, with no time, no ready-made material and no technical repertoire to turn 'teach how to spot a scam' into an activity that holds a primary-school class. On top of that, many public schools live with unstable or nonexistent internet, which rules out most online tools, and LGPD and the ECA (child statute) demand heightened protection for minors' data. The need is enormous, and existing tools are either generic, or depend on connectivity, or treat the child as a database record.",
+              "src": "/images/projects/detetives/detetives_consentimento.png",
+              "caption": "Consentimento do responsável em linguagem humana: quatro promessas claras e um codinome de detetive no lugar do nome real.",
+              "caption_en": "Guardian consent in human language: four clear promises and a detective codename instead of a real name."
             },
             {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/detetives/detetives_cover.png",
-                caption: "A landing conta a tese em uma frase: a IA prepara, o professor aprova, a turma aprende — até sem internet.",
-                caption_en: "The landing tells the thesis in one line: AI prepares, the teacher approves, the class learns — even offline.",
+              "src": "/images/projects/detetives/detetives_jogo_recado.png",
+              "caption": "A missão: um recado por vez, botões grandes, feedback que ensina. Errar não tira ponto — vira pista para o próximo.",
+              "caption_en": "The mission: one message at a time, big buttons, feedback that teaches. A wrong answer costs no points — it becomes a clue for the next."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Offline de verdade",
+          "title_en": "Truly offline",
+          "content": "O lado do aluno é um PWA offline-first real, não uma promessa de marketing. Cada resposta é gravada no aparelho (IndexedDB) antes de qualquer rede, então o feedback nunca depende de conexão; quando a internet volta, uma fila sincroniza sozinha com o backend. Testado no modo avião: a criança joga a missão inteira desplugada, ganha pontos, conclui — e nunca vê um spinner. Um service worker cacheia o app shell para que a missão abra mesmo sem sinal.",
+          "content_en": "The student side is a genuine offline-first PWA, not a marketing promise. Each answer is written to the device (IndexedDB) before any network call, so feedback never depends on connectivity; when the internet returns, a queue syncs itself with the backend. Tested in airplane mode: the child plays the whole mission unplugged, earns points, finishes — and never sees a spinner. A service worker caches the app shell so the mission opens even with no signal."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/detetives/detetives_resultados.png",
+          "caption": "O loop fecha: o professor vê onde a turma tropeçou, por codinome (zero PII). O recado que mais enganou vira ponto de partida da próxima aula.",
+          "caption_en": "The loop closes: the teacher sees where the class stumbled, by codename (zero PII). The message that fooled the most becomes the next lesson's starting point."
+        },
+        {
+          "type": "text",
+          "title": "Um design system, duas vozes",
+          "title_en": "One design system, two voices",
+          "content": "O professor precisa de calma e credibilidade; o aluno, de energia e acolhimento. Em vez de dois sistemas, um só com tokens semânticos compartilhados e re-mapeamento por voz: um escopo CSS troca cor, raio de canto e tipografia, e os componentes não mudam. A voz do professor referencia o Notion (neutros quentes, roxo como único acento); a do aluno referencia o Miro (amarelo canário, pastéis de sticky-note, pílula preta). O mesmo Seguro/Golpe mantém a semântica de cor nos dois lados, porque a semântica é compartilhada — só o valor muda. A landing encena essa metamorfose no meio do scroll: a ferramenta séria do professor derrete na brincadeira do aluno.",
+          "content_en": "The teacher needs calm and credibility; the student, energy and warmth. Instead of two systems, a single one with shared semantic tokens and per-voice remapping: a CSS scope swaps color, corner radius and typography, and the components don't change. The teacher's voice references Notion (warm neutrals, violet as the only accent); the student's references Miro (canary yellow, sticky-note pastels, black pill). The same Safe/Scam keeps its color semantics on both sides, because the semantics are shared — only the value changes. The landing stages this metamorphosis mid-scroll: the teacher's serious tool melts into the student's play."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/detetives/detetives_metamorfose.png",
+          "caption": "A metamorfose na landing: os mesmos tokens semânticos, valores re-mapeados — a ferramenta do professor vira brincadeira na mão do aluno.",
+          "caption_en": "The metamorphosis on the landing: the same semantic tokens, remapped values — the teacher's tool becomes the student's play."
+        },
+        {
+          "type": "text",
+          "title": "A jogada de mestre: reforço a partir do resultado",
+          "title_en": "The master stroke: reinforcement from results",
+          "content": "O último slice é o que transforma um gerador em copiloto de verdade: em vez de só gerar frio, a IA reage ao desempenho da turma. No painel, cada recado que a turma mais errou ganha um botão de reforço; um clique monta o contexto (objetivo, BNCC, conceitos que a turma não pegou, remetentes a evitar) e gera uma nova missão focada exatamente nos pontos fracos — que cai no mesmo fluxo de revisão do professor, sem auto-publicar e sem coletar PII. O loop pedagógico deixa de ser linha reta e vira ciclo. Reuso, não fork: um segundo ponto de entrada que alimenta o pipeline que já existia.",
+          "content_en": "The final slice is what turns a generator into a real copilot: instead of only generating cold, the AI reacts to the class's performance. In the dashboard, each message the class missed most gets a reinforcement button; one click assembles the context (goal, BNCC, concepts the class didn't grasp, senders to avoid) and generates a new mission focused precisely on the weak spots — which lands in the same teacher review flow, without auto-publishing and without collecting PII. The pedagogical loop stops being a straight line and becomes a cycle. Reuse, not fork: a second entry point feeding the pipeline that already existed."
+        },
+        {
+          "type": "outcomes",
+          "metrics": [
+            {
+              "value": "8",
+              "label": "slices verticais, do briefing ao reforço com IA"
             },
             {
-                type: "text",
-                title: "A tese em um fluxo",
-                title_en: "The thesis in one flow",
-                content: "A resposta é um fluxo único que conecta os dois lados do produto: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o professor vê o resultado. É a tese inteira de uma plataforma de letramento digital num percurso só. E o tema é também o conteúdo: uma missão no formato 'esse recado é seguro? caça ao golpe', onde a criança avalia mensagens reais de SMS, WhatsApp e e-mail e decide o que é golpe e o que é seguro — praticando, na brincadeira, exatamente a desconfiança que a pesquisa aponta como o que falta.",
-                content_en: "The answer is a single flow connecting both sides of the product: the teacher describes the goal, AI generates the mission, the student plays offline, and the teacher sees the result. It's the entire thesis of a digital-literacy platform in one journey. And the theme is also the content: a mission in a 'is this message safe? scam hunt' format, where the child evaluates real SMS, WhatsApp and email messages and decides what's a scam and what's safe — practicing, through play, exactly the distrust research points to as the missing skill.",
+              "value": "0",
+              "label": "dados pessoais de crianças coletados (LGPD por padrão)"
             },
             {
-                type: "research",
-                title: "Decisões de produto",
-                title_en: "Product Decisions",
-                methods: ["Conversa, não formulário", "Human-in-the-loop", "Zero-PII vira mecânica"],
-                methods_en: ["Conversation, not a form", "Human-in-the-loop", "Zero-PII becomes mechanic"],
-                content: "Três decisões guiaram o produto, cada uma transformando uma restrição em vantagem de UX.",
-                content_en: "Three decisions guided the product, each turning a constraint into a UX advantage.",
-                highlights: [
-                    "Conversa, não formulário: o professor descreve a aula em linguagem natural — como contaria a um colega — em vez de preencher doze campos. O nível da turma é a única configuração.",
-                    "Human-in-the-loop: a IA propõe; o professor decide. Nada vai ao aluno sem revisão: editar o texto, trocar o nível e, se a IA errar a classificação, inverter golpe/seguro com um toque.",
-                    "Zero-PII vira mecânica: em vez de pedir o nome da criança, o jogo pede um codinome de detetive. A exigência de LGPD deixou de ser fricção e virou parte da brincadeira.",
-                ],
-                highlights_en: [
-                    "Conversation, not a form: the teacher describes the lesson in natural language — as they'd tell a colleague — instead of filling twelve fields. The class level is the only setting.",
-                    "Human-in-the-loop: AI proposes; the teacher decides. Nothing reaches the student without review: edit the text, change the level and, if the AI mislabels, flip scam/safe with one tap.",
-                    "Zero-PII becomes mechanic: instead of asking for the child's name, the game asks for a detective codename. The LGPD requirement stopped being friction and became part of the play.",
-                ],
+              "value": "100%",
+              "label": "da missão jogável offline, sincroniza depois"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "8",
+              "label": "vertical slices, from briefing to AI reinforcement"
             },
             {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/detetives/detetives_professor_briefing.png",
-                caption: "O briefing conversacional: o objetivo pedagógico entra em linguagem natural, com estados de 'IA pensando' que reduzem a ansiedade da espera.",
-                caption_en: "The conversational briefing: the pedagogical goal enters in natural language, with 'AI thinking' states that reduce the anxiety of waiting.",
+              "value": "0",
+              "label": "children's personal data collected (LGPD by default)"
             },
             {
-                type: "text",
-                title: "A palavra final é do professor",
-                title_en: "The teacher has the final word",
-                content: "O Gemini devolve uma missão completa em JSON estruturado — recados, pistas, feedback e alinhamento BNCC — mas o design trata a IA como copiloto, não como piloto automático. A tela de revisão deixa o professor editar cada recado, regenerar por nível e, o gesto que mais conta, inverter a classificação da IA com um toque quando discorda dela. É a diferença entre 'a IA fez por você' e 'a IA fez com você'.",
-                content_en: "Gemini returns a complete mission as structured JSON — messages, clues, feedback and BNCC alignment — but the design treats AI as a copilot, not autopilot. The review screen lets the teacher edit each message, regenerate by level and, the gesture that matters most, flip the AI's classification with one tap when they disagree. It's the difference between 'the AI did it for you' and 'the AI did it with you'.",
-            },
-            {
-                type: "gallery",
-                title: "Do outro lado da tela: o aluno",
-                title_en: "On the other side of the screen: the student",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/detetives/detetives_consentimento.png", caption: "Consentimento do responsável em linguagem humana: quatro promessas claras e um codinome de detetive no lugar do nome real.", caption_en: "Guardian consent in human language: four clear promises and a detective codename instead of a real name." },
-                    { src: "/images/projects/detetives/detetives_jogo_recado.png", caption: "A missão: um recado por vez, botões grandes, feedback que ensina. Errar não tira ponto — vira pista para o próximo.", caption_en: "The mission: one message at a time, big buttons, feedback that teaches. A wrong answer costs no points — it becomes a clue for the next." },
-                ],
-            },
-            {
-                type: "text",
-                title: "Offline de verdade",
-                title_en: "Truly offline",
-                content: "O lado do aluno é um PWA offline-first real, não uma promessa de marketing. Cada resposta é gravada no aparelho (IndexedDB) antes de qualquer rede, então o feedback nunca depende de conexão; quando a internet volta, uma fila sincroniza sozinha com o backend. Testado no modo avião: a criança joga a missão inteira desplugada, ganha pontos, conclui — e nunca vê um spinner. Um service worker cacheia o app shell para que a missão abra mesmo sem sinal.",
-                content_en: "The student side is a genuine offline-first PWA, not a marketing promise. Each answer is written to the device (IndexedDB) before any network call, so feedback never depends on connectivity; when the internet returns, a queue syncs itself with the backend. Tested in airplane mode: the child plays the whole mission unplugged, earns points, finishes — and never sees a spinner. A service worker caches the app shell so the mission opens even with no signal.",
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/detetives/detetives_resultados.png",
-                caption: "O loop fecha: o professor vê onde a turma tropeçou, por codinome (zero PII). O recado que mais enganou vira ponto de partida da próxima aula.",
-                caption_en: "The loop closes: the teacher sees where the class stumbled, by codename (zero PII). The message that fooled the most becomes the next lesson's starting point.",
-            },
-            {
-                type: "text",
-                title: "Um design system, duas vozes",
-                title_en: "One design system, two voices",
-                content: "O professor precisa de calma e credibilidade; o aluno, de energia e acolhimento. Em vez de dois sistemas, um só com tokens semânticos compartilhados e re-mapeamento por voz: um escopo CSS troca cor, raio de canto e tipografia, e os componentes não mudam. A voz do professor referencia o Notion (neutros quentes, roxo como único acento); a do aluno referencia o Miro (amarelo canário, pastéis de sticky-note, pílula preta). O mesmo Seguro/Golpe mantém a semântica de cor nos dois lados, porque a semântica é compartilhada — só o valor muda. A landing encena essa metamorfose no meio do scroll: a ferramenta séria do professor derrete na brincadeira do aluno.",
-                content_en: "The teacher needs calm and credibility; the student, energy and warmth. Instead of two systems, a single one with shared semantic tokens and per-voice remapping: a CSS scope swaps color, corner radius and typography, and the components don't change. The teacher's voice references Notion (warm neutrals, violet as the only accent); the student's references Miro (canary yellow, sticky-note pastels, black pill). The same Safe/Scam keeps its color semantics on both sides, because the semantics are shared — only the value changes. The landing stages this metamorphosis mid-scroll: the teacher's serious tool melts into the student's play.",
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/detetives/detetives_metamorfose.png",
-                caption: "A metamorfose na landing: os mesmos tokens semânticos, valores re-mapeados — a ferramenta do professor vira brincadeira na mão do aluno.",
-                caption_en: "The metamorphosis on the landing: the same semantic tokens, remapped values — the teacher's tool becomes the student's play.",
-            },
-            {
-                type: "text",
-                title: "A jogada de mestre: reforço a partir do resultado",
-                title_en: "The master stroke: reinforcement from results",
-                content: "O último slice é o que transforma um gerador em copiloto de verdade: em vez de só gerar frio, a IA reage ao desempenho da turma. No painel, cada recado que a turma mais errou ganha um botão de reforço; um clique monta o contexto (objetivo, BNCC, conceitos que a turma não pegou, remetentes a evitar) e gera uma nova missão focada exatamente nos pontos fracos — que cai no mesmo fluxo de revisão do professor, sem auto-publicar e sem coletar PII. O loop pedagógico deixa de ser linha reta e vira ciclo. Reuso, não fork: um segundo ponto de entrada que alimenta o pipeline que já existia.",
-                content_en: "The final slice is what turns a generator into a real copilot: instead of only generating cold, the AI reacts to the class's performance. In the dashboard, each message the class missed most gets a reinforcement button; one click assembles the context (goal, BNCC, concepts the class didn't grasp, senders to avoid) and generates a new mission focused precisely on the weak spots — which lands in the same teacher review flow, without auto-publishing and without collecting PII. The pedagogical loop stops being a straight line and becomes a cycle. Reuse, not fork: a second entry point feeding the pipeline that already existed.",
-            },
-            {
-                type: "outcomes",
-                metrics: [
-                    { value: "8", label: "slices verticais, do briefing ao reforço com IA", label_en: "vertical slices, from briefing to AI reinforcement" },
-                    { value: "0", label: "dados pessoais de crianças coletados (LGPD por padrão)", label_en: "children's personal data collected (LGPD by default)" },
-                    { value: "100%", label: "da missão jogável offline, sincroniza depois", label_en: "of the mission playable offline, syncs later" },
-                ],
-            },
-            {
-                type: "text",
-                title: "Resultado",
-                title_en: "Outcome",
-                content: "Um produto end-to-end no ar que roda a tese inteira: da intenção pedagógica em linguagem natural até o insight que realimenta a próxima aula, com IA real (Gemini), offline real (PWA com fila de sync) e zero PII de criança. Cada tela carrega uma decisão de UX ancorada na realidade da escola brasileira: por que conversa e não formulário para um professor sem tempo, como mostrar a IA pensando sem ansiedade, como dizer 'salvo, vai sincronizar' para uma criança sem internet, como transformar a exigência da LGPD em parte da brincadeira. É a prova de que dá para pesquisar, desenhar e construir um produto educacional de ponta a ponta, sozinho.",
-                content_en: "A live end-to-end product that runs the entire thesis: from pedagogical intent in natural language to the insight that feeds the next lesson, with real AI (Gemini), real offline (a PWA with a sync queue) and zero children's PII. Every screen carries a UX decision anchored in the reality of Brazilian schools: why conversation over a form for a time-starved teacher, how to show the AI thinking without anxiety, how to tell a child with no internet 'saved, will sync', how to turn the LGPD requirement into part of the play. It's proof that one person can research, design and build an educational product from end to end.",
-            },
-        ],
+              "value": "100%",
+              "label": "of the mission playable offline, syncs later"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Resultado",
+          "title_en": "Outcome",
+          "content": "Um produto end-to-end no ar que roda a tese inteira: da intenção pedagógica em linguagem natural até o insight que realimenta a próxima aula, com IA real (Gemini), offline real (PWA com fila de sync) e zero PII de criança. Cada tela carrega uma decisão de UX ancorada na realidade da escola brasileira: por que conversa e não formulário para um professor sem tempo, como mostrar a IA pensando sem ansiedade, como dizer 'salvo, vai sincronizar' para uma criança sem internet, como transformar a exigência da LGPD em parte da brincadeira. É a prova de que dá para pesquisar, desenhar e construir um produto educacional de ponta a ponta, sozinho.",
+          "content_en": "A live end-to-end product that runs the entire thesis: from pedagogical intent in natural language to the insight that feeds the next lesson, with real AI (Gemini), real offline (a PWA with a sync queue) and zero children's PII. Every screen carries a UX decision anchored in the reality of Brazilian schools: why conversation over a form for a time-starved teacher, how to show the AI thinking without anxiety, how to tell a child with no internet 'saved, will sync', how to turn the LGPD requirement into part of the play. It's proof that one person can research, design and build an educational product from end to end."
+        }
+      ]
     },
     {
         id: 18,
@@ -295,421 +326,652 @@ export const projectsData = [
         ]
     },
     {
-        id: 19,
-        slug: "proficia-avaliacao-competencias-ux",
-            tldr: {
-                problem: "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível' — e gestores calibram senioridade no feeling, com planilhas soltas.",
-                problem_en: "Brazilian designers can't answer 'where am I and what's missing for the next level' — and managers calibrate seniority by gut feeling, with loose spreadsheets.",
-                role: "Product Designer & Full-Stack, solo: pesquisa de mercado, PRD, design system, código, infra e monetização, do zero ao deploy.",
-                role_en: "Product Designer & Full-Stack, solo: market research, PRD, design system, code, infra and monetization, from zero to deploy.",
-                outcome: "SaaS completo no ar em 3 dias: autoavaliação de ~88 habilidades, radar, gap autoavaliação × gestor, PDI por pessoa e assinaturas com Stripe.",
-                outcome_en: "Full SaaS live in 3 days: ~88-skill self-assessment, radar, self × manager gap, per-person development plan and Stripe subscriptions.",
-            },
-        pageType: "rich",
-        src: "/images/projects/proficia_full.jpg",
-        category: "Product Design & Full-Stack",
-        tags: ["Product Design", "Full-Stack"],
-        title: "Proficia",
-        tagline: "SaaS B2B de avaliação de competências: radar, senioridade e PDI 70-20-10 para designers e times de UX.",
-        tagline_en: "B2B SaaS for competency assessment: radar, seniority and 70-20-10 development plans for UX designers and teams.",
-        description: "SaaS português-first de avaliação e desenvolvimento de competências de UX/Product Design. A pessoa se avalia contra um framework de 14 competências e ~88 habilidades na escala Dreyfus de 6 níveis, recebe um radar, uma estimativa de senioridade na régua brasileira e um plano de desenvolvimento 70-20-10. O mesmo framework serve ao gestor: gap autoavaliação × gestor, radar agregado do time e PDI por pessoa.",
-        description_en: "Portuguese-first SaaS for assessing and developing UX/Product Design competencies. You assess yourself against a framework of 14 competencies and ~88 skills on the 6-level Dreyfus scale, and get a radar, a seniority estimate on the Brazilian ladder and a 70-20-10 development plan. The same framework serves managers: self × manager gap, aggregate team radar and per-person development plans.",
-        year: "2026",
-        role: "Product Designer & Full-Stack",
-        timeline: "3 dias · MVP + módulo B2B",
-        timeline_en: "3 days · MVP + B2B module",
-        team: "Solo",
-        client: "Produto próprio",
-        tools: ["Next.js", "Prisma", "Stripe", "GSAP"],
-        liveDemoLink: "https://proficia.com.br/",
-        accent: "#6A4CF5",
-        accentColor: "#6A4CF5",
-        sections: [
+      "id": 19,
+      "slug": "proficia-avaliacao-competencias-ux",
+      "src": "/images/projects/proficia_full.jpg",
+      "category": "Product Design & Full-Stack",
+      "tags": [
+        "Product Design",
+        "Full-Stack"
+      ],
+      "title": "Proficia",
+      "tagline": "SaaS B2B de avaliação de competências: radar, senioridade e PDI 70-20-10 para designers e times de UX.",
+      "tagline_en": "B2B SaaS for competency assessment: radar, seniority and 70-20-10 development plans for UX designers and teams.",
+      "tldr": {
+        "problem": "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível' — e gestores calibram senioridade no feeling, com planilhas soltas.",
+        "problem_en": "Brazilian designers can't answer 'where am I and what's missing for the next level' — and managers calibrate seniority by gut feeling, with loose spreadsheets.",
+        "role": "Product Designer & Full-Stack, solo: pesquisa de mercado, PRD, design system, código, infra e monetização, do zero ao deploy.",
+        "role_en": "Product Designer & Full-Stack, solo: market research, PRD, design system, code, infra and monetization, from zero to deploy.",
+        "outcome": "SaaS completo no ar, solo, do PRD ao deploy: autoavaliação de ~88 habilidades, radar, gap autoavaliação × gestor, PDI por pessoa e assinaturas com Stripe.",
+        "outcome_en": "Full SaaS live, solo, from PRD to deploy: ~88-skill self-assessment, radar, self × manager gap, per-person development plan and Stripe subscriptions."
+      },
+      "description": "SaaS português-first de avaliação e desenvolvimento de competências de UX/Product Design. A pessoa se avalia contra um framework de 14 competências e ~88 habilidades na escala Dreyfus de 6 níveis, recebe um radar, uma estimativa de senioridade na régua brasileira e um plano de desenvolvimento 70-20-10. O mesmo framework serve ao gestor: gap autoavaliação × gestor, radar agregado do time e PDI por pessoa.",
+      "description_en": "Portuguese-first SaaS for assessing and developing UX/Product Design competencies. You assess yourself against a framework of 14 competencies and ~88 skills on the 6-level Dreyfus scale, and get a radar, a seniority estimate on the Brazilian ladder and a 70-20-10 development plan. The same framework serves managers: self × manager gap, aggregate team radar and per-person development plans.",
+      "year": "2026",
+      "role": "Product Designer & Full-Stack",
+      "timeline": "MVP + módulo B2B · iteração contínua",
+      "timeline_en": "MVP + B2B module · continuous iteration",
+      "team": "Solo",
+      "client": "Produto próprio",
+      "tools": [
+        "Next.js",
+        "Prisma",
+        "Stripe",
+        "GSAP"
+      ],
+      "liveDemoLink": "https://proficia.com.br/",
+      "pageType": "rich",
+      "accent": "#6A4CF5",
+      "accentColor": "#6A4CF5",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "content": "Profissionais de UX no Brasil não têm uma forma estruturada, confiável e barata de responder três perguntas: onde estou? O que me falta para o próximo nível? E como um gestor calibra isso de forma justa entre pessoas diferentes? Hoje isso é resolvido com planilhas soltas, autoavaliações informais e réguas de senioridade que variam de empresa para empresa. Para a pessoa, o custo é um plano de desenvolvimento genérico e negociações de senioridade sem argumento. Para o gestor, é decisão no feeling — promoções injustas, PDIs de copiar e colar, turnover. As ferramentas globais que atacam o problema (Uxcel, TalentGuard, Leapsome) são caras, em inglês e genéricas demais para a realidade brasileira.",
+          "content_en": "UX professionals in Brazil have no structured, trustworthy and affordable way to answer three questions: where am I? What's missing for the next level? And how does a manager calibrate this fairly across different people? Today this is solved with loose spreadsheets, informal self-assessments and seniority ladders that change from company to company. For the individual, the cost is a generic development plan and seniority negotiations without arguments. For the manager, it's gut-feeling decisions — unfair promotions, copy-paste development plans, turnover. The global tools attacking the problem (Uxcel, TalentGuard, Leapsome) are expensive, English-only and too generic for the Brazilian reality."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/maestria_landing_hero.png",
+          "caption": "Landing: o 'radar vivo' desenha-se e morfa continuamente entre perfis Júnior → Pleno → Sênior.",
+          "caption_en": "Landing: the 'living radar' draws itself and continuously morphs between Junior → Mid → Senior profiles."
+        },
+        {
+          "type": "research",
+          "title": "Pesquisa",
+          "title_en": "Research",
+          "methods": [
+            "Fundamentação do framework no modelo Dreyfus de aquisição de habilidade (6 níveis com âncoras comportamentais)",
+            "Literatura de viés em autoavaliação (efeito Dunning-Kruger) e mitigações de produto",
+            "Benchmark competitivo: Uxcel, TalentGuard, Leapsome, planilhas NN/g e matrizes da comunidade",
+            "Mercado BR: salários por senioridade (CAGED, Glassdoor), régua Júnior→Especialista e sensibilidade a preço em BRL"
+          ],
+          "methods_en": [
+            "Framework grounded in the Dreyfus model of skill acquisition (6 levels with behavioral anchors)",
+            "Self-assessment bias literature (Dunning-Kruger effect) and product mitigations",
+            "Competitive benchmark: Uxcel, TalentGuard, Leapsome, NN/g spreadsheets and community matrices",
+            "Brazilian market: salaries by seniority (CAGED, Glassdoor), the Junior->Specialist ladder and BRL price sensitivity"
+          ],
+          "content": "A pesquisa apontou duas verdades que moldaram o produto. Primeira: autoavaliação sofre de viés sistemático — iniciantes superestimam, experientes subestimam — então uma nota isolada vale pouco; o antídoto é âncora comportamental em cada nível e o confronto com a leitura do gestor. Segunda: o motor de receita não é o indivíduo, é o time — o gestor que precisa calibrar senioridade e conduzir 1:1s com dado é quem paga. O indivíduo é topo de funil. Nenhum concorrente combina framework real de UX, português, régua brasileira e preço em BRL.",
+          "content_en": "Research surfaced two truths that shaped the product. First: self-assessment carries systematic bias — beginners overestimate, experts underestimate — so an isolated score is worth little; the antidote is a behavioral anchor at every level plus confrontation with the manager's reading. Second: the revenue engine is not the individual, it's the team — the manager who needs to calibrate seniority and run data-driven 1:1s is the one who pays. The individual is top of funnel. No competitor combines a real UX framework, Portuguese, the Brazilian ladder and BRL pricing."
+        },
+        {
+          "type": "text",
+          "title": "Decisões de produto",
+          "title_en": "Product Decisions",
+          "highlights": [
+            "N/A nunca é zero: Quem não faz motion não pode ser punido por isso. 'Não se aplica' é excluído da média — nunca conta como nota baixa.",
+            "Senioridade é estimativa: A régua varia entre empresas. O produto sempre rotula o resultado como sugestão orientativa — ponto de partida de conversa, não veredito.",
+            "O gap é a feature: A divergência entre autoavaliação e leitura do gestor não é ruído: é o artefato central da calibração e o principal valor do plano de time."
+          ],
+          "highlights_en": [
+            "N/A is never zero: Someone who doesn't do motion can't be punished for it. 'Not applicable' is excluded from the average — it never counts as a low score.",
+            "Seniority is an estimate: The ladder varies across companies. The product always labels the result as an orientative suggestion — a conversation starter, not a verdict.",
+            "The gap is the feature: The divergence between self-assessment and the manager's reading isn't noise: it's the core calibration artifact and the main value of the team plan."
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Do fluxo de avaliação ao radar",
+          "title_en": "From assessment flow to radar",
+          "columns": 2,
+          "images": [
             {
-                type: "text",
-                title: "O Problema",
-                title_en: "The Problem",
-                content: "Profissionais de UX no Brasil não têm uma forma estruturada, confiável e barata de responder três perguntas: onde estou? O que me falta para o próximo nível? E como um gestor calibra isso de forma justa entre pessoas diferentes? Hoje isso é resolvido com planilhas soltas, autoavaliações informais e réguas de senioridade que variam de empresa para empresa. Para a pessoa, o custo é um plano de desenvolvimento genérico e negociações de senioridade sem argumento. Para o gestor, é decisão no feeling — promoções injustas, PDIs de copiar e colar, turnover. As ferramentas globais que atacam o problema (Uxcel, TalentGuard, Leapsome) são caras, em inglês e genéricas demais para a realidade brasileira.",
-                content_en: "UX professionals in Brazil have no structured, trustworthy and affordable way to answer three questions: where am I? What's missing for the next level? And how does a manager calibrate this fairly across different people? Today this is solved with loose spreadsheets, informal self-assessments and seniority ladders that change from company to company. For the individual, the cost is a generic development plan and seniority negotiations without arguments. For the manager, it's gut-feeling decisions — unfair promotions, copy-paste development plans, turnover. The global tools attacking the problem (Uxcel, TalentGuard, Leapsome) are expensive, English-only and too generic for the Brazilian reality."
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/maestria/maestria_landing_hero.png",
-                caption: "Landing: o 'radar vivo' desenha-se e morfa continuamente entre perfis Júnior → Pleno → Sênior.",
-                caption_en: "Landing: the 'living radar' draws itself and continuously morphs between Junior → Mid → Senior profiles."
-            },
-            {
-                type: "research",
-                title: "Pesquisa",
-                title_en: "Research",
-                methods: ["Fundamentação do framework no modelo Dreyfus de aquisição de habilidade (6 níveis com âncoras comportamentais)", "Literatura de viés em autoavaliação (efeito Dunning-Kruger) e mitigações de produto", "Benchmark competitivo: Uxcel, TalentGuard, Leapsome, planilhas NN/g e matrizes da comunidade", "Mercado BR: salários por senioridade (CAGED, Glassdoor), régua Júnior→Especialista e sensibilidade a preço em BRL"],
-                methods_en: ["Framework grounded in the Dreyfus model of skill acquisition (6 levels with behavioral anchors)", "Self-assessment bias literature (Dunning-Kruger effect) and product mitigations", "Competitive benchmark: Uxcel, TalentGuard, Leapsome, NN/g spreadsheets and community matrices", "Brazilian market: salaries by seniority (CAGED, Glassdoor), the Junior->Specialist ladder and BRL price sensitivity"],
-                content: "A pesquisa apontou duas verdades que moldaram o produto. Primeira: autoavaliação sofre de viés sistemático — iniciantes superestimam, experientes subestimam — então uma nota isolada vale pouco; o antídoto é âncora comportamental em cada nível e o confronto com a leitura do gestor. Segunda: o motor de receita não é o indivíduo, é o time — o gestor que precisa calibrar senioridade e conduzir 1:1s com dado é quem paga. O indivíduo é topo de funil. Nenhum concorrente combina framework real de UX, português, régua brasileira e preço em BRL.",
-                content_en: "Research surfaced two truths that shaped the product. First: self-assessment carries systematic bias — beginners overestimate, experts underestimate — so an isolated score is worth little; the antidote is a behavioral anchor at every level plus confrontation with the manager's reading. Second: the revenue engine is not the individual, it's the team — the manager who needs to calibrate seniority and run data-driven 1:1s is the one who pays. The individual is top of funnel. No competitor combines a real UX framework, Portuguese, the Brazilian ladder and BRL pricing.",
-                highlights: ["N/A nunca é zero: quem não faz motion não é punido — 'não se aplica' sai da média, nunca conta como nota baixa", "Senioridade é estimativa: o resultado é sempre rotulado como sugestão orientativa, ponto de partida de conversa, não veredito", "O gap é a feature: a divergência entre autoavaliação e leitura do gestor é o artefato central da calibração"],
-                highlights_en: ["N/A is never zero: someone who doesn't do motion isn't punished — 'not applicable' leaves the average, never counts as a low score", "Seniority is an estimate: the result is always labeled an orientative suggestion, a conversation starter, not a verdict", "The gap is the feature: the divergence between self-assessment and the manager's reading is the core calibration artifact"]
-            },
-            {
-                type: "gallery",
-                title: "Do fluxo de avaliação ao radar",
-                title_en: "From assessment flow to radar",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/maestria/maestria_fluxo_avaliacao.png", caption: "Fluxo editorial: uma competência por vez, âncora Dreyfus visível em cada nível, autosave.", caption_en: "Editorial flow: one competency at a time, Dreyfus anchor visible at every level, autosave." },
-                    { src: "/images/projects/maestria/maestria_dashboard.png", caption: "Dashboard: radar do último ciclo e estimativa de senioridade.", caption_en: "Dashboard: latest cycle radar and seniority estimate." }
-                ]
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/maestria/maestria_resultado_heatmap.png",
-                caption: "O toggle obrigatório: radar para a síntese, heatmap por habilidade para a nuance — a pesquisa mostra que o radar sozinho esconde onde agir.",
-                caption_en: "The mandatory toggle: radar for synthesis, per-skill heatmap for nuance — research shows the radar alone hides where to act."
-            },
-            {
-                type: "text",
-                title: "Modo Time: o motor de receita",
-                title_en: "Team Mode: the revenue engine",
-                content: "O gestor cria um time, convida por link e avalia cada pessoa com o mesmo fluxo da autoavaliação. O sistema então confronta as duas leituras: o gap autoavaliação × gestor por competência e por habilidade, ordenado pelas maiores divergências — divergência negativa significa que a pessoa se avaliou acima da leitura do gestor, e é exatamente por aí que a conversa de calibração começa. Completam o módulo o radar agregado do time (forças e lacunas coletivas) e o PDI por pessoa, gerado do mesmo motor 70-20-10 do plano individual: 70% prática no trabalho, 20% aprendizado social, 10% estudo formal.",
-                content_en: "The manager creates a team, invites by link and assesses each person with the same flow as the self-assessment. The system then confronts both readings: the self × manager gap per competency and per skill, sorted by the largest divergences — a negative divergence means the person rated themselves above the manager's reading, and that's exactly where the calibration conversation starts. The module is completed by the aggregate team radar (collective strengths and gaps) and a per-person development plan generated by the same 70-20-10 engine as the individual plan: 70% on-the-job practice, 20% social learning, 10% formal study."
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/maestria/maestria_gap_membro.png",
-                caption: "Gap autoavaliação × gestor: duas séries no radar e as maiores divergências com delta numérico — o antídoto ao viés Dunning-Kruger.",
-                caption_en: "Self × manager gap: two radar series and the largest divergences with numeric deltas — the antidote to Dunning-Kruger bias."
-            },
-            {
-                type: "gallery",
-                title: "Painel do gestor",
-                title_en: "Manager's panel",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/maestria/maestria_time_painel.png", caption: "Radar agregado do time e senioridade média.", caption_en: "Aggregate team radar and average seniority." },
-                    { src: "/images/projects/maestria/maestria_time_membros.png", caption: "Status de preenchimento por pessoa: autoavaliação e avaliação do gestor.", caption_en: "Per-person completion status: self-assessment and manager assessment." }
-                ]
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/maestria/maestria_plano.png",
-                caption: "Plano 70-20-10: as maiores lacunas viram ações concretas de prática, mentoria e estudo.",
-                caption_en: "70-20-10 plan: the biggest gaps become concrete practice, mentoring and study actions."
+              "src": "/images/projects/maestria/maestria_fluxo_avaliacao.png",
+              "caption": "Fluxo editorial: uma competência por vez, âncora Dreyfus visível em cada nível, autosave.",
+              "caption_en": "Editorial flow: one competency at a time, Dreyfus anchor visible at every level, autosave."
             },
             {
-                type: "text",
-                title: "Design system 'Cinematic Gradient'",
-                title_en: "'Cinematic Gradient' design system",
-                content: "A linguagem visual nasceu de um estudo de DESIGN.md públicos (base Framer): canvas near-black, superfícies charcoal separadas por hairlines, tipografia display comprimida (Space Grotesk) e uma atmosfera gradient violeta→magenta→laranja usada como momento, nunca como fundo. Tudo é governado por um arquivo único de tokens que gera o CSS — zero hex hardcoded em componentes, com verificação no CI. A rampa de 6 cores dos níveis tem semântica própria (calor = em desenvolvimento, família da marca = proficiente+) e nunca comunica nível só por cor: o número mono está sempre junto. Na landing, GSAP conduz um scrollytelling contínuo e o 'radar vivo' em SVG morfa entre perfis de senioridade.",
-                content_en: "The visual language came from a study of public DESIGN.md files (Framer base): near-black canvas, charcoal surfaces separated by hairlines, compressed display typography (Space Grotesk) and a violet->magenta->orange gradient atmosphere used as a moment, never as a background. Everything is governed by a single token file that generates the CSS — zero hardcoded hex in components, enforced in CI. The 6-color level ramp carries its own semantics (warmth = developing, brand family = proficient+) and never communicates level by color alone: the mono number is always beside it. On the landing, GSAP drives continuous scrollytelling and the SVG 'living radar' morphs between seniority profiles."
-            },
-            {
-                type: "image",
-                fullWidth: true,
-                src: "/images/projects/maestria/maestria_landing_gap.png",
-                caption: "A atmosfera gradient como momento: o card do gap na landing, com glows internos e duas séries divergindo.",
-                caption_en: "The gradient atmosphere as a moment: the landing's gap card, with inner glows and two diverging series."
-            },
-            {
-                type: "outcomes",
-                metrics: [
-                    { value: "3", label: "dias do PRD ao produto completo no ar", label_en: "days from PRD to the full product live" },
-                    { value: "40", label: "checks E2E automatizados nas duas fases", label_en: "automated E2E checks across both phases" },
-                    { value: "0", label: "hex fora dos design tokens (verificado no CI)", label_en: "hex values outside design tokens (CI-enforced)" }
-                ]
-            },
-            {
-                type: "text",
-                title: "Resultado",
-                title_en: "Outcome",
-                content: "Um SaaS funcional de ponta a ponta: autenticação (Google + magic link), trial de 14 dias, assinaturas Pro e Time com Stripe, framework versionado no banco, avaliação com autosave e snapshot imutável, radar, heatmap, plano 70-20-10, histórico entre ciclos e o módulo B2B completo — times por convite, hetero-avaliação, gap, radar agregado e PDI. O projeto também virou um exercício de engenharia disciplinada: regras de negócio blindadas por testes E2E (N/A excluído da média, imutabilidade pós-conclusão, isolamento entre times) e design system wired em que editar um token propaga para produto e Storybook.",
-                content_en: "An end-to-end functional SaaS: authentication (Google + magic link), 14-day trial, Pro and Team subscriptions with Stripe, a versioned framework in the database, assessment with autosave and immutable snapshots, radar, heatmap, 70-20-10 plan, cross-cycle history and the full B2B module — teams by invite link, manager assessment, gap, aggregate radar and per-person plans. The project also became an exercise in disciplined engineering: business rules locked by E2E tests (N/A excluded from averages, post-completion immutability, team isolation) and a wired design system where editing a token propagates to both product and Storybook."
+              "src": "/images/projects/maestria/maestria_dashboard.png",
+              "caption": "Dashboard: radar do último ciclo e estimativa de senioridade.",
+              "caption_en": "Dashboard: latest cycle radar and seniority estimate."
             }
-        ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/maestria_resultado_heatmap.png",
+          "caption": "O toggle obrigatório: radar para a síntese, heatmap por habilidade para a nuance — a pesquisa mostra que o radar sozinho esconde onde agir.",
+          "caption_en": "The mandatory toggle: radar for synthesis, per-skill heatmap for nuance — research shows the radar alone hides where to act."
+        },
+        {
+          "type": "text",
+          "title": "Modo Time: o motor de receita",
+          "title_en": "Team Mode: the revenue engine",
+          "content": "O gestor cria um time, convida por link e avalia cada pessoa com o mesmo fluxo da autoavaliação. O sistema então confronta as duas leituras: o gap autoavaliação × gestor por competência e por habilidade, ordenado pelas maiores divergências — divergência negativa significa que a pessoa se avaliou acima da leitura do gestor, e é exatamente por aí que a conversa de calibração começa. Completam o módulo o radar agregado do time (forças e lacunas coletivas) e o PDI por pessoa, gerado do mesmo motor 70-20-10 do plano individual: 70% prática no trabalho, 20% aprendizado social, 10% estudo formal.",
+          "content_en": "The manager creates a team, invites by link and assesses each person with the same flow as the self-assessment. The system then confronts both readings: the self × manager gap per competency and per skill, sorted by the largest divergences — a negative divergence means the person rated themselves above the manager's reading, and that's exactly where the calibration conversation starts. The module is completed by the aggregate team radar (collective strengths and gaps) and a per-person development plan generated by the same 70-20-10 engine as the individual plan: 70% on-the-job practice, 20% social learning, 10% formal study."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/maestria_gap_membro.png",
+          "caption": "Gap autoavaliação × gestor: duas séries no radar e as maiores divergências com delta numérico — o antídoto ao viés Dunning-Kruger.",
+          "caption_en": "Self × manager gap: two radar series and the largest divergences with numeric deltas — the antidote to Dunning-Kruger bias."
+        },
+        {
+          "type": "gallery",
+          "title": "Painel do gestor",
+          "title_en": "Manager's panel",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/maestria/maestria_time_painel.png",
+              "caption": "Radar agregado do time e senioridade média.",
+              "caption_en": "Aggregate team radar and average seniority."
+            },
+            {
+              "src": "/images/projects/maestria/maestria_time_membros.png",
+              "caption": "Status de preenchimento por pessoa: autoavaliação e avaliação do gestor.",
+              "caption_en": "Per-person completion status: self-assessment and manager assessment."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/maestria_plano.png",
+          "caption": "Plano 70-20-10: as maiores lacunas viram ações concretas de prática, mentoria e estudo.",
+          "caption_en": "70-20-10 plan: the biggest gaps become concrete practice, mentoring and study actions."
+        },
+        {
+          "type": "text",
+          "title": "Design system 'Cinematic Gradient'",
+          "title_en": "'Cinematic Gradient' design system",
+          "content": "A linguagem visual nasceu de um estudo de DESIGN.md públicos (base Framer): canvas near-black, superfícies charcoal separadas por hairlines, tipografia display comprimida (Space Grotesk) e uma atmosfera gradient violeta→magenta→laranja usada como momento, nunca como fundo. Tudo é governado por um arquivo único de tokens que gera o CSS — zero hex hardcoded em componentes, com verificação no CI. A rampa de 6 cores dos níveis tem semântica própria (calor = em desenvolvimento, família da marca = proficiente+) e nunca comunica nível só por cor: o número mono está sempre junto. Na landing, GSAP conduz um scrollytelling contínuo e o 'radar vivo' em SVG morfa entre perfis de senioridade.",
+          "content_en": "The visual language came from a study of public DESIGN.md files (Framer base): near-black canvas, charcoal surfaces separated by hairlines, compressed display typography (Space Grotesk) and a violet->magenta->orange gradient atmosphere used as a moment, never as a background. Everything is governed by a single token file that generates the CSS — zero hardcoded hex in components, enforced in CI. The 6-color level ramp carries its own semantics (warmth = developing, brand family = proficient+) and never communicates level by color alone: the mono number is always beside it. On the landing, GSAP drives continuous scrollytelling and the SVG 'living radar' morphs between seniority profiles."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/proficia_ds_niveis.png",
+          "caption": "A rampa de níveis: calor para quem está em desenvolvimento, família da marca para quem já é proficiente — subir de nível é entrar na cor da marca. O número mono anda sempre junto da cor.",
+          "caption_en": "The level ramp: warmth for those still developing, brand family for the proficient — leveling up means entering the brand's color. The mono number always travels with the color."
+        },
+        {
+          "type": "gallery",
+          "title": "A folha do sistema",
+          "title_en": "The system sheet",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/maestria/proficia_ds_componentes.png",
+              "caption": "Componentes: elevação por escada de superfícies e hairline de 1px, nunca por sombra.",
+              "caption_en": "Components: elevation by a ladder of surfaces and 1px hairlines, never by shadow."
+            },
+            {
+              "src": "/images/projects/maestria/proficia_ds_tipografia.png",
+              "caption": "Escala tipográfica: a hierarquia vem do tamanho e do tracking negativo, não do peso.",
+              "caption_en": "Type scale: hierarchy comes from size and negative tracking, not from weight."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/maestria/maestria_landing_gap.png",
+          "caption": "A atmosfera gradient como momento: o card do gap na landing, com glows internos e duas séries divergindo.",
+          "caption_en": "The gradient atmosphere as a moment: the landing's gap card, with inner glows and two diverging series."
+        },
+        {
+          "type": "outcomes",
+          "metrics": [
+            {
+              "value": "14",
+              "label": "competências e ~88 habilidades no framework"
+            },
+            {
+              "value": "40",
+              "label": "checks E2E automatizados nas duas fases"
+            },
+            {
+              "value": "0",
+              "label": "hex fora dos design tokens (verificado no CI)"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "14",
+              "label": "competencies and ~88 skills in the framework"
+            },
+            {
+              "value": "40",
+              "label": "automated E2E checks across both phases"
+            },
+            {
+              "value": "0",
+              "label": "hex values outside design tokens (CI-enforced)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Resultado",
+          "title_en": "Outcome",
+          "content": "Um SaaS funcional de ponta a ponta: autenticação (Google + magic link), trial de 14 dias, assinaturas Pro e Time com Stripe, framework versionado no banco, avaliação com autosave e snapshot imutável, radar, heatmap, plano 70-20-10, histórico entre ciclos e o módulo B2B completo — times por convite, hetero-avaliação, gap, radar agregado e PDI. O projeto também virou um exercício de engenharia disciplinada: regras de negócio blindadas por testes E2E (N/A excluído da média, imutabilidade pós-conclusão, isolamento entre times) e design system wired em que editar um token propaga para produto e Storybook.",
+          "content_en": "An end-to-end functional SaaS: authentication (Google + magic link), 14-day trial, Pro and Team subscriptions with Stripe, a versioned framework in the database, assessment with autosave and immutable snapshots, radar, heatmap, 70-20-10 plan, cross-cycle history and the full B2B module — teams by invite link, manager assessment, gap, aggregate radar and per-person plans. The project also became an exercise in disciplined engineering: business rules locked by E2E tests (N/A excluded from averages, post-completion immutability, team isolation) and a wired design system where editing a token propagates to both product and Storybook."
+        }
+      ]
     },
     {
-        id: 16,
-        slug: "drop-marketplace-de-lancamentos",
-            tldr: {
-                problem: "Criadores que lançam drops limitados remendam e-commerce genérico com apps avulsos, sem waitlist priorizada, escassez real nem Pix.",
-                problem_en: "Creators launching limited drops patch together generic e-commerce and one-off apps, with no priority waitlist, real scarcity or Pix.",
-                role: "Product Designer & Full-Stack, solo, da análise competitiva ao deploy.",
-                role_en: "Product Designer & Full-Stack, solo, from competitive analysis to deploy.",
-                outcome: "MVP no ar: vitrine própria por criador, waitlist priorizada, countdown e checkout próprio com cartão e Pix.",
-                outcome_en: "Live MVP: a storefront per creator, priority waitlist, countdown and in-house checkout with card and Pix.",
-            },
-        pageType: "rich",
-        src: "/images/projects/drop/drop_capa.jpg",
-        category: "Product Design & Full-Stack",
-        tags: ["Product Design", "Full-Stack"],
-        title: "Drop",
-        tagline: "Lance drops. Venda para quem realmente quer.",
-        tagline_en: "Launch drops. Sell to the people who really want them.",
-        description: "Plataforma de loja para criadores que lançam produtos limitados com lista de espera prioritária, contagem regressiva e checkout próprio com Pix. Cada criador ganha uma vitrine com marca leve, sem precisar montar um site do zero.",
-        description_en: "Storefront platform for creators who launch limited-edition products with a priority waitlist, countdown, and their own checkout with Pix. Each creator gets a lightly branded storefront, without building a site from scratch.",
-        year: "2026",
-        role: "Product Designer & AI Engineer",
-        timeline: "MVP · iteração contínua",
-        timeline_en: "MVP · continuous iteration",
-        team: "Solo",
-        client: "Produto próprio",
-        tools: ["Next.js", "Prisma", "Stripe", "Vercel"],
-        liveDemoLink: "https://lancedrop.vercel.app/",
-        sections: [
+      "id": 16,
+      "slug": "drop-marketplace-de-lancamentos",
+      "src": "/images/projects/drop_capa.jpg",
+      "category": "Product Design & Full-Stack",
+      "tags": [
+        "Product Design",
+        "Full-Stack"
+      ],
+      "title": "Drop",
+      "tagline": "Plataforma de vitrine para criadores lançarem drops limitados, com lista de espera priorizada, countdown e checkout próprio com Pix.",
+      "tagline_en": "A storefront for creators to launch limited drops, with a priority waitlist, countdown and an in-house Pix checkout.",
+      "tldr": {
+        "problem": "Criadores que lançam drops limitados remendam e-commerce genérico com apps avulsos, sem waitlist priorizada, escassez real nem Pix.",
+        "problem_en": "Creators launching limited drops patch together generic e-commerce and one-off apps, with no priority waitlist, real scarcity or Pix.",
+        "role": "Product Designer & Full-Stack, solo, da análise competitiva ao deploy.",
+        "role_en": "Product Designer & Full-Stack, solo, from competitive analysis to deploy.",
+        "outcome": "MVP no ar: vitrine própria por criador, waitlist priorizada, countdown e checkout próprio com cartão e Pix.",
+        "outcome_en": "Live MVP: a storefront per creator, priority waitlist, countdown and in-house checkout with card and Pix."
+      },
+      "description": "Plataforma de loja para criadores e marcas de nicho que lançam produtos em drops limitados — roupas, objetos, digitais. Cada criador ganha uma vitrine própria com lista de espera priorizada, countdown e checkout próprio com Pix, sem redirecionar para outra plataforma.",
+      "description_en": "Storefront platform for creators and niche brands that launch products in limited drops — apparel, objects, digital goods. Each creator gets their own storefront with a priority waitlist, countdown and an in-house checkout with Pix, without redirecting to another platform.",
+      "year": "2026",
+      "role": "Product Designer & Full-Stack",
+      "timeline": "MVP · iteração contínua",
+      "timeline_en": "MVP · continuous iteration",
+      "team": "Solo",
+      "client": "Produto próprio",
+      "tools": [
+        "Next.js",
+        "Prisma",
+        "Stripe",
+        "Auth.js",
+        "Tailwind",
+        "Vercel"
+      ],
+      "liveDemoLink": "https://usedrop-br.vercel.app/",
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "content": "Criadores e marcas de nicho — streetwear, arte, objetos, digitais — vendem cada vez mais no formato de drop: tiragens limitadas, lançadas em data marcada, que esgotam em minutos. Mas a ferramenta certa para isso não existe de forma vertical. Quem lança drops hoje precisa remendar e-commerce genérico (Nuvemshop, Shopify) com apps avulsos de waitlist, ou codar o próprio fluxo. O ritual do drop — fila priorizada, escassez real, countdown, hype — fica sempre por conta do criador. E no Brasil falta o que mais importa para esse público: Pix no checkout.",
+          "content_en": "Creators and niche brands — streetwear, art, objects, digital goods — increasingly sell in the drop format: limited runs, launched on a set date, that sell out in minutes. But there's no vertical tool built for it. Whoever launches drops today has to patch generic e-commerce (Nuvemshop, Shopify) with one-off waitlist apps, or build their own flow. The drop ritual — priority queue, real scarcity, countdown, hype — is always left to the creator. And in Brazil, the thing that matters most for this audience is missing: Pix at checkout."
+        },
+        {
+          "type": "research",
+          "title": "Análise Competitiva",
+          "title_en": "Competitive Analysis",
+          "methods": [
+            "Benchmark de plataformas (Laylo, Fourthwall, Bonfire, NTWRK)",
+            "Mapeamento do mercado brasileiro (Nuvemshop, Shopify)",
+            "Auditoria de UX dos fluxos reais de compra"
+          ],
+          "methods_en": [
+            "Platform benchmark (Laylo, Fourthwall, Bonfire, NTWRK)",
+            "Brazilian market mapping (Nuvemshop, Shopify)",
+            "UX audit of real purchase flows"
+          ],
+          "content": "O mercado se divide em três camadas: ferramentas de drop/engajamento (Laylo), lojas de criador (Fourthwall, Bonfire) e e-commerce genérico (Nuvemshop, Shopify). Nenhum player amarra bem a combinação waitlist priorizada + escassez real + checkout próprio — e nenhum tem Pix nativo. O território aberto: ser opinativo e vertical para drops, em PT-BR, com Pix. O posicionamento do Drop saiu direto dessa análise: 'Laylo avisa, Drop vende.'",
+          "content_en": "The market splits into three layers: drop/engagement tools (Laylo), creator shops (Fourthwall, Bonfire) and generic e-commerce (Nuvemshop, Shopify). No player ties together priority waitlist + real scarcity + in-house checkout well — and none has native Pix. The open territory: being opinionated and vertical for drops, in PT-BR, with Pix. Drop's positioning came straight out of this analysis: 'Laylo notifies, Drop sells.'",
+          "highlights": [
+            "Nenhum concorrente entrega waitlist priorizada, escassez e checkout próprio num só fluxo",
+            "Players internacionais (Laylo, Fourthwall) não têm PT-BR nem Pix",
+            "Nuvemshop tem Pix, mas o ritual do drop não é nativo",
+            "Diferencial do Drop: vertical de drops, dark-first, com Pix no checkout"
+          ],
+          "highlights_en": [
+            "No competitor delivers priority waitlist, scarcity and in-house checkout in a single flow",
+            "International players (Laylo, Fourthwall) lack PT-BR and Pix",
+            "Nuvemshop has Pix, but the drop ritual isn't native",
+            "Drop's edge: vertical for drops, dark-first, with Pix at checkout"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/drop/explorar.png",
+          "caption": "Diretório de criadores: cada marca com sua vitrine e drops ao vivo",
+          "caption_en": "Creator directory: each brand with its own storefront and live drops"
+        },
+        {
+          "type": "text",
+          "title": "Solução & Produto",
+          "title_en": "Solution & Product",
+          "content": "O Drop é dark-first e opinativo: o criador não monta um site do zero, ele ganha uma vitrine pronta e linda, customizando só o essencial — marca, cor de acento, bio, capa. A landing comunica o posicionamento com tipografia display, hero animado e o Pix em destaque. Cada vitrine herda o tema do Drop mais a cor do criador, mantendo identidade consistente sem virar construtor de loja genérico. A decisão central de produto: ser vertical de drops, não 'mais uma loja'.",
+          "content_en": "Drop is dark-first and opinionated: the creator doesn't build a site from scratch — they get a polished, ready-made storefront and customize only the essentials: brand, accent color, bio, cover. The landing communicates the positioning with display typography, an animated hero and Pix front and center. Each storefront inherits Drop's theme plus the creator's accent color, keeping a consistent identity without becoming a generic store builder. The core product decision: be vertical for drops, not 'just another store.'"
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/drop/landing-hero.png",
+          "caption": "Landing dark com tipografia display e hero animado",
+          "caption_en": "Dark landing with display typography and animated hero"
+        },
+        {
+          "type": "research",
+          "title": "Funcionalidades",
+          "title_en": "Features",
+          "methods": [
+            "Drop Builder",
+            "Waitlist Engine",
+            "Checkout próprio com Pix",
+            "Order Manager",
+            "Drop Analytics"
+          ],
+          "methods_en": [
+            "Drop Builder",
+            "Waitlist Engine",
+            "In-house checkout with Pix",
+            "Order Manager",
+            "Drop Analytics"
+          ],
+          "content": "Cada funcionalidade serve ao ciclo do drop: criar → juntar a waitlist → esgotar. O Drop Builder monta a página de lançamento com countdown, galeria e estoque limitado. O Waitlist Engine coleta emails com acesso antecipado priorizado. O checkout é próprio (cartão e Pix via Stripe), sem sair da loja. O Order Manager controla pedidos e envio; o Analytics mostra conversão de waitlist e taxa de sell-out. Planos Free (5% de taxa) e Pro (0% de taxa) diferenciam pela taxa, não pelo acesso.",
+          "content_en": "Every feature serves the drop cycle: create → gather the waitlist → sell out. The Drop Builder assembles the launch page with countdown, gallery and limited stock. The Waitlist Engine collects emails with priority early access. Checkout is in-house (card and Pix via Stripe), without leaving the store. The Order Manager handles orders and shipping; Analytics shows waitlist conversion and sell-out rate. Free (5% fee) and Pro (0% fee) plans differ by fee, not by access.",
+          "highlights": [
+            "Página de drop com countdown, galeria e estoque limitado real",
+            "Waitlist com acesso antecipado priorizado para inscritos",
+            "Checkout próprio com cartão e Pix, sem redirecionar",
+            "Cart-drawer de confirmação com upsell de outros drops do criador",
+            "Gestão de pedidos e analytics de conversão e sell-out"
+          ],
+          "highlights_en": [
+            "Drop page with countdown, gallery and real limited stock",
+            "Waitlist with priority early access for subscribers",
+            "In-house checkout with card and Pix, no redirect",
+            "Confirmation cart-drawer with upsell of the creator's other drops",
+            "Order management and conversion / sell-out analytics"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/drop/vitrine.png",
+          "caption": "Vitrine do criador com a cor de acento da marca e drops por status",
+          "caption_en": "Creator storefront with the brand's accent color and drops by status"
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/drop/drop-page.png",
+          "caption": "Página de drop: galeria, preço, estoque e checkout próprio",
+          "caption_en": "Drop page: gallery, price, stock and in-house checkout"
+        },
+        {
+          "type": "text",
+          "title": "Arquitetura & Tecnologia",
+          "title_en": "Architecture & Technology",
+          "content": "Stack full-stack em Next.js (App Router) com TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) e Stripe para pagamentos. Comprador é anônimo (sem cadastro, só email no checkout); criador é autenticado. A cor de acento de cada criador é injetada como CSS var por requisição, sem hex hardcoded — design system com tokens como fonte única de verdade, documentado em Storybook. Deploy contínuo na Vercel. Detalhe de produto: o checkout não usa trial no Stripe, então o criador vira Pro na hora ao passar o cartão.",
+          "content_en": "Full-stack on Next.js (App Router) with TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) and Stripe for payments. Buyers are anonymous (no signup, just an email at checkout); creators are authenticated. Each creator's accent color is injected as a per-request CSS variable, with no hardcoded hex — a token-driven design system as the single source of truth, documented in Storybook. Continuous deploy on Vercel. Product detail: checkout uses no Stripe trial, so a creator upgrades to Pro instantly when they pay."
+        },
+        {
+          "type": "text",
+          "title": "Resultados & Aprendizados",
+          "title_en": "Results & Learnings",
+          "content": "O projeto percorreu o ciclo completo: análise competitiva, posicionamento, breadboarding das partes, build em fatias verticais e deploy contínuo. O principal aprendizado: num espaço lotado de 'lojas genéricas', o ganho não está em ter mais features e sim em ser opinativo — vertical de drops, com Pix, em PT-BR. Foco vence completude quando o ritual de uso é o produto.",
+          "content_en": "The project covered the full cycle: competitive analysis, positioning, breadboarding the parts, building in vertical slices and continuous deploy. The key learning: in a space crowded with 'generic stores', the win isn't more features — it's being opinionated: vertical for drops, with Pix, in PT-BR. Focus beats completeness when the ritual of use is the product."
+        },
+        {
+          "type": "outcomes",
+          "metrics": [
             {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "Criadores que vendem produtos limitados (roupas, objetos, digitais) dependem de Instagram para anunciar e de planilhas, DMs e links soltos para gerenciar pedidos. Não há senso de escassez controlada, nem lista de espera, nem checkout próprio. No lançamento, o resultado é caos: estoque vendido para quem chegou primeiro no story, comentários perdidos, cobranças manuais via Pix e nenhuma página que faça jus à marca. Ferramentas como Shopify são pesadas demais para um drop pontual, e marketplaces genéricos diluem a identidade do criador no meio de milhares de produtos.",
-                content_en: "Creators selling limited-edition products (apparel, objects, digital) rely on Instagram to announce and on spreadsheets, DMs, and loose links to manage orders. There's no controlled scarcity, no waitlist, no dedicated checkout. At launch, the result is chaos: stock sold to whoever saw the story first, lost comments, manual Pix charges, and no page that does the brand justice. Tools like Shopify are too heavy for a one-off drop, and generic marketplaces dilute the creator's identity among thousands of products."
+              "value": "5",
+              "label": "features de produto entregues end-to-end"
             },
             {
-                title: "Diretório de criadores",
-                title_en: "Creator directory",
-                type: "image",
-                src: "/images/projects/drop/explorar.png",
-                caption: "Diretório de criadores: cada marca com sua vitrine e drops ao vivo",
-                caption_en: "Creator directory: each brand with its own storefront and live drops"
+              "value": "0%",
+              "label": "taxa no plano Pro (vs 5% no Free)"
             },
             {
-                title: "Pesquisa de Mercado",
-                title_en: "Market Research",
-                type: "research",
-                methods: ["Benchmark de plataformas de creator commerce (Fourthwall, Big Cartel, Gumroad)", "Análise de lançamentos de marcas independentes no Instagram e TikTok", "Mapeamento de dores de criadores em comunidades e fóruns"],
-                methods_en: ["Creator commerce platform benchmark (Fourthwall, Big Cartel, Gumroad)", "Analysis of independent brand launches on Instagram and TikTok", "Pain point mapping in creator communities and forums"],
-                content: "O Fourthwall provou que criadores querem uma vitrine bonita sem virar webdesigner, mas é focado no mercado americano e não tem Pix, o meio de pagamento dominante no Brasil. Gumroad e Big Cartel resolvem o checkout, mas não criam o ritual de lançamento, a escassez, a contagem regressiva, a lista de espera, que é justamente o que move a venda de edições limitadas. A oportunidade está em combinar a mecânica de drop (hype + escassez) com pagamento local (Pix) e uma vitrine de marca leve, voltada ao criador brasileiro.",
-                content_en: "Fourthwall proved that creators want a beautiful storefront without becoming web designers, but it's focused on the US market and lacks Pix, the dominant payment method in Brazil. Gumroad and Big Cartel solve checkout, but don't create the launch ritual, the scarcity, the countdown, the waitlist, which is exactly what drives limited-edition sales. The opportunity is to combine drop mechanics (hype + scarcity) with local payment (Pix) and a lightly branded storefront, built for the Brazilian creator.",
-                highlights: [
-                    "Pix é o meio de pagamento preferido para compras online no Brasil, mas raro em plataformas de creator commerce",
-                    "Lançamentos de edição limitada vendem por escassez e urgência, não por catálogo permanente",
-                    "Criadores rejeitam construtores de site complexos: querem publicar um drop em minutos",
-                    "Lista de espera prioritária transforma seguidores em compradores qualificados antes do lançamento"
-                ],
-                highlights_en: [
-                    "Pix is the preferred online payment method in Brazil, yet rare in creator commerce platforms",
-                    "Limited-edition launches sell on scarcity and urgency, not on a permanent catalog",
-                    "Creators reject complex site builders: they want to publish a drop in minutes",
-                    "A priority waitlist turns followers into qualified buyers before launch"
-                ]
-            },
-            {
-                title: "Solução & Produto",
-                title_en: "Solution & Product",
-                type: "text",
-                content: "O Drop entrega ao criador uma vitrine de marca leve (templates + branding, não um construtor de site) onde cada lançamento vira uma página de drop com capa, descrição, preço, estoque, contagem regressiva e lista de espera. O comprador entra na lista, é avisado no lançamento, compra com Pix e acompanha o pedido. O criador gerencia tudo de um dashboard: cria o drop em minutos, define estoque e data, acompanha pedidos por status e personaliza sua vitrine com cor de acento e identidade própria. A escassez é real: estoque limitado, e o ritual de lançamento (espera → drop ao vivo → esgotou) é o coração do produto.",
-                content_en: "Drop gives creators a lightly branded storefront (templates + branding, not a site builder) where each launch becomes a drop page with cover, description, price, stock, countdown, and waitlist. Buyers join the list, get notified at launch, pay with Pix, and track their order. Creators manage everything from a dashboard: create a drop in minutes, set stock and date, track orders by status, and customize their storefront with an accent color and their own identity. Scarcity is real: limited stock, and the launch ritual (waitlist → live drop → sold out) is the heart of the product."
-            },
-            {
-                title: "Landing",
-                title_en: "Landing",
-                type: "image",
-                src: "/images/projects/drop/landing-hero.png",
-                caption: "Landing dark com tipografia display e hero animado",
-                caption_en: "Dark landing with display typography and animated hero"
-            },
-            {
-                title: "Funcionalidades",
-                title_en: "Features",
-                type: "research",
-                methods: ["Vitrine do criador", "Página de drop", "Lista de espera", "Checkout com Pix", "Gestão de pedidos"],
-                methods_en: ["Creator storefront", "Drop page", "Waitlist", "Pix checkout", "Order management"],
-                content: "Cada funcionalidade foi desenhada em torno do ritual de lançamento. A Vitrine do criador é uma página de marca com avatar, bio, cor de acento e todos os drops. A Página de drop traz capa, contagem regressiva, estoque e CTA de compra ou lista de espera. A Lista de espera prioritária qualifica compradores antes do go-live. O Checkout com Pix permite pagamento local instantâneo. A Gestão de pedidos dá ao criador controle por status (pendente, pago, enviado) em um painel simples.",
-                content_en: "Each feature was designed around the launch ritual. The Creator storefront is a brand page with avatar, bio, accent color, and all drops. The Drop page brings cover, countdown, stock, and a buy or waitlist CTA. The priority Waitlist qualifies buyers before go-live. Pix checkout enables instant local payment. Order management gives the creator status-based control (pending, paid, shipped) in a simple dashboard.",
-                highlights: [
-                    "Vitrine de marca com cor de acento, avatar, bio e links sociais por criador",
-                    "Página de drop com contagem regressiva, estoque limitado e estados ao vivo / esgotado",
-                    "Lista de espera prioritária que avisa o comprador no momento do lançamento",
-                    "Checkout próprio com Pix, o meio de pagamento preferido no Brasil",
-                    "Dashboard de gestão de pedidos por status, com criação de drop em minutos"
-                ],
-                highlights_en: [
-                    "Branded storefront with accent color, avatar, bio, and social links per creator",
-                    "Drop page with countdown, limited stock, and live / sold-out states",
-                    "Priority waitlist that notifies the buyer at the moment of launch",
-                    "Own checkout with Pix, the preferred payment method in Brazil",
-                    "Status-based order management dashboard, with drop creation in minutes"
-                ]
-            },
-            {
-                title: "Vitrine & Página de drop",
-                title_en: "Storefront & Drop page",
-                type: "gallery",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/drop/vitrine.png", caption: "Vitrine do criador com cor de acento e drops por status", caption_en: "Creator storefront with accent color and drops by status" },
-                    { src: "/images/projects/drop/drop-page.png", caption: "Página de drop: galeria, preço, estoque e checkout próprio", caption_en: "Drop page: gallery, price, stock and in-house checkout" }
-                ]
-            },
-            {
-                title: "Modelo de Negócio & Arquitetura",
-                title_en: "Business Model & Architecture",
-                type: "text",
-                content: "Construído inteiramente com AI coding (Claude como pair programmer do scaffolding ao deploy). Stack: Next.js 16 (App Router), Prisma + PostgreSQL para criadores, drops, listas de espera e pedidos, Auth.js para login com Google e magic link, Stripe para pagamentos (com Pix via conta BR), Resend para e-mails transacionais e Vercel para deploy contínuo. O modelo freemium limita o plano Free a 5 drops por mês, sem Pix, o suficiente para experimentar. O trial de 14 dias libera tudo, e o PRO (R$29/mês) mantém drops e vendas ilimitados com Pix ativo.",
-                content_en: "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 16 (App Router), Prisma + PostgreSQL for creators, drops, waitlists, and orders, Auth.js for Google and magic-link login, Stripe for payments (with Pix via a BR account), Resend for transactional emails, and Vercel for continuous deployment. The freemium model limits the Free plan to 5 drops per month, without Pix, enough to experiment. The 14-day trial unlocks everything, and PRO (R$29/month) keeps drops and sales unlimited with Pix active."
-            },
-            {
-                title: "Resultados & Aprendizados",
-                title_en: "Results & Learnings",
-                type: "outcomes",
-                metrics: [
-                    { value: "Pix", label: "checkout local nativo, raro no creator commerce" },
-                    { value: "5", label: "drops/mês no plano gratuito" },
-                    { value: "R$29", label: "PRO com drops e vendas ilimitados" }
-                ],
-                metrics_en: [
-                    { value: "Pix", label: "native local checkout, rare in creator commerce" },
-                    { value: "5", label: "drops/month on the free plan" },
-                    { value: "R$29", label: "PRO with unlimited drops and sales" }
-                ],
-                content: "O principal aprendizado foi que o produto não vende um checkout, vende um ritual. As decisões de design mais importantes foram a lista de espera prioritária e a contagem regressiva, que transformam o lançamento em evento e o seguidor em comprador. A escolha de templates + branding leve (em vez de um construtor de site) foi deliberada: criadores querem publicar rápido e manter coerência visual, não aprender a desenhar páginas. Apostar em Pix desde o início, mesmo com a complexidade de uma conta Stripe BR, foi o diferencial competitivo frente a plataformas internacionais como o Fourthwall.",
-                content_en: "The key learning was that the product doesn't sell a checkout, it sells a ritual. The most important design decisions were the priority waitlist and the countdown, which turn the launch into an event and the follower into a buyer. Choosing templates + light branding (instead of a site builder) was deliberate: creators want to publish fast and keep visual coherence, not learn to design pages. Betting on Pix from day one, despite the complexity of a Stripe BR account, was the competitive edge against international platforms like Fourthwall."
+              "value": "1",
+              "label": "MVP funcional lançado e deployado"
             }
-        ]
+          ],
+          "metrics_en": [
+            {
+              "value": "5",
+              "label": "product features shipped end-to-end"
+            },
+            {
+              "value": "0%",
+              "label": "fee on the Pro plan (vs 5% on Free)"
+            },
+            {
+              "value": "1",
+              "label": "working MVP launched and deployed"
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Design System",
+          "title_en": "Design System",
+          "columns": 2,
+          "content": "Dark-first por natureza: o Drop foi construído para vivir na escuridão — onde o produto se destaca. A cor de acento de cada criador é injetada como CSS var por requisição, mantendo identidade consistente sem hardcoding. Tipografia display em Anton para os nomes de drop, Space Grotesk no corpo e Geist Mono nos dados numéricos (preço, estoque, countdown).",
+          "content_en": "Dark-first by nature: Drop was built to live in darkness — where the product pops. Each creator's accent color is injected as a per-request CSS variable, keeping consistent identity without hardcoding. Anton for drop display titles, Space Grotesk for body text and Geist Mono for numeric data (price, stock, countdown).",
+          "images": [
+            {
+              "src": "/images/projects/drop/ds_tokens.png",
+              "caption": "Tokens e paleta: fundo dark, acento ciano, semânticas de status e tipografia display.",
+              "caption_en": "Tokens and palette: dark background, cyan accent, status semantics and display typography."
+            },
+            {
+              "src": "/images/projects/drop/ds_componentes.png",
+              "caption": "Componentes: botões, badges de status, card de drop, campos de formulário e escala de raios.",
+              "caption_en": "Components: buttons, status badges, drop card, form fields and border-radius scale."
+            }
+          ]
+        }
+      ]
     },
     {
-        id: 1,
-        slug: "sigil-design-system-builder",
-            tldr: {
-                problem: "Founders e devs solo constroem produtos sem designer e acabam com identidade visual fragmentada, sem tokens nem sistema.",
-                problem_en: "Founders and solo devs build products without a designer and end up with fragmented visual identity, no tokens, no system.",
-                role: "Product Designer & AI Engineer, solo: pesquisa de mercado, produto, design system e código, do zero ao deploy.",
-                role_en: "Product Designer & AI Engineer, solo: market research, product, design system and code, from zero to deploy.",
-                outcome: "MVP no ar em 3 dias: de uma cor seed a paleta, tokens e guia de estilo exportáveis, com preview em componentes reais.",
-                outcome_en: "MVP live in 3 days: from a seed color to exportable palette, tokens and style guide, previewed on real components.",
-            },
-        pageType: "rich",
-        src: "/images/projects/sigil/sigil_full.jpg",
-        category: "Product Design & AI Engineering",
-        tags: ["Product Design", "AI Engineering"],
-        title: "Sigil",
-        tagline: "De uma cor seed a um design system completo, pronto para exportar.",
-        tagline_en: "From a seed color to a complete design system, ready to export.",
-        description: "Gerador de sistemas visuais para founders, devs e criadores independentes. Cole uma cor seed para o Sigil gerar paleta, tokens de design e um guia de estilo pronto para exportação. Identidade visual coerente sem abrir o Figma.",
-        description_en: "Visual system generator for founders, devs, and independent creators. Paste a seed color and Sigil generates a palette, design tokens, and style guides ready for export. Cohesive visual identity without opening Figma.",
-        year: "2026",
-        role: "Product Designer & AI Engineer",
-        timeline: "MVP · iteração contínua",
-        timeline_en: "MVP · continuous iteration",
-        team: "Solo",
-        client: "Produto próprio",
-        tools: ["Claude API", "Next.js", "Prisma", "Vercel"],
-        liveDemoLink: "https://sigil-eight.vercel.app/",
-        sections: [
+      "id": 1,
+      "slug": "sigil-design-system-builder",
+      "src": "/images/projects/sigil/sigil_full.jpg",
+      "category": "Product Design & AI Engineering",
+      "tags": [
+        "Product Design",
+        "AI Engineering"
+      ],
+      "title": "Sigil",
+      "tagline": "De uma cor seed a um design system completo, pronto para exportar.",
+      "tagline_en": "From a seed color to a complete design system, ready to export.",
+      "tldr": {
+        "problem": "Founders e devs solo constroem produtos sem designer e acabam com identidade visual fragmentada, sem tokens nem sistema.",
+        "problem_en": "Founders and solo devs build products without a designer and end up with fragmented visual identity, no tokens, no system.",
+        "role": "Product Designer & AI Engineer, solo: pesquisa de mercado, produto, design system e código, do zero ao deploy.",
+        "role_en": "Product Designer & AI Engineer, solo: market research, product, design system and code, from zero to deploy.",
+        "outcome": "MVP no ar, solo, do zero ao deploy: de uma cor seed a paleta, tokens e guia de estilo exportáveis, com preview em componentes reais.",
+        "outcome_en": "MVP live, solo, from zero to deploy: from a seed color to exportable palette, tokens and style guide, previewed on real components."
+      },
+      "description": "Gerador de sistemas visuais para founders, devs e criadores independentes. Cole uma cor seed para o Sigil gerar paleta, tokens de design e um guia de estilo pronto para exportação. Identidade visual coerente sem abrir o Figma.",
+      "description_en": "Visual system generator for founders, devs, and independent creators. Paste a seed color and Sigil generates a palette, design tokens, and style guides ready for export. Cohesive visual identity without opening Figma.",
+      "year": "2026",
+      "role": "Product Designer & AI Engineer",
+      "timeline": "MVP · iteração contínua",
+      "timeline_en": "MVP · continuous iteration",
+      "team": "Solo",
+      "client": "Produto próprio",
+      "tools": [
+        "Claude API",
+        "Next.js",
+        "Prisma",
+        "Vercel"
+      ],
+      "liveDemoLink": "https://sigil-eight.vercel.app/",
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "content": "Founders, desenvolvedores e criadores independentes constroem produtos sem designer, e sentem isso a cada tela inconsistente, botão fora do padrão ou paleta improvisada. Ferramentas como Figma, Tokens Studio e Brand.ai foram criadas para designers. Quem constrói sozinho não tem tempo para aprender esses fluxos, nem budget para terceirizar. O resultado prático: projetos com identidade visual fragmentada, ausência de design tokens e incapacidade de escalar o sistema sem retrabalho. O mercado de ferramentas de design system é grande, mas todas as soluções assumem que existe um designer no processo.",
+          "content_en": "Founders, developers, and independent creators build products without a designer, and feel it in every inconsistent screen, off-pattern button, or improvised palette. Tools like Figma, Tokens Studio, and Brand.ai were built for designers. Solo builders don't have time to learn these workflows, nor the budget to outsource. The practical result: projects with fragmented visual identity, absent design tokens, and no way to scale the system without rework. The design system tooling market is large, but every solution assumes there is a designer in the loop."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/sigil/sigil_visao_geral1.png",
+          "caption": "Visão geral: dashboard de brand systems.",
+          "caption_en": "Overview: brand systems dashboard."
+        },
+        {
+          "type": "gallery",
+          "title": "O editor de um brand system",
+          "title_en": "The brand system editor",
+          "columns": 2,
+          "images": [
             {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "Founders, desenvolvedores e criadores independentes constroem produtos sem designer, e sentem isso a cada tela inconsistente, botão fora do padrão ou paleta improvisada. Ferramentas como Figma, Tokens Studio e Brand.ai foram criadas para designers. Quem constrói sozinho não tem tempo para aprender esses fluxos, nem budget para terceirizar. O resultado prático: projetos com identidade visual fragmentada, ausência de design tokens e incapacidade de escalar o sistema sem retrabalho. O mercado de ferramentas de design system é grande, mas todas as soluções assumem que existe um designer no processo.",
-                content_en: "Founders, developers, and independent creators build products without a designer, and feel it in every inconsistent screen, off-pattern button, or improvised palette. Tools like Figma, Tokens Studio, and Brand.ai were built for designers. Solo builders don't have time to learn these workflows, nor the budget to outsource. The practical result: projects with fragmented visual identity, absent design tokens, and no way to scale the system without rework. The design system tooling market is large, but every solution assumes there is a designer in the loop."
-            },
-            {
-                title: "Visão Geral",
-                title_en: "Overview",
-                type: "image",
-                src: "/images/projects/sigil/sigil_visao_geral1.png",
-                caption: "Visão geral: dashboard de brand systems.",
-                caption_en: "Overview: brand systems dashboard."
-            },
-            {
-                title: "O editor de um brand system",
-                title_en: "The brand system editor",
-                type: "gallery",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/sigil/sigil_visao_geral2.png", caption: "Editor de um brand system", caption_en: "Brand system editor" },
-                    { src: "/images/projects/sigil/sigil_visao_geral_dark.png", caption: "O mesmo editor em modo escuro", caption_en: "The same editor in dark mode" }
-                ]
-            },
-            {
-                title: "Pesquisa de Mercado",
-                title_en: "Market Research",
-                type: "research",
-                methods: ["Análise de comunidades indie hackers e devs solos", "Benchmark de ferramentas (Tokens Studio, Style Dictionary, Coolors, Realtime Colors)", "Mapeamento de dores em fóruns (Reddit, Product Hunt, Twitter/X)"],
-                methods_en: ["Indie hacker and solo dev community analysis", "Tool benchmark (Tokens Studio, Style Dictionary, Coolors, Realtime Colors)", "Pain point mapping in forums (Reddit, Product Hunt, Twitter/X)"],
-                content: "O crescimento de ferramentas no-code e do movimento indie hacker criou uma demanda clara: construtores solo que precisam de coerência visual mas rejeitam fluxos complexos. Tokens Studio e Style Dictionary são poderosos, mas têm curva de aprendizado íngreme e assumem familiaridade com design systems. Coolors e Realtime Colors resolvem paleta, mas não conectam com código. Nenhuma ferramenta fecha o ciclo completo, da cor seed ao arquivo de configuração pronto para uso no projeto.",
-                content_en: "The growth of no-code tools and the indie hacker movement created a clear demand: solo builders who need visual consistency but reject complex workflows. Tokens Studio and Style Dictionary are powerful, but have steep learning curves and assume design system familiarity. Coolors and Realtime Colors solve palette, but don't connect to code. No tool closes the full cycle, from seed color to config file ready for use in the project.",
-                highlights: [
-                    "Devs solos gastam horas consistindo cores manualmente entre CSS, Tailwind e componentes",
-                    "A maioria dos indie hackers usa 'achismo' visual: escolhem cores sem sistema de tokens",
-                    "A barreira não é conceitual, é operacional: ninguém quer aprender mais uma ferramenta complexa",
-                    "Product Hunt e Reddit mostram demanda alta por 'Tailwind palette generator' e 'brand kit for devs'"
-                ],
-                highlights_en: [
-                    "Solo devs spend hours manually syncing colors between CSS, Tailwind, and components",
-                    "Most indie hackers rely on guesswork: they choose colors without a token system",
-                    "The barrier isn't conceptual, it's operational: no one wants to learn another complex tool",
-                    "Product Hunt and Reddit show high demand for 'Tailwind palette generator' and 'brand kit for devs'"
-                ]
+              "src": "/images/projects/sigil/sigil_visao_geral2.png",
+              "caption": "Editor de um brand system",
+              "caption_en": "Brand system editor"
             },
             {
-                title: "Solução & Produto",
-                title_en: "Solution & Product",
-                type: "text",
-                content: "O Sigil fecha o ciclo em um fluxo de três passos: escolha uma cor primária, nomeie sua marca, exporte. Internamente, o app gera paleta harmônica com modos claro/escuro, cria um Brand Brief com logo, cores, tipografia e tom de voz, e disponibiliza todos os tokens no Export Hub em múltiplos formatos. O Component Preview exibe os tokens aplicados em botões, cards e inputs reais, permitindo que o usuário veja o sistema funcionando antes de escrever uma linha de código.",
-                content_en: "Sigil closes the loop in a three-step flow: pick a primary color, name your brand, export. Internally, the app generates a harmonic palette with light/dark modes, creates a Brand Brief with logo, colors, typography, and tone of voice, and makes all tokens available in the Export Hub in multiple formats. The Component Preview shows tokens applied to real buttons, cards, and inputs, so the user can see the system working before writing a line of code."
-            },
-            {
-                title: "Funcionalidades",
-                title_en: "Features",
-                type: "research",
-                methods: ["Token Studio", "Palette Generator", "Brand Brief", "Component Preview", "Export Hub"],
-                methods_en: ["Token Studio", "Palette Generator", "Brand Brief", "Component Preview", "Export Hub"],
-                content: "Cada feature foi desenhada para eliminar uma etapa manual do fluxo de criação de identidade visual. Token Studio cria e exporta design tokens em JSON, CSS e Tailwind config. Palette Generator gera paletas harmônicas a partir de uma cor seed com modo claro/escuro automático. Brand Brief é um documento vivo com logo, cores, fontes e tom de voz. Component Preview aplica os tokens em componentes reais antes de codar. Export Hub centraliza todos os formatos de exportação, incluindo Tailwind, vars CSS e Figma Variables JSON, ou gera uma página pública compartilhável da marca.",
-                content_en: "Each feature was designed to eliminate a manual step from the visual identity creation flow. Token Studio creates and exports design tokens in JSON, CSS, and Tailwind config. Palette Generator generates harmonic palettes from a seed color with automatic light/dark modes. Brand Brief is a living document with logo, colors, typography, and tone of voice. Component Preview applies tokens to real components before coding. Export Hub centralizes all export formats, such as Tailwind, CSS vars, and Figma Variables JSON, or generates a public shareable brand page.",
-                highlights: [
-                    "Token Studio: exporta JSON, CSS vars e Tailwind config prontos para usar",
-                    "Palette Generator: paleta harmônica com escala de tons light/dark a partir de uma cor seed",
-                    "Brand Brief: documento vivo com logo, cores, tipografia, tom de voz e exemplos de uso",
-                    "Component Preview: botões, cards e inputs renderizados com os tokens da marca em tempo real",
-                    "Export Hub: Tailwind config, CSS vars, Figma Variables JSON ou página pública da marca"
-                ],
-                highlights_en: [
-                    "Token Studio: exports JSON, CSS vars, and Tailwind config ready to use",
-                    "Palette Generator: harmonic palette with light/dark tone scale from a seed color",
-                    "Brand Brief: living document with logo, colors, typography, tone of voice and usage examples",
-                    "Component Preview: buttons, cards and inputs rendered with brand tokens in real time",
-                    "Export Hub: Tailwind config, CSS vars, Figma Variables JSON or public brand page"
-                ]
-            },
-            {
-                title: "Modelo de Negócio & Arquitetura",
-                title_en: "Business Model & Architecture",
-                type: "text",
-                content: "Construído inteiramente com AI coding (Claude como pair programmer do scaffolding ao deploy). Stack: Next.js 14 (App Router), Prisma + PostgreSQL para persistência de BrandSystems, Palettes, ExportLogs e SharedPages, Claude API para geração de sugestões de tokens e Brand Brief, Vercel para deploy contínuo. O modelo freemium limita o Free a 1 brand system e 3 paletas sem export, o que é suficiente para experimentar, mas insuficiente para escalar. O PRO (R$39/mês) libera tudo: brand systems ilimitados, Export Hub completo e SharedPages públicas.",
-                content_en: "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 14 (App Router), Prisma + PostgreSQL for BrandSystems, Palettes, ExportLogs, and SharedPages persistence, Claude API for token suggestions and Brand Brief generation, Vercel for continuous deployment. The freemium model limits Free to 1 brand system and 3 palettes without export, which is enough to experiment, not enough to scale. PRO (R$39/month) unlocks everything: unlimited brand systems, full Export Hub, and public SharedPages."
-            },
-            {
-                title: "Resultados & Aprendizados",
-                title_en: "Results & Learnings",
-                type: "outcomes",
-                metrics: [
-                    { value: "2", label: "dias do zero ao deploy" },
-                    { value: "5", label: "features no lançamento" },
-                    { value: "R$0", label: "plano gratuito com brand system completo" }
-                ],
-                metrics_en: [
-                    { value: "2", label: "days from zero to deploy" },
-                    { value: "5", label: "features at launch" },
-                    { value: "R$0", label: "free plan with complete brand system" }
-                ],
-                content: "O principal aprendizado foi sobre o valor de fechar o ciclo. Ferramentas de paleta existem aos montes, mas o diferencial do Sigil é conectar cor seed → tokens → exportação em código em um fluxo único. A decisão de incluir Component Preview foi a mais importante: ver os tokens funcionando em componentes reais, antes de exportar, reduziu drasticamente a fricção de adoção. O modelo de 14 dias de trial ilimitado foi escolhido para garantir que o usuário chegue ao 'aha moment', que só acontece quando ele exporta e vê o Tailwind config funcionando no projeto dele.",
-                content_en: "The key learning was about the value of closing the loop. Palette tools are a dime a dozen, but Sigil's differentiator is connecting seed color, tokens, and code export in a single flow. The decision to include Component Preview was the most important one: seeing tokens working in real components, before exporting, dramatically reduced adoption friction. The 14-day unlimited trial model was chosen to ensure users reach the 'aha moment', which only happens when they export and see the Tailwind config working in their own project."
-            },
-            {
-                title: "Design System",
-                title_en: "Design System",
-                type: "gallery",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/sigil/sigil_ds_colors_light.png", caption: "Paleta em modo claro", caption_en: "Palette in light mode" },
-                    { src: "/images/projects/sigil/sigil_ds_colors.png", caption: "Paleta em modo escuro", caption_en: "Palette in dark mode" },
-                    { src: "/images/projects/sigil/sigil_ds_components_light.png", caption: "Componentes em modo claro", caption_en: "Components in light mode" },
-                    { src: "/images/projects/sigil/sigil_ds_components.png", caption: "Componentes em modo escuro", caption_en: "Components in dark mode" }
-                ]
+              "src": "/images/projects/sigil/sigil_visao_geral_dark.png",
+              "caption": "O mesmo editor em modo escuro",
+              "caption_en": "The same editor in dark mode"
             }
-        ]
+          ]
+        },
+        {
+          "type": "research",
+          "title": "Pesquisa de Mercado",
+          "title_en": "Market Research",
+          "methods": [
+            "Análise de comunidades indie hackers e devs solos",
+            "Benchmark de ferramentas (Tokens Studio, Style Dictionary, Coolors, Realtime Colors)",
+            "Mapeamento de dores em fóruns (Reddit, Product Hunt, Twitter/X)"
+          ],
+          "methods_en": [
+            "Indie hacker and solo dev community analysis",
+            "Tool benchmark (Tokens Studio, Style Dictionary, Coolors, Realtime Colors)",
+            "Pain point mapping in forums (Reddit, Product Hunt, Twitter/X)"
+          ],
+          "content": "O crescimento de ferramentas no-code e do movimento indie hacker criou uma demanda clara: construtores solo que precisam de coerência visual mas rejeitam fluxos complexos. Tokens Studio e Style Dictionary são poderosos, mas têm curva de aprendizado íngreme e assumem familiaridade com design systems. Coolors e Realtime Colors resolvem paleta, mas não conectam com código. Nenhuma ferramenta fecha o ciclo completo, da cor seed ao arquivo de configuração pronto para uso no projeto.",
+          "content_en": "The growth of no-code tools and the indie hacker movement created a clear demand: solo builders who need visual consistency but reject complex workflows. Tokens Studio and Style Dictionary are powerful, but have steep learning curves and assume design system familiarity. Coolors and Realtime Colors solve palette, but don't connect to code. No tool closes the full cycle, from seed color to config file ready for use in the project.",
+          "highlights": [
+            "Devs solos gastam horas consistindo cores manualmente entre CSS, Tailwind e componentes",
+            "A maioria dos indie hackers usa 'achismo' visual: escolhem cores sem sistema de tokens",
+            "A barreira não é conceitual, é operacional: ninguém quer aprender mais uma ferramenta complexa",
+            "Product Hunt e Reddit mostram demanda alta por 'Tailwind palette generator' e 'brand kit for devs'"
+          ],
+          "highlights_en": [
+            "Solo devs spend hours manually syncing colors between CSS, Tailwind, and components",
+            "Most indie hackers rely on guesswork: they choose colors without a token system",
+            "The barrier isn't conceptual, it's operational: no one wants to learn another complex tool",
+            "Product Hunt and Reddit show high demand for 'Tailwind palette generator' and 'brand kit for devs'"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Solução & Produto",
+          "title_en": "Solution & Product",
+          "content": "O Sigil fecha o ciclo em um fluxo de três passos: escolha uma cor primária, nomeie sua marca, exporte. Internamente, o app gera paleta harmônica com modos claro/escuro, cria um Brand Brief com logo, cores, tipografia e tom de voz, e disponibiliza todos os tokens no Export Hub em múltiplos formatos. O Component Preview exibe os tokens aplicados em botões, cards e inputs reais, permitindo que o usuário veja o sistema funcionando antes de escrever uma linha de código.",
+          "content_en": "Sigil closes the loop in a three-step flow: pick a primary color, name your brand, export. Internally, the app generates a harmonic palette with light/dark modes, creates a Brand Brief with logo, colors, typography, and tone of voice, and makes all tokens available in the Export Hub in multiple formats. The Component Preview shows tokens applied to real buttons, cards, and inputs, so the user can see the system working before writing a line of code."
+        },
+        {
+          "type": "research",
+          "title": "Funcionalidades",
+          "title_en": "Features",
+          "methods": [
+            "Token Studio",
+            "Palette Generator",
+            "Brand Brief",
+            "Component Preview",
+            "Export Hub"
+          ],
+          "methods_en": [
+            "Token Studio",
+            "Palette Generator",
+            "Brand Brief",
+            "Component Preview",
+            "Export Hub"
+          ],
+          "content": "Cada feature foi desenhada para eliminar uma etapa manual do fluxo de criação de identidade visual. Token Studio cria e exporta design tokens em JSON, CSS e Tailwind config. Palette Generator gera paletas harmônicas a partir de uma cor seed com modo claro/escuro automático. Brand Brief é um documento vivo com logo, cores, fontes e tom de voz. Component Preview aplica os tokens em componentes reais antes de codar. Export Hub centraliza todos os formatos de exportação, incluindo Tailwind, vars CSS e Figma Variables JSON, ou gera uma página pública compartilhável da marca.",
+          "content_en": "Each feature was designed to eliminate a manual step from the visual identity creation flow. Token Studio creates and exports design tokens in JSON, CSS, and Tailwind config. Palette Generator generates harmonic palettes from a seed color with automatic light/dark modes. Brand Brief is a living document with logo, colors, typography, and tone of voice. Component Preview applies tokens to real components before coding. Export Hub centralizes all export formats, such as Tailwind, CSS vars, and Figma Variables JSON, or generates a public shareable brand page.",
+          "highlights": [
+            "Token Studio: exporta JSON, CSS vars e Tailwind config prontos para usar",
+            "Palette Generator: paleta harmônica com escala de tons light/dark a partir de uma cor seed",
+            "Brand Brief: documento vivo com logo, cores, tipografia, tom de voz e exemplos de uso",
+            "Component Preview: botões, cards e inputs renderizados com os tokens da marca em tempo real",
+            "Export Hub: Tailwind config, CSS vars, Figma Variables JSON ou página pública da marca"
+          ],
+          "highlights_en": [
+            "Token Studio: exports JSON, CSS vars, and Tailwind config ready to use",
+            "Palette Generator: harmonic palette with light/dark tone scale from a seed color",
+            "Brand Brief: living document with logo, colors, typography, tone of voice and usage examples",
+            "Component Preview: buttons, cards and inputs rendered with brand tokens in real time",
+            "Export Hub: Tailwind config, CSS vars, Figma Variables JSON or public brand page"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Modelo de Negócio & Arquitetura",
+          "title_en": "Business Model & Architecture",
+          "content": "Construído inteiramente com AI coding (Claude como pair programmer do scaffolding ao deploy). Stack: Next.js 14 (App Router), Prisma + PostgreSQL para persistência de BrandSystems, Palettes, ExportLogs e SharedPages, Claude API para geração de sugestões de tokens e Brand Brief, Vercel para deploy contínuo. O modelo freemium limita o Free a 1 brand system e 3 paletas sem export, o que é suficiente para experimentar, mas insuficiente para escalar. O PRO (R$39/mês) libera tudo: brand systems ilimitados, Export Hub completo e SharedPages públicas.",
+          "content_en": "Built entirely with AI coding (Claude as pair programmer from scaffolding to deployment). Stack: Next.js 14 (App Router), Prisma + PostgreSQL for BrandSystems, Palettes, ExportLogs, and SharedPages persistence, Claude API for token suggestions and Brand Brief generation, Vercel for continuous deployment. The freemium model limits Free to 1 brand system and 3 palettes without export, which is enough to experiment, not enough to scale. PRO (R$39/month) unlocks everything: unlimited brand systems, full Export Hub, and public SharedPages."
+        },
+        {
+          "type": "text",
+          "title": "Resultados & Aprendizados",
+          "title_en": "Results & Learnings",
+          "content": "O principal aprendizado foi sobre o valor de fechar o ciclo. Ferramentas de paleta existem aos montes, mas o diferencial do Sigil é conectar cor seed → tokens → exportação em código em um fluxo único. A decisão de incluir Component Preview foi a mais importante: foi desenhado para que o usuário veja os tokens funcionando em componentes reais antes de exportar — removendo a fricção entre gerar o sistema e confiar nele. O modelo de 14 dias de trial ilimitado foi escolhido para garantir que o usuário chegue ao 'aha moment', que só acontece quando ele exporta e vê o Tailwind config funcionando no projeto dele.",
+          "content_en": "The key learning was about the value of closing the loop. Palette tools are a dime a dozen, but Sigil's differentiator is connecting seed color, tokens, and code export in a single flow. The decision to include Component Preview was the most important one: it was designed so users see tokens working in real components before exporting — removing the friction between generating the system and trusting it. The 14-day unlimited trial model was chosen to ensure users reach the 'aha moment', which only happens when they export and see the Tailwind config working in their own project."
+        },
+        {
+          "type": "outcomes",
+          "metrics": [
+            {
+              "value": "4",
+              "label": "formatos de export (JSON, CSS vars, Tailwind, Figma)"
+            },
+            {
+              "value": "5",
+              "label": "features no lançamento"
+            },
+            {
+              "value": "R$0",
+              "label": "plano gratuito com brand system completo"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "4",
+              "label": "export formats (JSON, CSS vars, Tailwind, Figma)"
+            },
+            {
+              "value": "5",
+              "label": "features at launch"
+            },
+            {
+              "value": "R$0",
+              "label": "free plan with complete brand system"
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Design System",
+          "title_en": "Design System",
+          "columns": 2,
+          "content": "O próprio Sigil tem um design system, e ele serve de prova viva do que a ferramenta entrega. A base são tokens de cor em OKLCH, com temas claro e escuro derivados da mesma fonte, e uma escala tipográfica em Geist Sans e Geist Mono que vai do display ao texto de apoio. Sobre essa fundação vivem os componentes: botões em variantes e tamanhos, badges, inputs, cards e tabelas de preço, todos compartilhando raios, espaçamentos e estados. O resultado é consistência entre telas sem retrabalho, exatamente o que o produto promete a quem constrói sozinho.",
+          "content_en": "Sigil itself has a design system, and it doubles as living proof of what the tool delivers. The foundation is OKLCH color tokens, with light and dark themes derived from the same source, plus a typographic scale in Geist Sans and Geist Mono spanning from display to supporting text. On top of it live the components: buttons in variants and sizes, badges, inputs, cards and pricing tables, all sharing radii, spacing and states. The result is cross-screen consistency without rework, exactly what the product promises to solo builders.",
+          "images": [
+            {
+              "src": "/images/projects/sigil/sigil_ds_colors_light.png",
+              "caption": "Paleta de cores e tipografia (tema claro).",
+              "caption_en": "Color palette and typography (light theme)."
+            },
+            {
+              "src": "/images/projects/sigil/sigil_ds_colors.png",
+              "caption": "Paleta de cores e tipografia (tema escuro).",
+              "caption_en": "Color palette and typography (dark theme)."
+            },
+            {
+              "src": "/images/projects/sigil/sigil_ds_components_light.png",
+              "caption": "Componentes e padrões de interface (tema claro).",
+              "caption_en": "Components and interface patterns (light theme)."
+            },
+            {
+              "src": "/images/projects/sigil/sigil_ds_components.png",
+              "caption": "Componentes e padrões de interface (tema escuro).",
+              "caption_en": "Components and interface patterns (dark theme)."
+            }
+          ]
+        }
+      ]
     },
     {
         id: 15,
@@ -824,155 +1086,171 @@ export const projectsData = [
         ]
     },
     {
-        id: 6,
-        slug: "pixtudo-super-app-ux-research",
-            tldr: {
-                problem: "O brasileiro abre vários apps diferentes para pagar, investir, pedir crédito e dividir contas.",
-                problem_en: "Brazilians open several different apps just to pay, invest, apply for credit and split bills.",
-                role: "Product Designer & Full-Stack, solo: pesquisa de mercado, personas, jornada, arquitetura de informação e MVP.",
-                role_en: "Product Designer & Full-Stack, solo: market research, personas, journey, information architecture and MVP.",
-                outcome: "Pesquisa completa + MVP funcional com Pix simulado, cashback, extrato inteligente, score gamificado e rateio social.",
-                outcome_en: "Full research document + working MVP with simulated Pix, cashback, smart statement, gamified score and social bill-splitting.",
-            },
-        pageType: "rich",
-        accentColor: "#00C853",
-        liveDemoLink: "https://app-src-two.vercel.app/",
-        src: "/images/projects/pixtudo_full.jpg",
-        category: "Product Design & Full-Stack",
-        tags: ["Product Design", "Full-Stack"],
-        title: "PixTudo",
-        tagline: "Do documento de pesquisa ao MVP funcional: super-app financeiro com Pix, cashback e score inteligente.",
-        tagline_en: "From research to working MVP: financial super-app with Pix, cashback and smart score.",
-        description: "Pesquisa completa de UX e MVP funcional do PixTudo, um super-app financeiro brasileiro. A pesquisa cobre mercado, análise competitiva, 3 personas, jornada, arquitetura de informação e princípios de design. O MVP entrega Pix simulado com cashback, extrato inteligente, Score PixTudo com gamificação, hub de serviços e rateio social.",
-        description_en: "Full UX research and working MVP of PixTudo, a Brazilian financial super-app. Research covers market analysis, competitive benchmarking, 3 personas, user journey, information architecture and design principles. The MVP delivers simulated Pix with cashback, smart statement, gamified PixTudo Score, services hub and social bill-splitting.",
-        year: "2026",
-        role: "UX Researcher & Design Engineer",
-        timeline: "MVP · iteração contínua",
-        timeline_en: "MVP · continuous iteration",
-        team: "Solo",
-        client: "Projeto Pessoal",
-        tools: ["Figma", "Miro", "Next.js", "Claude API", "Prisma", "Vercel"],
-        prototypeLinks: [{ label: "Ver documento de pesquisa", url: "/pix-tudo-ux.html" }],
-        sections: [
+      "id": 6,
+      "slug": "pixtudo-super-app-ux-research",
+      "pageType": "rich",
+      "accentColor": "#00C853",
+      "liveDemoLink": "https://app-src-two.vercel.app/",
+      "src": "/images/projects/pixtudo_full.jpg",
+      "category": "Product Design & Full-Stack",
+      "tags": [
+        "Product Design",
+        "Full-Stack"
+      ],
+      "title": "PixTudo",
+      "tagline": "Do documento de pesquisa ao MVP funcional: super-app financeiro com Pix, cashback e score inteligente.",
+      "tagline_en": "From research to working MVP: financial super-app with Pix, cashback and smart score.",
+      "tldr": {
+        "problem": "O brasileiro abre vários apps diferentes para pagar, investir, pedir crédito e dividir contas.",
+        "problem_en": "Brazilians open several different apps just to pay, invest, apply for credit and split bills.",
+        "role": "Product Designer & Full-Stack, solo: pesquisa de mercado, personas, jornada, arquitetura de informação e MVP.",
+        "role_en": "Product Designer & Full-Stack, solo: market research, personas, journey, information architecture and MVP.",
+        "outcome": "Pesquisa completa + MVP funcional com Pix simulado, cashback, extrato inteligente, score gamificado e rateio social.",
+        "outcome_en": "Full research document + working MVP with simulated Pix, cashback, smart statement, gamified score and social bill-splitting."
+      },
+      "description": "Pesquisa completa de UX e MVP funcional do PixTudo, um super-app financeiro brasileiro. A pesquisa cobre mercado, análise competitiva, 3 personas, jornada, arquitetura de informação e princípios de design. O MVP entrega Pix simulado com cashback, extrato inteligente, Score PixTudo com gamificação, hub de serviços e rateio social.",
+      "description_en": "Full UX research and working MVP of PixTudo, a Brazilian financial super-app. Research covers market analysis, competitive benchmarking, 3 personas, user journey, information architecture and design principles. The MVP delivers simulated Pix with cashback, smart statement, gamified PixTudo Score, services hub and social bill-splitting.",
+      "year": "2026",
+      "role": "Product Designer & Full-Stack",
+      "timeline": "MVP · iteração contínua",
+      "timeline_en": "MVP · continuous iteration",
+      "team": "Solo",
+      "client": "Projeto Pessoal",
+      "tools": [
+        "Figma",
+        "Miro",
+        "Next.js",
+        "Claude API",
+        "Prisma",
+        "Vercel"
+      ],
+      "prototypeLinks": [
+        {
+          "label": "Ver documento de pesquisa",
+          "url": "/pix-tudo-ux.html"
+        }
+      ],
+      "sections": [
+        {
+          "type": "text",
+          "title": "Contexto de mercado",
+          "title_en": "Market context",
+          "content": "O PixTudo nasce de uma fricção real: o brasileiro abre vários apps para pagar, investir, pedir crédito e dividir contas. A proposta é unir tudo em um super-app financeiro com linguagem local, Pix como ação primária e uma camada social nativa.",
+          "content_en": "PixTudo was born from a real friction: Brazilians open several apps just to pay, invest, apply for credit and split bills. The pitch is to bring it all together in a financial super-app built on local language, Pix as the primary action and a native social layer."
+        },
+        {
+          "type": "screens",
+          "title": "Visão geral do app",
+          "title_en": "App overview",
+          "images": [
             {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "O Brasil tem características únicas no mundo que criam o momento ideal para um super-app financeiro: o Pix atingiu 153 milhões de usuários únicos em 2024 com volume de R$4,7 trilhões transacionados, superando cartões em número de operações. O brasileiro usa em média 4,2 apps para pagamento, banco, investimento e benefícios — apps bancários dos grandes bancos têm satisfação média de 2,8/5. Autônomos e MEIs (40% da força de trabalho) não têm acesso a crédito, e os juros do rotativo chegam a 440% ao ano. A fragmentação é total e nenhum player entregou a experiência unificada que o Alipay representa na China.",
-                content_en: "Brazil has unique global characteristics creating the ideal moment for a financial super-app: Pix reached 153 million unique users in 2024 with R$4.7 trillion transacted. Brazilians use an average of 4.2 apps for tasks that could be unified — major bank apps average 2.8/5 satisfaction. Freelancers and MEIs (40% of the workforce) can't access credit, and credit card revolving interest reaches 440% per year. Fragmentation is total and no player has delivered the unified experience that Alipay represents in China.",
-                highlights: [
-                    "153 milhões de usuários de Pix em 2024 — maior adoção de pagamento instantâneo do mundo",
-                    "Brasileiro usa em média 4,2 apps para tarefas que poderiam ser unificadas",
-                    "68% dos brasileiros desconfiam de bancos tradicionais (Febraban 2024) — fintechs têm NPS 2× maior",
-                    "Mercado de fintechs brasileiro estimado em R$312 bilhões para 2026, crescendo 23% ao ano",
-                ],
-                highlights_en: [
-                    "153 million Pix users in 2024 — the world's largest instant payment adoption",
-                    "Brazilians use an average of 4.2 apps for tasks that could be unified",
-                    "68% of Brazilians distrust traditional banks (Febraban 2024) — fintechs have 2× higher NPS",
-                    "Brazilian fintech market estimated at R$312 billion for 2026, growing 23% per year",
-                ],
-            },
-            {
-                title: "Análise Competitiva",
-                title_en: "Competitive Analysis",
-                type: "component",
-                component: "PixTudoCompetitors",
-            },
-            {
-                title: "Personas",
-                title_en: "Personas",
-                type: "component",
-                component: "PixTudoPersonas",
-            },
-            {
-                title: "Jornada do Usuário",
-                title_en: "User Journey",
-                type: "component",
-                component: "PixTudoJourney",
+              "src": "/images/projects/pixtudo/pixtudo_mob_01.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Início — resumo financeiro e cashback",
+              "caption_en": "Home — financial summary & cashback"
             },
             {
-                title: "Como Poderíamos…",
-                title_en: "How Might We…",
-                type: "research",
-                methods: ["HMW · Inclusão Financeira", "HMW · Fragmentação", "HMW · Social & Cultura", "HMW · Educação Financeira", "HMW · Segurança", "HMW · Ecossistema"],
-                methods_en: ["HMW · Financial Inclusion", "HMW · Fragmentation", "HMW · Social & Culture", "HMW · Financial Education", "HMW · Security", "HMW · Ecosystem"],
-                content: "Transformamos os insights da pesquisa em questões de design que abrem espaço para soluções criativas.",
-                content_en: "We transformed research insights into design questions that open space for creative solutions.",
-                highlights: [
-                    "Como poderíamos tornar o crédito acessível para autônomos e MEIs sem histórico bancário, usando dados de comportamento como alternativa ao score tradicional?",
-                    "Como poderíamos fazer o brasileiro substituir 4 apps financeiros por um único, sem sentir que está perdendo funcionalidade ou segurança?",
-                    "Como poderíamos transformar o momento de pagar e cobrar amigos — socialmente constrangedor — em algo leve e até divertido?",
-                    "Como poderíamos ensinar conceitos financeiros para a geração Z de forma contextual, sem interromper o fluxo da tarefa principal?",
-                    "Como poderíamos proteger usuários de golpes do Pix em tempo real sem criar fricção excessiva nas transações legítimas?",
-                    "Como poderíamos criar um ecossistema de mini-apps que faça sentido para o contexto brasileiro, sem virar uma bagunça difícil de navegar?",
-                ],
-                highlights_en: [
-                    "How might we make credit accessible to freelancers and MEIs without banking history, using behavioral data as an alternative to traditional scoring?",
-                    "How might we get Brazilians to replace 4 financial apps with one, without losing functionality or security?",
-                    "How might we transform the moment of paying and charging friends — socially awkward — into something light and even fun?",
-                    "How might we teach financial concepts to Gen Z contextually, without interrupting the main task flow?",
-                    "How might we protect users from Pix scams in real time without creating excessive friction in legitimate transactions?",
-                    "How might we create a mini-app ecosystem that makes sense for the Brazilian context without becoming a hard-to-navigate mess?",
-                ],
+              "src": "/images/projects/pixtudo/pixtudo_mob_02.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Pix — envio com cashback automático",
+              "caption_en": "Pix — send with automatic cashback"
             },
             {
-                title: "Princípios de Design",
-                title_en: "Design Principles",
-                type: "component",
-                component: "PixTudoPrinciples",
+              "src": "/images/projects/pixtudo/pixtudo_mob_03.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Extrato — histórico e gráfico de movimentações",
+              "caption_en": "Statement — history & spending chart"
             },
             {
-                title: "KPIs & Métricas",
-                title_en: "KPIs & Metrics",
-                type: "component",
-                component: "PixTudoKPIs",
+              "src": "/images/projects/pixtudo/pixtudo_mob_04.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Score — pontuação gamificada com níveis e metas",
+              "caption_en": "Score — gamified rating with levels & goals"
             },
             {
-                title: "Roadmap de Produto",
-                title_en: "Product Roadmap",
-                type: "component",
-                component: "PixTudoRoadmap",
+              "src": "/images/projects/pixtudo/pixtudo_mob_05.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Serviços — contas, recarga e transporte",
+              "caption_en": "Services — bills, top-up & transit"
             },
             {
-                title: "MVP",
-                title_en: "MVP",
-                type: "text",
-                content: "A pesquisa não ficou no papel. Construí um MVP funcional com as features priorizadas na fase de discovery: Pix simulado com cashback automático de 1,5%, extrato com categorização inteligente de gastos, Score PixTudo com gamificação e metas financeiras, hub de serviços (recarga de celular, vale-transporte, pagamento de contas) e rateio social com amigos. O produto tem plano PRO por R$19,90/mês com trial gratuito de 14 dias.",
-                content_en: "The research didn't stay on paper. I built a working MVP with the features prioritized during discovery: simulated Pix with automatic 1.5% cashback, statement with intelligent spending categorization, PixTudo Score with gamification and financial goals, services hub (mobile top-up, transit pass, bill payments) and social bill-splitting. The product has a PRO plan at R$19.90/month with a 14-day free trial.",
+              "src": "/images/projects/pixtudo/pixtudo_mob_06.jpg",
+              "width": 720,
+              "height": 1560,
+              "caption": "Social — rateio e vaquinhas via Pix",
+              "caption_en": "Social — split bills & group payments"
+            }
+          ]
+        },
+        {
+          "type": "component",
+          "title": "Personas",
+          "title_en": "Personas",
+          "component": "PixTudoPersonas"
+        },
+        {
+          "type": "component",
+          "title": "Análise competitiva",
+          "title_en": "Competitive Analysis",
+          "component": "PixTudoCompetitors"
+        },
+        {
+          "type": "component",
+          "title": "Jornada do usuário",
+          "title_en": "User Journey",
+          "component": "PixTudoJourney"
+        },
+        {
+          "type": "component",
+          "title": "Princípios de Design",
+          "title_en": "Design Principles",
+          "component": "PixTudoPrinciples"
+        },
+        {
+          "type": "component",
+          "title": "KPIs-alvo",
+          "title_en": "Target KPIs",
+          "component": "PixTudoKPIs"
+        },
+        {
+          "type": "component",
+          "title": "Roadmap",
+          "title_en": "Roadmap",
+          "component": "PixTudoRoadmap"
+        },
+        {
+          "type": "gallery",
+          "title": "Design System",
+          "title_en": "Design System",
+          "columns": 2,
+          "content": "Sistema visual do PixTudo: verde como cor primária de confiança e ação, hierarquia limpa para resolver tarefas em poucos toques e componentes pensados para uso rápido, com uma mão e em qualquer conexão.",
+          "content_en": "PixTudo's visual system: green as the primary color of trust and action, a clean hierarchy to resolve tasks in a few taps, and components designed for quick one-handed use on any connection.",
+          "images": [
+            {
+              "src": "/images/projects/pixtudo/ds_tokens.png",
+              "caption": "Tokens, cores e tipografia.",
+              "caption_en": "Tokens, colors and typography."
             },
             {
-                title: "Telas do app",
-                title_en: "App screens",
-                type: "gallery",
-                columns: 3,
-                images: [
-                    { src: "/images/projects/pixtudo/pixtudo_mob_01.jpg", caption: "Início — resumo financeiro e cashback", caption_en: "Home — financial summary & cashback" },
-                    { src: "/images/projects/pixtudo/pixtudo_mob_02.jpg", caption: "Pix — envio com cashback automático", caption_en: "Pix — send with automatic cashback" },
-                    { src: "/images/projects/pixtudo/pixtudo_mob_03.jpg", caption: "Extrato — histórico e gráfico de movimentações", caption_en: "Statement — history & spending chart" },
-                    { src: "/images/projects/pixtudo/pixtudo_mob_04.jpg", caption: "Score — pontuação gamificada com níveis e metas", caption_en: "Score — gamified rating with levels & goals" },
-                    { src: "/images/projects/pixtudo/pixtudo_mob_05.jpg", caption: "Serviços — contas, recarga e transporte", caption_en: "Services — bills, top-up & transit" },
-                    { src: "/images/projects/pixtudo/pixtudo_mob_06.jpg", caption: "Social — rateio e vaquinhas via Pix", caption_en: "Social — split bills & group payments" }
-                ]
-            },
-            {
-                title: "Resultados & Entregáveis",
-                title_en: "Results & Deliverables",
-                type: "outcomes",
-                metrics: [
-                    { value: "10",  label: "entregáveis de UX research" },
-                    { value: "3",   label: "personas baseadas em pesquisa real" },
-                    { value: "1",   label: "MVP funcional lançado e deployado" },
-                ],
-                metrics_en: [
-                    { value: "10",  label: "UX research deliverables" },
-                    { value: "3",   label: "personas based on real research" },
-                    { value: "1",   label: "working MVP launched and deployed" },
-                ],
-                content: "O projeto percorreu o ciclo completo: pesquisa de mercado, análise competitiva, personas, jornada do usuário, HMW, princípios de design, KPIs e roadmap — seguidos da construção do MVP. O principal aprendizado: no Brasil, as decisões de design financeiro são inseparáveis de comportamentos sociais como o pagamento coletivo, a desconfiança histórica em bancos e a centralidade do WhatsApp.",
-                content_en: "The project covered the full cycle: market research, competitive analysis, personas, user journey, HMW, design principles, KPIs and roadmap — followed by building the MVP. The key learning: in Brazil, financial design decisions are inseparable from social behaviors like collective payment, historical distrust of banks, and WhatsApp's centrality.",
-            },
-        ]
+              "src": "/images/projects/pixtudo/ds_componentes.png",
+              "caption": "Componentes: botões e badges, com variantes e tamanhos.",
+              "caption_en": "Components: buttons and badges, with variants and sizes."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "O que esse projeto demonstra",
+          "title_en": "What this project demonstrates",
+          "content": "Mais do que telas, o PixTudo mostra um processo de produto completo: pesquisa de mercado, personas, análise competitiva, jornada, princípios, KPIs e roadmap, conectados a um MVP funcional.",
+          "content_en": "More than screens, PixTudo shows a complete product process: market research, personas, competitive analysis, user journey, design principles, KPIs and roadmap, all connected to a working MVP."
+        }
+      ]
     },
     {
         id: 2,
@@ -1974,332 +2252,510 @@ export const projectsData = [
         ]
     },
     {
-        id: 11,
-        slug: "globo-ab-test-landing-page-aquisicao",
-            tldr: {
-                problem: "Páginas de aquisição de assinaturas mudavam por opinião, sem evidência de qual versão convertia mais.",
-                problem_en: "Subscription acquisition pages changed based on opinion, with no evidence of which version converted better.",
-                role: "Product Designer & Front-end: dono do design e da implementação das variantes em HTML/CSS/JS, dentro de um programa cross-funcional com Canais Digitais e marketing.",
-                role_en: "Product Designer & Front-end: owner of the design and implementation of the variants in HTML/CSS/JS, within a cross-functional program with Digital Channels and marketing.",
-                outcome: "Programa contínuo de testes A/B validado no Google Ads; variantes vencedoras viram padrão nos canais das marcas, sem sacrificar o LTV.",
-                outcome_en: "A continuous A/B testing program validated on Google Ads; winning variants become the standard across brand channels without sacrificing LTV.",
-            },
-        src: "/images/projects/ab_test/oglb_full.jpg",
-        pageSrc: "/images/projects/ab_test/oglb_full_intern.jpg",
-        category: "Product Design · Conversão & Aquisição",
-        tags: ["Product Design"],
-        title: "O Globo · Testes A/B",
-        tagline: "Programa contínuo de testes A/B em páginas de aquisição de assinaturas, validados no Google Ads e levados aos canais internos.",
-        tagline_en: "A continuous A/B testing program on subscription acquisition pages, validated on Google Ads and rolled out to internal channels.",
-        description: "Programa contínuo de testes A/B em páginas de aquisição de assinaturas para marcas da Editora Globo — O Globo, Valor Econômico e Clube O Globo — com testes pontuais em parcerias do Grupo Globo, como o Globoplay. As hipóteses vêm de Canais Digitais, guiadas por benchmarks de veículos de assinatura, e eu sou o responsável pelo design e pela implementação das variantes. Cada teste é validado no Google Ads e depois levado aos canais internos. O foco é aumentar conversão sem sacrificar o LTV do assinante.",
-        description_en: "A continuous A/B testing program on subscription acquisition pages for Editora Globo brands — O Globo, Valor Econômico and Clube O Globo — with occasional tests on Grupo Globo partnerships, such as Globoplay. Hypotheses come from Digital Channels, driven by subscription-media benchmarks, and I own the design and implementation of the variants. Each test is validated on Google Ads and then rolled out to internal channels. The focus is to grow conversion without sacrificing subscriber LTV.",
-        year: "Desde 2023",
-        year_en: "Since 2023",
-        role: "Product Designer & Front-end",
-        timeline: "Programa contínuo",
-        timeline_en: "Ongoing program",
-        team: "Multidisciplinar",
-        client: "Editora Globo",
-        tools: ["Figma", "HTML", "CSS", "JS", "Google Ads"],
-        pageType: "rich",
-        accentColor: "#1B4FD8",
-        sections: [
-            {
-                title: "O problema",
-                title_en: "The problem",
-                type: "text",
-                content: "Páginas de aquisição vivem uma tensão permanente: precisam converter agora, mas sem atrair o assinante errado, que cancela cedo e derruba o LTV. Otimizar só a conversão imediata pode sair caro lá na frente.",
-                content_en: "Acquisition pages live in constant tension: they must convert now, but without attracting the wrong subscriber, who churns early and drags down LTV. Optimizing only for immediate conversion can be costly down the line.",
-            },
-            {
-                title: "Meu papel no programa",
-                title_en: "My role in the program",
-                type: "text",
-                content: "A hipótese nasce em Canais Digitais e o marketing consolida a proposta de teste. A partir daí, o design e o código das variantes são inteiramente meus: sou o responsável por estruturar as landing pages e colocar cada teste no ar. Depois, coapresento os resultados junto ao marketing. É um papel de dono da execução dentro de um programa cross-funcional, não um projeto solo.",
-                content_en: "The hypothesis originates in Digital Channels, and Marketing consolidates the test proposal. From there, the design and the code of the variants are entirely mine: I am responsible for structuring the landing pages and putting each test live. I then co-present the results together with Marketing. It is a role of owning execution within a cross-functional program, not a solo project.",
-            },
-            {
-                title: "O ciclo de um teste",
-                title_en: "A test's lifecycle",
-                type: "research",
-                methods: [
-                    "01 · Hipótese — Canais Digitais identifica a oportunidade e o marketing consolida a proposta",
-                    "02 · Priorização — as hipóteses entram na fila por esforço × impacto",
-                    "03 · Design & build — desenho e implemento as variantes em HTML/CSS/JS (etapa minha)",
-                    "04 · No ar (80/20) — o teste roda preservando o CPA da campanha institucional",
-                    "05 · Leitura — Canais Digitais mede o experimento e cruza mídia com o CRM de assinaturas",
-                    "06 · Decisão & rollout — marketing, design e canais decidem juntos; a vencedora vai aos canais internos",
-                ],
-                methods_en: [
-                    "01 · Hypothesis — Digital Channels spots the opportunity and Marketing consolidates the proposal",
-                    "02 · Prioritization — hypotheses enter the queue by effort × impact",
-                    "03 · Design & build — I design and implement the variants in HTML/CSS/JS (my stage)",
-                    "04 · Live (80/20) — the test runs while preserving the institutional campaign's CPA",
-                    "05 · Read-out — Digital Channels measures the experiment and cross-references media with the subscriptions CRM",
-                    "06 · Decision & rollout — marketing, design and channels decide together; the winner goes to internal channels",
-                ],
-                content: "Cada ciclo dura cerca de duas semanas. O programa roda desde 2023, com sempre um ou dois testes ativos por mês, cobrindo O Globo, Valor Econômico e o Clube O Globo.",
-                content_en: "Each cycle takes about two weeks. The program has run since 2023, with one or two active tests every month, covering O Globo, Valor Econômico and Clube O Globo.",
-            },
-            {
-                title: "Quem faz o quê",
-                title_en: "Who does what",
-                type: "research",
-                methods: ["Canais Digitais", "Marketing", "Design — eu"],
-                methods_en: ["Digital Channels", "Marketing", "Design — me"],
-                content: "É um programa cross-funcional com papéis claros: Canais Digitais traz o problema de negócio, formula a hipótese, mede o experimento e lê os resultados; o marketing consolida a proposta, participa da decisão e coapresenta; e o design — eu — desenha e implementa as variantes em HTML/CSS/JS, estrutura e coloca os testes no ar, participa da decisão e coapresenta os resultados.",
-                content_en: "It's a cross-functional program with clear roles: Digital Channels brings the business problem, formulates the hypothesis, measures the experiment and reads the results; Marketing consolidates the proposal, takes part in the decision and co-presents; and Design — me — designs and implements the variants in HTML/CSS/JS, structures and ships the tests live, takes part in the decision and co-presents the results.",
-                highlights: [
-                    "Canais Digitais: traz o problema, formula a hipótese, mede e lê os dados (mídia + CRM)",
-                    "Marketing: consolida a proposta de teste, participa da decisão e coapresenta",
-                    "Design (eu): design + código das variantes, estruturo e rodo os testes, participo da decisão e coapresento",
-                ],
-                highlights_en: [
-                    "Digital Channels: brings the problem, formulates the hypothesis, measures and reads the data (media + CRM)",
-                    "Marketing: consolidates the test proposal, takes part in the decision and co-presents",
-                    "Design (me): design + code of the variants, I structure and ship the tests, take part in the decision and co-present",
-                ],
-            },
-            {
-                title: "As duas abordagens",
-                title_en: "The two approaches",
-                type: "component",
-                component: "GloboLPComparison",
-            },
-            {
-                title: "Decisões de design",
-                title_en: "Design decisions",
-                type: "research",
-                methods: [
-                    "Reordenar prioridades: valor antes do preço",
-                    "Prova social mais cedo na página",
-                    "Destaque do produto impresso no topo",
-                    "Formulário mais curto e CTA direto",
-                    "Mote e incentivo testados por marca",
-                ],
-                methods_en: [
-                    "Reordering priorities: value before price",
-                    "Social proof earlier on the page",
-                    "Print product highlighted at the top",
-                    "Shorter form and direct CTA",
-                    "Hook and incentive tested per brand",
-                ],
-                content: "A variante vencedora raramente é uma reformulação completa. Quase sempre é uma reordenação de prioridades: trazer valor e prova social para cima e deixar a decisão mais fácil.",
-                content_en: "The winning variant is rarely a full redesign. It is almost always a reordering of priorities: bringing value and social proof up and making the decision easier.",
-            },
-            {
-                title: "Resultados",
-                title_en: "Results",
-                type: "text",
-                content: "Os números de cada teste são confidenciais e não são exibidos aqui — o foco é a direção dos resultados e o que cada experimento ensinou. Na prática, a abordagem mais direta costuma superar a institucional em conversão e em margem entre LTV e CPA, e as variantes vencedoras viram padrão nos canais internos das marcas (mobiliários, barreira de backend e AMP), sem sacrificar o LTV do assinante.",
-                content_en: "The figures for each test are confidential and are not shown here — the focus is the direction of results and what each experiment taught. In practice, the more direct approach tends to outperform the institutional one in conversion and in the LTV-to-CPA margin, and winning variants become the standard across the brands' internal channels (on-site placements, backend barrier and AMP), without sacrificing subscriber LTV.",
-            },
-            {
-                title: "Aprendizados",
-                title_en: "Learnings",
-                type: "research",
-                methods: [
-                    "Mídia e CRM contam histórias diferentes sobre a mesma venda",
-                    "A plataforma recomenda ler pelo modelo de atribuição dela, que nem sempre bate com o CRM",
-                    "Qualidade vs. volume: a variante direta capta melhor, mas pode custar mais por assinante",
-                    "LTV como métrica central: conversão isolada não conta a história completa",
-                    "Inconclusivo para escalar sem antes analisar o payback period",
-                ],
-                methods_en: [
-                    "Media and CRM tell different stories about the same sale",
-                    "The platform recommends reading by its own attribution model, which doesn't always match the CRM",
-                    "Quality vs. volume: the direct variant captures better but may cost more per subscriber",
-                    "LTV as the central metric: conversion alone is not the whole story",
-                    "Inconclusive to scale without analyzing the payback period first",
-                ],
-                content: "O aprendizado mais importante não veio da comparação entre A e B, e sim de dentro da análise: a plataforma de mídia e o CRM de assinaturas divergiam sobre as mesmas vendas. Ler o resultado pelo modelo de atribuição da mídia ou pelo CRM levava a decisões diferentes, o que mudou como o time decide quais campanhas escalar.",
-                content_en: "The most important learning did not come from comparing A and B, but from within the analysis: the media platform and the subscriptions CRM diverged on the same sales. Reading the result by the media's attribution model or by the CRM led to different decisions, which changed how the team decides which campaigns to scale.",
-            },
-        ],
+      "id": 11,
+      "slug": "globo-ab-test-landing-page-aquisicao",
+      "src": "/images/projects/ab_test/oglb_full.jpg",
+      "pageSrc": "/images/projects/ab_test/oglb_full_intern.jpg",
+      "category": "Product Design · Conversão & Aquisição",
+      "tags": [
+        "Product Design"
+      ],
+      "title": "O Globo · Testes A/B",
+      "tagline": "Programa contínuo de testes A/B em páginas de aquisição de assinaturas, validados no Google Ads e levados aos canais internos.",
+      "tagline_en": "A continuous A/B testing program on subscription acquisition pages, validated on Google Ads and rolled out to internal channels.",
+      "tldr": {
+        "problem": "Páginas de aquisição de assinaturas mudavam por opinião, sem evidência de qual versão convertia mais.",
+        "problem_en": "Subscription acquisition pages changed based on opinion, with no evidence of which version converted better.",
+        "role": "Product Designer & Front-end: dono do design e da implementação das variantes em HTML/CSS/JS, dentro de um programa cross-funcional com Canais Digitais e marketing.",
+        "role_en": "Product Designer & Front-end: owner of the design and implementation of the variants in HTML/CSS/JS, within a cross-functional program with Digital Channels and marketing.",
+        "outcome": "Programa contínuo de testes A/B validado no Google Ads; variantes vencedoras viram padrão nos canais das marcas, sem sacrificar o LTV.",
+        "outcome_en": "A continuous A/B testing program validated on Google Ads; winning variants become the standard across brand channels without sacrificing LTV."
+      },
+      "description": "Programa contínuo de testes A/B em páginas de aquisição de assinaturas para marcas da Editora Globo — O Globo, Valor Econômico e Clube O Globo — com testes pontuais em parcerias do Grupo Globo, como o Globoplay. As hipóteses vêm de Canais Digitais, guiadas por benchmarks de veículos de assinatura, e eu sou o responsável pelo design e pela implementação das variantes. Cada teste é validado no Google Ads e depois levado aos canais internos. O foco é aumentar conversão sem sacrificar o LTV do assinante.",
+      "description_en": "A continuous A/B testing program on subscription acquisition pages for Editora Globo brands — O Globo, Valor Econômico and Clube O Globo — with occasional tests on Grupo Globo partnerships, such as Globoplay. Hypotheses come from Digital Channels, driven by subscription-media benchmarks, and I own the design and implementation of the variants. Each test is validated on Google Ads and then rolled out to internal channels. The focus is to grow conversion without sacrificing subscriber LTV.",
+      "year": "Desde 2023",
+      "year_en": "Since 2023",
+      "role": "Product Designer & Front-end",
+      "timeline": "Programa contínuo",
+      "timeline_en": "Ongoing program",
+      "team": "Multidisciplinar",
+      "client": "Editora Globo",
+      "tools": [
+        "Figma",
+        "HTML",
+        "CSS",
+        "JS",
+        "Google Ads"
+      ],
+      "pageType": "rich",
+      "accentColor": "#1B4FD8",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O problema",
+          "title_en": "The problem",
+          "content": "Páginas de aquisição vivem uma tensão permanente: precisam converter agora, mas sem atrair o assinante errado, que cancela cedo e derruba o LTV. Otimizar só a conversão imediata pode sair caro lá na frente.",
+          "content_en": "Acquisition pages live in constant tension: they must convert now, but without attracting the wrong subscriber, who churns early and drags down LTV. Optimizing only for immediate conversion can be costly down the line."
+        },
+        {
+          "type": "text",
+          "title": "Meu papel no programa",
+          "title_en": "My role in the program",
+          "content": "A hipótese nasce em Canais Digitais e o marketing consolida a proposta de teste. A partir daí, o design e o código das variantes são inteiramente meus: sou o responsável por estruturar as landing pages e colocar cada teste no ar. Depois, coapresento os resultados junto ao marketing. É um papel de dono da execução dentro de um programa cross-funcional, não um projeto solo.",
+          "content_en": "The hypothesis originates in Digital Channels, and Marketing consolidates the test proposal. From there, the design and the code of the variants are entirely mine: I am responsible for structuring the landing pages and putting each test live. I then co-present the results together with Marketing. It is a role of owning execution within a cross-functional program, not a solo project."
+        },
+        {
+          "type": "text",
+          "title": "O ciclo de um teste",
+          "title_en": "A test's lifecycle",
+          "highlights": [
+            "Hipótese: Canais Digitais identifica a oportunidade e o marketing consolida a proposta de teste.",
+            "Priorização: As hipóteses são priorizadas por esforço × impacto antes de entrar na fila.",
+            "Design & build: Desenho e implemento as variantes em HTML, CSS e JavaScript. Esta etapa é minha.",
+            "No ar (80/20): O teste roda no modelo 80/20 no Google Ads, preservando o CPA da campanha institucional.",
+            "Leitura: Canais Digitais mede o experimento e cruza os dados de mídia com o CRM de assinaturas.",
+            "Decisão & rollout: Marketing, design e canais decidem juntos; a variante vencedora vai para os canais internos."
+          ],
+          "highlights_en": [
+            "Hypothesis: Digital Channels spots the opportunity and Marketing consolidates the test proposal.",
+            "Prioritization: Hypotheses are prioritized by effort × impact before entering the queue.",
+            "Design & build: I design and implement the variants in HTML, CSS and JavaScript. This stage is mine.",
+            "Live (80/20): The test runs on an 80/20 model on Google Ads, preserving the institutional campaign's CPA.",
+            "Read-out: Digital Channels measures the experiment and cross-references media data with the subscriptions CRM.",
+            "Decision & rollout: Marketing, design and channels decide together; the winning variant goes to internal channels."
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Cada ciclo dura cerca de duas semanas. O programa roda desde 2023, com sempre um ou dois testes ativos por mês, cobrindo O Globo, Valor Econômico e o Clube O Globo.",
+          "content_en": "Each cycle takes about two weeks. The program has run since 2023, with one or two active tests every month, covering O Globo, Valor Econômico and Clube O Globo."
+        },
+        {
+          "type": "text",
+          "title": "Quem faz o quê",
+          "title_en": "Who does what",
+          "highlights": [
+            "Canais Digitais",
+            "Marketing",
+            "Design — eu"
+          ],
+          "highlights_en": [
+            "Digital Channels",
+            "Marketing",
+            "Design — me"
+          ]
+        },
+        {
+          "type": "research",
+          "title": "Como testamos",
+          "title_en": "How we test",
+          "methods": [
+            "Hipóteses guiadas por benchmark (NYT, FYT)",
+            "Modelo 80/20 para preservar o CPA da campanha",
+            "Validação primeiro no Google Ads",
+            "Rollout para canais internos: mobiliários, barreira de backend e AMP",
+            "Análise cruzada: plataforma de mídia + CRM de assinaturas"
+          ],
+          "methods_en": [
+            "Benchmark-driven hypotheses (NYT, FYT)",
+            "80/20 model to preserve campaign CPA",
+            "Validation first on Google Ads",
+            "Rollout to internal channels: on-site placements, backend barrier and AMP",
+            "Cross analysis: media platform + subscriptions CRM"
+          ],
+          "content": "Cada teste parte de um benchmark de veículos de assinatura e roda no modelo 80/20, preservando o CPA da campanha institucional. A hipótese que vence no Google Ads é levada para os canais internos.",
+          "content_en": "Each test starts from a subscription-media benchmark and runs on an 80/20 model, preserving the institutional campaign CPA. The hypothesis that wins on Google Ads is taken to internal channels."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/ab_test/oglbo_ajuste_full.jpg",
+          "caption": "As duas abordagens testadas: a página atual (institucional) e a variante mais direta, inspirada em benchmarks.",
+          "caption_en": "The two approaches tested: the current (institutional) page and the more direct variant inspired by benchmarks."
+        },
+        {
+          "type": "research",
+          "title": "Decisões de design",
+          "title_en": "Design decisions",
+          "methods": [
+            "Reordenar prioridades: valor antes do preço",
+            "Prova social mais cedo na página",
+            "Destaque do produto impresso no topo",
+            "Formulário mais curto e CTA direto",
+            "Mote e incentivo testados por marca"
+          ],
+          "methods_en": [
+            "Reordering priorities: value before price",
+            "Social proof earlier on the page",
+            "Print product highlighted at the top",
+            "Shorter form and direct CTA",
+            "Hook and incentive tested per brand"
+          ],
+          "content": "A variante vencedora raramente é uma reformulação completa. Quase sempre é uma reordenação de prioridades: trazer valor e prova social para cima e deixar a decisão mais fácil.",
+          "content_en": "The winning variant is rarely a full redesign. It is almost always a reordering of priorities: bringing value and social proof up and making the decision easier."
+        },
+        {
+          "type": "text",
+          "title": "O programa de testes",
+          "title_en": "The test program",
+          "highlights": [
+            "LP direta (estilo NYT) vs institucional: A abordagem mais direta superou a institucional em conversão e em margem.",
+            "Produto impresso em destaque no topo: Trazer o impresso para o topo da página elevou o share de conversões e a margem.",
+            "Mote do Globoplay na oferta: Adicionar o mote do Globoplay à página melhorou conversão e margem.",
+            "LP direta vs benchmark (FYT): A versão mais direta aumentou a conversão e reduziu o custo por aquisição."
+          ],
+          "highlights_en": [
+            "Direct LP (NYT style) vs institutional: The more direct approach outperformed the institutional one in conversion and margin.",
+            "Print product highlighted at the top: Moving the print product to the top of the page raised the share of conversions and margin.",
+            "Globoplay tagline in the offer: Adding the Globoplay tagline to the page improved conversion and margin.",
+            "Direct LP vs benchmark (FYT): The more direct version increased conversion and reduced cost per acquisition."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/ab_test/valor_economico_full.jpg",
+          "caption": "Valor Econômico: a LP direta testada contra o benchmark (FYT).",
+          "caption_en": "Valor Econômico: the direct LP tested against the benchmark (FYT)."
+        },
+        {
+          "type": "research",
+          "title": "Aprendizados",
+          "title_en": "Learnings",
+          "methods": [
+            "Mídia e CRM contam histórias diferentes sobre a mesma venda",
+            "A plataforma recomenda ler pelo modelo de atribuição dela, que nem sempre bate com o CRM",
+            "Qualidade vs. volume: a variante direta capta melhor, mas pode custar mais por assinante",
+            "LTV como métrica central: conversão isolada não conta a história completa",
+            "Inconclusivo para escalar sem antes analisar o payback period"
+          ],
+          "methods_en": [
+            "Media and CRM tell different stories about the same sale",
+            "The platform recommends reading by its own attribution model, which doesn't always match the CRM",
+            "Quality vs. volume: the direct variant captures better but may cost more per subscriber",
+            "LTV as the central metric: conversion alone is not the whole story",
+            "Inconclusive to scale without analyzing the payback period first"
+          ],
+          "content": "O aprendizado mais importante não veio da comparação entre A e B, e sim de dentro da análise: a plataforma de mídia e o CRM de assinaturas divergiam sobre as mesmas vendas. Ler o resultado pelo modelo de atribuição da mídia ou pelo CRM levava a decisões diferentes, o que mudou como o time decide quais campanhas escalar.",
+          "content_en": "The most important learning did not come from comparing A and B, but from within the analysis: the media platform and the subscriptions CRM diverged on the same sales. Reading the result by the media's attribution model or by the CRM led to different decisions, which changed how the team decides which campaigns to scale."
+        },
+        {
+          "type": "text",
+          "title": "Status & rollout",
+          "title_en": "Status & rollout",
+          "content": "Os testes são validados no Google Ads e depois levados aos canais internos (mobiliários, barreira de backend e AMP).",
+          "content_en": "Tests are validated on Google Ads and then taken to internal channels (on-site placements, backend barrier and AMP)."
+        },
+        {
+          "type": "text",
+          "content": "Os números de cada teste são confidenciais e não são exibidos aqui. O foco é a direção dos resultados e o que cada experimento ensinou.",
+          "content_en": "The figures for each test are confidential and are not shown here. The focus is the direction of results and what each experiment taught."
+        }
+      ]
     },
     {
-        id: 12,
-        slug: "ensineme-plataforma-ead-estacio",
-            tldr: {
-                problem: "Dezenas de disciplinas simultâneas, com conteúdos radicalmente diferentes, precisavam virar módulos EAD claros e consistentes.",
-                problem_en: "Dozens of simultaneous disciplines, with radically different content, had to become clear and consistent e-learning modules.",
-                role: "Product Designer & Front-end em squads multidisciplinares: protótipos no Figma, implementação em HTML/CSS/JS e evolução do Design System.",
-                role_en: "Product Designer & Front-end in multidisciplinary squads: Figma prototypes, HTML/CSS/JS implementation and Design System evolution.",
-                outcome: "Módulos entregues em escala por 2 anos e meio, com alta fidelidade ao protótipo e consistência garantida pelo Design System.",
-                outcome_en: "Modules delivered at scale over 2.5 years, with high prototype fidelity and consistency guaranteed by the Design System.",
-            },
-        src: "/images/projects/ensineme/ensineme_full.jpg",
-        pageSrc: "/images/projects/ensineme/ensineme_full.jpg",
-        category: "Product Design",
-        tags: ["Product Design"],
-        title: "Ensineme · Plataforma EAD",
-        tagline: "Design de módulos educacionais para dezenas de disciplinas simultâneas na maior plataforma EAD do Brasil.",
-        tagline_en: "Educational module design for dozens of simultaneous disciplines on Brazil's largest e-learning platform.",
-        description: "Atuação como Product Designer na Ensineme, plataforma de ensino a distância da Estácio e do grupo YDUQS. O trabalho cobriu o design de módulos educacionais para disciplinas radicalmente diferentes, em colaboração com designers instrucionais, conteudistas, curadores e times de tecnologia. Cada módulo entregue era uma decisão pedagógica traduzida em interface.",
-        description_en: "Product Designer at Ensineme, the e-learning platform of Estácio and the YDUQS group. The work covered the design of educational modules for radically different disciplines, in collaboration with instructional designers, content creators, curators and technology teams. Each delivered module was a pedagogical decision translated into interface.",
-        year: "2020",
-        role: "Product Designer",
-        timeline: "Jul 2019 a Nov 2021",
-        timeline_en: "Jul 2019 to Nov 2021",
-        team: "Multidisciplinar",
-        client: "Estácio · YDUQS",
-        tools: ["Figma", "HTML", "CSS", "JS"],
-        pageType: "rich",
-        accentColor: "#006B75",
-        sections: [
+      "id": 12,
+      "slug": "ensineme-plataforma-ead-estacio",
+      "src": "/images/projects/ensineme/ensineme_full.jpg",
+      "pageSrc": "/images/projects/ensineme/ensineme_full.jpg",
+      "category": "Product Design",
+      "tags": [
+        "Product Design"
+      ],
+      "title": "Ensineme · Plataforma EAD",
+      "tagline": "Design de módulos educacionais para dezenas de disciplinas simultâneas na maior plataforma EAD do Brasil.",
+      "tagline_en": "Educational module design for dozens of simultaneous disciplines on Brazil's largest e-learning platform.",
+      "tldr": {
+        "problem": "Dezenas de disciplinas simultâneas, com conteúdos radicalmente diferentes, precisavam virar módulos EAD claros e consistentes.",
+        "problem_en": "Dozens of simultaneous disciplines, with radically different content, had to become clear and consistent e-learning modules.",
+        "role": "Product Designer & Front-end em squads multidisciplinares: protótipos no Figma, implementação em HTML/CSS/JS e evolução do Design System.",
+        "role_en": "Product Designer & Front-end in multidisciplinary squads: Figma prototypes, HTML/CSS/JS implementation and Design System evolution.",
+        "outcome": "Módulos entregues em escala por 2 anos e meio, com alta fidelidade ao protótipo e consistência garantida pelo Design System.",
+        "outcome_en": "Modules delivered at scale over 2.5 years, with high prototype fidelity and consistency guaranteed by the Design System."
+      },
+      "description": "Atuação como Product Designer na Ensineme, plataforma de ensino a distância da Estácio e do grupo YDUQS. O trabalho cobriu o design de módulos educacionais para disciplinas radicalmente diferentes, em colaboração com designers instrucionais, conteudistas, curadores e times de tecnologia. Cada módulo entregue era uma decisão pedagógica traduzida em interface.",
+      "description_en": "Product Designer at Ensineme, the e-learning platform of Estácio and the YDUQS group. The work covered the design of educational modules for radically different disciplines, in collaboration with instructional designers, content creators, curators and technology teams. Each delivered module was a pedagogical decision translated into interface.",
+      "year": "2019–2021",
+      "role": "Product Designer & Front-end",
+      "timeline": "2 anos e meio",
+      "timeline_en": "2.5 years",
+      "team": "Multidisciplinar",
+      "client": "Estácio · YDUQS",
+      "tools": [
+        "Figma",
+        "HTML",
+        "CSS",
+        "JS"
+      ],
+      "pageType": "rich",
+      "accentColor": "#006B75",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Desafio",
+          "title_en": "The Challenge",
+          "content": "A Ensineme era a plataforma de ensino a distância da Estácio, maior rede de ensino superior privado do Brasil, parte do grupo YDUQS. Em qualquer período, dezenas de módulos diferentes estavam ativos simultaneamente para cursos que iam de Direito a Engenharia, de Medicina Veterinária a Comunicação Social.\n\nO desafio não era projetar um único módulo. Era garantir que conteúdos radicalmente diferentes funcionassem com a mesma clareza dentro do mesmo sistema: um texto filosófico, uma sequência de cálculo, um vídeo de aula e uma timeline histórica precisavam compartilhar padrões de interação reconhecíveis sem que um parecesse com o outro.",
+          "content_en": "Ensineme was the e-learning platform of Estácio, Brazil's largest private higher education network, part of the YDUQS group. At any given time, dozens of different modules were active simultaneously for courses ranging from Law to Engineering, from Veterinary Medicine to Communication.\n\nThe challenge wasn't designing a single module. It was ensuring radically different content worked with the same clarity within the same system: a philosophical text, a calculation sequence, a lecture video and a historical timeline all needed to share recognizable interaction patterns without resembling each other."
+        },
+        {
+          "type": "research",
+          "title": "Processo e Colaboração",
+          "title_en": "Process and Collaboration",
+          "methods": [
+            "Design de módulos EAD para disciplinas de diferentes áreas do conhecimento",
+            "Co-criação com designers instrucionais em cada disciplina",
+            "Implementação front-end com HTML, CSS e JS",
+            "Interlocução com curadores, conteudistas, revisores, QA e times de produto e tecnologia",
+            "Dezenas de módulos entregues em produção"
+          ],
+          "methods_en": [
+            "EAD module design for disciplines across different knowledge areas",
+            "Co-creation with instructional designers on each discipline",
+            "Front-end implementation with HTML, CSS and JS",
+            "Communication with curators, content creators, reviewers, QA and product and technology teams",
+            "Dozens of modules delivered to production"
+          ],
+          "content": "Cada módulo começava com a dupla designer e designer instrucional. A arquitetura pedagógica chegava definida; meu papel era transformá-la em interface. As reuniões com outros profissionais do processo, incluindo curadores e conteudistas, traziam visão de produto e de negócio que alimentavam as decisões de design além do nível visual.",
+          "content_en": "Each module started with the designer and instructional designer pair. The pedagogical architecture arrived defined; my role was to translate it into interface. Meetings with other professionals in the process, including curators and content creators, brought product and business perspective that fed design decisions beyond the visual level.",
+          "highlights": [
+            "A escala era o argumento substituto para métricas: dezenas de módulos em produção, cobrindo disciplinas sem nenhuma semelhança temática, eram a evidência de que o sistema funcionava",
+            "Cada disciplina precisava de identidade visual própria, mas reconhecível no mesmo sistema: Shakespeare tem paleta e ritmo diferentes de Algoritmos no Jornalismo, mas os padrões de interação precisavam ser os mesmos",
+            "Componentes como tabs, timelines, exercícios de preenchimento e quizzes foram pensados para manter o aluno ativo e reduzir a carga cognitiva de conteúdos densos"
+          ],
+          "highlights_en": [
+            "Scale was the substitute argument for metrics: dozens of modules in production, covering disciplines with no thematic resemblance, were the evidence that the system worked",
+            "Each discipline needed its own visual identity, yet recognizable within the same system: Shakespeare has a different palette and rhythm than Algorithms in Journalism, but the interaction patterns needed to be the same",
+            "Components like tabs, timelines, fill-in exercises and quizzes were designed to keep students active and reduce cognitive load for dense content"
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Diversidade de conteúdo",
+          "title_en": "Content diversity",
+          "columns": 2,
+          "images": [
             {
-                title: "O Desafio",
-                title_en: "The Challenge",
-                type: "text",
-                content: "A Ensineme era a plataforma de ensino a distância da Estácio, maior rede de ensino superior privado do Brasil, parte do grupo YDUQS. Em qualquer período, dezenas de módulos diferentes estavam ativos simultaneamente para cursos que iam de Direito a Engenharia, de Medicina Veterinária a Comunicação Social.\n\nO desafio não era projetar um único módulo. Era garantir que conteúdos radicalmente diferentes funcionassem com a mesma clareza dentro do mesmo sistema: um texto filosófico, uma sequência de cálculo, um vídeo de aula e uma timeline histórica precisavam compartilhar padrões de interação reconhecíveis sem que um parecesse com o outro.",
-                content_en: "Ensineme was the e-learning platform of Estácio, Brazil's largest private higher education network, part of the YDUQS group. At any given time, dozens of different modules were active simultaneously for courses ranging from Law to Engineering, from Veterinary Medicine to Communication.\n\nThe challenge wasn't designing a single module. It was ensuring radically different content worked with the same clarity within the same system: a philosophical text, a calculation sequence, a lecture video and a historical timeline all needed to share recognizable interaction patterns without resembling each other.",
+              "src": "/images/projects/ensineme/prints/capa_shakespeare.jpg",
+              "caption": "Sociedade elizabetana e o teatro de Shakespeare",
+              "caption_en": "Elizabethan society and Shakespeare's theatre"
             },
             {
-                title: "Processo e Colaboração",
-                title_en: "Process and Collaboration",
-                type: "research",
-                methods: [
-                    "Design de módulos EAD para disciplinas de diferentes áreas do conhecimento",
-                    "Co-criação com designers instrucionais em cada disciplina",
-                    "Implementação front-end com HTML, CSS e JS",
-                    "Interlocução com curadores, conteudistas, revisores, QA e times de produto e tecnologia",
-                    "Dezenas de módulos entregues em produção",
-                ],
-                methods_en: [
-                    "EAD module design for disciplines across different knowledge areas",
-                    "Co-creation with instructional designers on each discipline",
-                    "Front-end implementation with HTML, CSS and JS",
-                    "Communication with curators, content creators, reviewers, QA and product and technology teams",
-                    "Dozens of modules delivered to production",
-                ],
-                content: "Cada módulo começava com a dupla designer e designer instrucional. A arquitetura pedagógica chegava definida; meu papel era transformá-la em interface. As reuniões com outros profissionais do processo, incluindo curadores e conteudistas, traziam visão de produto e de negócio que alimentavam as decisões de design além do nível visual.",
-                content_en: "Each module started with the designer and instructional designer pair. The pedagogical architecture arrived defined; my role was to translate it into interface. Meetings with other professionals in the process, including curators and content creators, brought product and business perspective that fed design decisions beyond the visual level.",
-                highlights: [
-                    "A escala era o argumento substituto para métricas: dezenas de módulos em produção, cobrindo disciplinas sem nenhuma semelhança temática, eram a evidência de que o sistema funcionava",
-                    "Cada disciplina precisava de identidade visual própria, mas reconhecível no mesmo sistema: Shakespeare tem paleta e ritmo diferentes de Algoritmos no Jornalismo, mas os padrões de interação precisavam ser os mesmos",
-                    "Componentes como tabs, timelines, exercícios de preenchimento e quizzes foram pensados para manter o aluno ativo e reduzir a carga cognitiva de conteúdos densos",
-                ],
-                highlights_en: [
-                    "Scale was the substitute argument for metrics: dozens of modules in production, covering disciplines with no thematic resemblance, were the evidence that the system worked",
-                    "Each discipline needed its own visual identity, yet recognizable within the same system: Shakespeare has a different palette and rhythm than Algorithms in Journalism, but the interaction patterns needed to be the same",
-                    "Components like tabs, timelines, fill-in exercises and quizzes were designed to keep students active and reduce cognitive load for dense content",
-                ],
+              "src": "/images/projects/ensineme/prints/capa_artes_marciais.jpg",
+              "caption": "Lutas, artes marciais e esportes de combate",
+              "caption_en": "Fights, martial arts and combat sports"
             },
             {
-                title: "A Plataforma",
-                title_en: "The Platform",
-                type: "component",
-                component: "EnsinemeDevices",
+              "src": "/images/projects/ensineme/prints/capa_algoritmos.jpg",
+              "caption": "Algoritmos no jornalismo",
+              "caption_en": "Algorithms in journalism"
             },
             {
-                title: "Diversidade de Conteúdo",
-                title_en: "Content Diversity",
-                type: "component",
-                component: "EnsinemeCovers",
+              "src": "/images/projects/ensineme/prints/capa_processo_legislativo.jpg",
+              "caption": "Processo legislativo",
+              "caption_en": "Legislative process"
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Design system aplicado às aulas",
+          "title_en": "Design system applied to the lessons",
+          "columns": 3,
+          "content": "Mockups de aulas de diferentes disciplinas com o design system da Estácio já aplicado, vistos em desktop, tablet e celular. Mais do que telas isoladas, mostram como os mesmos padrões de tipografia, cor e componentes se mantêm coerentes em conteúdos radicalmente distintos e em qualquer dispositivo.",
+          "content_en": "Lesson mockups from different disciplines with Estácio's design system already applied, shown on desktop, tablet and mobile. More than isolated screens, they show how the same typography, color and component patterns stay consistent across radically different content and on any device.",
+          "images": [
+            {
+              "src": "/images/projects/ensineme/ensineme_animado.mp4",
+              "poster": "/images/projects/ensineme/ensineme_animado_poster.jpg",
+              "caption": "A plataforma em diferentes dispositivos",
+              "caption_en": "The platform across different devices",
+              "span": 2
             },
             {
-                title: "Sistema de Componentes",
-                title_en: "Component System",
-                type: "component",
-                component: "EnsinemeComponents",
+              "src": "/images/projects/ensineme/prints/mockup_relacoes_internacionais.jpg",
+              "caption": "Relações internacionais",
+              "caption_en": "International relations"
             },
-        ],
+            {
+              "src": "/images/projects/ensineme/prints/mockup_comunidades_sinalizantes.jpg",
+              "caption": "Comunidades sinalizantes",
+              "caption_en": "Signing communities"
+            },
+            {
+              "src": "/images/projects/ensineme/prints/mockup_ciberarte.jpg",
+              "caption": "Ciberarte e ciberpoesia",
+              "caption_en": "Cyberart and cyberpoetry"
+            },
+            {
+              "src": "/images/projects/ensineme/prints/mockup_atos_administrativos.jpg",
+              "caption": "Atos administrativos",
+              "caption_en": "Administrative acts"
+            },
+            {
+              "src": "/images/projects/ensineme/prints/mockup_linguagem_jornalistica.jpg",
+              "caption": "Linguagem jornalística no audiovisual",
+              "caption_en": "Journalistic language in audiovisual"
+            }
+          ]
+        }
+      ]
     },
     {
-        id: 13,
-        slug: "tradeview-plataforma-negociacao",
-            tldr: {
-                problem: "Interfaces de trading concentram dados densos em tempo real; o desafio era torná-las legíveis sem perder profundidade.",
-                problem_en: "Trading interfaces pack dense real-time data; the challenge was making them readable without losing depth.",
-                role: "Product Designer & Front-end, solo, do design à implementação em Next.js.",
-                role_en: "Product Designer & Front-end, solo, from design to Next.js implementation.",
-                outcome: "Plataforma funcional com orderbook ao vivo, candlestick, depth chart, watchlist, alertas e onboarding interativo.",
-                outcome_en: "A working platform with live order book, candlestick, depth chart, watchlist, alerts and interactive onboarding.",
-            },
-        pageType: "rich",
-        liveDemoLink: "https://orderbookfinancas.vercel.app",
-        src: "/images/projects/tradeview_full2.jpg",
-        pageSrc: "/images/projects/tradeview_full2.jpg",
-        category: "React · Data Visualization",
-        tags: ["React", "Data Viz", "Fintech"],
-        title: "TradeView",
-        tagline: "Plataforma de negociação com orderbook em tempo real, candlestick chart e depth chart.",
-        tagline_en: "Trading platform with real-time order book, candlestick chart and depth chart.",
-        description: "Simulador de plataforma de negociação de ações brasileiras construído com Next.js e Lightweight Charts (TradingView). Inclui orderbook ao vivo, gráfico de candlestick, depth chart, watchlist, painel de ordens, gestão de portfolio, alertas de preço e histórico de negociações — com dados simulados e onboarding interativo.",
-        description_en: "Simulated Brazilian stock trading platform built with Next.js and Lightweight Charts (TradingView). Includes live order book, candlestick chart, depth chart, watchlist, order panel, portfolio management, price alerts and trade history — with simulated data and interactive onboarding.",
-        year: "2025",
-        role: "Designer & Front-end Engineer",
-        timeline: "Projeto pessoal",
-        timeline_en: "Personal project",
-        team: "Solo",
-        client: "Produto próprio",
-        tools: ["Next.js", "Lightweight Charts", "Tailwind CSS", "Vercel"],
-        sections: [
+      "id": 13,
+      "slug": "tradeview-plataforma-negociacao",
+      "liveDemoLink": "https://orderbookfinancas.vercel.app",
+      "src": "/images/projects/tradeview_full2.jpg",
+      "pageSrc": "/images/projects/tradeview_full2.jpg",
+      "category": "React · Data Visualization",
+      "tags": [
+        "React",
+        "Data Viz",
+        "Fintech"
+      ],
+      "title": "TradeView",
+      "tagline": "Plataforma de negociação com orderbook em tempo real, candlestick chart e depth chart.",
+      "tagline_en": "Trading platform with real-time order book, candlestick chart and depth chart.",
+      "tldr": {
+        "problem": "Interfaces de trading concentram dados densos em tempo real; o desafio era torná-las legíveis sem perder profundidade.",
+        "problem_en": "Trading interfaces pack dense real-time data; the challenge was making them readable without losing depth.",
+        "role": "Product Designer & Front-end, solo, do design à implementação em Next.js.",
+        "role_en": "Product Designer & Front-end, solo, from design to Next.js implementation.",
+        "outcome": "Plataforma funcional com orderbook ao vivo, candlestick, depth chart, watchlist, alertas e onboarding interativo.",
+        "outcome_en": "A working platform with live order book, candlestick, depth chart, watchlist, alerts and interactive onboarding."
+      },
+      "description": "Simulador de plataforma de negociação de ações brasileiras construído com Next.js e Lightweight Charts (TradingView). Inclui orderbook ao vivo, gráfico de candlestick, depth chart, watchlist, painel de ordens, gestão de portfolio, alertas de preço e histórico de negociações — com dados simulados e onboarding interativo.",
+      "description_en": "Simulated Brazilian stock trading platform built with Next.js and Lightweight Charts (TradingView). Includes live order book, candlestick chart, depth chart, watchlist, order panel, portfolio management, price alerts and trade history — with simulated data and interactive onboarding.",
+      "year": "2025",
+      "role": "Product Designer & Front-end",
+      "timeline": "Projeto pessoal",
+      "timeline_en": "Personal project",
+      "team": "Solo",
+      "client": "Produto próprio",
+      "tools": [
+        "Next.js",
+        "Lightweight Charts",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O desafio de design",
+          "title_en": "The design challenge",
+          "content": "O desafio aqui não é deixar bonito, é domar densidade. São muitos dados mudando a cada segundo para um usuário que precisa decidir rápido e, acima de tudo, confiar no que vê. Cada decisão de hierarquia, cor e movimento tem peso: um número mal posicionado vira um erro caro.\n\nO objetivo foi construir um produto funcional do zero, do login ao gráfico, para provar domínio prático sobre componentes de data visualization complexos no ecossistema React.",
+          "content_en": "The challenge here is not to make it pretty, it is to tame density. Lots of data changing every second for a user who needs to decide fast and, above all, trust what they see. Every decision of hierarchy, color and motion carries weight: a misplaced number becomes a costly mistake.\n\nThe goal was to build a functional product from scratch, from login to chart, to prove practical mastery over complex data visualization components in the React ecosystem."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/tradeview/main.png",
+          "caption": "Tela principal: gráfico de candlestick ao centro, watchlist à esquerda e painel de compra e venda à direita.",
+          "caption_en": "Main screen: candlestick chart in the center, watchlist on the left and buy/sell panel on the right."
+        },
+        {
+          "type": "research",
+          "title": "Stack técnica",
+          "title_en": "Technical stack",
+          "methods": [
+            "Lightweight Charts (TradingView) para candlestick e depth chart",
+            "Simulador de orderbook com atualização em tempo real",
+            "Next.js App Router + Tailwind CSS",
+            "Onboarding interativo com tour guiado",
+            "Theme toggle dark/light"
+          ],
+          "methods_en": [
+            "Lightweight Charts (TradingView) for candlestick and depth chart",
+            "Order book simulator with real-time updates",
+            "Next.js App Router + Tailwind CSS",
+            "Interactive onboarding with guided tour",
+            "Dark/light theme toggle"
+          ],
+          "content": "O coração técnico é a integração com Lightweight Charts, a biblioteca de gráficos financeiros do TradingView. O candlestick consome dados OHLCV simulados em tempo real e o depth chart renderiza a profundidade de mercado acumulada. O simulador de orderbook gera fluxo de ordens com spread dinâmico e mantém todos os componentes sincronizados.",
+          "content_en": "The technical core is the integration with Lightweight Charts, TradingViews financial charting library. The candlestick consumes simulated OHLCV data in real time and the depth chart renders accumulated market depth. The order book simulator generates order flow with dynamic spread and keeps every component in sync.",
+          "highlights": [
+            "Candlestick e depth chart com Lightweight Charts",
+            "Orderbook simulado com spread dinâmico em tempo real",
+            "Portfolio com posições, P&L e saldo disponível",
+            "Alertas de preço configuráveis por ativo",
+            "Onboarding interativo passo a passo"
+          ],
+          "highlights_en": [
+            "Candlestick and depth chart with Lightweight Charts",
+            "Simulated order book with dynamic real-time spread",
+            "Portfolio with positions, P&L and available balance",
+            "Configurable price alerts per asset",
+            "Step-by-step interactive onboarding"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/tradeview/orderbook.png",
+          "maxWidth": 340,
+          "caption": "Detalhe do orderbook: bid e ask em tempo real com spread dinâmico.",
+          "caption_en": "Order book detail: real-time bid and ask with dynamic spread."
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/tradeview/portfolio.png",
+          "caption": "Carteira: posições com preço médio, valor atual e P&L por ativo.",
+          "caption_en": "Portfolio: positions with average price, current value and P&L per asset."
+        },
+        {
+          "type": "screens",
+          "title": "Versão mobile",
+          "title_en": "Mobile version",
+          "content": "O mesmo produto adaptado para o celular: o layout denso vira uma pilha vertical, mantendo gráfico, order book, conta, painel de compra e venda e carteira acessíveis com o polegar.",
+          "content_en": "The same product adapted to the phone: the dense layout becomes a vertical stack, keeping chart, order book, account, buy/sell panel and portfolio reachable with the thumb.",
+          "images": [
             {
-                title: "O Produto",
-                title_en: "The Product",
-                type: "text",
-                content: "TradeView é um simulador completo de plataforma de negociação de ativos brasileiros. O objetivo foi construir um produto funcional do zero — do login ao gráfico — para demonstrar domínio prático sobre componentes de data visualization complexos no ecossistema React.\n\nA interface replica o padrão de plataformas profissionais de trading: orderbook com bid/ask em tempo real, gráfico candlestick com Lightweight Charts (biblioteca do TradingView), depth chart de profundidade de mercado, watchlist com cotações ao vivo, painel de compra e venda, gestão de posições e alertas de preço.",
-                content_en: "TradeView is a complete simulator of a Brazilian asset trading platform. The goal was to build a functional product from scratch — from login to chart — to demonstrate practical mastery over complex data visualization components in the React ecosystem.\n\nThe interface replicates the standard of professional trading platforms: real-time bid/ask order book, candlestick chart with Lightweight Charts (TradingView library), market depth chart, live-quote watchlist, buy/sell panel, position management and price alerts.",
+              "src": "/images/projects/tradeview/mobile_1.jpg",
+              "width": 720,
+              "height": 1600,
+              "caption": "Cotação, gráfico, profundidade e order book.",
+              "caption_en": "Quote, chart, depth and order book."
             },
             {
-                title: "Stack Técnica",
-                title_en: "Technical Stack",
-                type: "research",
-                methods: [
-                    "Lightweight Charts (TradingView) para candlestick e depth chart",
-                    "Simulador de orderbook com atualização em tempo real",
-                    "Next.js App Router + Tailwind CSS",
-                    "Onboarding interativo com tour guiado",
-                    "Theme toggle dark/light",
-                ],
-                methods_en: [
-                    "Lightweight Charts (TradingView) for candlestick and depth chart",
-                    "Order book simulator with real-time updates",
-                    "Next.js App Router + Tailwind CSS",
-                    "Interactive onboarding with guided tour",
-                    "Dark/light theme toggle",
-                ],
-                content: "O coração técnico do projeto é a integração com Lightweight Charts, a biblioteca de gráficos financeiros do TradingView. O candlestick consome dados OHLCV simulados com atualização em tempo real; o depth chart renderiza a profundidade de mercado acumulada em tempo real. O simulador de orderbook gera fluxo de ordens com spread dinâmico e atualiza todos os componentes de forma sincronizada.",
-                content_en: "The technical core of the project is the integration with Lightweight Charts, TradingView's financial charting library. The candlestick consumes simulated OHLCV data with real-time updates; the depth chart renders accumulated market depth in real time. The order book simulator generates order flow with dynamic spread and updates all components synchronously.",
-                highlights: [
-                    "Candlestick + depth chart com Lightweight Charts (TradingView)",
-                    "Orderbook simulado com spread dinâmico e atualizações em tempo real",
-                    "Portfolio com posições, P&L e saldo disponível",
-                    "Alertas de preço configuráveis por ativo",
-                    "Onboarding interativo com tour passo a passo",
-                ],
-                highlights_en: [
-                    "Candlestick + depth chart with Lightweight Charts (TradingView)",
-                    "Simulated order book with dynamic spread and real-time updates",
-                    "Portfolio with positions, P&L and available balance",
-                    "Configurable price alerts per asset",
-                    "Interactive onboarding with step-by-step tour",
-                ],
+              "src": "/images/projects/tradeview/mobile_2.jpg",
+              "width": 720,
+              "height": 1600,
+              "caption": "Conta, painel de compra e venda e alertas.",
+              "caption_en": "Account, buy/sell panel and alerts."
             },
             {
-                title: "Interface principal",
-                title_en: "Main interface",
-                type: "gallery",
-                columns: 2,
-                images: [
-                    { src: "/images/projects/tradeview/main.png", caption: "Interface principal com candlestick e orderbook", caption_en: "Main interface with candlestick and order book" },
-                    { src: "/images/projects/tradeview/orderbook.png", caption: "Orderbook com bid/ask em tempo real", caption_en: "Order book with real-time bid/ask" },
-                    { src: "/images/projects/tradeview/portfolio.png", caption: "Gestão de portfolio com posições e P&L", caption_en: "Portfolio management with positions and P&L" }
-                ]
+              "src": "/images/projects/tradeview/mobile_3.jpg",
+              "width": 720,
+              "height": 1600,
+              "caption": "Carteira, negociações e histórico de ordens.",
+              "caption_en": "Portfolio, trades and order history."
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Design System",
+          "title_en": "Design System",
+          "columns": 2,
+          "content": "O TradeView é dark-first por natureza: o fundo escuro reduz a fadiga em sessões longas e faz os dados saltarem. A cor carrega significado e nunca é decorativa, verde para alta e vermelho para baixa. A tipografia mistura uma sans neutra na interface com números tabulares e monoespaçados para preços e volumes, garantindo alinhamento e leitura rápida.",
+          "content_en": "TradeView is dark-first by nature: the dark background reduces fatigue in long sessions and makes the data pop. Color carries meaning and is never decorative, green for up and red for down. Typography mixes a neutral sans for the interface with tabular, monospaced numbers for prices and volumes, ensuring alignment and fast reading.",
+          "images": [
+            {
+              "src": "/images/projects/tradeview/ds_tokens.png",
+              "caption": "Tokens e paleta: verde de alta, vermelho de baixa e escala de cinzas dark-first.",
+              "caption_en": "Tokens and palette: up green, down red and a dark-first gray scale."
             },
             {
-                title: "Versão mobile",
-                title_en: "Mobile version",
-                type: "gallery",
-                columns: 3,
-                images: [
-                    { src: "/images/projects/tradeview/mobile_1.jpg", caption: "Home — resumo do portfolio", caption_en: "Home — portfolio summary" },
-                    { src: "/images/projects/tradeview/mobile_2.jpg", caption: "Gráfico candlestick em mobile", caption_en: "Candlestick chart on mobile" },
-                    { src: "/images/projects/tradeview/mobile_3.jpg", caption: "Orderbook em mobile", caption_en: "Order book on mobile" }
-                ]
-            },
-        ],
+              "src": "/images/projects/tradeview/ds_componentes.png",
+              "caption": "Componentes: botões, cards de cotação, order book, painel de compra e venda e badges de variação.",
+              "caption_en": "Components: buttons, quote cards, order book, buy/sell panel and change badges."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "O que esse projeto demonstra",
+          "title_en": "What this project shows",
+          "content": "Mais do que telas, o TradeView mostra a capacidade de levar uma experiência densa do conceito ao produto no ar: design de interface, arquitetura de componentes e integração de bibliotecas de visualização de dados, tudo construído por mim.",
+          "content_en": "More than screens, TradeView shows the ability to take a dense experience from concept to a live product: interface design, component architecture and data visualization library integration, all built by me."
+        }
+      ]
     },
     {
         id: 14,
@@ -2365,119 +2821,193 @@ export const projectsData = [
         ],
     },
     {
-        id: 17,
-        slug: "meu-sus-digital-agendamento-fila",
-            tldr: {
-                problem: "O paciente do SUS entra na fila sem saber a posição, sem previsão e sem lembrete; a única forma de acompanhar é ligar para a UBS.",
-                problem_en: "SUS patients join the queue without knowing their position, predicted date or reminders; the only way to follow up is calling the clinic.",
-                role: "UX Researcher & Product Designer, solo: pesquisa, benchmark, personas e redesign do fluxo de agendamento.",
-                role_en: "UX Researcher & Product Designer, solo: research, benchmarking, personas and scheduling flow redesign.",
-                outcome: "Protótipo navegável com 12 telas e código em React, sobre o design system gov.br auditado em WCAG, focado em idosos e classes C/D.",
-                outcome_en: "Navigable 12-screen prototype with React code, on a WCAG-audited gov.br design system, focused on elderly and lower-income users.",
-            },
-        pageType: "rich",
-        accentColor: "#1351B4",
-        src: "/images/projects/sus/sus_fila_capa.jpg",
-        pageSrc: "/images/projects/sus/sus_fila_capa.jpg",
-        category: "UX Research & Product Design",
-        tags: ["UX Research", "Product Design"],
-        title: "Meu SUS Digital",
-        tagline: "Fila transparente para quem mais precisa.",
-        tagline_en: "Transparent queue for those who need it most.",
-        description: "Redesign do fluxo de agendamento e fila inteligente do Meu SUS Digital. O app oficial tem agendamento desde mar/2026, mas sem posição na fila, previsão de data ou lembretes — essa lacuna é o diferencial. Protótipo navegável com 12 telas, design system gov.br auditado em WCAG e código em React + TypeScript. Focado em idosos e classes C/D.",
-        description_en: "Redesign of Meu SUS Digital's scheduling and intelligent queue flow. The official app has had scheduling since Mar/2026, but without queue position, date prediction, or reminders — that gap is the differentiator. Navigable prototype with 12 screens, WCAG-audited gov.br design system, and React + TypeScript code. Focused on elderly users and lower-income classes.",
-        year: "2026",
-        role: "UX Researcher & Product Designer",
-        timeline: "Case de portfólio",
-        timeline_en: "Portfolio case study",
-        team: "Solo",
-        client: "Case de portfólio",
-        tools: ["Figma", "React", "TypeScript", "Vite"],
-        liveDemoLink: "https://sus-rose.vercel.app",
-        sections: [
+      "id": 17,
+      "slug": "meu-sus-digital-agendamento-fila",
+      "pageType": "rich",
+      "accentColor": "#1351B4",
+      "src": "/images/projects/sus/sus_fila_capa.jpg",
+      "pageSrc": "/images/projects/sus/sus_fila_capa.jpg",
+      "category": "UX Research & Product Design",
+      "tags": [
+        "UX Research",
+        "Product Design"
+      ],
+      "title": "Meu SUS Digital",
+      "tagline": "Fila transparente para quem mais precisa.",
+      "tagline_en": "Transparent queue for those who need it most.",
+      "tldr": {
+        "problem": "O paciente do SUS entra na fila sem saber a posição, sem previsão e sem lembrete; a única forma de acompanhar é ligar para a UBS.",
+        "problem_en": "SUS patients join the queue without knowing their position, predicted date or reminders; the only way to follow up is calling the clinic.",
+        "role": "UX Researcher & Product Designer, solo: pesquisa, benchmark, personas e redesign do fluxo de agendamento.",
+        "role_en": "UX Researcher & Product Designer, solo: research, benchmarking, personas and scheduling flow redesign.",
+        "outcome": "Protótipo navegável com 12 telas e código em React, sobre o design system gov.br auditado em WCAG, focado em idosos e classes C/D.",
+        "outcome_en": "Navigable 12-screen prototype with React code, on a WCAG-audited gov.br design system, focused on elderly and lower-income users."
+      },
+      "description": "Redesign do fluxo de agendamento e fila inteligente do Meu SUS Digital. O app oficial tem agendamento desde mar/2026, mas sem posição na fila, previsão de data ou lembretes, essa lacuna é o diferencial. Protótipo navegável com 12 telas, design system gov.br auditado em WCAG e código em React + TypeScript. Focado em idosos e classes C/D.",
+      "description_en": "Redesign of Meu SUS Digital's scheduling and intelligent queue flow. The official app has had scheduling since Mar/2026, but without queue position, date prediction, or reminders, that gap is the differentiator. Navigable prototype with 12 screens, WCAG-audited gov.br design system, and React + TypeScript code. Focused on elderly users and lower-income classes.",
+      "year": "2026",
+      "role": "UX Researcher & Product Designer",
+      "timeline": "Case de portfólio",
+      "timeline_en": "Portfolio case study",
+      "team": "Solo",
+      "client": "Case de portfólio",
+      "tools": [
+        "Figma",
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveDemoLink": "https://sus-rose.vercel.app",
+      "sections": [
+        {
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "type": "text",
+          "content": "O Meu SUS Digital passou a oferecer agendamento de consultas em mar/2026, mas apenas em ~500 municípios e somente para atenção básica — e sem transparência alguma sobre a fila. O paciente entra na fila sem saber sua posição, sem previsão de atendimento e sem lembretes. A única forma de acompanhar é ligar para a UBS. Para idosos e pessoas de classe C/D, que dependem exclusivamente do SUS, essa opacidade gera ansiedade, faltas desnecessárias e perda de vaga.",
+          "content_en": "Meu SUS Digital began offering appointment scheduling in Mar/2026, but only in ~500 cities and only for basic care — and with zero queue transparency. Patients enter the queue without knowing their position, with no predicted date and no reminders. The only way to follow up is to call the UBS. For elderly and lower-income users who depend exclusively on the SUS, this opacity generates anxiety, unnecessary absences, and lost queue spots."
+        },
+        {
+          "title": "Pesquisa & Personas",
+          "title_en": "Research & Personas",
+          "type": "research",
+          "methods": [
+            "Análise do app oficial Meu SUS Digital",
+            "Benchmark: Paraná Saúde, Agenda Fácil SP, NHS 18-week tracker",
+            "3 personas: Dona Marta (67 a.), Jeferson (34 a.), Cláudia (41 a.)",
+            "Journey map + mapa de dores"
+          ],
+          "methods_en": [
+            "Official Meu SUS Digital app analysis",
+            "Benchmark: Paraná Saúde, Agenda Fácil SP, NHS 18-week tracker",
+            "3 personas: Dona Marta (67 y.o.), Jeferson (34 y.o.), Cláudia (41 y.o.)",
+            "Journey map + pain point map"
+          ],
+          "content": "A pesquisa confirmou que a lacuna de transparência não é bug — é ausência de design. Sistemas de regulação como o SISREG têm dados de posição na fila, mas nenhuma interface os expõe ao paciente. O benchmark internacional prova que é possível: pacientes informados faltam menos e confiam mais no sistema.",
+          "content_en": "Research confirmed that the transparency gap is not a bug — it's an absence of design. Regulation systems like SISREG have queue position data, but no interface exposes it to the patient. International benchmarks prove it's possible: informed patients miss fewer appointments and trust the system more.",
+          "highlights": [
+            "Fila só existe em sistemas estaduais isolados — nenhum dado é exposto no app nacional",
+            "Dona Marta (67 a.) liga 3x por semana pra UBS perguntando da vez",
+            "NHS 18-week tracker: transparência de fila reduz no-show em até 30%",
+            "Benchmark Agenda Fácil SP: previsão de data aumenta adesão em 22%"
+          ],
+          "highlights_en": [
+            "Queue only exists in isolated state systems — no data is exposed in the national app",
+            "Dona Marta (67 y.o.) calls the UBS 3x per week asking about her spot",
+            "NHS 18-week tracker: queue transparency reduces no-show by up to 30%",
+            "Agenda Fácil SP benchmark: date prediction increases adherence by 22%"
+          ]
+        },
+        {
+          "title": "Solução: Fila Transparente",
+          "title_en": "Solution: Transparent Queue",
+          "type": "text",
+          "content": "O redesign introduz o Card de Fila — tela-herói do protótipo. Exibe posição numérica (\"Você é o 12º\"), previsão de data (\"Previsão: meados de julho\"), uma timeline de 4 etapas com estado visual claro (concluído / ativo / futuro) e botão de remarcar. Notificações proativas avisam quando a posição muda e quando a consulta está próxima. O design system usa tokens gov.br auditados WCAG AA — azul #1351B4, verde SUS #0B6E17 — com tamanhos de fonte e toque acessíveis para o público sênior.",
+          "content_en": "The redesign introduces the Queue Card — the prototype's hero screen. It shows the numerical queue position (\"You are 12th\"), a date prediction (\"Expected: mid-July\"), a 4-step timeline with clear visual states (done / active / future), and a reschedule button. Proactive notifications alert when the position changes and when the appointment is near. The design system uses WCAG AA-audited gov.br tokens — blue #1351B4, SUS green #0B6E17 — with accessible font sizes and touch targets for the senior audience."
+        },
+        {
+          "title": "Acessibilidade WCAG",
+          "title_en": "WCAG Accessibility",
+          "type": "research",
+          "methods": [
+            "Contraste AA: 221/223 tokens passam (99%)",
+            "Touch targets: 18/18 alvos ≥ 44×44 px",
+            "Tipografia: escala legível, mínimo 14 px"
+          ],
+          "methods_en": [
+            "AA contrast: 221/223 tokens pass (99%)",
+            "Touch targets: 18/18 targets ≥ 44×44 px",
+            "Typography: readable scale, minimum 14 px"
+          ],
+          "content": "Auditoria completa com figma-cli a11y. Dois tokens corrigidos antes do deploy: muted #888 → #6E6E6E (ratio 4.6:1) e success #168821 → #0B6E17 (ratio 5.1:1). Correções aplicadas nos tokens-fonte — todos os componentes atualizam automaticamente.",
+          "content_en": "Full audit with figma-cli a11y. Two tokens corrected before deploy: muted #888 → #6E6E6E (ratio 4.6:1) and success #168821 → #0B6E17 (ratio 5.1:1). Corrections applied at the source tokens — all components update automatically."
+        },
+        {
+          "title": "Resultados & Aprendizados",
+          "title_en": "Results & Learnings",
+          "type": "outcomes",
+          "metrics": [
             {
-                title: "O Problema",
-                title_en: "The Problem",
-                type: "text",
-                content: "O Meu SUS Digital passou a oferecer agendamento de consultas em mar/2026, mas apenas em ~500 municípios e somente para atenção básica — e sem transparência alguma sobre a fila. O paciente entra na fila sem saber sua posição, sem previsão de atendimento e sem lembretes. A única forma de acompanhar é ligar para a UBS. Para idosos e pessoas de classe C/D, que dependem exclusivamente do SUS, essa opacidade gera ansiedade, faltas desnecessárias e perda de vaga.",
-                content_en: "Meu SUS Digital began offering appointment scheduling in Mar/2026, but only in ~500 cities and only for basic care — and with zero queue transparency. Patients enter the queue without knowing their position, with no predicted date and no reminders. The only way to follow up is to call the UBS. For elderly and lower-income users who depend exclusively on the SUS, this opacity generates anxiety, unnecessary absences, and lost queue spots.",
+              "value": "12",
+              "label": "telas no protótipo navegável"
             },
             {
-                title: "Pesquisa & Personas",
-                title_en: "Research & Personas",
-                type: "research",
-                methods: ["Análise do app oficial Meu SUS Digital", "Benchmark: Paraná Saúde, Agenda Fácil SP, NHS 18-week tracker", "3 personas: Dona Marta (67 a.), Jeferson (34 a.), Cláudia (41 a.)", "Journey map + mapa de dores"],
-                methods_en: ["Official Meu SUS Digital app analysis", "Benchmark: Paraná Saúde, Agenda Fácil SP, NHS 18-week tracker", "3 personas: Dona Marta (67 y.o.), Jeferson (34 y.o.), Cláudia (41 y.o.)", "Journey map + pain point map"],
-                content: "A pesquisa confirmou que a lacuna de transparência não é bug — é ausência de design. Sistemas de regulação como o SISREG têm dados de posição na fila, mas nenhuma interface os expõe ao paciente. O benchmark internacional prova que é possível: pacientes informados faltam menos e confiam mais no sistema.",
-                content_en: "Research confirmed that the transparency gap is not a bug — it's an absence of design. Regulation systems like SISREG have queue position data, but no interface exposes it to the patient. International benchmarks prove it's possible: informed patients miss fewer appointments and trust the system more.",
-                highlights: [
-                    "Fila só existe em sistemas estaduais isolados — nenhum dado é exposto no app nacional",
-                    "Dona Marta (67 a.) liga 3x por semana pra UBS perguntando da vez",
-                    "NHS 18-week tracker: transparência de fila reduz no-show em até 30%",
-                    "Benchmark Agenda Fácil SP: previsão de data aumenta adesão em 22%",
-                ],
-                highlights_en: [
-                    "Queue only exists in isolated state systems — no data is exposed in the national app",
-                    "Dona Marta (67 y.o.) calls the UBS 3x per week asking about her spot",
-                    "NHS 18-week tracker: queue transparency reduces no-show by up to 30%",
-                    "Agenda Fácil SP benchmark: date prediction increases adherence by 22%",
-                ],
+              "value": "99%",
+              "label": "tokens passam no WCAG AA"
             },
             {
-                title: "Solução: Fila Transparente",
-                title_en: "Solution: Transparent Queue",
-                type: "text",
-                content: "O redesign introduz o Card de Fila — tela-herói do protótipo. Exibe posição numérica (\"Você é o 12º\"), previsão de data (\"Previsão: meados de julho\"), uma timeline de 4 etapas com estado visual claro (concluído / ativo / futuro) e botão de remarcar. Notificações proativas avisam quando a posição muda e quando a consulta está próxima. O design system usa tokens gov.br auditados WCAG AA — azul #1351B4, verde SUS #0B6E17 — com tamanhos de fonte e toque acessíveis para o público sênior.",
-                content_en: "The redesign introduces the Queue Card — the prototype's hero screen. It shows the numerical queue position (\"You are 12th\"), a date prediction (\"Expected: mid-July\"), a 4-step timeline with clear visual states (done / active / future), and a reschedule button. Proactive notifications alert when the position changes and when the appointment is near. The design system uses WCAG AA-audited gov.br tokens — blue #1351B4, SUS green #0B6E17 — with accessible font sizes and touch targets for the senior audience.",
+              "value": "8",
+              "label": "dores do fluxo original redesenhadas"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "12",
+              "label": "screens in the navigable prototype"
             },
             {
-                title: "Acessibilidade WCAG",
-                title_en: "WCAG Accessibility",
-                type: "research",
-                methods: ["Contraste AA: 221/223 tokens passam (99%)", "Touch targets: 18/18 alvos ≥ 44×44 px", "Tipografia: escala legível, mínimo 14 px"],
-                methods_en: ["AA contrast: 221/223 tokens pass (99%)", "Touch targets: 18/18 targets ≥ 44×44 px", "Typography: readable scale, minimum 14 px"],
-                content: "Auditoria completa com figma-cli a11y. Dois tokens corrigidos antes do deploy: muted #888 → #6E6E6E (ratio 4.6:1) e success #168821 → #0B6E17 (ratio 5.1:1). Correções aplicadas nos tokens-fonte — todos os componentes atualizam automaticamente.",
-                content_en: "Full audit with figma-cli a11y. Two tokens corrected before deploy: muted #888 → #6E6E6E (ratio 4.6:1) and success #168821 → #0B6E17 (ratio 5.1:1). Corrections applied at the source tokens — all components update automatically.",
+              "value": "99%",
+              "label": "tokens pass WCAG AA"
             },
             {
-                title: "Resultados & Aprendizados",
-                title_en: "Results & Learnings",
-                type: "outcomes",
-                metrics: [
-                    { value: "12", label: "telas no protótipo navegável" },
-                    { value: "99%", label: "tokens passam no WCAG AA" },
-                    { value: "8", label: "dores do fluxo original redesenhadas" },
-                ],
-                metrics_en: [
-                    { value: "12", label: "screens in the navigable prototype" },
-                    { value: "99%", label: "tokens pass WCAG AA" },
-                    { value: "8", label: "original flow pain points redesigned" },
-                ],
-                content: "O aprendizado central foi que transparência de fila não é feature opcional — é o produto inteiro para esse público. Mostrar \"Você é o 12º\" vale mais do que qualquer ornamento visual. Construir o protótipo em código além do Figma permitiu testar navegação real, estados ativos e acessibilidade no browser — impossível num protótipo estático.",
-                content_en: "The key learning was that queue transparency is not an optional feature — it is the entire product for this audience. Showing \"You are 12th\" is worth more than any visual ornament. Building the prototype in code beyond Figma allowed testing real navigation, active states, and browser accessibility — impossible in a static prototype.",
+              "value": "8",
+              "label": "original flow pain points redesigned"
+            }
+          ],
+          "content": "O aprendizado central foi que transparência de fila não é feature opcional — é o produto inteiro para esse público. Mostrar \"Você é o 12º\" vale mais do que qualquer ornamento visual. Construir o protótipo em código além do Figma permitiu testar navegação real, estados ativos e acessibilidade no browser — impossível num protótipo estático.",
+          "content_en": "The key learning was that queue transparency is not an optional feature — it is the entire product for this audience. Showing \"You are 12th\" is worth more than any visual ornament. Building the prototype in code beyond Figma allowed testing real navigation, active states, and browser accessibility — impossible in a static prototype."
+        },
+        {
+          "title": "Telas do Protótipo",
+          "title_en": "Prototype Screens",
+          "type": "screens",
+          "images": [
+            {
+              "src": "/images/projects/sus/exp-login.png",
+              "caption": "Login",
+              "width": 390,
+              "height": 844
             },
             {
-                title: "Telas do Protótipo",
-                title_en: "Prototype Screens",
-                type: "screens",
-                images: [
-                    { src: "/images/projects/sus/exp-login.png", caption: "Login", width: 390, height: 844 },
-                    { src: "/images/projects/sus/exp-home.png", caption: "Início", width: 390, height: 844 },
-                    { src: "/images/projects/sus/exp-confirmar.png", caption: "Confirmar agendamento", width: 390, height: 844 },
-                    { src: "/images/projects/sus/exp-cardfila.png", caption: "Card de Fila (tela-herói)", width: 390, height: 844 },
-                    { src: "/images/projects/sus/exp-filas.png", caption: "Minhas filas", width: 390, height: 844 },
-                    { src: "/images/projects/sus/exp-convocacao.png", caption: "Convocação", width: 390, height: 844 },
-                ],
+              "src": "/images/projects/sus/exp-home.png",
+              "caption": "Início",
+              "width": 390,
+              "height": 844
             },
             {
-                title: "Comparativo Antes/Depois",
-                title_en: "Before/After Comparison",
-                type: "image",
-                src: "/images/projects/sus/montagem.png",
-                caption: "8 dores do fluxo atual redesenhadas",
-                caption_en: "8 original flow pain points redesigned",
+              "src": "/images/projects/sus/exp-confirmar.png",
+              "caption": "Confirmar agendamento",
+              "width": 390,
+              "height": 844
             },
-        ],
+            {
+              "src": "/images/projects/sus/exp-cardfila.png",
+              "caption": "Card de Fila (tela-herói)",
+              "width": 390,
+              "height": 844
+            },
+            {
+              "src": "/images/projects/sus/exp-filas.png",
+              "caption": "Minhas filas",
+              "width": 390,
+              "height": 844
+            },
+            {
+              "src": "/images/projects/sus/exp-convocacao.png",
+              "caption": "Convocação",
+              "width": 390,
+              "height": 844
+            }
+          ]
+        },
+        {
+          "title": "Comparativo Antes/Depois",
+          "title_en": "Before/After Comparison",
+          "type": "image",
+          "src": "/images/projects/sus/montagem.png",
+          "caption": "8 dores do fluxo atual redesenhadas",
+          "caption_en": "8 original flow pain points redesigned"
+        }
+      ]
     },
 ];
 

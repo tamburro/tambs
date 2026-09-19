@@ -1316,10 +1316,10 @@ const RichProjectPage = ({ project }) => {
                 if (section.type === 'image') {
                     return (
                         <SectionShell key={i} num={num} title={title} accent={accent}>
-                            <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+                            <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)', maxWidth: section.maxWidth, margin: '0 auto' }}>
                                 <Image
                                     src={section.src}
-                                    alt={title}
+                                    alt={title || pick(section.caption, section.caption_en) || project.title}
                                     width={1920}
                                     height={1080}
                                     style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -1345,7 +1345,7 @@ const RichProjectPage = ({ project }) => {
                                             <div className="cs-phone-screen">
                                                 <Image
                                                     src={img.src}
-                                                    alt={img.caption || title}
+                                                    alt={img.caption || title || project.title}
                                                     width={img.width || 390}
                                                     height={img.height || 844}
                                                     sizes="(max-width: 768px) 50vw, 14vw"
@@ -1366,9 +1366,17 @@ const RichProjectPage = ({ project }) => {
                     const cols = section.columns || 2;
                     return (
                         <SectionShell key={i} num={num} title={title} accent={accent}>
+                            {section.content && (
+                                <p style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--mist)', margin: '0 0 24px' }}>
+                                    {pick(section.content, section.content_en)}
+                                </p>
+                            )}
                             <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 12 }}>
                                 {section.images?.map((img, j) => (
                                     <div key={j} style={{ borderRadius: 10, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+                                        {img.src.endsWith('.mp4') ? (
+                                            <video src={img.src} poster={img.poster} autoPlay muted loop playsInline style={{ width: '100%', height: 'auto', display: 'block' }} />
+                                        ) : (
                                         <Image
                                             src={img.src}
                                             alt={pick(img.caption, img.caption_en) || title}
@@ -1376,6 +1384,7 @@ const RichProjectPage = ({ project }) => {
                                             height={600}
                                             style={{ width: '100%', height: 'auto', display: 'block' }}
                                         />
+                                        )}
                                         {img.caption && (
                                             <p style={{ margin: '8px 10px', fontSize: 11, color: 'var(--mist)', fontFamily: 'var(--ph-mono)', letterSpacing: '0.04em' }}>
                                                 {pick(img.caption, img.caption_en)}
