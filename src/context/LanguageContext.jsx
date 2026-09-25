@@ -31,7 +31,7 @@ export const translations = {
       sub: "Currently a Product Designer at Editora Globo. Graduate in Graphic Design from Senac RJ, MBA in UX Design from Instituto Infnet, currently pursuing an MBA in AI-Driven Innovation & UX at UX Unicórnio. I believe the best designer today is one who can also build. That's the standard I hold myself to.",
       stats: [
         { value: '16', label: 'Years of career' },
-        { value: '20', label: 'Projects in the gallery' },
+        { value: '21', label: 'Projects in the gallery' },
       ],
       approachEyebrow: 'Approach',
       approachHeadline: ['Design.', 'Build.', 'Ship.'],
@@ -140,7 +140,7 @@ export const translations = {
       sub: 'Atualmente Product Designer na Editora Globo. Graduado em Design Gráfico pelo Senac RJ, MBA em UX Design pelo Instituto Infnet e cursando MBA em Inovação Orientada à IA e UX pela UX Unicórnio. Acredito que o melhor designer hoje é aquele que também sabe construir. É esse o padrão que busco.',
       stats: [
         { value: '16', label: 'Anos de carreira' },
-        { value: '20', label: 'Projetos na galeria' },
+        { value: '21', label: 'Projetos na galeria' },
       ],
       approachEyebrow: 'Abordagem',
       approachHeadline: ['Design.', 'Código.', 'Entrega.'],

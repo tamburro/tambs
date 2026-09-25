@@ -1245,7 +1245,7 @@ const RichProjectPage = ({ project }) => {
                                             {project.prototypeLinks?.length > 0
                                                 ? project.prototypeLinks.map((link, i) => (
                                                     <Link key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="parallax-cta-link">
-                                                        {link.label} <RiExternalLinkLine size={13} />
+                                                        {pick(link.label, link.label_en)} <RiExternalLinkLine size={13} />
                                                     </Link>
                                                 ))
                                                 : project.prototypeLink

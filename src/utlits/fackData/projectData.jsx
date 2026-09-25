@@ -2,6 +2,211 @@
 
 export const projectsData = [
     {
+      "id": 21,
+      "slug": "alex-toys-loja-e-landing-imersiva",
+      "src": "/images/projects/alextoys/alextoys_full.jpg",
+      "category": "Product Design & Full-Stack",
+      "tags": [
+        "Product Design",
+        "Full-Stack",
+        "AI Engineering"
+      ],
+      "title": "Alex Toys!",
+      "tagline": "Landing cinematográfica que voa por dentro de uma loja de brinquedos em miniatura, ligada a uma loja real com painel que o dono opera sozinho.",
+      "tagline_en": "A cinematic landing that flies through a miniature toy store, wired to a real shop with a back-office the owner runs alone.",
+      "tldr": {
+        "problem": "Uma loja de brinquedos do Rio vendia só por Instagram e WhatsApp, sem catálogo, sem vitrine e com um cartão de visita como único material de marca.",
+        "problem_en": "A Rio toy store sold only through Instagram and WhatsApp, with no catalog, no storefront and a single business card as its entire brand material.",
+        "role": "Product Designer & Full-Stack, solo: identidade, landing imersiva, loja, painel e deploy.",
+        "role_en": "Product Designer & Full-Stack, solo: identity, immersive landing, shop, back-office and deploy.",
+        "outcome": "Landing com fly-through contínuo e loja no ar com checkout por WhatsApp e painel de produtos usável por quem nunca mexeu num admin.",
+        "outcome_en": "A live landing with a continuous fly-through and a shop with WhatsApp checkout and a product panel usable by someone who has never touched an admin."
+      },
+      "description": "Ecossistema digital para a Alex Toys, loja de brinquedos clássicos e modernos do Rio de Janeiro. São duas peças conectadas: uma landing cinematográfica em que a câmera voa de fora para dentro de uma megaloja de brinquedos em miniatura conforme a pessoa rola a página, e uma loja completa com catálogo, carrinho, checkout por WhatsApp e painel de gestão feito para um dono leigo em tecnologia. Tudo construído a partir de um único cartão de visita como material de marca.",
+      "description_en": "A digital ecosystem for Alex Toys, a classic-and-modern toy store in Rio de Janeiro. Two connected pieces: a cinematic landing where the camera flies from outside into a miniature mega toy store as you scroll, and a full shop with catalog, cart, WhatsApp checkout and a back-office built for a non-technical owner. All of it derived from a single business card as the brand's only material.",
+      "year": "2026",
+      "role": "Product Designer & Full-Stack",
+      "timeline": "Projeto cliente · entrega contínua",
+      "timeline_en": "Client project · continuous delivery",
+      "team": "Solo",
+      "client": "Alex Toys",
+      "tools": [
+        "Next.js",
+        "Tailwind",
+        "Claude Code",
+        "Higgsfield",
+        "Vercel"
+      ],
+      "liveDemoLink": "https://alextoys.vercel.app",
+      "prototypeLinks": [
+        {
+          "label": "Ver a loja",
+          "label_en": "View the shop",
+          "url": "https://alextoys-loja.vercel.app"
+        }
+      ],
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O Problema",
+          "title_en": "The Problem",
+          "content": "A Alex Toys tinha identidade, mas não tinha presença digital própria. As vendas dependiam de DMs e mensagens soltas, sem catálogo navegável, sem vitrine e sem um link que transmitisse o carinho da marca. O maior travamento não era estético e sim operacional: qualquer solução precisava ser operável por uma pessoa sem repertório técnico, e cadastrar um brinquedo tinha que ser tão simples quanto postar um story. Como toda a matéria-prima de marca era um cartão de visita, a identidade também precisava ser extraída e expandida do zero.",
+          "content_en": "Alex Toys had an identity but no digital presence of its own. Sales depended on DMs and scattered messages, with no browsable catalog, no storefront and no link that carried the brand's warmth. The hardest constraint was operational, not aesthetic: whatever we built had to be run by someone with no technical background, and adding a toy had to be as easy as posting a story. With a business card as the brand's only raw material, the identity had to be extracted and expanded from scratch."
+        },
+        {
+          "type": "text",
+          "title": "O Desafio",
+          "title_en": "The Challenge",
+          "content": "Transformar um cartão de visita em um sistema visual coeso e, sobre ele, entregar duas experiências com propósitos diferentes e a mesma alma. Restrições de custo também moldaram o projeto: a experiência imersiva foi produzida com um orçamento fechado de créditos de geração, o que exigiu decidir com precisão quantas cenas gerar e em qual qualidade.",
+          "content_en": "Turn a business card into a coherent visual system and, on top of it, ship two experiences with different purposes and the same soul. Cost shaped the project too: the immersive experience was produced on a fixed budget of generation credits, which meant deciding precisely how many scenes to generate and at what quality.",
+          "highlights": [
+            "Encantar: uma landing que traduzisse 'um mundo de brinquedos' de forma literal e memorável, no nível de scroll-experience de páginas de produto premium",
+            "Vender e operar: uma loja real, responsiva, com um back-office que o dono usa sem manual"
+          ],
+          "highlights_en": [
+            "Delight: a landing that turns 'a world of toys' into something literal and memorable, at the level of premium product-page scroll experiences",
+            "Sell and operate: a real, responsive shop with a back-office the owner uses without a manual"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "A Experiência Imersiva",
+          "title_en": "The Immersive Experience",
+          "content": "A landing é um fly-through contínuo: conforme a pessoa rola, a câmera mergulha de fora para dentro de uma megaloja de brinquedos em miniatura, da fachada ao corredor de clássicos até os lançamentos, sem cortes. A experiência foi construída com a skill scroll-world rodando no Claude Code, integrada ao Higgsfield (modelo de vídeo Seedance) para gerar as cenas e os clipes de câmera. Cada cena é uma imagem isométrica coerente com a anterior, os clipes são encadeados com costuras frame-idênticas (o último frame real de um clipe vira o primeiro do próximo) e um engine de scroll-scrub sincroniza o vídeo à posição da rolagem. Toda a copy fica em overlays HTML, nunca dentro das imagens, o que mantém o texto nítido e editável de graça. Personagens recorrentes atravessam as quatro cenas e criam continuidade narrativa.",
+          "content_en": "The landing is a continuous fly-through: as you scroll, the camera dives from outside into a miniature mega toy store, from the storefront through the aisle of classics to the new arrivals, with no cuts. It was built with the scroll-world skill running in Claude Code, wired to Higgsfield (the Seedance video model) to generate the scenes and camera clips. Each scene is an isometric image consistent with the previous one, clips are chained with frame-identical seams (a clip's real last frame becomes the next one's first), and a scroll-scrub engine syncs the video to scroll position. All copy lives in HTML overlays, never inside the images, which keeps text sharp and editable for free. Recurring characters cross all four scenes and carry the narrative."
+        },
+        {
+          "type": "gallery",
+          "title": "A landing, cena a cena",
+          "title_en": "The landing, scene by scene",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/alextoys/lp-hero.png",
+              "caption": "Fachada: o começo do voo",
+              "caption_en": "Storefront: where the flight begins"
+            },
+            {
+              "src": "/images/projects/alextoys/lp-scene2.png",
+              "caption": "Corredor de clássicos, sem corte entre as cenas",
+              "caption_en": "Aisle of classics, no cut between scenes"
+            },
+            {
+              "src": "/images/projects/alextoys/lp-scene3.png",
+              "caption": "Lançamentos, fim da jornada",
+              "caption_en": "New arrivals, the end of the journey"
+            },
+            {
+              "src": "/images/projects/alextoys/lp-mobile.png",
+              "caption": "A mesma imersão no celular",
+              "caption_en": "The same immersion on mobile"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "A Loja e o Painel",
+          "title_en": "The Shop and the Back-office",
+          "content": "O CTA principal da landing leva à loja completa: vitrine com destaques e novidades, catálogo com filtro por categoria, busca e ordenação, página de produto e carrinho. O checkout finaliza pelo WhatsApp com o pedido já formatado, então a loja vende de verdade desde o primeiro dia, sem depender de gateway de pagamento. O coração operacional é o painel do lojista: um dashboard com visão de estoque e um CRUD de produtos pensado para quem nunca mexeu num admin, onde adicionar um brinquedo é preencher nome, preço em reais e foto. Marcar como destaque já joga o produto na home.",
+          "content_en": "The landing's main CTA leads to the full shop: a storefront with featured items and new arrivals, a catalog with category filters, search and sorting, product pages and a cart. Checkout completes over WhatsApp with the order pre-formatted, so the shop actually sells from day one without waiting on a payment gateway. Its operational core is the owner's panel: a dashboard with stock at a glance and a product CRUD designed for someone who has never used an admin, where adding a toy means filling in name, price in reais and a photo. Flagging it as featured puts it straight on the home page."
+        },
+        {
+          "type": "gallery",
+          "title": "Loja e painel de gestão",
+          "title_en": "Shop and management panel",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/alextoys/store-home.png",
+              "caption": "Vitrine com destaques e novidades",
+              "caption_en": "Storefront with featured items and new arrivals"
+            },
+            {
+              "src": "/images/projects/alextoys/store-home-cats.png",
+              "caption": "Navegação por categoria",
+              "caption_en": "Category navigation"
+            },
+            {
+              "src": "/images/projects/alextoys/store-catalog.png",
+              "caption": "Catálogo com filtro, busca e ordenação",
+              "caption_en": "Catalog with filters, search and sorting"
+            },
+            {
+              "src": "/images/projects/alextoys/store-mobile.png",
+              "caption": "Loja no celular",
+              "caption_en": "Shop on mobile"
+            },
+            {
+              "src": "/images/projects/alextoys/store-admin.png",
+              "caption": "Dashboard com visão de estoque",
+              "caption_en": "Dashboard with stock at a glance"
+            },
+            {
+              "src": "/images/projects/alextoys/store-admin-prod.png",
+              "caption": "Gestão de produtos: nome, preço e foto",
+              "caption_en": "Product management: name, price and photo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Identidade & Design System",
+          "title_en": "Identity & Design System",
+          "content": "A identidade foi extraída do cartão de visita e sistematizada: base verde-menta, tinta roxo-escuro, acentos em rosa e amarelo vindos dos brinquedos. Landing e loja compartilham o mesmo sistema, então quem navega de uma para a outra não sente troca de marca.",
+          "content_en": "The identity was extracted from the business card and systematized: a mint-green base, dark purple ink, pink and yellow accents borrowed from the toys. Landing and shop share one system, so moving between them never feels like a change of brand.",
+          "highlights": [
+            "Tipografia: Bricolage Grotesque nos títulos, editorial e pesada, com Nunito no corpo",
+            "Cor: tokens semânticos, com ink como cor de ação e grape como acento sobre superfícies em tons de menta",
+            "Ícones: conjunto SVG de linha desenhado à mão, zero emojis",
+            "Linguagem visual: cards de borda fina, rótulos em caixa-alta espaçada e listas numeradas editoriais"
+          ],
+          "highlights_en": [
+            "Type: Bricolage Grotesque for headings, editorial and heavy, with Nunito for body copy",
+            "Color: semantic tokens, with ink as the action color and grape as the accent over mint surfaces",
+            "Icons: a hand-drawn line SVG set, zero emojis",
+            "Visual language: thin-bordered cards, spaced uppercase labels and editorial numbered lists"
+          ]
+        },
+        {
+          "type": "research",
+          "title": "Arquitetura & Tecnologia",
+          "title_en": "Architecture & Technology",
+          "methods": [
+            "HTML/CSS/JS puro + engine de scroll-scrub",
+            "Higgsfield (Seedance 720p) + ffmpeg",
+            "Next.js (App Router) + Tailwind",
+            "React Context",
+            "Vercel"
+          ],
+          "methods_en": [
+            "Vanilla HTML/CSS/JS + scroll-scrub engine",
+            "Higgsfield (Seedance 720p) + ffmpeg",
+            "Next.js (App Router) + Tailwind",
+            "React Context",
+            "Vercel"
+          ],
+          "content": "A landing roda como página estática, sem framework, com um engine de scroll-scrub portátil e degradação elegante onde o scrub não é suportado. Os assets de imagem e vídeo vieram da skill scroll-world com o Higgsfield e foram processados com ffmpeg para as costuras frame-idênticas. A loja é Next.js com Tailwind e React Context para estado de produtos e carrinho, com persistência local no MVP. O deploy é contínuo na Vercel a cada push. Login, pagamento online e banco de dados já têm pontos de integração isolados em uma única camada, prontos para plugar sem reescrever o app.",
+          "content_en": "The landing runs as a static page, no framework, with a portable scroll-scrub engine and graceful degradation where scrubbing isn't supported. Image and video assets came from the scroll-world skill with Higgsfield and were processed with ffmpeg for the frame-identical seams. The shop is Next.js with Tailwind and React Context for product and cart state, with local persistence in the MVP. Deploys are continuous on Vercel on every push. Login, online payments and a database already have integration points isolated in a single layer, ready to plug in without rewriting the app."
+        },
+        {
+          "type": "text",
+          "title": "Resultados & Aprendizados",
+          "title_en": "Outcomes & Learnings",
+          "content": "A marca saiu do 'só Instagram' para um ecossistema próprio: uma landing que encanta, uma loja que vende e um painel que o dono opera sozinho. O principal aprendizado foi que, com orçamento de geração limitado, definir o escopo da imersão (número de cenas × qualidade) é uma decisão de produto, não de estética: calibrar uma cena antes de gerar a cadeia inteira economizou créditos e evitou retrabalho.",
+          "content_en": "The brand moved from 'Instagram only' to an ecosystem of its own: a landing that delights, a shop that sells and a panel the owner runs alone. The main learning: on a limited generation budget, scoping the immersion (number of scenes × quality) is a product decision, not an aesthetic one — calibrating a single scene before generating the whole chain saved credits and avoided rework.",
+          "highlights": [
+            "O checkout via WhatsApp provou que dá para vender desde o dia um, sem esperar a infraestrutura de pagamento",
+            "IA generativa foi usada como ferramenta de produção de uma experiência de marca real, não como enfeite"
+          ],
+          "highlights_en": [
+            "WhatsApp checkout proved you can sell from day one, without waiting on payment infrastructure",
+            "Generative AI was used as a production tool for a real brand experience, not as decoration"
+          ]
+        }
+      ]
+    },
+    {
       "id": 20,
       "slug": "detetives-digitais-letramento-ia",
       "src": "/images/projects/detetives_full.jpg",
