@@ -80,27 +80,22 @@ export const projectsData = [
           "type": "gallery",
           "title": "A landing, cena a cena",
           "title_en": "The landing, scene by scene",
-          "columns": 2,
+          "columns": 1,
           "images": [
             {
-              "src": "/images/projects/alextoys/lp-hero.png",
+              "src": "/images/projects/alextoys/lp-hero.jpg",
               "caption": "Fachada: o começo do voo",
               "caption_en": "Storefront: where the flight begins"
             },
             {
-              "src": "/images/projects/alextoys/lp-scene2.png",
+              "src": "/images/projects/alextoys/lp-scene2.jpg",
               "caption": "Corredor de clássicos, sem corte entre as cenas",
               "caption_en": "Aisle of classics, no cut between scenes"
             },
             {
-              "src": "/images/projects/alextoys/lp-scene3.png",
+              "src": "/images/projects/alextoys/lp-scene3.jpg",
               "caption": "Lançamentos, fim da jornada",
               "caption_en": "New arrivals, the end of the journey"
-            },
-            {
-              "src": "/images/projects/alextoys/lp-mobile.png",
-              "caption": "A mesma imersão no celular",
-              "caption_en": "The same immersion on mobile"
             }
           ]
         },
@@ -113,8 +108,8 @@ export const projectsData = [
         },
         {
           "type": "gallery",
-          "title": "Loja e painel de gestão",
-          "title_en": "Shop and management panel",
+          "title": "Vitrine e catálogo",
+          "title_en": "Storefront and catalog",
           "columns": 2,
           "images": [
             {
@@ -126,17 +121,21 @@ export const projectsData = [
               "src": "/images/projects/alextoys/store-home-cats.png",
               "caption": "Navegação por categoria",
               "caption_en": "Category navigation"
-            },
-            {
-              "src": "/images/projects/alextoys/store-catalog.png",
-              "caption": "Catálogo com filtro, busca e ordenação",
-              "caption_en": "Catalog with filters, search and sorting"
-            },
-            {
-              "src": "/images/projects/alextoys/store-mobile.png",
-              "caption": "Loja no celular",
-              "caption_en": "Shop on mobile"
-            },
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/alextoys/store-catalog.png",
+          "caption": "Catálogo com filtro por categoria, busca e ordenação",
+          "caption_en": "Catalog with category filters, search and sorting"
+        },
+        {
+          "type": "gallery",
+          "title": "O painel do lojista",
+          "title_en": "The owner's panel",
+          "columns": 2,
+          "images": [
             {
               "src": "/images/projects/alextoys/store-admin.png",
               "caption": "Dashboard com visão de estoque",
@@ -146,6 +145,25 @@ export const projectsData = [
               "src": "/images/projects/alextoys/store-admin-prod.png",
               "caption": "Gestão de produtos: nome, preço e foto",
               "caption_en": "Product management: name, price and photo"
+            }
+          ]
+        },
+        {
+          "type": "screens",
+          "title": "As duas pontas no celular",
+          "title_en": "Both ends on mobile",
+          "images": [
+            {
+              "src": "/images/projects/alextoys/lp-mobile.png",
+              "width": 780,
+              "height": 1688,
+              "caption": "Landing"
+            },
+            {
+              "src": "/images/projects/alextoys/store-mobile.png",
+              "width": 780,
+              "height": 1688,
+              "caption": "Loja"
             }
           ]
         },
