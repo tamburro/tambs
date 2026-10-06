@@ -93,13 +93,19 @@ export default function SphereGallery({ activeFilter = null }) {
         function makeTopTexture(project) {
             return makeStripTexture(ctx => {
                 ctx.textBaseline = 'middle'
-                ctx.font = '400 26px "Space Mono", monospace'
-                ctx.fillStyle = 'rgba(255,255,255,0.6)'
-                ctx.fillText((project.category || '').toUpperCase(), 4, LABEL_H / 2)
                 ctx.font = '700 30px "Space Mono", monospace'
                 ctx.fillStyle = 'rgba(255,255,255,0.95)'
                 const title = (project.title || '').toUpperCase()
-                ctx.fillText(title, LABEL_W - ctx.measureText(title).width - 4, LABEL_H / 2)
+                const titleX = LABEL_W - ctx.measureText(title).width - 4
+                ctx.fillText(title, titleX, LABEL_H / 2)
+                // the category gives way when a long title needs the room
+                ctx.font = '400 26px "Space Mono", monospace'
+                ctx.fillStyle = 'rgba(255,255,255,0.6)'
+                let category = (project.category || '').toUpperCase()
+                while (category && ctx.measureText(category).width > titleX - 40) {
+                    category = category.slice(0, category.lastIndexOf(' '))
+                }
+                ctx.fillText(category.replace(/[\s·&]+$/, ''), 4, LABEL_H / 2)
             })
         }
 

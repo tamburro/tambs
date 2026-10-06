@@ -2940,31 +2940,31 @@ export const projectsData = [
     },
     {
       "id": 11,
-      "slug": "globo-ab-test-landing-page-aquisicao",
-      "src": "/images/projects/ab_test/oglb_full.jpg",
-      "pageSrc": "/images/projects/ab_test/oglb_full_intern.jpg",
+      "slug": "editora-globo-aquisicao-landing-pages-ia",
+      "src": "/images/projects/ab_test/capa_v1.jpg",
+      "pageSrc": "/images/projects/ab_test/capa_v2.jpg",
       "category": "Product Design · Conversão & Aquisição",
       "tags": [
         "Product Design"
       ],
-      "title": "O Globo · Testes A/B",
-      "tagline": "Programa contínuo de testes A/B em páginas de aquisição de assinaturas, validados no Google Ads e levados aos canais internos.",
-      "tagline_en": "A continuous A/B testing program on subscription acquisition pages, validated on Google Ads and rolled out to internal channels.",
+      "title": "Editora Globo · Aquisição com IA",
+      "tagline": "Testes A/B e landing pages de aquisição para O Globo e Valor Econômico, hoje construídas com IA em menos de um dia.",
+      "tagline_en": "A/B tests and acquisition landing pages for O Globo and Valor Econômico, now built with AI in under a day.",
       "tldr": {
-        "problem": "Páginas de aquisição de assinaturas mudavam por opinião, sem evidência de qual versão convertia mais.",
-        "problem_en": "Subscription acquisition pages changed based on opinion, with no evidence of which version converted better.",
-        "role": "Product Designer & Front-end: dono do design e da implementação das variantes em HTML/CSS/JS, dentro de um programa cross-funcional com Canais Digitais e marketing.",
-        "role_en": "Product Designer & Front-end: owner of the design and implementation of the variants in HTML/CSS/JS, within a cross-functional program with Digital Channels and marketing.",
-        "outcome": "Programa contínuo de testes A/B validado no Google Ads; variantes vencedoras viram padrão nos canais das marcas, sem sacrificar o LTV.",
-        "outcome_en": "A continuous A/B testing program validated on Google Ads; winning variants become the standard across brand channels without sacrificing LTV."
+        "problem": "Páginas de aquisição precisam converter sem atrair o assinante que cancela cedo, e cada página levava dias para ir ao ar em ferramentas low-code limitadas.",
+        "problem_en": "Acquisition pages must convert without attracting the subscriber who churns early, and each page took days to ship in limited low-code tools.",
+        "role": "Product Designer & Front-end: design e código das páginas e das variantes de teste. Por iniciativa própria, levei a programação assistida por IA para o time de design.",
+        "role_en": "Product Designer & Front-end: design and code of the pages and test variants. On my own initiative, I brought AI-assisted coding to the design team.",
+        "outcome": "Variantes vencedoras viram padrão nos canais das marcas. Em 2026, dezenas de landing pages feitas com IA e 7 designers treinados no Rio e em São Paulo.",
+        "outcome_en": "Winning variants become the standard across brand channels. In 2026, dozens of landing pages built with AI and 7 designers trained in Rio and São Paulo."
       },
-      "description": "Programa contínuo de testes A/B em páginas de aquisição de assinaturas para marcas da Editora Globo — O Globo, Valor Econômico e Clube O Globo — com testes pontuais em parcerias do Grupo Globo, como o Globoplay. As hipóteses vêm de Canais Digitais, guiadas por benchmarks de veículos de assinatura, e eu sou o responsável pelo design e pela implementação das variantes. Cada teste é validado no Google Ads e depois levado aos canais internos. O foco é aumentar conversão sem sacrificar o LTV do assinante.",
-      "description_en": "A continuous A/B testing program on subscription acquisition pages for Editora Globo brands — O Globo, Valor Econômico and Clube O Globo — with occasional tests on Grupo Globo partnerships, such as Globoplay. Hypotheses come from Digital Channels, driven by subscription-media benchmarks, and I own the design and implementation of the variants. Each test is validated on Google Ads and then rolled out to internal channels. The focus is to grow conversion without sacrificing subscriber LTV.",
+      "description": "Desde 2023 desenho e programo as páginas de aquisição de assinaturas da Editora Globo: O Globo, Valor Econômico e Clube O Globo, além de parcerias e campanhas. O trabalho começou com um programa contínuo de testes A/B, focado em aumentar a conversão sem sacrificar o LTV do assinante. Em 2026 levei a programação assistida por IA para o processo, o que reduziu o prazo de uma landing page de dias para menos de um dia, e treinei os designers de Marketing Institucional do Rio e de São Paulo para trabalhar da mesma forma.",
+      "description_en": "Since 2023 I have designed and coded Editora Globo's subscription acquisition pages: O Globo, Valor Econômico and Clube O Globo, plus partnerships and campaigns. The work started with a continuous A/B testing program, focused on growing conversion without sacrificing subscriber LTV. In 2026 I brought AI-assisted coding into the process, which cut the lead time of a landing page from days to under a day, and I trained the Institutional Marketing designers in Rio and São Paulo to work the same way.",
       "year": "Desde 2023",
       "year_en": "Since 2023",
       "role": "Product Designer & Front-end",
-      "timeline": "Programa contínuo",
-      "timeline_en": "Ongoing program",
+      "timeline": "Trabalho contínuo",
+      "timeline_en": "Ongoing work",
       "team": "Multidisciplinar",
       "client": "Editora Globo",
       "tools": [
@@ -2972,7 +2972,8 @@ export const projectsData = [
         "HTML",
         "CSS",
         "JS",
-        "Google Ads"
+        "Google Ads",
+        "Antigravity"
       ],
       "pageType": "rich",
       "accentColor": "#1B4FD8",
@@ -2981,15 +2982,15 @@ export const projectsData = [
           "type": "text",
           "title": "O problema",
           "title_en": "The problem",
-          "content": "Páginas de aquisição vivem uma tensão permanente: precisam converter agora, mas sem atrair o assinante errado, que cancela cedo e derruba o LTV. Otimizar só a conversão imediata pode sair caro lá na frente.",
-          "content_en": "Acquisition pages live in constant tension: they must convert now, but without attracting the wrong subscriber, who churns early and drags down LTV. Optimizing only for immediate conversion can be costly down the line."
+          "content": "Páginas de aquisição vivem uma tensão permanente: precisam converter agora, mas sem atrair o assinante errado, que cancela cedo e derruba o LTV. Otimizar só a conversão imediata pode sair caro lá na frente.\n\nHavia também um problema de produção. Cada campanha, parceria ou oferta pede uma página nova, e montar uma delas em ferramentas low-code limitadas levava dias, com um resultado abaixo do que as marcas pediam.",
+          "content_en": "Acquisition pages live in constant tension: they must convert now, but without attracting the wrong subscriber, who churns early and drags down LTV. Optimizing only for immediate conversion can be costly down the line.\n\nThere was also a production problem. Every campaign, partnership or offer needs a new page, and building one in limited low-code tools took days, with a result below what the brands called for."
         },
         {
           "type": "text",
-          "title": "Meu papel no programa",
-          "title_en": "My role in the program",
-          "content": "A hipótese nasce em Canais Digitais e o marketing consolida a proposta de teste. A partir daí, o design e o código das variantes são inteiramente meus: sou o responsável por estruturar as landing pages e colocar cada teste no ar. Depois, coapresento os resultados junto ao marketing. É um papel de dono da execução dentro de um programa cross-funcional, não um projeto solo.",
-          "content_en": "The hypothesis originates in Digital Channels, and Marketing consolidates the test proposal. From there, the design and the code of the variants are entirely mine: I am responsible for structuring the landing pages and putting each test live. I then co-present the results together with Marketing. It is a role of owning execution within a cross-functional program, not a solo project."
+          "title": "Meu papel",
+          "title_en": "My role",
+          "content": "Nos testes A/B, a hipótese nasce em Canais Digitais e o marketing consolida a proposta. A partir daí, o design e o código das variantes são meus: estruturo as landing pages, coloco cada teste no ar e apresento os resultados junto com o marketing.\n\nNas landing pages de campanha e de parceria, faço o design e o código de ponta a ponta. E, por iniciativa própria, puxei a adoção de IA no time de design: mudei o meu processo, mostrei o resultado e treinei os outros designers. É uma frente reconhecida pela gerência, ainda sem cargo formal.",
+          "content_en": "In the A/B tests, the hypothesis originates in Digital Channels and Marketing consolidates the proposal. From there, the design and the code of the variants are mine: I structure the landing pages, put each test live and present the results together with Marketing.\n\nOn campaign and partnership landing pages, I do the design and the code end to end. And, on my own initiative, I drove AI adoption in the design team: I changed my own process, showed the result and trained the other designers. It is a front recognized by management, with no formal title yet."
         },
         {
           "type": "text",
@@ -3018,36 +3019,21 @@ export const projectsData = [
           "content_en": "Each cycle takes about two weeks. The program has run since 2023, with one or two active tests every month, covering O Globo, Valor Econômico and Clube O Globo."
         },
         {
-          "type": "text",
-          "title": "Quem faz o quê",
-          "title_en": "Who does what",
-          "highlights": [
-            "Canais Digitais",
-            "Marketing",
-            "Design — eu"
-          ],
-          "highlights_en": [
-            "Digital Channels",
-            "Marketing",
-            "Design — me"
-          ]
-        },
-        {
           "type": "research",
           "title": "Como testamos",
           "title_en": "How we test",
           "methods": [
-            "Hipóteses guiadas por benchmark (NYT, FYT)",
+            "Hipóteses guiadas por benchmark (NYT, FT)",
             "Modelo 80/20 para preservar o CPA da campanha",
             "Validação primeiro no Google Ads",
-            "Rollout para canais internos: mobiliários, barreira de backend e AMP",
+            "Rollout das vencedoras para os canais internos das marcas",
             "Análise cruzada: plataforma de mídia + CRM de assinaturas"
           ],
           "methods_en": [
-            "Benchmark-driven hypotheses (NYT, FYT)",
+            "Benchmark-driven hypotheses (NYT, FT)",
             "80/20 model to preserve campaign CPA",
             "Validation first on Google Ads",
-            "Rollout to internal channels: on-site placements, backend barrier and AMP",
+            "Rollout of winners to the brands' internal channels",
             "Cross analysis: media platform + subscriptions CRM"
           ],
           "content": "Cada teste parte de um benchmark de veículos de assinatura e roda no modelo 80/20, preservando o CPA da campanha institucional. A hipótese que vence no Google Ads é levada para os canais internos.",
@@ -3088,20 +3074,36 @@ export const projectsData = [
             "LP direta (estilo NYT) vs institucional: A abordagem mais direta superou a institucional em conversão e em margem.",
             "Produto impresso em destaque no topo: Trazer o impresso para o topo da página elevou o share de conversões e a margem.",
             "Mote do Globoplay na oferta: Adicionar o mote do Globoplay à página melhorou conversão e margem.",
-            "LP direta vs benchmark (FYT): A versão mais direta aumentou a conversão e reduziu o custo por aquisição."
+            "LP direta vs benchmark (FT): A versão mais direta aumentou a conversão e reduziu o custo por aquisição."
           ],
           "highlights_en": [
             "Direct LP (NYT style) vs institutional: The more direct approach outperformed the institutional one in conversion and margin.",
             "Print product highlighted at the top: Moving the print product to the top of the page raised the share of conversions and margin.",
             "Globoplay tagline in the offer: Adding the Globoplay tagline to the page improved conversion and margin.",
-            "Direct LP vs benchmark (FYT): The more direct version increased conversion and reduced cost per acquisition."
+            "Direct LP vs benchmark (FT): The more direct version increased conversion and reduced cost per acquisition."
           ]
         },
         {
           "type": "image",
           "src": "/images/projects/ab_test/valor_economico_full.jpg",
-          "caption": "Valor Econômico: a LP direta testada contra o benchmark (FYT).",
-          "caption_en": "Valor Econômico: the direct LP tested against the benchmark (FYT)."
+          "caption": "Valor Econômico: a LP direta testada contra o benchmark (FT).",
+          "caption_en": "Valor Econômico: the direct LP tested against the benchmark (FT)."
+        },
+        {
+          "type": "gallery",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/ab_test/lp_valor_a.jpg",
+              "caption": "Valor Econômico, versão institucional: marca e proposta de valor antes dos planos.",
+              "caption_en": "Valor Econômico, institutional version: brand and value proposition before the plans."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_valor_b.jpg",
+              "caption": "Valor Econômico, versão direta: planos na primeira dobra, com a melhor oferta já selecionada.",
+              "caption_en": "Valor Econômico, direct version: plans above the fold, with the best offer preselected."
+            }
+          ]
         },
         {
           "type": "research",
@@ -3125,16 +3127,95 @@ export const projectsData = [
           "content_en": "The most important learning did not come from comparing A and B, but from within the analysis: the media platform and the subscriptions CRM diverged on the same sales. Reading the result by the media's attribution model or by the CRM led to different decisions, which changed how the team decides which campaigns to scale."
         },
         {
-          "type": "text",
-          "title": "Status & rollout",
-          "title_en": "Status & rollout",
-          "content": "Os testes são validados no Google Ads e depois levados aos canais internos (mobiliários, barreira de backend e AMP).",
-          "content_en": "Tests are validated on Google Ads and then taken to internal channels (on-site placements, backend barrier and AMP)."
+          "type": "gallery",
+          "title": "Além dos testes: landing pages de campanha",
+          "title_en": "Beyond the tests: campaign landing pages",
+          "content": "Fora do programa de testes, cada campanha pede um mecanismo de conversão próprio. Uma parceria com uma vinícola não vende como um programa de indicação, e uma página para quem já visitou a oferta não fala como uma página de primeiro contato. Estas são algumas das páginas que desenhei e programei em 2026.",
+          "content_en": "Outside the testing program, each campaign calls for its own conversion mechanism. A winery partnership does not sell like a referral program, and a page for someone who has already seen the offer does not speak like a first-contact page. These are some of the pages I designed and coded in 2026.",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/ab_test/lp_clube.jpg",
+              "caption": "Clube O Globo: uma calculadora soma os descontos que o leitor usaria e compara com o preço da assinatura.",
+              "caption_en": "Clube O Globo: a calculator adds up the discounts the reader would use and compares them with the subscription price."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_falta_um_passo.jpg",
+              "caption": "Falta um passo: remarketing que narra a jornada de quem já visitou a oferta e deixa só a escolha do plano.",
+              "caption_en": "One step left: remarketing that narrates the journey of someone who already saw the offer and leaves only the plan choice."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_ofertas.jpg",
+              "caption": "Oferta direta: planos na primeira dobra, com o anual já selecionado.",
+              "caption_en": "Direct offer: plans above the fold, with the annual one preselected."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_woodswine.jpg",
+              "caption": "Valor e O Globo × WoodsWine: parceria premium, com linguagem visual própria para o impresso.",
+              "caption_en": "Valor and O Globo × WoodsWine: a premium partnership, with its own visual language for the print edition."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_kes_summit.jpg",
+              "caption": "Valor × KES Summit: resgate de voucher em três etapas para o público do evento.",
+              "caption_en": "Valor × KES Summit: three-step voucher redemption for the event audience."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_rio_gastronomia.jpg",
+              "caption": "Rio Gastronomia: ingressos por data, com estado de esgotado atualizado ao longo do evento.",
+              "caption_en": "Rio Gastronomia: tickets by date, with a sold-out state updated throughout the event."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_indique_ganhe.jpg",
+              "caption": "Indique e ganhe: indicação com benefício para os dois lados, explicada em três passos.",
+              "caption_en": "Refer and earn: a referral with a benefit for both sides, explained in three steps."
+            },
+            {
+              "src": "/images/projects/ab_test/lp_chico_salgado.jpg",
+              "caption": "O Globo + Chico Salgado: co-branding com plano combinado e comparativo de benefícios.",
+              "caption_en": "O Globo + Chico Salgado: co-branding with a bundled plan and a benefits comparison."
+            }
+          ]
         },
         {
           "type": "text",
-          "content": "Os números de cada teste são confidenciais e não são exibidos aqui. O foco é a direção dos resultados e o que cada experimento ensinou.",
-          "content_en": "The figures for each test are confidential and are not shown here. The focus is the direction of results and what each experiment taught."
+          "title": "IA no processo",
+          "title_en": "AI in the process",
+          "content": "Até 2025, uma landing page de campanha levava dias e saía limitada pelo que a ferramenta low-code permitia. Em 2026 passei a construir as páginas com programação assistida por IA no Antigravity, ferramenta homologada pela Editora Globo.\n\nA mesma página agora fica pronta em menos de um dia, em código próprio, sem as limitações do low-code. O tempo que sobra vai para o que antes não cabia no prazo: uma calculadora de economia, uma narrativa de remarketing, uma identidade visual para cada parceria. Em poucos meses foram dezenas de landing pages.",
+          "content_en": "Until 2025, a campaign landing page took days and came out limited by what the low-code tool allowed. In 2026 I started building the pages with AI-assisted coding in Antigravity, a tool approved by Editora Globo.\n\nThe same page is now ready in under a day, in its own code, without the low-code constraints. The time saved goes into what did not fit the deadline before: a savings calculator, a remarketing narrative, a visual identity for each partnership. In a few months that added up to dozens of landing pages."
+        },
+        {
+          "type": "text",
+          "title": "Treinando o time",
+          "title_en": "Training the team",
+          "content": "Um designer mais rápido não resolve o gargalo de um time. Montei um workshop de uma hora sobre construção de landing pages com programação assistida por IA e apliquei para os designers de Marketing Institucional: quatro no Rio de Janeiro e três em São Paulo.\n\nDepois do workshop, o time passou a produzir landing pages e e-mails marketing com mais qualidade e em menos tempo, usando o mesmo fluxo.",
+          "content_en": "One faster designer does not fix a team bottleneck. I put together a one-hour workshop on building landing pages with AI-assisted coding and ran it for the Institutional Marketing designers: four in Rio de Janeiro and three in São Paulo.\n\nAfter the workshop, the team started producing landing pages and marketing emails with higher quality and in less time, using the same workflow."
+        },
+        {
+          "type": "outcomes",
+          "title": "Resultado",
+          "title_en": "Outcome",
+          "metrics": [
+            {
+              "value": "<1",
+              "label": "dia para uma landing page ir ao ar; antes eram dias",
+              "label_en": "day to ship a landing page; it used to take days"
+            },
+            {
+              "value": "7",
+              "label": "designers treinados, no Rio e em São Paulo",
+              "label_en": "designers trained, in Rio and São Paulo"
+            },
+            {
+              "value": "1h",
+              "label": "de workshop para o time adotar o mesmo fluxo",
+              "label_en": "workshop for the team to adopt the same workflow"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Os números de conversão de cada teste são confidenciais e não são exibidos aqui. O foco é a direção dos resultados e o que cada experimento ensinou.",
+          "content_en": "The conversion figures for each test are confidential and are not shown here. The focus is the direction of results and what each experiment taught."
         }
       ]
     },

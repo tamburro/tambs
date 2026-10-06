@@ -9,6 +9,12 @@ const nextConfig = {
         destination: "/works/proficia-avaliacao-competencias-ux",
         permanent: true,
       },
+      {
+        // O case da Editora Globo ganhou novo título e slug.
+        source: "/works/globo-ab-test-landing-page-aquisicao",
+        destination: "/works/editora-globo-aquisicao-landing-pages-ia",
+        permanent: true,
+      },
     ];
   },
 };
