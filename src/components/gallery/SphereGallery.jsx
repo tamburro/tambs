@@ -130,11 +130,15 @@ export default function SphereGallery({ activeFilter = null }) {
         const totalTiles = ROWS.length * COLS
 
         // assign projects so no tile repeats its left or upper neighbor
+        // offset so the tile facing the camera on load (middle row, lon = 3π/2) is the first project
+        const centerRow = Math.floor(ROWS.length / 2)
+        const centerSeed = centerRow * 5 + (COLS * 3 / 4) * 3
+        const offset = projects.length - (centerSeed % projects.length)
         const assignments = []
         ROWS.forEach((_, rowIdx) => {
             assignments[rowIdx] = []
             for (let c = 0; c < COLS; c++) {
-                let idx = (rowIdx * 5 + c * 3) % projects.length
+                let idx = (rowIdx * 5 + c * 3 + offset) % projects.length
                 const left = assignments[rowIdx][(c - 1 + COLS) % COLS]
                 const above = rowIdx > 0 ? assignments[rowIdx - 1][c] : -1
                 while (idx === left || idx === above || (c === COLS - 1 && idx === assignments[rowIdx][0])) {
@@ -194,7 +198,12 @@ export default function SphereGallery({ activeFilter = null }) {
                 mesh.userData = {
                     project,
                     lat,
-                    centerDir: new THREE.Vector3().setFromSphericalCoords(1, thetaCenter, lon).normalize(),
+                    // same axis convention as SphereGeometry (phi = 0 points to -x)
+                    centerDir: new THREE.Vector3(
+                        -Math.cos(lon) * Math.sin(thetaCenter),
+                        Math.cos(thetaCenter),
+                        Math.sin(lon) * Math.sin(thetaCenter)
+                    ),
                     baseOpacity: 0,
                     hoverBoost: 0,
                     filterDim: 1,
@@ -353,8 +362,8 @@ export default function SphereGallery({ activeFilter = null }) {
 
             // rotate so the tile faces the camera, then zoom in
             const dir = tile.userData.centerDir
-            const targetY = Math.atan2(dir.x, -dir.z) * -1
-            const targetX = Math.asin(dir.y)
+            const targetY = Math.atan2(dir.x, -dir.z)
+            const targetX = -Math.asin(dir.y)
 
             // shortest path for longitude
             let ty = targetY
