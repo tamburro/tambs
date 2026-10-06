@@ -3,21 +3,40 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { getGalleryProjects } from '@/components/gallery/SphereGallery'
+import { coverUrl, getGalleryProjects } from '@/components/gallery/SphereGallery'
 import { useLanguage } from '@/context/LanguageContext'
 
 const STRIP_COUNT = 5
 
 // full-width statement with the label sitting in the first-line indent
+// the first sentence reads in white, the rest steps back to grey
 function Lede({ label, text, small }) {
+    const lead = text.indexOf('. ') + 1 || text.length
+    let offset = 0
     return (
         <div className={`ph-lede ${small ? 'ph-lede--small' : ''}`}>
             {label && <p className="ph-eyebrow">{label}</p>}
             <p className="ph-statement">
-                {text.split(' ').map((word, i) => (
-                    <React.Fragment key={i}><span className="ph-word">{word}</span>{' '}</React.Fragment>
-                ))}
+                {text.split(' ').map((word, i) => {
+                    const dim = offset >= lead
+                    offset += word.length + 1
+                    return (
+                        <React.Fragment key={i}>
+                            <span className={`ph-word ${dim ? 'ph-word--dim' : ''}`}>{word}</span>{' '}
+                        </React.Fragment>
+                    )
+                })}
             </p>
+        </div>
+    )
+}
+
+// label in the left margin, content on the page's single column axis
+function Row({ label, children }) {
+    return (
+        <div className="ph-row">
+            {label ? <p className="ph-eyebrow">{label}</p> : <span />}
+            <div>{children}</div>
         </div>
     )
 }
@@ -30,7 +49,11 @@ export default function AboutPage() {
     const approachRef = useRef(null)
     const heroRef = useRef(null)
 
-    const strip = getGalleryProjects().slice(0, STRIP_COUNT)
+    const projects = getGalleryProjects()
+    const strip = projects.slice(0, STRIP_COUNT)
+    const proof = t.aiWorkflow.proof
+        .map(item => ({ ...item, project: projects.find(p => p.slug === item.slug) }))
+        .filter(item => item.project)
 
     useEffect(() => {
         gsap.fromTo(heroRef.current.querySelectorAll('.ph-reveal'),
@@ -61,14 +84,14 @@ export default function AboutPage() {
                     })
             })
 
-            gsap.utils.toArray('.ph-display--section').forEach(title => {
+            gsap.utils.toArray('.ph-display--sub').forEach(title => {
                 gsap.from(title, {
                     opacity: 0, y: 60, duration: 1.1, ease: 'power3.out',
                     scrollTrigger: { trigger: title, start: 'top 88%', once: true },
                 })
             })
 
-            const rise = '.ph-lede-sub, .ph-stat, .ph-service-row, .ph-xp-row, .ph-ai-rules li, .ph-chips'
+            const rise = '.ph-lede-sub, .ph-stat, .ph-service-row, .ph-step, .ph-proof-card, .ph-xp-row, .ph-ai-rules li, .ph-chips'
             gsap.set(rise, { opacity: 0, y: 32 })
             ScrollTrigger.batch(rise, {
                 start: 'top 90%',
@@ -133,47 +156,49 @@ export default function AboutPage() {
                 <div className="ph-strip">
                     {strip.map(project => (
                         <Link key={project.id} href={`/works/${project.slug}`} className="ph-strip-item">
-                            <img src={project.src} alt={project.title} />
+                            <img src={coverUrl(project.src, 640)} alt={project.title} />
                         </Link>
                     ))}
                 </div>
 
-                <div className="ph-container">
+                <div className="ph-container ph-rows">
                     <Lede label="Pedro Tamburro" text={t.aboutPage.statement} />
                     <p className="ph-body ph-lede-sub">{t.aboutPage.sub}</p>
 
-                    <div className="ph-stats">
-                        {t.aboutPage.stats.map(stat => (
-                            <div key={stat.label} className="ph-stat">
-                                <p className="ph-stat-value">{stat.value}</p>
-                                <p className="ph-stat-label">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Row>
+                        <div className="ph-stats">
+                            {t.aboutPage.stats.map(stat => (
+                                <div key={stat.label} className="ph-stat">
+                                    <p className="ph-stat-value">{stat.value}</p>
+                                    <p className="ph-stat-label">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </Row>
                 </div>
             </section>
 
             {/* ── Approach ── */}
-            <section ref={approachRef} style={{ marginTop: '110px' }}>
-                <div className="ph-container ph-about-section" style={{ borderTop: 'none' }}>
-                    <p className="ph-eyebrow">{t.aboutPage.approachEyebrow}</p>
-                    <h2 className="ph-display ph-display--section" style={{ marginBottom: '64px' }}>
-                        {t.aboutPage.approachHeadline.join(' ')}
-                    </h2>
-                    <div style={{ marginBottom: '80px' }}>
+            <section ref={approachRef}>
+                <div className="ph-container ph-about-section ph-rows">
+                    <Row label={t.aboutPage.approachEyebrow}>
+                        <h2 className="ph-display ph-display--sub">
+                            {t.aboutPage.approachHeadline.join(' ')}
+                        </h2>
                         <Lede text={t.aboutPage.approachIntro} small />
-                    </div>
+                    </Row>
 
-                    {t.aboutPage.services.map((service, i) => (
-                        <div key={service.title} className="ph-service-row">
-                            <span className="ph-service-index">{String(i + 1).padStart(2, '0')}</span>
-                            <h3 className="ph-service-title">{service.title}</h3>
-                            <p className="ph-body" style={{ margin: 0 }}>{service.description}</p>
-                        </div>
-                    ))}
+                    <Row>
+                        {t.aboutPage.services.map((service, i) => (
+                            <div key={service.title} className="ph-service-row">
+                                <span className="ph-service-index">{String(i + 1).padStart(2, '0')}</span>
+                                <h3 className="ph-service-title">{service.title}</h3>
+                                <p className="ph-body" style={{ margin: 0 }}>{service.description}</p>
+                            </div>
+                        ))}
+                    </Row>
 
-                    <div style={{ marginTop: '90px' }}>
-                        <p className="ph-eyebrow">{t.aboutPage.toolsLabel}</p>
+                    <Row label={t.aboutPage.toolsLabel}>
                         <div className="ph-chips">
                             {tools.map(tool => (
                                 <span key={tool} className="ph-tag" style={{ fontSize: '11px', padding: '8px 16px' }}>
@@ -181,64 +206,72 @@ export default function AboutPage() {
                                 </span>
                             ))}
                         </div>
+                    </Row>
+                </div>
+
+                <div className="ph-container ph-about-section ph-rows">
+                    <Row label={t.aiWorkflow.label}>
+                        <h2 className="ph-display ph-display--sub">{t.aiWorkflow.title}</h2>
+                        <Lede text={t.aiWorkflow.sub} small />
+                    </Row>
+
+                    <Row>
+                        <div className="ph-stats">
+                            {t.aiWorkflow.stats.map(stat => (
+                                <div key={stat.label} className="ph-stat">
+                                    <p className="ph-stat-value">{stat.value}</p>
+                                    <p className="ph-stat-label">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </Row>
+
+                    <Row>
+                        <div className="ph-steps">
+                            {t.aiWorkflow.steps.map((step, i) => (
+                                <div key={step.title} className="ph-step">
+                                    <span className="ph-service-index">{String(i + 1).padStart(2, '0')}</span>
+                                    <h3 className="ph-step-title">{step.title}</h3>
+                                    <p className="ph-step-text">{step.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </Row>
+
+                    <Row label={t.aiWorkflow.guardrailsLabel}>
+                        <ul className="ph-ai-rules">
+                            {t.aiWorkflow.guardrails.map(rule => <li key={rule}>{rule}</li>)}
+                        </ul>
+                    </Row>
+
+                    <Row label={t.aiWorkflow.toolsLabel}>
+                        <div className="ph-chips">
+                            {t.aiWorkflow.tools.map(tool => (
+                                <span key={tool} className="ph-tag" style={{ fontSize: '11px', padding: '8px 16px' }}>
+                                    {tool}
+                                </span>
+                            ))}
+                        </div>
+                    </Row>
+
+                    <div>
+                        <p className="ph-eyebrow">{t.aiWorkflow.proofLabel}</p>
+                        <div className="ph-proof">
+                            {proof.map(item => (
+                                <Link key={item.slug} href={`/works/${item.slug}`} className="ph-proof-card">
+                                    <div className="ph-strip-item">
+                                        <img src={coverUrl(item.project.src, 640)} alt={item.title} />
+                                    </div>
+                                    <h3 className="ph-proof-name">{item.title}</h3>
+                                    <p className="ph-proof-note">{item.note}</p>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="ph-container ph-about-section">
-                    <p className="ph-eyebrow">{t.aiWorkflow.label}</p>
-                    <h2 className="ph-display ph-display--section" style={{ marginBottom: '64px' }}>
-                        {t.aiWorkflow.title}
-                    </h2>
-                    <Lede text={t.aiWorkflow.sub} small />
-
-                    <div className="ph-stats" style={{ marginBottom: '80px' }}>
-                        {t.aiWorkflow.stats.map(stat => (
-                            <div key={stat.label} className="ph-stat">
-                                <p className="ph-stat-value">{stat.value}</p>
-                                <p className="ph-stat-label">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div>
-                        {t.aiWorkflow.steps.map((step, i) => (
-                            <div key={step.title} className="ph-service-row">
-                                <span className="ph-service-index">{String(i + 1).padStart(2, '0')}</span>
-                                <h3 className="ph-service-title">{step.title}</h3>
-                                <p className="ph-body" style={{ margin: 0 }}>{step.description}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.guardrailsLabel}</p>
-                    <ul className="ph-ai-rules">
-                        {t.aiWorkflow.guardrails.map(rule => <li key={rule}>{rule}</li>)}
-                    </ul>
-
-                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.toolsLabel}</p>
-                    <div className="ph-chips">
-                        {t.aiWorkflow.tools.map(tool => (
-                            <span key={tool} className="ph-tag" style={{ fontSize: '11px', padding: '8px 16px' }}>
-                                {tool}
-                            </span>
-                        ))}
-                    </div>
-
-                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.proofLabel}</p>
-                    <div>
-                        {t.aiWorkflow.proof.map(item => (
-                            <Link key={item.slug} href={`/works/${item.slug}`} className="ph-xp-row ph-ai-proof">
-                                <span className="ph-xp-period">{item.note}</span>
-                                <h3 className="ph-xp-role">{item.title}</h3>
-                                <span className="ph-xp-org">↗</span>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="ph-container ph-about-section">
-                    <p className="ph-eyebrow">{t.aboutPage.experienceLabel}</p>
-                    <div style={{ marginTop: '40px' }}>
+                <div className="ph-container ph-about-section ph-rows">
+                    <Row label={t.aboutPage.experienceLabel}>
                         {experience.map(item => (
                             <div key={item.role + item.org} className="ph-xp-row">
                                 <span className="ph-xp-period">{item.period}</span>
@@ -246,10 +279,9 @@ export default function AboutPage() {
                                 <span className="ph-xp-org">{item.org}</span>
                             </div>
                         ))}
-                    </div>
+                    </Row>
 
-                    <p className="ph-eyebrow" style={{ marginTop: '80px' }}>{t.aboutPage.educationLabel}</p>
-                    <div style={{ marginTop: '40px' }}>
+                    <Row label={t.aboutPage.educationLabel}>
                         {education.map(item => (
                             <div key={item.role} className="ph-xp-row">
                                 <span className="ph-xp-period">{item.period}</span>
@@ -257,7 +289,7 @@ export default function AboutPage() {
                                 <span className="ph-xp-org">{item.org}</span>
                             </div>
                         ))}
-                    </div>
+                    </Row>
                 </div>
             </section>
 
