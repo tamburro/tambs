@@ -447,18 +447,6 @@ body {
     background: var(--ph-ink);
 }
 
-.sphere-gallery-vignette {
-    background:
-        linear-gradient(to right,
-            rgba(16, 16, 16, 0.78) 0%,
-            rgba(16, 16, 16, 0.32) 14%,
-            transparent 32%,
-            transparent 68%,
-            rgba(16, 16, 16, 0.32) 86%,
-            rgba(16, 16, 16, 0.78) 100%),
-        radial-gradient(ellipse at center, transparent 55%, rgba(16, 16, 16, 0.82) 100%);
-}
-
 /* ───────────────────────────── Page scaffolding (About / Contact) ───────────────────────────── */
 
 .ph-page {
@@ -903,13 +891,4 @@ a.ph-info-value:hover {
     .ph-about-toggle { top: 78px; left: 16px; }
     .ph-list { padding: 120px 16px 160px; }
     .ph-list-preview { display: none; }
-    .sphere-gallery-vignette {
-        background:
-            linear-gradient(to right,
-                rgba(16, 16, 16, 0.6) 0%,
-                transparent 18%,
-                transparent 82%,
-                rgba(16, 16, 16, 0.6) 100%),
-            radial-gradient(ellipse at center, transparent 55%, rgba(16, 16, 16, 0.82) 100%);
-    }
 }

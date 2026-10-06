@@ -124,6 +124,26 @@ export default function SphereGallery({ activeFilter = null }) {
             })
         }
 
+        // per-pixel dimming by angle from the view axis, so tiles darken along the sphere's curve
+        function applyAngularFalloff(mat) {
+            mat.userData.hover = { value: 0 }
+            mat.onBeforeCompile = shader => {
+                shader.uniforms.uHover = mat.userData.hover
+                shader.vertexShader = shader.vertexShader
+                    .replace('#include <common>', '#include <common>\nvarying vec3 vViewPos;')
+                    .replace('#include <project_vertex>', '#include <project_vertex>\nvViewPos = mvPosition.xyz;')
+                shader.fragmentShader = shader.fragmentShader
+                    .replace('#include <common>', '#include <common>\nvarying vec3 vViewPos;\nuniform float uHover;')
+                    .replace('#include <dithering_fragment>', `
+                        float viewDot = -normalize(vViewPos).z;
+                        float falloff = smoothstep(0.45, 0.97, viewDot);
+                        falloff = mix(falloff, 1.0, uHover * 0.6);
+                        gl_FragColor.a *= 0.16 + 0.84 * falloff;
+                        #include <dithering_fragment>`)
+            }
+            return mat
+        }
+
         const loader = new THREE.TextureLoader()
         const tiles = []
         let loadedCount = 0
@@ -157,12 +177,12 @@ export default function SphereGallery({ activeFilter = null }) {
                 lon - TILE_PHI / 2, TILE_PHI * 0.92,
                 thetaStart, height
             )
-            const mat = new THREE.MeshBasicMaterial({
+            const mat = applyAngularFalloff(new THREE.MeshBasicMaterial({
                 map: tex,
                 side: THREE.BackSide,
                 transparent: true,
                 opacity: 0,
-            })
+            }))
             return new THREE.Mesh(geo, mat)
         }
 
@@ -179,12 +199,12 @@ export default function SphereGallery({ activeFilter = null }) {
                     lon - TILE_PHI / 2, TILE_PHI,
                     thetaCenter - TILE_THETA / 2, TILE_THETA
                 )
-                const mat = new THREE.MeshBasicMaterial({
+                const mat = applyAngularFalloff(new THREE.MeshBasicMaterial({
                     color: 0xffffff,
                     side: THREE.BackSide,
                     transparent: true,
                     opacity: 0,
-                })
+                }))
                 loader.load(project.src, tex => {
                     tex.colorSpace = THREE.SRGBColorSpace
                     tex.wrapS = THREE.RepeatWrapping
@@ -402,9 +422,6 @@ export default function SphereGallery({ activeFilter = null }) {
         }
         window.addEventListener('resize', onResize)
 
-        const forward = new THREE.Vector3()
-        const tileWorldDir = new THREE.Vector3()
-
         let rafId
         function animate() {
             rafId = requestAnimationFrame(animate)
@@ -460,16 +477,13 @@ export default function SphereGallery({ activeFilter = null }) {
                 }
             }
 
-            // angular opacity falloff (tiles dim toward edges of view)
-            camera.getWorldDirection(forward)
+            // angular falloff itself happens per pixel in the shader (applyAngularFalloff)
             tiles.forEach(tile => {
-                tileWorldDir.copy(tile.userData.centerDir).applyQuaternion(group.quaternion)
-                const dot = tileWorldDir.dot(forward)
-                const falloff = THREE.MathUtils.smoothstep(dot, -0.1, 0.75)
-                const base = tile.userData.baseOpacity * (0.18 + falloff * 0.82) * tile.userData.filterDim
-                tile.material.opacity = Math.min(1, base + tile.userData.hoverBoost * 0.35)
+                tile.material.opacity = tile.userData.baseOpacity * tile.userData.filterDim
+                tile.material.userData.hover.value = tile.userData.hoverBoost
                 tile.userData.labelMeshes.forEach(label => {
                     label.material.opacity = tile.material.opacity * 0.85
+                    label.material.userData.hover.value = tile.userData.hoverBoost
                 })
             })
 
