@@ -105,6 +105,7 @@ export const translations = {
       showGallery: 'Show Images',
       hideGallery: 'Hide Images',
       backToProjects: 'Back to Works',
+      related: 'Related work',
     },
     footer: {
       cta: "Let's Talk",
@@ -214,6 +215,7 @@ export const translations = {
       showGallery: 'Ver Imagens',
       hideGallery: 'Ocultar Imagens',
       backToProjects: 'Voltar aos Trabalhos',
+      related: 'Trabalhos relacionados',
     },
     footer: {
       cta: 'Vamos Conversar',

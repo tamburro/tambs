@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiExternalLinkLine } from '@remixicon/react';
 import { useLanguage } from '@/context/LanguageContext';
+import ProjectHero from '@/components/projects/ProjectHero';
+import RelatedProjects from '@/components/projects/RelatedProjects';
 
 // ─── iFood accent ─────────────────────────────────────────────────────────────
 const RED  = '#E8471A';
@@ -1185,88 +1186,15 @@ const SECTION_COMPONENTS = {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 const RichProjectPage = ({ project }) => {
-    const parallaxRef = useRef(null);
-    const [offsetY, setOffsetY] = useState(0);
     const { t, lang } = useLanguage();
     const pick = (pt, en) => lang === 'en' && en ? en : pt;
 
-    useEffect(() => {
-        const handleScroll = () => setOffsetY(window.scrollY);
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const hasLinks = project.prototypeLink || project.prototypeLinks?.length > 0 || project.liveDemoLink;
     const accent = project.accentColor || RED;
 
     return (
         <div className="single-project-page-design">
 
-            {/* Hero com Parallax — idêntico ao SingleProjectPage */}
-            <div className="project-parallax-hero" ref={parallaxRef}>
-                {(project.pageSrc || project.src) && (
-                    <div
-                        className="project-parallax-bg"
-                        style={{ transform: `translateY(${offsetY * 0.35}px)` }}
-                    >
-                        <Image
-                            src={project.pageSrc || project.src}
-                            alt={`Imagem principal do projeto ${project.title}`}
-                            fill
-                            sizes="100vw"
-                            style={{ objectFit: 'cover', objectPosition: 'top' }}
-                            priority
-                        />
-                    </div>
-                )}
-                <div className="project-parallax-overlay" />
-                <div className="project-parallax-content container">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="parallax-title-box mb-4">
-                                <p className="project-sub-title">{project.category} | {project.client || 'Projeto Pessoal'}</p>
-                                <h1 className="project-main-title">{project.title}</h1>
-                            </div>
-                            <div className="project-parallax-info-row">
-                                {project.year     && <div className="parallax-info-box"><p>{t.project.year}</p><h3>{project.year}</h3></div>}
-                                {project.role     && <div className="parallax-info-box"><p>{t.project.role}</p><h3>{pick(project.role, project.role_en)}</h3></div>}
-                                {project.timeline && <div className="parallax-info-box"><p>{t.project.duration}</p><h3>{pick(project.timeline, project.timeline_en)}</h3></div>}
-                                {project.team     && <div className="parallax-info-box"><p>{t.project.team}</p><h3>{pick(project.team, project.team_en)}</h3></div>}
-                                {project.tools?.length > 0 && (
-                                    <div className="parallax-info-box">
-                                        <p>{t.project.tools}</p>
-                                        <h3>{project.tools.join(' · ')}</h3>
-                                    </div>
-                                )}
-                                {hasLinks && (
-                                    <div className="parallax-info-box parallax-info-box--cta">
-                                        <p>{t.project.viewProject}</p>
-                                        <div className="parallax-cta-links">
-                                            {project.prototypeLinks?.length > 0
-                                                ? project.prototypeLinks.map((link, i) => (
-                                                    <Link key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="parallax-cta-link">
-                                                        {pick(link.label, link.label_en)} <RiExternalLinkLine size={13} />
-                                                    </Link>
-                                                ))
-                                                : project.prototypeLink
-                                                    ? <Link href={project.prototypeLink} target="_blank" rel="noopener noreferrer" className="parallax-cta-link">
-                                                        {t.project.prototype} <RiExternalLinkLine size={13} />
-                                                      </Link>
-                                                    : null
-                                            }
-                                            {project.liveDemoLink && (
-                                                <Link href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="parallax-cta-link">
-                                                    {t.project.liveDemo} <RiExternalLinkLine size={13} />
-                                                </Link>
-                                            )}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ProjectHero project={project} />
 
             {/* TL;DR */}
             {project.tldr && (
@@ -1431,6 +1359,8 @@ const RichProjectPage = ({ project }) => {
                     </SectionShell>
                 );
             })}
+
+            <RelatedProjects project={project} />
 
             <footer className="ph-footer ph-proj-footer">
                 <div className="ph-container">
