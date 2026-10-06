@@ -609,6 +609,43 @@ export const projectsData = [
         },
         {
           "type": "text",
+          "title": "Design system: Night Shift",
+          "title_en": "Design system: Night Shift",
+          "content": "O sistema visual veio antes das telas e foi escrito como documento, o DESIGN.md do repositório, com os tokens que o Tailwind e os componentes consomem. A ideia central são duas superfícies com função definida: o escuro é onde o sistema opera, no portão, no caixa e no backoffice, e o papel creme é onde ele presta contas, em ingresso, recibo e extrato. Trocar de superfície não é tema, é a interface dizendo em que modo está.",
+          "content_en": "The visual system came before the screens and was written as a document, the repository's DESIGN.md, with the tokens that Tailwind and the components consume. The core idea is two surfaces with a defined job: dark is where the system operates, at the gate, the till and the back office, and cream paper is where it reports back, on tickets, receipts and statements. Switching surfaces isn't a theme, it's the interface saying which mode it is in.",
+          "highlights": [
+            "Um acento fora da semântica: O magenta-palco aparece uma vez por faixa de tela, na ação principal. Ele ficou fora do verde, amarelo e vermelho de propósito, porque no portão essas cores já significam autorizado, atenção e negado.",
+            "Pendente tem cor própria: Fila offline não é erro. Pintar de vermelho faria o operador tentar consertar o que só precisa de rede.",
+            "O dinheiro tem tipografia: Archivo na sinalização, Instrument Sans na interface e IBM Plex Mono em toda célula de dinheiro, com algarismos tabulares e alinhamento à direita.",
+            "Cara de equipamento: Cantos de 4 a 8 px e profundidade por troca de superfície e fio de 1 px, sem sombra difusa.",
+            "Tema claro não é o escuro invertido: Ele existe para o backoffice de dia. O magenta ganhou uma versão própria para texto pequeno, e o contraste foi validado em WCAG AA nos dois temas."
+          ],
+          "highlights_en": [
+            "An accent outside the semantic range: Stage magenta appears once per band of the screen, on the main action. It was kept away from green, yellow and red on purpose, because at the gate those colors already mean authorized, warning and denied.",
+            "Pending has its own color: An offline queue isn't an error. Painting it red would make the operator try to fix something that only needs a connection.",
+            "Money has its own typeface: Archivo for signage, Instrument Sans for the interface and IBM Plex Mono in every money cell, with tabular figures and right alignment.",
+            "It looks like equipment: Corners of 4 to 8 px and depth through surface changes and 1 px hairlines, with no soft shadows.",
+            "Light theme isn't dark inverted: It exists for daytime back-office work. Magenta got its own variant for small text, and contrast was validated against WCAG AA in both themes."
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Fundamentos",
+          "title_en": "Foundations",
+          "src": "/images/projects/vira/vira_ds_fundamentos.jpg",
+          "caption": "As duas superfícies, o acento com os quatro estados e os três papéis da tipografia, na página do sistema visual que acompanha o repositório.",
+          "caption_en": "The two surfaces, the accent with its four states and the three typographic roles, on the visual system page that lives alongside the repository (in Portuguese)."
+        },
+        {
+          "type": "image",
+          "title": "Modo campo",
+          "title_en": "Field mode",
+          "src": "/images/projects/vira/vira_ds_campo.jpg",
+          "caption": "Um conjunto de regras para quem trabalha em pé, sob sol e com pressa: alvo de toque de 56 px, cor chapada em mais de 40% da tela, preto sobre a cor saturada e o resultado nunca dito só por cor.",
+          "caption_en": "A set of rules for people working on their feet, in sunlight and in a hurry: 56 px touch targets, solid color on more than 40% of the screen, black over the saturated color and a result never conveyed by color alone (in Portuguese)."
+        },
+        {
+          "type": "text",
           "title": "Comprar sem sair da vitrine",
           "title_en": "Buying without leaving the storefront",
           "content": "A compra abre num modal por cima da vitrine, com a própria página de compra do sistema dentro. Pix, cartão e aceite dos termos ficam num lugar só, sem código de pagamento duplicado. Fechar o modal não perde nada: quem fecha no meio do Pix e reabre volta para o mesmo QR. Para isso funcionar com segurança, o sistema passou a recusar ser aberto dentro de qualquer outro site; só a página de compra aceita a vitrine.\n\nA conta de comprador é opcional e não tem senha: a conta é o e-mail, o acesso é por código e dura 30 dias no aparelho. Ela junta todos os CPFs comprados com aquele e-mail, como uma família, e mostra os ingressos válidos e o histórico de compras.",
