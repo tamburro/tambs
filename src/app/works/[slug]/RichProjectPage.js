@@ -1345,7 +1345,7 @@ const RichProjectPage = ({ project }) => {
                                             <div className="cs-phone-screen">
                                                 <Image
                                                     src={img.src}
-                                                    alt={img.caption || title || project.title}
+                                                    alt={pick(img.caption, img.caption_en) || title || project.title}
                                                     width={img.width || 390}
                                                     height={img.height || 844}
                                                     sizes="(max-width: 768px) 50vw, 14vw"
@@ -1354,7 +1354,7 @@ const RichProjectPage = ({ project }) => {
                                             </div>
                                             <div className="cs-phone-bar" />
                                         </div>
-                                        {img.caption && <figcaption style={{ fontSize: 11, color: 'var(--mist)', textAlign: 'center', marginTop: 8 }}>{img.caption}</figcaption>}
+                                        {img.caption && <figcaption style={{ fontSize: 11, color: 'var(--mist)', textAlign: 'center', marginTop: 8 }}>{pick(img.caption, img.caption_en)}</figcaption>}
                                     </figure>
                                 ))}
                             </div>

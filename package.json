@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.2.0",
-    "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.12.72",
     "@tailwindcss/postcss": "^4.2.2",
     "bootstrap": "^5.3.3",
     "framer-motion": "^12.42.2",
@@ -19,7 +17,6 @@
     "next": "^16.2.12",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-fast-marquee": "^1.6.5",
     "resend": "^6.9.4",
     "three": "^0.184.0"
   },

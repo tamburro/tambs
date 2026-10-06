@@ -130,6 +130,23 @@ const SingleProjectPage = ({ params }) => {
                 <div className="row justify-content-center">
                     <div className="col-12">
 
+                        {project.tldr && (
+                            <div className="cs-tldr">
+                                <div className="cs-tldr-item">
+                                    <span className="cs-tldr-label">{t.project.tldrProblem}</span>
+                                    <p>{pick(project.tldr.problem, project.tldr.problem_en)}</p>
+                                </div>
+                                <div className="cs-tldr-item">
+                                    <span className="cs-tldr-label">{t.project.tldrRole}</span>
+                                    <p>{pick(project.tldr.role, project.tldr.role_en)}</p>
+                                </div>
+                                <div className="cs-tldr-item">
+                                    <span className="cs-tldr-label">{t.project.tldrOutcome}</span>
+                                    <p>{pick(project.tldr.outcome, project.tldr.outcome_en)}</p>
+                                </div>
+                            </div>
+                        )}
+
                         {project.description && (
                             <div className="project-section project-section--first">
                                 <h3>{t.project.overview}</h3>

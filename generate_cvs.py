@@ -10,7 +10,8 @@ from reportlab.lib.utils import ImageReader
 from PIL import Image
 import tempfile, os
 
-PROFILE_PHOTO = "/Users/pedro/Documents/projetos/portfolio/bentos-next/public/images/about/profile3.png"
+BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
+PROFILE_PHOTO = os.path.join(BASE, "images/about/profile3.png")
 
 def _prepare_photo(photo_path):
     """Convert RGBA PNG to RGB JPEG for reportlab compatibility."""
@@ -566,7 +567,6 @@ EN_DATA = {
     ],
 }
 
-BASE = "/Users/pedro/Documents/projetos/portfolio/bentos-next/public"
 
 generate_cv(f"{BASE}/pedro-tamburro-cv-pt.pdf", PT_DATA)
 generate_cv(f"{BASE}/pedro-tamburro-cv-en.pdf", EN_DATA)

@@ -1146,7 +1146,7 @@ export const projectsData = [
             },
             {
               "value": "R$0",
-              "label": "plano gratuito com brand system completo"
+              "label": "plano gratuito com 1 brand system e 3 paletas"
             }
           ],
           "metrics_en": [
@@ -1160,7 +1160,7 @@ export const projectsData = [
             },
             {
               "value": "R$0",
-              "label": "free plan with complete brand system"
+              "label": "free plan with 1 brand system and 3 palettes"
             }
           ]
         },
@@ -1801,7 +1801,7 @@ export const projectsData = [
                 highlights_en: [
                     "Users simultaneously use WhatsApp + spreadsheet + maps app to plan",
                     "The itinerary 'owner' becomes a bottleneck: any change goes through them",
-                    "Pós-viagem é frequentemente ignorado pelos apps, fazendo com que memórias e fotos se percam",
+                    "Map view is essential to understand the itinerary sequence",
                     "Post-trip is often ignored by apps, causing memories and photos to get lost"
                 ]
             },
@@ -2010,7 +2010,7 @@ export const projectsData = [
                 methods: ["Testes moderados gravados", "5 participantes por modelo", "Análise qualitativa pós-teste"],
                 methods_en: ["Recorded moderated tests", "5 participants per model", "Post-test qualitative analysis"],
                 content: "Desenvolvemos dois protótipos navegáveis. Modelo A: moodboard interativo, onde o usuário arrasta peças que vão sendo sugeridas de acordo com suas escolhas. Modelo B: escolha binária estilo Tinder, curtindo ou descartando looks, com novos modelos sendo sugeridos adaptativamente. 10 usuários testaram os protótipos, 5 por modelo.",
-                content_en: "We developed two navigable prototypes. Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido. A variedade de categorias, que inclui paletas, estampas e objetos, deu segurança ao usuário de que seu estilo seria compreendido. Visualizar o resumo de todas as escolhas ao final foi valorizado em ambos os modelos. Usuários do Modelo A relataram dificuldade em entender o funcionamento, já que a curva de aprendizado foi um obstáculo.",
+                content_en: "We developed two navigable prototypes. Model A: an interactive moodboard, where the user drags pieces that are suggested according to their choices. Model B: Tinder-style binary choice, liking or discarding looks, with new ones suggested adaptively. 10 users tested the prototypes, 5 per model.",
                 highlights: [
                     "Modelo B foi mais intuitivo, pois o mecanismo de swipe já é um padrão mental estabelecido",
                     "Imagens grandes (Modelo B) foram mais valorizadas do que peças em miniatura (Modelo A)",
@@ -2092,7 +2092,7 @@ export const projectsData = [
         role: "UX Designer & Researcher",
         timeline: "3 meses",
         timeline_en: "3 months",
-        team: "7 integrantes",
+        team: "4 integrantes",
         client: "Projeto Acadêmico · Pós-graduação Infnet",
         tools: ["Figma", "Miro"],
         prototypeLink: "https://www.figma.com/proto/IEQMzJVFMRJ5gMPQ7lAsX2/Prot%C3%B3tipo?node-id=62-1369&starting-point-node-id=62%3A1369&t=N0QqFqUBLfg7T0Y9-1",
@@ -2194,7 +2194,6 @@ export const projectsData = [
     },
     {
         id: 8,
-        hidden: true,
         slug: "palavra-selvagem",
         liveDemoLink: "https://palavraselvagem.vercel.app/",
         src: "/images/projects/palavraselvagem_full2.jpg",
@@ -2270,7 +2269,6 @@ export const projectsData = [
     },
     {
         id: 9,
-        hidden: true,
         slug: "orbinum",
         liveDemoLink: "https://orbinum.vercel.app/",
         src: "/images/projects/orbinum_full.jpg",
@@ -2345,7 +2343,6 @@ export const projectsData = [
     },
     {
         id: 10,
-        hidden: true,
         slug: "veradice",
         liveDemoLink: "https://veradice.vercel.app/",
         src: "/images/projects/veradice_full.jpg",
@@ -2789,8 +2786,7 @@ export const projectsData = [
               "src": "/images/projects/ensineme/ensineme_animado.mp4",
               "poster": "/images/projects/ensineme/ensineme_animado_poster.jpg",
               "caption": "A plataforma em diferentes dispositivos",
-              "caption_en": "The platform across different devices",
-              "span": 2
+              "caption_en": "The platform across different devices"
             },
             {
               "src": "/images/projects/ensineme/prints/mockup_relacoes_internacionais.jpg",

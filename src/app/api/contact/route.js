@@ -1,19 +1,27 @@
 import { Resend } from 'resend';
 
+const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+));
+
 export async function POST(request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     try {
-        const { name, email, message } = await request.json();
+        const body = await request.json();
 
-        if (!name || !email || !message) {
+        if (!body.name || !body.email || !body.message) {
             return Response.json({ error: 'Campos obrigatórios faltando.' }, { status: 400 });
         }
+
+        const name = escapeHtml(body.name);
+        const email = escapeHtml(body.email);
+        const message = escapeHtml(body.message);
 
         const { error } = await resend.emails.send({
             from: 'Portfolio <onboarding@resend.dev>',
             to: 'pedropaulotjr@gmail.com',
-            replyTo: email,
-            subject: `[Portfolio] Nova mensagem de ${name}`,
+            replyTo: body.email,
+            subject: `[Portfolio] Nova mensagem de ${body.name}`,
             html: `
                 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #0D0D18; color: #F0F0FA; border-radius: 12px;">
                     <h2 style="color: #C070FF; margin-bottom: 24px;">Nova mensagem do portfólio</h2>

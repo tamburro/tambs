@@ -8,7 +8,7 @@ const BottomNav = () => {
     const pathname = usePathname()
     const { t } = useLanguage()
 
-    if (pathname.startsWith('/works') || pathname.startsWith('/universobservavel')) return null
+    if (pathname.startsWith('/works')) return null
 
     const items = [
         { href: '/', label: t.nav.work },

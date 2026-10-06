@@ -251,6 +251,10 @@ export function LanguageProvider({ children }) {
     setLang(newLang)
   }, [])
 
+  useEffect(() => {
+    if (lang) document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
+  }, [lang])
+
   // Use 'en' while not yet mounted (avoids SSR/hydration mismatch)
   const activeLang = lang ?? 'en'
 
