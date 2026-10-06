@@ -649,10 +649,6 @@ body {
     margin-bottom: 28px;
 }
 
-.ph-word--dim {
-    color: var(--ph-mist);
-}
-
 .ph-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -735,8 +731,7 @@ body {
 }
 
 .ph-lede {
-    --lede-size: clamp(24px, 3.2vw, 44px);
-    position: relative;
+    --lede-size: clamp(28px, 4vw, 60px);
 }
 
 .ph-lede--small {
@@ -744,29 +739,29 @@ body {
 }
 
 .ph-lede .ph-eyebrow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: calc(var(--lede-size) * 1.14);
-    margin: 0;
+    margin-bottom: 24px;
 }
 
 .ph-lede .ph-statement {
     font-size: var(--lede-size);
-    text-indent: 25%;
+}
+
+.ph-lede-rest,
+.ph-lede-sub {
+    max-width: 64ch;
+    margin: 32px 0 0 25%;
 }
 
 .ph-lede-sub {
-    margin: calc(32px - var(--ph-block-gap)) 0 0 25%;
-    max-width: 64ch;
+    margin-top: calc(16px - var(--ph-block-gap));
+}
+
+.ph-row .ph-lede-rest {
+    margin: 20px 0 0;
 }
 
 .ph-rows .ph-stats {
     margin-top: 0;
-}
-
-.ph-row .ph-lede .ph-statement {
-    text-indent: 0;
 }
 
 .ph-stats {
@@ -774,6 +769,29 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 4px;
     margin-top: 90px;
+}
+
+.ph-brands {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.ph-brands-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.ph-brands-track img {
+    height: 30px;
+    width: auto;
+    margin-right: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ph-brands { mask-image: none; }
+    .ph-brands-track { width: auto; flex-wrap: wrap; row-gap: 28px; }
+    .ph-brands-track img[aria-hidden="true"] { display: none; }
 }
 
 .ph-stats--3 {
@@ -1236,9 +1254,7 @@ a.ph-info-value:hover {
     .ph-service-row .ph-body { grid-column: 2; }
     .ph-xp-row { grid-template-columns: 1fr; gap: 6px; }
     .ph-ai-rules { grid-template-columns: 1fr; }
-    .ph-lede .ph-eyebrow { position: static; height: auto; margin-bottom: 20px; }
-    .ph-lede .ph-statement { text-indent: 0; }
-    .ph-lede-sub { margin-left: 0; }
+    .ph-lede-rest, .ph-lede-sub { margin-left: 0; }
     .ph-row { grid-template-columns: 1fr; }
     .ph-row > .ph-eyebrow { margin: 0 0 20px; }
     .ph-row > span:first-child { display: none; }

@@ -8,25 +8,23 @@ import { useLanguage } from '@/context/LanguageContext'
 
 const STRIP_COUNT = 5
 
+// logo files are /images/client-logos/partner1.png … partner9.png, in this order
+const BRANDS = ['O Globo', 'Globo+', 'Clube O Globo', 'Extra', 'Valor One', 'Valor Econômico', 'YDUQS', 'EnsineMe', 'Estácio']
+
 // full-width statement with the label sitting in the first-line indent
-// the first sentence reads in white, the rest steps back to grey
+// only the first sentence is set big; the rest follows as body copy
 function Lede({ label, text, small }) {
-    const lead = text.indexOf('. ') + 1 || text.length
-    let offset = 0
+    const cut = text.indexOf('. ') + 1 || text.length
+    const rest = text.slice(cut).trim()
     return (
         <div className={`ph-lede ${small ? 'ph-lede--small' : ''}`}>
             {label && <p className="ph-eyebrow">{label}</p>}
             <p className="ph-statement">
-                {text.split(' ').map((word, i) => {
-                    const dim = offset >= lead
-                    offset += word.length + 1
-                    return (
-                        <React.Fragment key={i}>
-                            <span className={`ph-word ${dim ? 'ph-word--dim' : ''}`}>{word}</span>{' '}
-                        </React.Fragment>
-                    )
-                })}
+                {text.slice(0, cut).split(' ').map((word, i) => (
+                    <React.Fragment key={i}><span className="ph-word">{word}</span>{' '}</React.Fragment>
+                ))}
             </p>
+            {rest && <p className="ph-body ph-lede-rest">{rest}</p>}
         </div>
     )
 }
@@ -91,7 +89,9 @@ export default function AboutPage() {
                 })
             })
 
-            const rise = '.ph-lede-sub, .ph-stat, .ph-service-row, .ph-step, .ph-proof-card, .ph-xp-row, .ph-ai-rules li, .ph-chips'
+            gsap.to('.ph-brands-track', { xPercent: -50, duration: 40, ease: 'none', repeat: -1 })
+
+            const rise = '.ph-lede-rest, .ph-lede-sub, .ph-stat, .ph-service-row, .ph-step, .ph-proof-card, .ph-xp-row, .ph-ai-rules li, .ph-chips'
             gsap.set(rise, { opacity: 0, y: 32 })
             ScrollTrigger.batch(rise, {
                 start: 'top 90%',
@@ -173,6 +173,21 @@ export default function AboutPage() {
                                     <p className="ph-stat-label">{stat.label}</p>
                                 </div>
                             ))}
+                        </div>
+                    </Row>
+
+                    <Row label={t.aboutPage.brandsLabel}>
+                        <div className="ph-brands">
+                            <div className="ph-brands-track">
+                                {[0, 1].map(copy => BRANDS.map((name, i) => (
+                                    <img
+                                        key={`${copy}-${name}`}
+                                        src={`/images/client-logos/partner${i + 1}.png`}
+                                        alt={copy ? '' : name}
+                                        aria-hidden={copy === 1}
+                                    />
+                                )))}
+                            </div>
                         </div>
                     </Row>
                 </div>
