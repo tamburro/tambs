@@ -1292,6 +1292,42 @@ const RichProjectPage = ({ project }) => {
                     );
                 }
 
+                if (section.type === 'videos') {
+                    // só um vídeo toca por vez
+                    const pauseOthers = (e) => document.querySelectorAll('.cs-video-player').forEach(v => v !== e.target && v.pause());
+                    return (
+                        <SectionShell key={i} num={num} title={title} accent={accent}>
+                            {section.content && (
+                                <p className="ph-case-text" style={{ marginBottom: 24 }}>
+                                    {pick(section.content, section.content_en)}
+                                </p>
+                            )}
+                            <div className="cs-screens-row">
+                                {section.videos?.map((video, j) => (
+                                    <figure key={j} style={{ flex: '0 0 auto', width: 'clamp(220px, 62vw, 280px)', scrollSnapAlign: 'start', margin: 0 }}>
+                                        <video
+                                            className="cs-video-player"
+                                            src={video.src}
+                                            poster={video.poster}
+                                            controls
+                                            playsInline
+                                            preload="none"
+                                            onPlay={pauseOthers}
+                                            aria-label={pick(video.caption, video.caption_en)}
+                                            style={{ width: '100%', aspectRatio: '9 / 16', display: 'block', borderRadius: 12, border: '1px solid rgba(255,255,255,0.07)', background: '#000' }}
+                                        />
+                                        {video.caption && (
+                                            <figcaption style={{ margin: '10px 0 0', fontSize: 12, color: 'var(--mist)', fontFamily: 'var(--ph-mono)', letterSpacing: '0.04em' }}>
+                                                {pick(video.caption, video.caption_en)}
+                                            </figcaption>
+                                        )}
+                                    </figure>
+                                ))}
+                            </div>
+                        </SectionShell>
+                    );
+                }
+
                 if (section.type === 'gallery') {
                     const cols = section.columns || 2;
                     return (

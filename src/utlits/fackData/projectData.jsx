@@ -2,6 +2,235 @@
 
 export const projectsData = [
     {
+      "id": 23,
+      "slug": "daniele-guerra-contabilidade",
+      "src": "/images/projects/danieleguerra/danieleguerra_full.jpg",
+      "category": "Vídeo com IA & Product Design",
+      "tags": [
+        "Product Design",
+        "Full-Stack",
+        "Motion"
+      ],
+      "title": "Daniele Guerra Contabilidade",
+      "tagline": "Vídeos curtos com avatar e gráficos em 3D para um escritório de contabilidade, e o caminho depois deles: simuladores por nicho e um site novo.",
+      "tagline_en": "Short videos with an avatar and 3D charts for an accounting firm, and the path after them: niche calculators and a new website.",
+      "tldr": {
+        "problem": "Um escritório de contabilidade pequeno precisa aparecer toda semana nas redes, mas a contadora não tem tempo para gravar. E vídeo sozinho não traz cliente: quem assiste precisa de um próximo passo que não seja só \"me chama no WhatsApp\".",
+        "problem_en": "A small accounting firm needs to show up on social media every week, but the accountant has no time to record. And video alone doesn't bring clients: viewers need a next step other than \"message me on WhatsApp\".",
+        "role": "Tudo do roteiro de produção à publicação: adaptação dos textos, geração do avatar e da voz, gráficos, legenda, montagem, simuladores, protótipo do site e planejamento.",
+        "role_en": "Everything from production script to publishing: text adaptation, avatar and voice generation, charts, captions, editing, calculators, website prototype and planning.",
+        "outcome": "16 roteiros levados a vídeo final num padrão único de produção, 4 simuladores por nicho e um protótipo de site publicados para validação da cliente.",
+        "outcome_en": "16 scripts taken to final video under a single production standard, plus 4 niche calculators and a website prototype published for client review."
+      },
+      "description": "Produção recorrente de vídeos verticais de cerca de 30 segundos para a Daniele Guerra Contabilidade, no Rio de Janeiro. A contadora escreve ou aprova cada texto; o vídeo sai com o avatar e a voz dela, gráficos animados em tela cheia e legenda palavra a palavra. Em volta dos vídeos, desenhei e programei quatro simuladores (psicólogas, profissionais da saúde, MEI e empresas) e um protótipo de site que os reúne.",
+      "description_en": "Recurring production of roughly 30-second vertical videos for Daniele Guerra Contabilidade, in Rio de Janeiro. The accountant writes or approves every script; the video ships with her avatar and voice, full-screen animated charts and word-by-word captions. Around the videos, I designed and coded four calculators (psychologists, health professionals, sole traders and companies) and a website prototype that brings them together.",
+      "year": "2026",
+      "role": "Roteiro de produção, vídeo, design e código",
+      "role_en": "Production scripting, video, design & code",
+      "timeline": "Ago a out 2026 · em andamento",
+      "timeline_en": "Aug to Oct 2026 · ongoing",
+      "team": "Solo · textos aprovados pela contadora",
+      "team_en": "Solo · scripts approved by the accountant",
+      "client": "Daniele Guerra Contabilidade",
+      "tools": [
+        "HeyGen",
+        "ElevenLabs",
+        "Blender",
+        "ffmpeg",
+        "Claude Code"
+      ],
+      "accentColor": "#30426B",
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O problema",
+          "title_en": "The problem",
+          "content": "Contabilidade é um serviço que as pessoas contratam por confiança, e confiança pede rosto e constância. Gravar toda semana não cabia na rotina da contadora. A saída foi um avatar dela, com a voz dela, falando textos que ela mesma aprova.\n\nO segundo problema veio depois: os vídeos terminavam em \"me chama no WhatsApp\", e isso pede muito de quem acabou de conhecer o escritório. Faltava um passo intermediário em que a pessoa visse o próprio caso antes de conversar.",
+          "content_en": "Accounting is a service people hire on trust, and trust needs a face and consistency. Recording every week didn't fit the accountant's routine. The answer was an avatar of her, with her voice, speaking scripts she approves herself.\n\nThe second problem came later: the videos ended with \"message me on WhatsApp\", which asks a lot from someone who has just met the firm. An intermediate step was missing, one where people could see their own case before talking."
+        },
+        {
+          "type": "videos",
+          "title": "Os vídeos",
+          "title_en": "The videos",
+          "content": "Seis dos vídeos finais. Os quatro primeiros falam com um nicho e têm um simulador correspondente; os dois últimos são da série para empresários em geral.",
+          "content_en": "Six of the final videos (in Portuguese). The first four each address a niche and have a matching calculator; the last two belong to the series for business owners in general.",
+          "videos": [
+            {
+              "src": "/images/projects/danieleguerra/psicologas.mp4",
+              "poster": "/images/projects/danieleguerra/psicologas_poster.jpg",
+              "caption": "Psicólogas: carnê-leão ou CNPJ?",
+              "caption_en": "Psychologists: self-employed tax or a company?"
+            },
+            {
+              "src": "/images/projects/danieleguerra/saude.mp4",
+              "poster": "/images/projects/danieleguerra/saude_poster.jpg",
+              "caption": "Saúde: INSS acima do teto",
+              "caption_en": "Health professionals: social security paid above the cap"
+            },
+            {
+              "src": "/images/projects/danieleguerra/mei.mp4",
+              "poster": "/images/projects/danieleguerra/mei_poster.jpg",
+              "caption": "MEI: o prazo do Simples foi prorrogado",
+              "caption_en": "Sole traders: the tax-regime deadline was extended"
+            },
+            {
+              "src": "/images/projects/danieleguerra/reserva.mp4",
+              "poster": "/images/projects/danieleguerra/reserva_poster.jpg",
+              "caption": "Empresas: reserva não é luxo",
+              "caption_en": "Companies: a cash reserve is not a luxury"
+            },
+            {
+              "src": "/images/projects/danieleguerra/notafiscal.mp4",
+              "poster": "/images/projects/danieleguerra/notafiscal_poster.jpg",
+              "caption": "Nota fiscal não é burocracia",
+              "caption_en": "Invoices are not red tape"
+            },
+            {
+              "src": "/images/projects/danieleguerra/planilha.mp4",
+              "poster": "/images/projects/danieleguerra/planilha_poster.jpg",
+              "caption": "A planilha que você atualiza quando lembra",
+              "caption_en": "The spreadsheet you update when you remember"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Como cada vídeo é feito",
+          "title_en": "How each video is made",
+          "highlights": [
+            "Texto: O roteiro aprovado é dividido em cenas e ajustado para a fala. Vírgula vira pausa na voz, então frases longas são reescritas antes de gerar qualquer coisa.",
+            "Avatar e voz: O avatar é gerado no HeyGen a partir de uma foto dela em plano médio, com a voz clonada. Siglas passam por um glossário de pronúncia; a de INSS só foi aprovada depois de duas rodadas de teste em áudio.",
+            "Pausas: O avatar mexe a boca sem som em pausas longas. Um script corta os silêncios na pós, sempre num ponto em que a câmera muda de zoom ou um gráfico entra, para o salto não aparecer.",
+            "Gráficos: Feitos no Blender por script, em tela cheia e na paleta da marca. Eles mostram o que a fala não diz, em vez de repetir a frase por escrito.",
+            "Legenda: Frases de até 23 caracteres, com a palavra falada destacada em dourado, renderizadas a partir de HTML e sincronizadas pelo arquivo de legenda do avatar.",
+            "Área segura: Todo texto fica numa faixa que serve ao post orgânico e ao anúncio, fora das áreas que a interface do Instagram cobre."
+          ],
+          "highlights_en": [
+            "Script: The approved text is split into scenes and adjusted for speech. A comma becomes a pause in the voice, so long sentences are rewritten before anything is generated.",
+            "Avatar and voice: The avatar is generated in HeyGen from a medium-shot photo of her, with her cloned voice. Acronyms go through a pronunciation glossary; one of them was only approved after two rounds of audio tests.",
+            "Pauses: The avatar moves its mouth silently during long pauses. A script trims the silences in post, always where the camera changes zoom or a chart comes in, so the jump doesn't show.",
+            "Charts: Built in Blender by script, full screen and in the brand palette. They show what the speech doesn't say instead of repeating the sentence in writing.",
+            "Captions: Phrases of up to 23 characters, with the spoken word highlighted in gold, rendered from HTML and synced using the avatar's subtitle file.",
+            "Safe area: All text sits in a band that works for both organic posts and ads, clear of the areas Instagram's interface covers."
+          ]
+        },
+        {
+          "type": "outcomes",
+          "title": "Em números",
+          "title_en": "In numbers",
+          "metrics": [
+            {
+              "value": "16",
+              "label": "roteiros levados a vídeo final"
+            },
+            {
+              "value": "~30s",
+              "label": "por vídeo, em 9:16 e 1080p"
+            },
+            {
+              "value": "4",
+              "label": "simuladores, um por nicho"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "16",
+              "label": "scripts taken to final video"
+            },
+            {
+              "value": "~30s",
+              "label": "per video, in 9:16 at 1080p"
+            },
+            {
+              "value": "4",
+              "label": "calculators, one per niche"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Do vídeo ao contato",
+          "title_en": "From video to contact",
+          "content": "Cada simulador responde à pergunta do vídeo com os números da própria pessoa: quanto a psicóloga paga como pessoa física e como empresa, quanto de INSS o profissional da saúde pagou acima do teto, se o MEI corre risco de exclusão, quantos meses o caixa da empresa aguenta. No fim, o botão abre o WhatsApp com o resultado já escrito na mensagem, e a conversa começa pelo caso, não pelo \"oi\".\n\nSão páginas estáticas, sem servidor, pensadas primeiro para o celular. As regras de cálculo estão documentadas com a fonte de cada uma, e a tela diz quando a resposta não favorece a contratação: se pessoa física compensa mais, é isso que aparece.",
+          "content_en": "Each calculator answers the video's question with the viewer's own numbers: what a psychologist pays as an individual versus as a company, how much social security a health professional paid above the cap, whether a sole trader is at risk of exclusion, how many months a company's cash can last. At the end, the button opens WhatsApp with the result already written in the message, so the conversation starts from the case, not from \"hi\".\n\nThey are static pages with no server, designed mobile first. Calculation rules are documented with the source for each, and the screen says so when the answer doesn't favor hiring the firm: if staying an individual is cheaper, that's what it shows."
+        },
+        {
+          "type": "screens",
+          "title": "Simuladores e site",
+          "title_en": "Calculators and website",
+          "images": [
+            {
+              "src": "/images/projects/danieleguerra/hub.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Entrada dos simuladores",
+              "caption_en": "Calculator hub"
+            },
+            {
+              "src": "/images/projects/danieleguerra/psicologas-resultado.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Psicólogas",
+              "caption_en": "Psychologists"
+            },
+            {
+              "src": "/images/projects/danieleguerra/saude-resultado.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Saúde",
+              "caption_en": "Health"
+            },
+            {
+              "src": "/images/projects/danieleguerra/mei-resultado.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "MEI",
+              "caption_en": "Sole traders"
+            },
+            {
+              "src": "/images/projects/danieleguerra/empresas-resultado.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Empresas",
+              "caption_en": "Companies"
+            },
+            {
+              "src": "/images/projects/danieleguerra/site-hero.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Site: primeira tela",
+              "caption_en": "Website: first screen"
+            },
+            {
+              "src": "/images/projects/danieleguerra/site-simuladores.jpg",
+              "width": 780,
+              "height": 1688,
+              "caption": "Site: simuladores",
+              "caption_en": "Website: calculators"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "O que aprendi",
+          "title_en": "What I learned",
+          "highlights": [
+            "Testar antes de gerar em lote: Geração paga erra em silêncio. Um item de teste e a conferência dos parâmetros antes de cada lote viraram regra depois de um lote inteiro sair na proporção errada.",
+            "Emendar em vez de refazer: Quando a cliente mudou a primeira cena de um vídeo pronto, gerei só aquela cena e emendei num corte que já existia. Custou uma fração de gerar tudo de novo.",
+            "Prazo muda o roteiro: Um vídeo sobre um prazo fiscal ficou pronto no dia em que soubemos que o prazo tinha sido prorrogado. O substituto saiu no mesmo dia, reaproveitando parte dos gráficos.",
+            "Vídeo é o começo do caminho: Sem um destino que qualifique o contato, o vídeo gera visualização e pouca conversa. Por isso os simuladores e o site entraram no escopo."
+          ],
+          "highlights_en": [
+            "Test before generating in bulk: Paid generation fails silently. One test item and a parameter check before every batch became a rule after a whole batch came out in the wrong aspect ratio.",
+            "Splice instead of redoing: When the client changed the first scene of a finished video, I generated only that scene and spliced it in at an existing cut. It cost a fraction of regenerating everything.",
+            "Deadlines change the script: A video about a tax deadline was finished the day we learned the deadline had been extended. Its replacement shipped the same day, reusing some of the charts.",
+            "Video is the start of the path: Without a destination that qualifies the contact, video brings views and little conversation. That's why the calculators and the website joined the scope."
+          ]
+        }
+      ]
+    },
+    {
       "id": 22,
       "slug": "vira-ticketeria-propria",
       "src": "/images/projects/vira/vira_full.jpg",
