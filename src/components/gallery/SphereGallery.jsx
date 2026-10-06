@@ -15,6 +15,9 @@ export function getGalleryProjects() {
         .filter(Boolean)
 }
 
+// resized cover served by the Next image optimizer, instead of the 1920px original
+export const coverUrl = (src, width = 828) => `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=75`
+
 const RADIUS = 30
 const ROWS = [-0.68, -0.34, 0, 0.34, 0.68] // latitudes in radians
 const COLS = 12
@@ -146,6 +149,23 @@ export default function SphereGallery({ activeFilter = null }) {
         }
 
         const loader = new THREE.TextureLoader()
+        // one texture per project, shared by every tile that repeats it
+        const coverCache = {}
+        function withCover(project, onReady) {
+            let entry = coverCache[project.id]
+            if (!entry) {
+                entry = coverCache[project.id] = { tex: null, waiting: [] }
+                loader.load(coverUrl(project.src), tex => {
+                    tex.colorSpace = THREE.SRGBColorSpace
+                    tex.wrapS = THREE.RepeatWrapping
+                    tex.repeat.x = -1
+                    entry.tex = tex
+                    entry.waiting.forEach(fn => fn(tex))
+                })
+            }
+            if (entry.tex) onReady(entry.tex)
+            else entry.waiting.push(onReady)
+        }
         const tiles = []
         let loadedCount = 0
         const totalTiles = ROWS.length * COLS
@@ -259,10 +279,7 @@ export default function SphereGallery({ activeFilter = null }) {
                 bg.visible = false
                 group.add(bg)
 
-                loader.load(project.src, tex => {
-                    tex.colorSpace = THREE.SRGBColorSpace
-                    tex.wrapS = THREE.RepeatWrapping
-                    tex.repeat.x = -1
+                withCover(project, tex => {
                     mat.map = tex
                     mat.needsUpdate = true
                     if (!blurTexCache[project.id]) blurTexCache[project.id] = makeBlurTexture(tex.image)

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import gsap from 'gsap'
+import { coverUrl } from './SphereGallery'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function WorkList({ projects, activeFilter }) {
@@ -55,7 +56,7 @@ export default function WorkList({ projects, activeFilter }) {
                     key={project.id}
                     className="ph-list-row"
                     onClick={() => open(project)}
-                    onPointerEnter={() => setPreviewSrc(project.src)}
+                    onPointerEnter={() => setPreviewSrc(coverUrl(project.src))}
                     onPointerLeave={() => setPreviewSrc(null)}
                 >
                     <span className="ph-list-index">{String(i + 1).padStart(2, '0')}</span>
