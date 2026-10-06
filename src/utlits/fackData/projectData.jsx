@@ -50,11 +50,17 @@ export const projectsData = [
           "content_en": "Vira is an events company with its own ticketing platform. At an event, a brand competes for attention with the stage, the bar and the queue, and the usual activation loses that fight: people grab the giveaway, take the photo and forget whose booth it was.\n\nThe idea was to make simple, genuinely fun games with the brand inside the game rather than on a splash screen. The first one is a pinball, because anyone understands it in three seconds by watching someone play, a match is short and it makes you want another go."
         },
         {
+          "type": "component",
+          "title": "Jogue",
+          "title_en": "Play it",
+          "component": "PinballJogavel"
+        },
+        {
           "type": "videos",
-          "title": "O jogo",
-          "title_en": "The game",
-          "content": "Dois trechos da mesma partida na máquina Palco Principal: os primeiros 34 segundos, em que a mesa passa pelas três fases, e o Bis Final. Para gravar, o jogo roda com relógio manual e sorteio com semente, e um jogador automático aciona os flippers: a mesma partida se repete quadro a quadro, sem perda de imagem. O link no topo da página abre o jogo de verdade.",
-          "content_en": "Two stretches of the same match on the Main Stage machine: the first 34 seconds, in which the table goes through all three stages, and the Final Encore. For recording, the game runs on a manual clock with seeded randomness while an automated player works the flippers: the same match replays frame by frame, with no loss of image quality. The link at the top of the page opens the real game.",
+          "title": "Uma partida gravada",
+          "title_en": "A recorded match",
+          "content": "Dois trechos da mesma partida na máquina Palco Principal: os primeiros 34 segundos, em que a mesa passa pelas três fases, e o Bis Final. Para gravar, o jogo roda com relógio manual e sorteio com semente, e um jogador automático aciona os flippers: a mesma partida se repete quadro a quadro, sem perda de imagem. O jogo de verdade está na seção acima.",
+          "content_en": "Two stretches of the same match on the Main Stage machine: the first 34 seconds, in which the table goes through all three stages, and the Final Encore. For recording, the game runs on a manual clock with seeded randomness while an automated player works the flippers: the same match replays frame by frame, with no loss of image quality. The real game is in the section above.",
           "videos": [
             {
               "src": "/images/projects/pinball/pinball_partida.mp4",

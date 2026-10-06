@@ -1159,10 +1159,52 @@ function EnsinemeComponents() {
     );
 }
 
+// ─── Vira Pinball: o jogo de verdade, num quadro ────────────────────────────
+// Só carrega depois do clique: o jogo captura setas e espaço, e sem isso a
+// página do case deixaria de rolar pelo teclado.
+
+function PinballJogavel() {
+    const { lang } = useLanguage();
+    const en = lang === 'en';
+    const [aberto, setAberto] = useState(false);
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
+            <div style={{ position: 'relative', width: 'min(100%, 405px)', aspectRatio: '9 / 16', borderRadius: 14, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#0B0B0D' }}>
+                {aberto ? (
+                    <iframe
+                        src="https://vira-pinball.vercel.app/"
+                        title="Vira Pinball"
+                        allow="fullscreen; screen-wake-lock; autoplay"
+                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+                    />
+                ) : (
+                    <button
+                        type="button"
+                        onClick={() => setAberto(true)}
+                        aria-label={en ? 'Play Vira Pinball' : 'Jogar o Vira Pinball'}
+                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', padding: 0, border: 0, cursor: 'pointer', background: 'none' }}
+                    >
+                        <Image src="/images/projects/pinball/pinball_partida_poster.jpg" alt="" fill sizes="405px" style={{ objectFit: 'cover', opacity: 0.55 }} />
+                        <span style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', padding: '14px 28px', borderRadius: 999, background: '#E11D6B', color: '#fff', fontFamily: 'var(--ph-mono)', fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                            {en ? 'Play' : 'Jogar'}
+                        </span>
+                    </button>
+                )}
+            </div>
+            <p style={{ margin: 0, fontSize: 12, color: 'var(--mist)', fontFamily: 'var(--ph-mono)', letterSpacing: '0.05em', textAlign: 'center' }}>
+                {en
+                    ? 'Keyboard: ← → for the flippers, hold and release space to launch. Touch: tap left or right, hold on the right to launch.'
+                    : 'Teclado: ← → nos flippers, segure e solte o espaço para lançar. Toque: esquerda ou direita, segure à direita para lançar.'}
+            </p>
+        </div>
+    );
+}
+
 // ─── Registry ────────────────────────────────────────────────────────────────
 
 const SECTION_COMPONENTS = {
     SubidaPersonas:      PersonasSection,
+    PinballJogavel:      PinballJogavel,
     SubidaJourneyMap:    JourneyMapSection,
     SubidaFluxoTelas:    FluxoTelasSection,
     PixTudoPersonas:     PixTudoPersonas,
