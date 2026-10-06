@@ -244,7 +244,7 @@ export default function SphereGallery({ activeFilter = null }) {
                 }))
                 // dimmed so the white labels stay readable on top
                 const bgMat = new THREE.MeshBasicMaterial({
-                    color: 0x969696,
+                    color: 0x707070,
                     side: THREE.BackSide,
                     transparent: true,
                     opacity: 0,
