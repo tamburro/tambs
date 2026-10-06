@@ -13,12 +13,11 @@ const BRANDS = ['O Globo', 'Globo+', 'Clube O Globo', 'Extra', 'Valor One', 'Val
 
 // full-width statement with the label sitting in the first-line indent
 // only the first sentence is set big; the rest follows as body copy
-function Lede({ label, text, small }) {
+function Lede({ text, small }) {
     const cut = text.indexOf('. ') + 1 || text.length
     const rest = text.slice(cut).trim()
     return (
         <div className={`ph-lede ${small ? 'ph-lede--small' : ''}`}>
-            {label && <p className="ph-eyebrow">{label}</p>}
             <p className="ph-statement">
                 {text.slice(0, cut).split(' ').map((word, i) => (
                     <React.Fragment key={i}><span className="ph-word">{word}</span>{' '}</React.Fragment>
@@ -30,9 +29,9 @@ function Lede({ label, text, small }) {
 }
 
 // label in the left margin, content on the page's single column axis
-function Row({ label, children }) {
+function Row({ label, lede, children }) {
     return (
-        <div className="ph-row">
+        <div className={`ph-row ${lede ? 'ph-row--lede' : ''}`}>
             {label ? <p className="ph-eyebrow">{label}</p> : <span />}
             <div>{children}</div>
         </div>
@@ -162,8 +161,10 @@ export default function AboutPage() {
                 </div>
 
                 <div className="ph-container ph-rows">
-                    <Lede label="Pedro Tamburro" text={t.aboutPage.statement} />
-                    <p className="ph-body ph-lede-sub">{t.aboutPage.sub}</p>
+                    <Row label="Pedro Tamburro" lede>
+                        <Lede text={t.aboutPage.statement} />
+                        <p className="ph-body ph-lede-sub">{t.aboutPage.sub}</p>
+                    </Row>
 
                     <Row>
                         <div className="ph-stats">

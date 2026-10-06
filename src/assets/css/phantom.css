@@ -730,16 +730,18 @@ body {
     align-items: start;
 }
 
-.ph-lede {
+.ph-lede,
+.ph-row--lede {
     --lede-size: clamp(28px, 4vw, 60px);
+}
+
+/* label centred on the statement's first line */
+.ph-row--lede > .ph-eyebrow {
+    margin-top: calc(var(--lede-size) * 0.57 - 9px);
 }
 
 .ph-lede--small {
     --lede-size: clamp(20px, 2.2vw, 30px);
-}
-
-.ph-lede .ph-eyebrow {
-    margin-bottom: 24px;
 }
 
 .ph-lede .ph-statement {
@@ -749,15 +751,15 @@ body {
 .ph-lede-rest,
 .ph-lede-sub {
     max-width: 64ch;
-    margin: 32px 0 0 25%;
+    margin: 20px 0 0;
+}
+
+.ph-lede:not(.ph-lede--small) .ph-lede-rest {
+    margin-top: 40px;
 }
 
 .ph-lede-sub {
-    margin-top: calc(16px - var(--ph-block-gap));
-}
-
-.ph-row .ph-lede-rest {
-    margin: 20px 0 0;
+    margin-top: 16px;
 }
 
 .ph-rows .ph-stats {
@@ -1254,9 +1256,8 @@ a.ph-info-value:hover {
     .ph-service-row .ph-body { grid-column: 2; }
     .ph-xp-row { grid-template-columns: 1fr; gap: 6px; }
     .ph-ai-rules { grid-template-columns: 1fr; }
-    .ph-lede-rest, .ph-lede-sub { margin-left: 0; }
     .ph-row { grid-template-columns: 1fr; }
-    .ph-row > .ph-eyebrow { margin: 0 0 20px; }
+    .ph-row > .ph-eyebrow, .ph-row--lede > .ph-eyebrow { margin: 0 0 20px; }
     .ph-row > span:first-child { display: none; }
     .ph-steps { grid-template-columns: repeat(2, 1fr); }
     .ph-proof { grid-template-columns: repeat(3, 1fr); gap: 4px 4px; row-gap: 28px; }
