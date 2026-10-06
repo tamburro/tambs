@@ -92,7 +92,9 @@ export const translations = {
         'I turn performance hypotheses into A/B tests and build the pages in HTML, CSS and JavaScript, from Figma to the live product.',
       ],
       descUniverso: [
-        'Independent design brand. From illustration and visual identity to prototyping SaaS, apps and end-to-end digital products, integrating UX, front-end and AI-driven design.',
+        'Independent studio where I design and code my own digital products, alongside my product career.',
+        'Vira (ticketing, from zero to the first paid event in six weeks), Proficia (B2B SaaS for skills assessment), Sigil (a design system from a single color) and Drop (limited drops for creators).',
+        'I run the whole cycle, from research and UI in Figma to the front end in React and Next.js, using AI-assisted coding to go from idea to deploy on my own.',
       ],
       desc2: [
         'Worked at EnsineMe (YDUQS group) in multidisciplinary teams building digital educational products.',
@@ -261,7 +263,9 @@ export const translations = {
         'Transformo hipóteses de performance em testes A/B e construo as páginas em HTML, CSS e JavaScript, do Figma ao produto no ar.',
       ],
       descUniverso: [
-        'Marca autoral de design. Da ilustração e identidade visual à prototipação de SaaS, apps e produtos digitais de ponta a ponta, integrando UX, front-end e AI-driven design.',
+        'Estúdio autoral onde desenho e programo meus próprios produtos digitais, em paralelo à carreira em produto.',
+        'Vira (ticketeria, do zero ao primeiro evento pago em seis semanas), Proficia (SaaS B2B de avaliação de competências), Sigil (design system a partir de uma cor) e Drop (drops limitados para criadores).',
+        'Faço o ciclo inteiro, da pesquisa e UI no Figma ao front-end em React e Next.js, usando programação assistida por IA para ir da ideia ao deploy sozinho.',
       ],
       desc2: [
         'Atuação na EnsineMe (grupo YDUQS) em times multidisciplinares de produtos educacionais digitais.',
