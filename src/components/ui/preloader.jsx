@@ -14,24 +14,24 @@ const Preloader = () => {
             await controls.start({
                 opacity: 0,
                 y: -100,
-                transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
+                transition: { delay: 0.2, duration: 0.3, ease: "easeInOut" },
             });
 
             // Morphing path animation
             await controls.start({
                 d: curve,
-                transition: { duration: 0.5, ease: "easeIn" },
+                transition: { duration: 0.3, ease: "easeIn" },
             });
 
             await controls.start({
                 d: flat,
-                transition: { duration: 0.5, ease: "easeOut" },
+                transition: { duration: 0.3, ease: "easeOut" },
             });
 
             // Hide preloader
             await controls.start({
                 y: -1500,
-                transition: { duration: 0.5, ease: "easeInOut" },
+                transition: { duration: 0.4, ease: "easeInOut" },
             });
 
             // Set preloader display to none
