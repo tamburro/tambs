@@ -2669,6 +2669,7 @@ export const projectsData = [
     {
         id: 8,
         slug: "palavra-selvagem",
+        video: "/videos/cases/palavraselvagem.mp4",
         accentColor: "#0B8A40",
         liveDemoLink: "https://palavraselvagem.vercel.app/",
         src: "/images/projects/palavraselvagem_full2.jpg",
@@ -2745,6 +2746,7 @@ export const projectsData = [
     {
         id: 9,
         slug: "orbinum",
+        video: "/videos/cases/orbinum.mp4",
         accentColor: "#622D96",
         liveDemoLink: "https://orbinum.vercel.app/",
         src: "/images/projects/orbinum_full.jpg",
@@ -2820,6 +2822,7 @@ export const projectsData = [
     {
         id: 10,
         slug: "veradice",
+        video: "/videos/cases/veradice.mp4",
         accentColor: "#E5C05E",
         liveDemoLink: "https://veradice.vercel.app/",
         src: "/images/projects/veradice_full.jpg",
@@ -3378,6 +3381,7 @@ export const projectsData = [
     {
       "id": 13,
       "slug": "tradeview-plataforma-negociacao",
+      "video": "/videos/cases/tradeview.mp4",
       "accentColor": "#EFB928",
       "liveDemoLink": "https://orderbookfinancas.vercel.app",
       "src": "/images/projects/tradeview_full2.jpg",
@@ -3603,6 +3607,7 @@ export const projectsData = [
     {
       "id": 17,
       "slug": "meu-sus-digital-agendamento-fila",
+      "video": "/videos/cases/meusus.mp4",
       "pageType": "rich",
       "accentColor": "#1351B4",
       "src": "/images/projects/sus/sus_fila_capa.jpg",
