@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import gsap from 'gsap'
 import { projectsData } from '@/utlits/fackData/projectData'
 import { useLanguage } from '@/context/LanguageContext'
+import { luminance } from '@/components/projects/ProjectHero'
 
 export const GALLERY_ORDER = [22, 23, 21, 18, 19, 20, 17, 16, 11, 12, 13, 14, 1, 15, 6, 2, 7, 5, 4, 3, 8, 9, 10]
 
@@ -196,6 +197,15 @@ export default function SphereGallery({ activeFilter = null }) {
             return new THREE.Mesh(geo, mat)
         }
 
+        // project accent for the label strips, lifted when too dark to read on the ink background
+        const WHITE = new THREE.Color(0xffffff)
+        function accentTint(hex) {
+            if (!hex) return WHITE
+            const lum = luminance(hex)
+            const color = new THREE.Color(hex)
+            return lum < 0.16 ? color.lerp(WHITE, (0.16 - lum) / (1 - lum)) : color
+        }
+
         ROWS.forEach((lat, rowIdx) => {
             const rowOffset = rowIdx % 2 === 0 ? 0 : Math.PI / COLS
             for (let c = 0; c < COLS; c++) {
@@ -239,6 +249,7 @@ export default function SphereGallery({ activeFilter = null }) {
                     filterDim: 1,
                     filterActive: true,
                     introDone: false,
+                    tint: accentTint(project.accentColor),
                 }
                 group.add(mesh)
                 tiles.push(mesh)
@@ -486,7 +497,10 @@ export default function SphereGallery({ activeFilter = null }) {
                     if (hovered) {
                         gsap.to(hovered.userData, { hoverBoost: 1, duration: 0.4, ease: 'power2.out' })
                         if (labelRef.current) {
+                            const accent = hovered.userData.project.accentColor
                             labelRef.current.textContent = hovered.userData.project.title
+                            labelRef.current.style.background = accent || ''
+                            labelRef.current.style.color = accent && luminance(accent) <= 0.22 ? '#FAFAFA' : ''
                             labelRef.current.style.opacity = 1
                         }
                         mount.style.cursor = 'pointer'
@@ -504,6 +518,7 @@ export default function SphereGallery({ activeFilter = null }) {
                 tile.userData.labelMeshes.forEach(label => {
                     label.material.opacity = tile.material.opacity * 0.85
                     label.material.userData.hover.value = tile.userData.hoverBoost
+                    label.material.color.lerpColors(WHITE, tile.userData.tint, tile.userData.hoverBoost)
                 })
             })
 
