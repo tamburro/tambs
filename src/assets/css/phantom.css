@@ -867,17 +867,90 @@ body:has(.ph-case-hero:not(.ph-case-hero--light)) .ph-header::before {
     gap: 8px;
 }
 
-.ph-xp-row {
+.ph-xp {
+    border-top: 1px solid var(--ph-hairline);
+}
+
+.ph-xp:last-child {
+    border-bottom: 1px solid var(--ph-hairline);
+}
+
+.ph-xp-row,
+.ph-xp-panel-inner {
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr);
     gap: 28px;
-    align-items: baseline;
-    border-top: 1px solid var(--ph-hairline);
-    padding: 26px 0;
 }
 
-.ph-xp-row:last-of-type {
-    border-bottom: 1px solid var(--ph-hairline);
+.ph-xp-row {
+    align-items: baseline;
+    width: 100%;
+    padding: 26px 0;
+    border: none;
+    background: none;
+    color: inherit;
+    text-align: left;
+}
+
+button.ph-xp-row {
+    cursor: pointer;
+}
+
+/* opens by growing the row track, so the height animates without measuring */
+.ph-xp-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s var(--ph-ease);
+}
+
+.ph-xp.is-open .ph-xp-panel {
+    grid-template-rows: 1fr;
+}
+
+.ph-xp-panel-inner {
+    overflow: hidden;
+}
+
+.ph-xp-panel-inner > div {
+    grid-column: 2 / -1;
+    max-width: 62ch;
+    padding-bottom: 30px;
+}
+
+.ph-xp-panel p {
+    font-family: var(--ph-display);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ph-mist);
+    margin: 0 0 10px;
+}
+
+.ph-xp-plus {
+    position: relative;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-left: 16px;
+    vertical-align: -1px;
+    transition: transform 0.4s var(--ph-ease);
+}
+
+.ph-xp-plus::before,
+.ph-xp-plus::after {
+    content: "";
+    position: absolute;
+    inset: 5px 0 auto 0;
+    height: 1px;
+    background: var(--ph-paper);
+}
+
+.ph-xp-plus::after {
+    transform: rotate(90deg);
+    transition: opacity 0.3s;
+}
+
+.ph-xp.is-open .ph-xp-plus::after {
+    opacity: 0;
 }
 
 .ph-ai-rules {
@@ -1338,6 +1411,8 @@ a.ph-info-value:hover {
     .ph-service-row { grid-template-columns: 40px 1fr; }
     .ph-service-row .ph-body { grid-column: 2; }
     .ph-xp-row { grid-template-columns: 1fr; gap: 6px; }
+    .ph-xp-panel-inner { grid-template-columns: 1fr; }
+    .ph-xp-panel-inner > div { grid-column: 1; }
     .ph-ai-rules { grid-template-columns: 1fr; }
     .ph-case-about { grid-template-columns: 1fr; gap: 40px; }
     .ph-row { grid-template-columns: 1fr; }

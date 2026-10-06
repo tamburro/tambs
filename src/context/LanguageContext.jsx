@@ -85,7 +85,24 @@ export const translations = {
       title1: 'Product Designer · Conversion & Acquisition',
       year1: 'Nov 2022 – Present',
       org1: 'Editora Globo',
-      titleUniverso: 'Designer & Founder',
+      titleUniverso: 'Product Designer & Founder',
+      desc1: [
+        "Design of acquisition pages and subscription flows focused on conversion and revenue growth for Editora Globo's digital products.",
+        'Landing page implementation in HTML/CSS/JS, conversion journey optimization based on performance metrics (CRO) and responsive email marketing.',
+      ],
+      descUniverso: [
+        'Independent design brand. From illustration and visual identity to prototyping SaaS, apps and end-to-end digital products, integrating UX, front-end and AI-driven design.',
+      ],
+      desc2: [
+        'Worked at EnsineMe (YDUQS group) in multidisciplinary teams building digital educational products.',
+        'Figma prototyping and development of e-learning lessons in HTML/CSS/JS with high prototype fidelity.',
+        'Design System application, redesign of infographics and agile demand management (Azure DevOps).',
+      ],
+      desc3: [
+        'Design of educational interfaces for the distance learning platform, focused on pedagogical clarity and consistency.',
+        'Development of e-learning lessons in HTML/CSS/JS, Design System application and redesign of educational infographics.',
+      ],
+      descZion: ['In-person Graphic Design teaching for teenagers and children.'],
       yearUniverso: 'Dec 2017 – Present',
       orgUniverso: 'Universo Observável',
       title2: 'Product Designer · UX/UI',
@@ -233,7 +250,24 @@ export const translations = {
       title1: 'Product Designer · Conversão & Aquisição',
       year1: 'Nov 2022 – Presente',
       org1: 'Editora Globo',
-      titleUniverso: 'Designer & Founder',
+      titleUniverso: 'Designer de produto & fundador',
+      desc1: [
+        'Design de páginas de aquisição e fluxos de assinatura orientados a conversão e crescimento de receita para os produtos digitais da Editora Globo.',
+        'Implementação de landing pages em HTML/CSS/JS, otimização de jornadas com base em métricas de performance (CRO) e email marketing responsivo.',
+      ],
+      descUniverso: [
+        'Marca autoral de design. Da ilustração e identidade visual à prototipação de SaaS, apps e produtos digitais de ponta a ponta, integrando UX, front-end e AI-driven design.',
+      ],
+      desc2: [
+        'Atuação na EnsineMe (grupo YDUQS) em times multidisciplinares de produtos educacionais digitais.',
+        'Prototipação no Figma e desenvolvimento de aulas EAD em HTML/CSS/JS com alta fidelidade ao protótipo.',
+        'Aplicação de Design System, redesign de infográficos e gestão de demandas em metodologias ágeis (Azure DevOps).',
+      ],
+      desc3: [
+        'Design de interfaces educacionais para a plataforma EAD, com foco em clareza pedagógica e consistência.',
+        'Desenvolvimento de aulas EAD em HTML/CSS/JS, aplicação de Design System e redesign de infográficos educacionais.',
+      ],
+      descZion: ['Ensino presencial de Design Gráfico para adolescentes e crianças.'],
       yearUniverso: 'Dez 2017 – Presente',
       orgUniverso: 'Universo Observável',
       title2: 'Product Designer · UX/UI',

@@ -28,6 +28,33 @@ function Lede({ text, small }) {
     )
 }
 
+// rows that open to show their description, one at a time; rows without one stay plain
+function XpList({ items, initial = null }) {
+    const [open, setOpen] = useState(initial)
+    return items.map((item, i) => {
+        const cells = (
+            <>
+                <span className="ph-xp-period">{item.period}</span>
+                <h3 className="ph-xp-role">{item.role}</h3>
+                <span className="ph-xp-org">{item.org}{item.text && <i className="ph-xp-plus" />}</span>
+            </>
+        )
+        if (!item.text) return <div key={item.role + item.org} className="ph-xp"><div className="ph-xp-row">{cells}</div></div>
+        return (
+            <div key={item.role + item.org} className={`ph-xp ${open === i ? 'is-open' : ''}`}>
+                <button className="ph-xp-row" aria-expanded={open === i} onClick={() => setOpen(open === i ? null : i)}>
+                    {cells}
+                </button>
+                <div className="ph-xp-panel">
+                    <div className="ph-xp-panel-inner">
+                        <div>{item.text.map(line => <p key={line}>{line}</p>)}</div>
+                    </div>
+                </div>
+            </div>
+        )
+    })
+}
+
 // label in the left margin, content on the page's single column axis
 function Row({ label, lede, children }) {
     return (
@@ -104,11 +131,11 @@ export default function AboutPage() {
     const scrollTo = (ref) => ref.current.scrollIntoView({ behavior: 'smooth' })
 
     const experience = [
-        { period: t.resume.year1, role: t.resume.title1, org: t.resume.org1 },
-        { period: t.resume.yearUniverso, role: t.resume.titleUniverso, org: t.resume.orgUniverso },
-        { period: t.resume.year2, role: t.resume.title2, org: t.resume.org2 },
-        { period: t.resume.year3, role: t.resume.title3, org: t.resume.org3 },
-        { period: t.resume.yearZion, role: t.resume.titleZion, org: t.resume.orgZion },
+        { period: t.resume.year1, role: t.resume.title1, org: t.resume.org1, text: t.resume.desc1 },
+        { period: t.resume.yearUniverso, role: t.resume.titleUniverso, org: t.resume.orgUniverso, text: t.resume.descUniverso },
+        { period: t.resume.year2, role: t.resume.title2, org: t.resume.org2, text: t.resume.desc2 },
+        { period: t.resume.year3, role: t.resume.title3, org: t.resume.org3, text: t.resume.desc3 },
+        { period: t.resume.yearZion, role: t.resume.titleZion, org: t.resume.orgZion, text: t.resume.descZion },
     ]
 
     const education = [
@@ -288,23 +315,11 @@ export default function AboutPage() {
 
                 <div className="ph-container ph-about-section ph-rows">
                     <Row label={t.aboutPage.experienceLabel}>
-                        {experience.map(item => (
-                            <div key={item.role + item.org} className="ph-xp-row">
-                                <span className="ph-xp-period">{item.period}</span>
-                                <h3 className="ph-xp-role">{item.role}</h3>
-                                <span className="ph-xp-org">{item.org}</span>
-                            </div>
-                        ))}
+                        <XpList items={experience} initial={0} />
                     </Row>
 
                     <Row label={t.aboutPage.educationLabel}>
-                        {education.map(item => (
-                            <div key={item.role} className="ph-xp-row">
-                                <span className="ph-xp-period">{item.period}</span>
-                                <h3 className="ph-xp-role">{item.role}</h3>
-                                <span className="ph-xp-org">{item.org}</span>
-                            </div>
-                        ))}
+                        <XpList items={education} />
                     </Row>
                 </div>
             </section>
