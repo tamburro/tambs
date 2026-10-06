@@ -256,7 +256,7 @@ export const translations = {
       title1: 'Product Designer · Conversão & Aquisição',
       year1: 'Nov 2022 – Presente',
       org1: 'Editora Globo',
-      titleUniverso: 'Designer de produto & fundador',
+      titleUniverso: 'Product Designer & Founder',
       desc1: [
         'Lidero o design de páginas de aquisição e fluxos de assinatura para as marcas do grupo, como O Globo e Valor Econômico, com foco em conversão e receita.',
         'Em 2026 levei a programação assistida por IA para o processo: landing pages que levavam dias vão ao ar em menos de um dia, e treinei 8 designers no Rio e em São Paulo para fazer o mesmo.',

@@ -836,7 +836,7 @@ body:has(.ph-case-hero:not(.ph-case-hero--light)) .ph-header::before {
     display: grid;
     grid-template-columns: 70px minmax(0, 5fr) minmax(0, 6fr);
     gap: 28px;
-    align-items: baseline;
+    align-items: start;
     border-top: 1px solid var(--ph-hairline);
     padding: 34px 0;
 }
