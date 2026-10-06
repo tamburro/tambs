@@ -1229,9 +1229,9 @@ const RichProjectPage = ({ project }) => {
                             </div>
                             <div className="project-parallax-info-row">
                                 {project.year     && <div className="parallax-info-box"><p>{t.project.year}</p><h3>{project.year}</h3></div>}
-                                {project.role     && <div className="parallax-info-box"><p>{t.project.role}</p><h3>{project.role}</h3></div>}
+                                {project.role     && <div className="parallax-info-box"><p>{t.project.role}</p><h3>{pick(project.role, project.role_en)}</h3></div>}
                                 {project.timeline && <div className="parallax-info-box"><p>{t.project.duration}</p><h3>{pick(project.timeline, project.timeline_en)}</h3></div>}
-                                {project.team     && <div className="parallax-info-box"><p>{t.project.team}</p><h3>{project.team}</h3></div>}
+                                {project.team     && <div className="parallax-info-box"><p>{t.project.team}</p><h3>{pick(project.team, project.team_en)}</h3></div>}
                                 {project.tools?.length > 0 && (
                                     <div className="parallax-info-box">
                                         <p>{t.project.tools}</p>

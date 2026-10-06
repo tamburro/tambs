@@ -2,6 +2,220 @@
 
 export const projectsData = [
     {
+      "id": 22,
+      "slug": "vira-ticketeria-propria",
+      "src": "/images/projects/vira/vira_full.jpg",
+      "category": "Product Design & Full-Stack",
+      "tags": [
+        "Product Design",
+        "Full-Stack"
+      ],
+      "title": "Vira",
+      "tagline": "Ticketeria própria, do zero ao primeiro evento pago em seis semanas: vitrine, compra com Pix e cartão, backoffice, repasse ao produtor e portaria.",
+      "tagline_en": "An in-house ticketing platform, from zero to the first paid event in six weeks: storefront, Pix and card checkout, back office, producer payouts and door control.",
+      "tldr": {
+        "problem": "A Vira é uma produtora que queria vender ingresso, controlar a porta e, depois, o consumo do evento sem depender de uma plataforma de terceiros. Isso significa lidar com dinheiro de verdade: Pix, cartão parcelado, chargeback, repasse ao produtor, meia-entrada, direito de arrependimento e LGPD.",
+        "problem_en": "Vira is an events company that wanted to sell tickets, run the door and, later, on-site spending without depending on a third-party platform. That means handling real money: Pix, installment card payments, chargebacks, producer payouts, Brazil's half-price ticket law, the right to withdraw and LGPD.",
+        "role": "Cofundador, à frente de produto e tecnologia: regras de negócio, design, código, infraestrutura e a documentação que as sócias usam para operar sozinhas.",
+        "role_en": "Co-founder leading product and technology: business rules, design, code, infrastructure, and the documentation my partners use to run it on their own.",
+        "outcome": "No ar em viraentretenimento.com.br, com Mercado Pago em produção, ensaio com dinheiro de verdade aprovado e o primeiro evento pago à venda, seis semanas depois do primeiro commit.",
+        "outcome_en": "Live at viraentretenimento.com.br, with Mercado Pago in production, a real-money dry run passed and the first paid event on sale, six weeks after the first commit."
+      },
+      "description": "Plataforma de bilheteria própria da Vira: vitrine pública de eventos, compra em modal com Pix e cartão em até 12x, conta de comprador sem senha, backoffice para as sócias publicarem eventos e acompanharem vendas e repasse, portaria no celular e um handbook interno gerado do próprio repositório. Construída com Next.js, Prisma e Postgres num servidor no Brasil, com o Mercado Pago atrás de uma interface que permite trocar de gateway sem mexer nas regras.",
+      "description_en": "Vira's in-house ticketing platform: a public event storefront, an in-page checkout with Pix and cards in up to 12 installments, a passwordless buyer account, a back office where my partners publish events and track sales and payouts, phone-based door control, and an internal handbook generated from the repository itself. Built with Next.js, Prisma and Postgres on a server in Brazil, with Mercado Pago behind an interface that lets us swap gateways without touching business rules.",
+      "year": "2026",
+      "role": "Cofundador · Produto e engenharia",
+      "role_en": "Co-founder · Product & Engineering",
+      "timeline": "Ago a out 2026 · 6 semanas até a primeira venda",
+      "timeline_en": "Aug to Oct 2026 · 6 weeks to the first sale",
+      "team": "4 sócios · eu no produto e no código",
+      "team_en": "4 co-founders · I own product and code",
+      "client": "Vira Entretenimento",
+      "tools": [
+        "Next.js",
+        "Prisma + Postgres",
+        "Mercado Pago",
+        "Claude Code"
+      ],
+      "liveDemoLink": "https://www.viraentretenimento.com.br",
+      "accentColor": "#E11D6B",
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O problema",
+          "title_en": "The problem",
+          "content": "Produtora pequena costuma vender ingresso numa plataforma de terceiros. O público vira cliente da plataforma, a experiência de compra é a dela e a produtora não decide nada sobre taxa, prazo de repasse ou o que acontece na porta. A Vira queria o contrário: um produto próprio que juntasse bilheteria, portaria e, numa segunda fase, o consumo dentro do evento.\n\nO desafio não era fazer uma tela de compra. Era tratar dinheiro de outras pessoas com segurança desde o primeiro dia: Pix e cartão parcelado, contestação de cobrança, repasse ao produtor em prazo certo, meia-entrada de 40% exigida por lei, sete dias para desistir e consentimento separado na LGPD. E fazer isso a tempo do primeiro evento pago, com uma equipe de quatro sócios em que só eu programo.",
+          "content_en": "Small events companies usually sell tickets through a third-party platform. The audience becomes the platform's customer, the buying experience is the platform's, and the company has no say over fees, payout timing or what happens at the door. Vira wanted the opposite: its own product bringing together ticketing, door control and, in a second phase, on-site spending.\n\nThe challenge wasn't building a checkout screen. It was handling other people's money safely from day one: Pix and installment cards, chargebacks, producer payouts on a set schedule, the legally required 40% half-price quota, a seven-day right to withdraw and separate LGPD consent. And doing it in time for the first paid event, on a team of four co-founders where I'm the only one who codes."
+        },
+        {
+          "type": "image",
+          "title": "A vitrine",
+          "title_en": "The storefront",
+          "src": "/images/projects/vira/vira_vitrine.jpg",
+          "caption": "A vitrine pública em viraentretenimento.com.br, no computador e no celular. Os eventos, as datas e a situação da venda vêm do sistema; nada aparece por estar escrito na página.",
+          "caption_en": "The public storefront at viraentretenimento.com.br, on desktop and mobile. Events, dates and sale status come from the system; nothing shows up just because it's written on the page."
+        },
+        {
+          "type": "outcomes",
+          "title": "Em números",
+          "title_en": "In numbers",
+          "metrics": [
+            {
+              "value": "6",
+              "label": "semanas, do primeiro commit ao primeiro evento pago à venda"
+            },
+            {
+              "value": "159",
+              "label": "pull requests mesclados, com testes rodando na CI"
+            },
+            {
+              "value": "423",
+              "label": "testes automatizados contra um banco real"
+            }
+          ],
+          "metrics_en": [
+            {
+              "value": "6",
+              "label": "weeks, from first commit to the first paid event on sale"
+            },
+            {
+              "value": "159",
+              "label": "pull requests merged, with tests running in CI"
+            },
+            {
+              "value": "423",
+              "label": "automated tests against a real database"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Decisões que vieram antes do código",
+          "title_en": "Decisions that came before the code",
+          "highlights": [
+            "Quem guarda o dinheiro: Na bilheteria, a Vira recebe e repassa ao produtor: sem o dinheiro na mão, não há como cobrir contestação. No consumo, o saldo fica com instituição autorizada, nunca com a Vira. A divisão de cada venda nasce no momento da cobrança.",
+            "Taxa congelada na venda: A taxa é negociada por evento e fica gravada em cada ingresso, como o preço. Negociar outro percentual amanhã não reescreve o que já foi cobrado de ninguém.",
+            "Pix primeiro: O Pix custa uma fração do cartão. Ele aparece primeiro e já selecionado; o cartão continua lá, à vista ou em até 12x, sem destaque.",
+            "Lei vira regra do sistema: Os 40% de meia-entrada e a cota de 60+ são calculados sozinhos em cada lote. O teto dos bombeiros é limite rígido de venda. Ingresso já usado na porta não volta como estorno.",
+            "Consentimento separado: Aceitar os termos, receber novidades e compartilhar dados com patrocinador são três caixas diferentes. A terceira pode ser recusada sem perder nada.",
+            "Endereço depois da compra: Para festa em casa, a vitrine e a página de compra mostram só a cidade. O endereço completo vai no ingresso e no e-mail de quem comprou."
+          ],
+          "highlights_en": [
+            "Who holds the money: For tickets, Vira collects and pays the producer out: without holding the money there's no way to cover chargebacks. For on-site spending, balances stay with a licensed institution, never with Vira. Each sale's split is recorded at the moment of charging.",
+            "Fee frozen at sale time: The fee is negotiated per event and recorded on each ticket, like the price. Negotiating a different rate tomorrow never rewrites what someone already paid.",
+            "Pix first: Pix costs a fraction of a card payment. It comes first and pre-selected; cards are still there, in full or up to 12 installments, without the spotlight.",
+            "The law becomes a system rule: The 40% half-price quota and the 60+ quota are calculated automatically for every batch. The fire department's capacity is a hard sales limit. A ticket already used at the door can't be refunded.",
+            "Separate consent: Accepting the terms, getting news and sharing data with sponsors are three separate checkboxes. The third can be declined at no cost.",
+            "Address after purchase: For house parties, the storefront and checkout show only the city. The full address goes on the ticket and in the buyer's email."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Comprar sem sair da vitrine",
+          "title_en": "Buying without leaving the storefront",
+          "content": "A compra abre num modal por cima da vitrine, com a própria página de compra do sistema dentro. Pix, cartão e aceite dos termos ficam num lugar só, sem código de pagamento duplicado. Fechar o modal não perde nada: quem fecha no meio do Pix e reabre volta para o mesmo QR. Para isso funcionar com segurança, o sistema passou a recusar ser aberto dentro de qualquer outro site; só a página de compra aceita a vitrine.\n\nA conta de comprador é opcional e não tem senha: a conta é o e-mail, o acesso é por código e dura 30 dias no aparelho. Ela junta todos os CPFs comprados com aquele e-mail, como uma família, e mostra os ingressos válidos e o histórico de compras.",
+          "content_en": "Checkout opens in a modal over the storefront, with the system's own checkout page inside. Pix, cards and terms acceptance live in one place, with no duplicated payment code. Closing the modal loses nothing: if you close it mid-Pix and reopen, you're back on the same QR code. To make this safe, the system now refuses to be framed by any other site; only the checkout page accepts the storefront.\n\nThe buyer account is optional and passwordless: the account is the email, access is by one-time code and lasts 30 days on the device. It groups every CPF bought under that email, like a family, and shows valid tickets and purchase history."
+        },
+        {
+          "type": "image",
+          "title": "A compra",
+          "title_en": "The checkout",
+          "src": "/images/projects/vira/vira_compra.jpg",
+          "caption": "Total com a taxa à vista antes de pagar, três consentimentos separados e o Pix pré-selecionado. O cartão parcela em até 12x, com o juro mostrado pelo próprio Mercado Pago.",
+          "caption_en": "The total including the fee shown up front, three separate consents and Pix pre-selected. Cards split into up to 12 installments, with interest shown by Mercado Pago itself."
+        },
+        {
+          "type": "text",
+          "title": "As sócias operam sem pedir ao dev",
+          "title_en": "My partners operate without asking the developer",
+          "content": "Cada sócia tem uma área: operações, comercial e financeiro. O backoffice foi desenhado para que nenhuma delas precise de mim no dia a dia. Elas criam evento e lotes, publicam na vitrine, escrevem o texto, escolhem a capa e veem o resultado numa prévia ao vivo antes de salvar. O financeiro acompanha recebido, devolvido e repasse por evento, com o prazo de cada parcela calculado em dias úteis e a planilha para conciliar.\n\nCancelar um ingresso devolve o dinheiro pelo Mercado Pago automaticamente, com a regra certa: na desistência a taxa fica retida; se o evento for cancelado, a devolução é integral e a taxa sai da parte do produtor.",
+          "content_en": "Each partner owns an area: operations, sales and finance. The back office was designed so none of them needs me day to day. They create events and ticket batches, publish to the storefront, write the copy, pick the cover and see the result in a live preview before saving. Finance tracks what came in, what went back and payouts per event, with each installment's date calculated in business days and a spreadsheet for reconciliation.\n\nCancelling a ticket refunds through Mercado Pago automatically, with the right rule: on a buyer's withdrawal the fee is kept; if the event is cancelled, the refund is full and the fee comes out of the producer's share."
+        },
+        {
+          "type": "gallery",
+          "title": "O backoffice das sócias",
+          "title_en": "The partners' back office",
+          "columns": 2,
+          "images": [
+            {
+              "src": "/images/projects/vira/vira_backoffice.jpg",
+              "caption": "Vendas e repasse de um evento de demonstração, ao lado do controle da vitrine. O repasse de 90% em um dia útil e 10% depois do evento sai calculado do sistema.",
+              "caption_en": "Sales and payouts for a demo event, next to the storefront controls. The 90% payout in one business day and 10% after the event is calculated by the system."
+            },
+            {
+              "src": "/images/projects/vira/vira_previa.jpg",
+              "caption": "Ver na vitrine: o site de verdade num quadro dentro do backoffice, atualizado a cada tecla, com o selo de que nada foi publicado.",
+              "caption_en": "Preview on storefront: the real site in a frame inside the back office, updated with every keystroke, labelled as not yet published."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Na porta",
+          "title_en": "At the door",
+          "content": "A portaria roda no celular de quem trabalha no evento. O aparelho abre o turno com um passe do evento, sem senha digitada na fila, lê o QR pela câmera e responde em cor chapada, legível a um metro. Nunca só cor: autorizado mostra o nome, negado mostra o motivo e conferir pede o documento da meia-entrada ou do 60+. Cada entrada fica registrada em nome do turno que leu.",
+          "content_en": "Door control runs on the staff member's phone. The device opens a shift with an event pass, with no password typed at the line, reads the QR code with the camera and answers in solid color, readable from a meter away. Never color alone: approved shows the name, denied shows the reason, and check asks for the half-price or 60+ document. Every entry is recorded under the shift that scanned it."
+        },
+        {
+          "type": "image",
+          "title": "As três respostas",
+          "title_en": "The three answers",
+          "src": "/images/projects/vira/vira_portaria.jpg",
+          "caption": "As três respostas da porta. A tela foi pensada para a luz e a pressa de uma fila, não para um escritório.",
+          "caption_en": "The door's three answers. The screen was designed for the light and rush of a line, not an office."
+        },
+        {
+          "type": "text",
+          "title": "Documentação que não envelhece",
+          "title_en": "Documentation that doesn't go stale",
+          "content": "Com quatro sócios decidindo, o risco era a decisão ficar perdida em mensagem de WhatsApp. Montei um handbook interno, com senha, que sai do próprio repositório a cada publicação: decisões tomadas e pendentes, manual do backoffice e da portaria, regras de negócio e o estado de cada funcionalidade.\n\nAs jornadas são desenhadas em raias por ator, do comprador ao gateway, com o estado de cada passo: funcionando, em ensaio ou falta construir. Elas vêm de arquivos de dados, e a CI confere que todo passo marcado como pronto aponta para código que existe. A página que diz o que funciona não consegue mentir sem quebrar o build. Para quem aprende vendo, gerei vídeos curtos por sócia, com Blender e GSAP, sobre cada fluxo.",
+          "content_en": "With four co-founders making decisions, the risk was decisions getting lost in WhatsApp threads. I set up a password-protected internal handbook built from the repository itself on every deploy: decisions made and pending, back office and door manuals, business rules and the status of every feature.\n\nJourneys are drawn as swimlanes per actor, from buyer to payment gateway, with each step's status: working, in rehearsal or still to build. They come from data files, and CI checks that every step marked as done points to code that exists. The page that says what works can't lie without breaking the build. For people who learn by watching, I generated short videos per partner, with Blender and GSAP, covering each flow."
+        },
+        {
+          "type": "image",
+          "title": "O handbook",
+          "title_en": "The handbook",
+          "src": "/images/projects/vira/vira_handbook.jpg",
+          "caption": "Jornadas em raias e o estado do produto, gerados dos mesmos arquivos. A última coluna diz o que já pode ser prometido a cliente e em peça de marketing.",
+          "caption_en": "Swimlane journeys and product status, generated from the same files. The last column says what can already be promised to clients and in marketing."
+        },
+        {
+          "type": "text",
+          "title": "Engenharia que protege o dinheiro",
+          "title_en": "Engineering that protects the money",
+          "highlights": [
+            "Valores sempre em centavos inteiros e saldo como soma de movimentos num registro só de acréscimo: corrigir é lançar um ajuste, nunca editar o passado.",
+            "Gateway atrás de uma interface: o Mercado Pago (API de pedidos) entrou em produção sem tocar em nenhum serviço, e o modo simulado continua servindo aos testes.",
+            "Migrei da Vercel para um servidor no Brasil, com banco e aplicação na mesma máquina, deploy por script e um vigia externo no GitHub Actions que avisa se o site cair.",
+            "Regras do projeto viraram portões automáticos na CI, e um hook impede merge com teste vermelho ou pendente.",
+            "Toda ação que muda dinheiro ou ingresso fica registrada em nome de quem fez, com sessão autenticada; nunca um nome digitado."
+          ],
+          "highlights_en": [
+            "Amounts always in integer cents, and balances as the sum of movements in an append-only ledger: corrections are new adjustment entries, never edits to the past.",
+            "The payment gateway sits behind an interface: Mercado Pago (Orders API) went to production without touching any service, and a simulated mode keeps serving the tests.",
+            "I migrated from Vercel to a server in Brazil, with database and app on the same machine, scripted deploys and an external watchdog on GitHub Actions that alerts if the site goes down.",
+            "Project rules became automated gates in CI, and a hook blocks merges with red or pending tests.",
+            "Every action that touches money or tickets is logged under who did it, with an authenticated session; never a typed-in name."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Como trabalhei com IA",
+          "title_en": "How I worked with AI",
+          "content": "Construí a Vira com o Claude Code como par de engenharia. A divisão foi clara: eu defino o produto, as regras de negócio e o que entra ou espera; a IA escreve, testa e documenta, sempre por pull request, com a CI como juiz. O que fez isso funcionar foi transformar decisões em coisas verificáveis: uma regra que dá para conferir lendo o código vira portão na CI, e uma decisão das sócias vira item no handbook no mesmo PR que muda a tela. Assim a velocidade não custou confiança, num produto que mexe com dinheiro.",
+          "content_en": "I built Vira with Claude Code as an engineering partner. The split was clear: I define the product, the business rules and what ships or waits; the AI writes, tests and documents, always through pull requests, with CI as the judge. What made it work was turning decisions into things that can be checked: a rule you can verify by reading the code becomes a CI gate, and a partners' decision becomes a handbook entry in the same PR that changes the screen. That way speed didn't cost trust, in a product that handles money."
+        },
+        {
+          "type": "text",
+          "title": "Resultado",
+          "title_en": "Outcome",
+          "content": "Em seis semanas a Vira saiu do primeiro commit para uma bilheteria no ar no próprio domínio. O Mercado Pago entrou em produção em 30 de setembro, e o ensaio com dinheiro de verdade passou: Pix, cartão à vista e parcelado, aviso de pagamento e devolução automática. O primeiro evento pago está à venda na vitrine, e as sócias publicam e acompanham eventos sem passar por mim.\n\nOs próximos passos estão no próprio handbook, marcados como falta construir: a portaria continuar liberando sem internet, o consumo sem dinheiro dentro do evento e a compra já preenchida para quem tem conta.",
+          "content_en": "In six weeks Vira went from first commit to a live ticketing platform on its own domain. Mercado Pago went to production on September 30, and the real-money dry run passed: Pix, full and installment card payments, payment notification and automatic refunds. The first paid event is on sale on the storefront, and my partners publish and track events without going through me.\n\nThe next steps are in the handbook itself, marked as still to build: door control that keeps working offline, cashless spending inside the event, and pre-filled checkout for account holders."
+        }
+      ]
+    },
+    {
       "id": 21,
       "slug": "alex-toys-loja-e-landing-imersiva",
       "src": "/images/projects/alextoys/alextoys_full.jpg",
