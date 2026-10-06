@@ -2,13 +2,29 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getGalleryProjects } from '@/components/gallery/SphereGallery'
 import { useLanguage } from '@/context/LanguageContext'
 
 const STRIP_COUNT = 5
 
+// full-width statement with the label sitting in the first-line indent
+function Lede({ label, text, small }) {
+    return (
+        <div className={`ph-lede ${small ? 'ph-lede--small' : ''}`}>
+            {label && <p className="ph-eyebrow">{label}</p>}
+            <p className="ph-statement">
+                {text.split(' ').map((word, i) => (
+                    <React.Fragment key={i}><span className="ph-word">{word}</span>{' '}</React.Fragment>
+                ))}
+            </p>
+        </div>
+    )
+}
+
 export default function AboutPage() {
-    const { t } = useLanguage()
+    const { t, lang } = useLanguage()
+    const pageRef = useRef(null)
     const [section, setSection] = useState('profile')
     const profileRef = useRef(null)
     const approachRef = useRef(null)
@@ -30,6 +46,38 @@ export default function AboutPage() {
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
+
+    useEffect(() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+        gsap.registerPlugin(ScrollTrigger)
+        const ctx = gsap.context(() => {
+            // statements light up word by word as they are read
+            gsap.utils.toArray('.ph-lede').forEach(lede => {
+                gsap.fromTo(lede.querySelectorAll('.ph-word'),
+                    { opacity: 0.14 },
+                    {
+                        opacity: 1, ease: 'none', stagger: 0.06,
+                        scrollTrigger: { trigger: lede, start: 'top 82%', end: 'bottom 55%', scrub: 0.6 },
+                    })
+            })
+
+            gsap.utils.toArray('.ph-display--section').forEach(title => {
+                gsap.from(title, {
+                    opacity: 0, y: 60, duration: 1.1, ease: 'power3.out',
+                    scrollTrigger: { trigger: title, start: 'top 88%', once: true },
+                })
+            })
+
+            const rise = '.ph-lede-sub, .ph-stat, .ph-service-row, .ph-xp-row, .ph-ai-rules li, .ph-chips'
+            gsap.set(rise, { opacity: 0, y: 32 })
+            ScrollTrigger.batch(rise, {
+                start: 'top 90%',
+                once: true,
+                onEnter: els => gsap.to(els, { opacity: 1, y: 0, duration: 0.9, stagger: 0.07, ease: 'power3.out' }),
+            })
+        }, pageRef)
+        return () => ctx.revert()
+    }, [lang])
 
     const scrollTo = (ref) => ref.current.scrollIntoView({ behavior: 'smooth' })
 
@@ -54,7 +102,7 @@ export default function AboutPage() {
     ]
 
     return (
-        <div className="ph-page">
+        <div className="ph-page" ref={pageRef}>
             {/* section toggle */}
             <div className="ph-about-toggle">
                 <button
@@ -91,13 +139,8 @@ export default function AboutPage() {
                 </div>
 
                 <div className="ph-container">
-                    <div className="ph-about-grid">
-                        <p className="ph-eyebrow" style={{ marginTop: '8px' }}>Pedro Tamburro</p>
-                        <div>
-                            <p className="ph-statement">{t.aboutPage.statement}</p>
-                            <p className="ph-body" style={{ marginTop: '28px' }}>{t.aboutPage.sub}</p>
-                        </div>
-                    </div>
+                    <Lede label="Pedro Tamburro" text={t.aboutPage.statement} />
+                    <p className="ph-body ph-lede-sub">{t.aboutPage.sub}</p>
 
                     <div className="ph-stats">
                         {t.aboutPage.stats.map(stat => (
@@ -117,11 +160,8 @@ export default function AboutPage() {
                     <h2 className="ph-display ph-display--section" style={{ marginBottom: '64px' }}>
                         {t.aboutPage.approachHeadline.join(' ')}
                     </h2>
-                    <div className="ph-about-grid" style={{ marginBottom: '80px' }}>
-                        <div />
-                        <p className="ph-statement" style={{ fontSize: 'clamp(20px, 2.2vw, 30px)' }}>
-                            {t.aboutPage.approachIntro}
-                        </p>
+                    <div style={{ marginBottom: '80px' }}>
+                        <Lede text={t.aboutPage.approachIntro} small />
                     </div>
 
                     {t.aboutPage.services.map((service, i) => (
@@ -149,14 +189,9 @@ export default function AboutPage() {
                     <h2 className="ph-display ph-display--section" style={{ marginBottom: '64px' }}>
                         {t.aiWorkflow.title}
                     </h2>
-                    <div className="ph-about-grid">
-                        <div />
-                        <p className="ph-statement" style={{ fontSize: 'clamp(20px, 2.2vw, 30px)' }}>
-                            {t.aiWorkflow.sub}
-                        </p>
-                    </div>
+                    <Lede text={t.aiWorkflow.sub} small />
 
-                    <div className="ph-stats ph-stats--3" style={{ marginBottom: '80px' }}>
+                    <div className="ph-stats" style={{ marginBottom: '80px' }}>
                         {t.aiWorkflow.stats.map(stat => (
                             <div key={stat.label} className="ph-stat">
                                 <p className="ph-stat-value">{stat.value}</p>

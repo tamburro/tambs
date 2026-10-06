@@ -51,7 +51,6 @@ export const translations = {
       title: 'How I build with AI',
       sub: "AI doesn't replace the process, it compresses it: cycles that go from idea to production in days, not months. The products I build go through the same discipline:",
       stats: [
-        { value: '9', label: 'Selected products live in production' },
         { value: '40+', label: 'Automated E2E checks guarding business rules' },
         { value: '100%', label: 'Built on token-based design systems' },
       ],
@@ -74,6 +73,7 @@ export const translations = {
       tools: ['Claude Code', 'Antigravity', 'Figma', 'Nano Banana'],
       proofLabel: 'Shipped with this workflow',
       proof: [
+        { title: 'Vira', slug: 'vira-ticketeria-propria', note: 'Ticketing live in six weeks' },
         { title: 'Sigil', slug: 'sigil-design-system-builder', note: 'From seed color to export' },
         { title: 'Proficia', slug: 'proficia-avaliacao-competencias-ux', note: 'SaaS with team plans' },
         { title: 'Drop', slug: 'drop-marketplace-de-lancamentos', note: 'Pix checkout, live' },
@@ -196,7 +196,6 @@ export const translations = {
       title: 'Como eu construo com IA',
       sub: 'IA não substitui o processo, ela o comprime: ciclos que vão da ideia à produção em dias, não meses. Os produtos que construo passam pela mesma disciplina:',
       stats: [
-        { value: '9', label: 'Produtos selecionados no ar em produção' },
         { value: '40+', label: 'Checks E2E automatizados protegendo regras de negócio' },
         { value: '100%', label: 'Construídos sobre design systems com tokens' },
       ],
@@ -219,6 +218,7 @@ export const translations = {
       tools: ['Claude Code', 'Antigravity', 'Figma', 'Nano Banana'],
       proofLabel: 'Construídos com esse workflow',
       proof: [
+        { title: 'Vira', slug: 'vira-ticketeria-propria', note: 'Ticketeria no ar em seis semanas' },
         { title: 'Sigil', slug: 'sigil-design-system-builder', note: 'Da cor seed ao export' },
         { title: 'Proficia', slug: 'proficia-avaliacao-competencias-ux', note: 'SaaS com planos de time' },
         { title: 'Drop', slug: 'drop-marketplace-de-lancamentos', note: 'Checkout Pix, no ar' },
