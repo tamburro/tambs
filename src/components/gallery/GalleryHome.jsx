@@ -1,5 +1,5 @@
 'use client'
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { RiGridFill, RiListUnordered } from '@remixicon/react'
 import SphereGallery, { getGalleryProjects } from './SphereGallery'
 import WorkList from './WorkList'
@@ -12,16 +12,21 @@ export default function GalleryHome() {
     const [filterOpen, setFilterOpen] = useState(false)
 
     const projects = useMemo(() => getGalleryProjects(), [])
-    const categories = useMemo(() => {
+    const tags = useMemo(() => {
         const counts = new Map()
-        projects.forEach(p => {
-            if (p.category) counts.set(p.category, (counts.get(p.category) || 0) + 1)
-        })
-        return [...counts.entries()]
+        projects.forEach(p => (p.tags || []).forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1)))
+        return [...counts.entries()].sort((x, y) => y[1] - x[1])
     }, [projects])
 
-    const selectFilter = (cat) => {
-        setFilter(cat)
+    useEffect(() => {
+        if (!filterOpen) return
+        const onKey = (e) => { if (e.key === 'Escape') setFilterOpen(false) }
+        window.addEventListener('keydown', onKey)
+        return () => window.removeEventListener('keydown', onKey)
+    }, [filterOpen])
+
+    const selectFilter = (tag) => {
+        setFilter(tag)
         setFilterOpen(false)
     }
 
@@ -57,26 +62,27 @@ export default function GalleryHome() {
                     className={`ph-filter-btn ${filterOpen ? 'is-open' : ''}`}
                     onClick={() => setFilterOpen(open => !open)}
                 >
-                    {filter || t.gallery.filter}
+                    {filterOpen ? t.gallery.close : filter || t.gallery.filter}
                 </button>
             </div>
 
-            <div className={`ph-filter-panel ${filterOpen ? 'is-open' : ''}`}>
-                <button
-                    className={`ph-filter-chip ${!filter ? 'is-active' : ''}`}
-                    onClick={() => selectFilter(null)}
-                >
-                    {t.gallery.all} <span>[{projects.length}]</span>
-                </button>
-                {categories.map(([cat, count]) => (
-                    <button
-                        key={cat}
-                        className={`ph-filter-chip ${filter === cat ? 'is-active' : ''}`}
-                        onClick={() => selectFilter(cat)}
-                    >
-                        {cat} <span>[{count}]</span>
-                    </button>
-                ))}
+            <div
+                className={`ph-filter-overlay ${filterOpen ? 'is-open' : ''}`}
+                inert={!filterOpen}
+                onClick={() => setFilterOpen(false)}
+            >
+                <div className="ph-filter-list">
+                    {[[null, projects.length], ...tags].map(([tag, count], i) => (
+                        <button
+                            key={tag || 'all'}
+                            className={`ph-filter-option ${filter === tag ? 'is-active' : ''}`}
+                            style={{ '--i': i }}
+                            onClick={() => selectFilter(tag)}
+                        >
+                            {tag || t.gallery.all} <span>[{count}]</span>
+                        </button>
+                    ))}
+                </div>
             </div>
         </>
     )

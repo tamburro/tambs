@@ -269,60 +269,75 @@ body {
     color: var(--ph-ink);
 }
 
-.ph-filter-panel {
+.ph-filter-overlay {
     position: fixed;
-    bottom: 80px;
-    right: 22px;
-    z-index: 94;
+    inset: 0;
+    z-index: 93;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
+    padding: 96px 24px 112px;
+    overflow-y: auto;
+    background: rgba(16, 16, 16, 0.86);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     opacity: 0;
-    transform: translateY(12px);
     pointer-events: none;
-    transition: opacity 0.4s var(--ph-ease), transform 0.4s var(--ph-ease);
+    transition: opacity 0.5s var(--ph-ease);
 }
 
-.ph-filter-panel.is-open {
+.ph-filter-overlay.is-open {
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
 }
 
-.ph-filter-chip {
-    display: inline-flex;
+.ph-filter-list {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    font-family: var(--ph-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
+}
+
+.ph-filter-option {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.25em;
+    font-family: var(--ph-display);
+    font-size: clamp(24px, min(6.4vh, 8.2vw), 76px);
+    white-space: nowrap;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: -0.035em;
+    line-height: 1.06;
     color: var(--ph-paper);
-    background: rgba(30, 30, 30, 0.85);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--ph-hairline);
-    border-radius: 999px;
-    padding: 10px 18px;
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
 }
 
-.ph-filter-chip span {
+.ph-filter-overlay.is-open .ph-filter-option {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s var(--ph-ease) calc(var(--i) * 35ms),
+        transform 0.6s var(--ph-ease) calc(var(--i) * 35ms),
+        color 0.3s;
+}
+
+.ph-filter-option span {
+    font-family: var(--ph-mono);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-top: 0.5em;
+    color: var(--ph-mist);
+}
+
+.ph-filter-list:hover .ph-filter-option:not(:hover),
+.ph-filter-list:not(:hover) .ph-filter-option:not(.is-active) {
     color: var(--ph-faint);
-}
-
-.ph-filter-chip:hover {
-    border-color: rgba(250, 250, 250, 0.4);
-}
-
-.ph-filter-chip.is-active {
-    background: var(--ph-paper);
-    color: var(--ph-ink);
-}
-
-.ph-filter-chip.is-active span {
-    color: rgba(22, 22, 22, 0.5);
 }
 
 /* ───────────────────────────── List view ───────────────────────────── */
