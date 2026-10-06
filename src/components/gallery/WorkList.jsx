@@ -36,6 +36,8 @@ export default function WorkList({ projects, activeFilter }) {
     }, [])
 
     const open = (project) => {
+        router.prefetch(`/works/${project.slug}`)
+        overlayRef.current.style.background = project.accentColor || 'var(--ph-ink)'
         gsap.to(overlayRef.current, {
             opacity: 1,
             duration: 0.5,

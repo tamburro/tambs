@@ -49,13 +49,6 @@ const ProjectPage = ({ slug }) => {
                             </div>
                         )}
 
-                        {project.description && (
-                            <div className="project-section project-section--first">
-                                <h3>{t.project.overview}</h3>
-                                <p>{pick(project.description, project.description_en)}</p>
-                            </div>
-                        )}
-
                         {project.sections?.map((section, i) => {
                             const methods = pick(section.methods, section.methods_en);
                             const highlights = pick(section.highlights, section.highlights_en);

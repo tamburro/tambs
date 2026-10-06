@@ -84,14 +84,6 @@ Version      : 1.0
         margin-top: 30px;
     }
 
-    .single-project-page-design {
-        padding-top: 120px;
-    }
-
-    .single-project-page-design h1 {
-        font-size: 40px;
-    }
-
     .single-project-page-right {
         margin-top: 30px;
     }
@@ -263,14 +255,6 @@ Version      : 1.0
     .copyright-text,
     .extra-copyright p {
         text-align: center;
-    }
-
-    .single-project-page-design {
-        padding-top: 100px;
-    }
-
-    .single-project-page-design h1 {
-        font-size: 30px;
     }
 
     .about-image-part {

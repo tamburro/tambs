@@ -60,6 +60,11 @@ body {
     -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent);
 }
 
+/* over a case's colour band the fade stays light, so the colour reads through */
+body:has(.ph-case-hero:not(.ph-case-hero--light)) .ph-header::before {
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.38), rgba(22, 22, 22, 0));
+}
+
 .ph-header > * {
     pointer-events: auto;
 }
@@ -1076,85 +1081,154 @@ a.ph-info-value:hover {
 .ph-case-hero {
     background: var(--case-bg, var(--ph-carbon));
     color: var(--case-fg, var(--ph-paper));
-    padding: 150px 0 72px;
-}
-
-.ph-case-eyebrow {
-    font-family: var(--ph-mono);
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: inherit;
-    opacity: 0.7;
-    margin: 0 0 22px;
+    padding: 150px 0 96px;
 }
 
 .ph-case-title {
     color: inherit;
-    font-size: clamp(44px, 9vw, 150px);
+    font-size: clamp(44px, 10.5vw, 176px);
+    text-align: center;
     overflow-wrap: break-word;
     text-wrap: balance;
 }
 
-.ph-case-meta {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 28px 32px;
-    margin-top: 48px;
-    padding-top: 22px;
+/* hairline row under the title: who and what on the left, where to see it on the right */
+.ph-case-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    margin-top: clamp(36px, 5vw, 72px);
+    padding-top: 16px;
     border-top: 1px solid color-mix(in srgb, currentColor 28%, transparent);
-}
-
-.ph-case-meta-label {
     font-family: var(--ph-mono);
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: inherit;
-    opacity: 0.62;
-    margin: 0 0 8px;
 }
 
-.ph-case-meta-value {
-    font-family: var(--ph-display);
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.35;
-    color: inherit;
-    margin: 0;
-}
-
-.ph-case-links {
+.ph-case-bar-group {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
-.ph-case-link {
+.ph-case-bar-label {
+    margin-right: 6px;
+}
+
+.ph-case-chip {
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.ph-case-live {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-family: var(--ph-mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    gap: 8px;
     color: inherit;
     text-decoration: none;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-    padding: 7px 13px;
+    margin-left: 14px;
+}
+
+.ph-case-live span {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: color-mix(in srgb, currentColor 14%, transparent);
     transition: background 0.3s, color 0.3s;
 }
 
-.ph-case-link:hover {
+.ph-case-live:hover {
+    color: inherit;
+}
+
+.ph-case-live:hover span {
     background: var(--case-fg, var(--ph-paper));
     color: var(--case-bg, var(--ph-carbon));
 }
 
 .ph-case-cover {
-    margin-top: 56px;
+    margin-top: clamp(40px, 5vw, 72px);
     border-radius: 6px;
     overflow: hidden;
+}
+
+.ph-case-statement {
+    color: inherit;
+    font-size: clamp(26px, 4.2vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    padding-top: clamp(56px, 7vw, 110px);
+    text-indent: clamp(36px, 9vw, 150px);
+}
+
+/* overview in reading columns, with the project sheet beside it */
+.ph-case-about {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 48px;
+    padding-top: 28px;
+    margin-top: clamp(56px, 7vw, 96px);
+    border-top: 1px solid var(--ph-hairline);
+}
+
+.ph-case-about .ph-eyebrow {
+    margin-bottom: 22px;
+}
+
+.ph-case-about-text {
+    font-family: var(--ph-display);
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ph-paper);
+    columns: 2;
+    column-gap: 28px;
+    margin: 0;
+}
+
+.ph-case-facts {
+    margin: 0;
+}
+
+.ph-case-facts > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--ph-hairline);
+}
+
+.ph-case-facts dt {
+    font-family: var(--ph-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ph-mist);
+    flex-shrink: 0;
+}
+
+.ph-case-facts dd {
+    font-family: var(--ph-display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ph-paper);
+    text-align: right;
+    margin: 0;
+}
+
+.ph-case-facts-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
 }
 
 .ph-case-video {
@@ -1167,12 +1241,6 @@ a.ph-info-value:hover {
     aspect-ratio: 16 / 10;
     border-radius: 6px;
     background: var(--ph-ink-deep);
-}
-
-.ph-case-statement {
-    padding-top: 88px;
-    max-width: 1180px;
-    text-indent: clamp(36px, 9vw, 150px);
 }
 
 /* body copy: same face, size and measure as the overview paragraph */
@@ -1271,6 +1339,7 @@ a.ph-info-value:hover {
     .ph-service-row .ph-body { grid-column: 2; }
     .ph-xp-row { grid-template-columns: 1fr; gap: 6px; }
     .ph-ai-rules { grid-template-columns: 1fr; }
+    .ph-case-about { grid-template-columns: 1fr; gap: 40px; }
     .ph-row { grid-template-columns: 1fr; }
     .ph-row > .ph-eyebrow, .ph-row--lede > .ph-eyebrow { margin: 0 0 20px; }
     .ph-row > span:first-child { display: none; }
@@ -1296,9 +1365,8 @@ a.ph-info-value:hover {
     .ph-about-toggle { top: 78px; left: 16px; }
     .ph-list { padding: 120px 16px 160px; }
     .ph-list-preview { display: none; }
-    .ph-case-hero { padding: 120px 0 48px; }
-    .ph-case-meta { grid-template-columns: 1fr 1fr; gap: 22px 20px; margin-top: 32px; }
-    .ph-case-cover { margin-top: 36px; }
-    .ph-case-statement { padding-top: 56px; }
+    .ph-case-hero { padding: 120px 0 56px; }
+    .ph-case-live { margin-left: 0; margin-right: 14px; }
+    .ph-case-about-text { columns: 1; }
     .ph-related-grid { grid-template-columns: 1fr; gap: 32px; }
 }

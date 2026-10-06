@@ -28,7 +28,6 @@ export default function SphereGallery({ activeFilter = null }) {
     const mountRef = useRef(null)
     const labelRef = useRef(null)
     const overlayRef = useRef(null)
-    const overlayTitleRef = useRef(null)
     const tilesRef = useRef([])
     const router = useRouter()
     const { t } = useLanguage()
@@ -461,33 +460,17 @@ export default function SphereGallery({ activeFilter = null }) {
             mount.style.cursor = 'default'
             if (labelRef.current) labelRef.current.style.opacity = 0
 
-            // rotate so the tile faces the camera, then zoom in
-            const dir = tile.userData.centerDir
-            const targetY = Math.atan2(dir.x, -dir.z)
-            const targetX = -Math.asin(dir.y)
-
-            // shortest path for longitude
-            let ty = targetY
-            while (ty - rot.y > Math.PI) ty -= Math.PI * 2
-            while (ty - rot.y < -Math.PI) ty += Math.PI * 2
-
-            if (overlayTitleRef.current) {
-                overlayTitleRef.current.textContent = project.title
-            }
-
+            // the gallery dissolves straight into the project colour, the same one the case opens on
+            router.prefetch(`/works/${project.slug}`)
+            overlayRef.current.style.background = project.accentColor || ''
             const tl = gsap.timeline({
                 onComplete: () => router.push(`/works/${project.slug}`),
             })
-            tl.to(target, { x: targetX, y: ty, duration: 0.9, ease: 'power3.inOut' }, 0)
             tl.to(camera, {
-                fov: 26, duration: 1.1, ease: 'power3.inOut',
+                fov: 62, duration: 0.6, ease: 'power2.in',
                 onUpdate: () => camera.updateProjectionMatrix(),
-            }, 0.15)
-            tl.to(overlayRef.current, { opacity: 1, duration: 0.7, ease: 'power2.inOut' }, 0.55)
-            tl.fromTo(overlayTitleRef.current,
-                { opacity: 0, y: 28 },
-                { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.75)
-            tl.to({}, { duration: 0.35 }) // hold
+            }, 0)
+            tl.to(overlayRef.current, { opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 0.05)
         }
 
         // wheel / trackpad rotates the sphere, like dragging sideways
@@ -648,9 +631,7 @@ export default function SphereGallery({ activeFilter = null }) {
             <div ref={labelRef} className="sphere-gallery-label" />
 
             {/* transition overlay */}
-            <div ref={overlayRef} className="sphere-gallery-overlay">
-                <h2 ref={overlayTitleRef} className="sphere-gallery-overlay-title" />
-            </div>
+            <div ref={overlayRef} className="sphere-gallery-overlay" />
         </div>
     )
 }

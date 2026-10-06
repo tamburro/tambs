@@ -1218,16 +1218,6 @@ const RichProjectPage = ({ project }) => {
                 </div>
             )}
 
-            {/* Overview */}
-            {project.description && (
-                <div className={`container ${project.tldr ? '' : 'pt-30'}`}>
-                    <div className="project-section project-section--first">
-                        <h3>{t.project.overview}</h3>
-                        <p>{pick(project.description, project.description_en)}</p>
-                    </div>
-                </div>
-            )}
-
             {/* Seções */}
             {project.sections?.map((section, i) => {
                 const num   = String(i + 1).padStart(2, '0');

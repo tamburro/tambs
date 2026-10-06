@@ -143,6 +143,7 @@ export const translations = {
       backToProjects: 'Back to Works',
       related: 'Related work',
       inMotion: 'In motion',
+      sheet: 'Details',
     },
     footer: {
       cta: "Let's Talk",
@@ -290,6 +291,7 @@ export const translations = {
       backToProjects: 'Voltar aos Trabalhos',
       related: 'Trabalhos relacionados',
       inMotion: 'Em movimento',
+      sheet: 'Ficha',
     },
     footer: {
       cta: 'Vamos Conversar',

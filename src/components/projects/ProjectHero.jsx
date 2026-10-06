@@ -2,7 +2,8 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { RiExternalLinkLine } from '@remixicon/react'
+import gsap from 'gsap'
+import { RiArrowRightUpLine } from '@remixicon/react'
 import { useLanguage } from '@/context/LanguageContext'
 
 // relative luminance (WCAG) of a #rrggbb color
@@ -23,9 +24,20 @@ export default function ProjectHero({ project }) {
     const pick = (pt, en) => lang === 'en' && en ? en : pt
 
     const accent = project.accentColor
-    const style = accent ? { '--case-bg': accent, '--case-fg': readableOn(accent) } : undefined
+    const fg = accent && readableOn(accent)
+    const style = accent ? { '--case-bg': accent, '--case-fg': fg } : undefined
     const cover = project.pageSrc || project.src
+    const heroRef = useRef(null)
     const videoRef = useRef(null)
+
+    // the page arrives on the project colour; its content rises in after
+    useEffect(() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+        const ctx = gsap.context(() => {
+            gsap.from('.ph-case-rise', { opacity: 0, y: 44, duration: 1, stagger: 0.09, ease: 'power3.out', delay: 0.1 })
+        }, heroRef)
+        return () => ctx.revert()
+    }, [project.slug])
 
     // the loop only downloads and plays while it is on screen
     useEffect(() => {
@@ -39,12 +51,11 @@ export default function ProjectHero({ project }) {
         return () => io.disconnect()
     }, [project.video])
 
-    const meta = [
+    const facts = [
         [t.project.year, pick(project.year, project.year_en)],
         [t.project.role, pick(project.role, project.role_en)],
         [t.project.duration, pick(project.timeline, project.timeline_en)],
         [t.project.team, pick(project.team, project.team_en)],
-        [t.project.tools, project.tools?.join(' · ')],
     ].filter(([, value]) => value)
 
     const links = [
@@ -54,36 +65,30 @@ export default function ProjectHero({ project }) {
         ...(project.liveDemoLink ? [[t.project.liveDemo, project.liveDemoLink]] : []),
     ]
 
+    const description = pick(project.description, project.description_en)
+
     return (
         <>
-            <header className="ph-case-hero" style={style}>
+            <header className={`ph-case-hero ${fg === '#161616' ? 'ph-case-hero--light' : ''}`} style={style} ref={heroRef}>
                 <div className="container">
-                    <p className="ph-case-eyebrow">{project.category} | {project.client || 'Projeto Pessoal'}</p>
-                    <h1 className="ph-display ph-case-title">{project.title}</h1>
+                    <h1 className="ph-display ph-case-title ph-case-rise">{project.title}</h1>
 
-                    <div className="ph-case-meta">
-                        {meta.map(([label, value]) => (
-                            <div key={label}>
-                                <p className="ph-case-meta-label">{label}</p>
-                                <p className="ph-case-meta-value">{value}</p>
-                            </div>
-                        ))}
-                        {links.length > 0 && (
-                            <div>
-                                <p className="ph-case-meta-label">{t.project.viewProject}</p>
-                                <div className="ph-case-links">
-                                    {links.map(([label, url]) => (
-                                        <Link key={url} href={url} target="_blank" rel="noopener noreferrer" className="ph-case-link">
-                                            {label} <RiExternalLinkLine size={12} />
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                    <div className="ph-case-bar ph-case-rise">
+                        <div className="ph-case-bar-group">
+                            <span className="ph-case-bar-label">{project.client || 'Projeto Pessoal'}</span>
+                            {(project.tags || []).map(tag => <span key={tag} className="ph-case-chip">{tag}</span>)}
+                        </div>
+                        <div className="ph-case-bar-group">
+                            {links.map(([label, url]) => (
+                                <Link key={url} href={url} target="_blank" rel="noopener noreferrer" className="ph-case-live">
+                                    {label} <span><RiArrowRightUpLine size={12} /></span>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
 
                     {cover && (
-                        <div className="ph-case-cover">
+                        <div className="ph-case-cover ph-case-rise">
                             <Image
                                 src={cover}
                                 alt={`Imagem principal do projeto ${project.title}`}
@@ -95,14 +100,40 @@ export default function ProjectHero({ project }) {
                             />
                         </div>
                     )}
+
+                    {project.tagline && (
+                        <p className="ph-statement ph-case-statement">{pick(project.tagline, project.tagline_en)}</p>
+                    )}
                 </div>
             </header>
 
-            {project.tagline && (
-                <div className="container">
-                    <p className="ph-statement ph-case-statement">{pick(project.tagline, project.tagline_en)}</p>
+            <div className="container ph-case-about">
+                {description && (
+                    <div>
+                        <p className="ph-eyebrow">{t.project.overview}</p>
+                        <p className="ph-case-about-text">{description}</p>
+                    </div>
+                )}
+                <div>
+                    <p className="ph-eyebrow">{t.project.sheet}</p>
+                    <dl className="ph-case-facts">
+                        {facts.map(([label, value]) => (
+                            <div key={label}>
+                                <dt>{label}</dt>
+                                <dd>{value}</dd>
+                            </div>
+                        ))}
+                        {project.tools?.length > 0 && (
+                            <div>
+                                <dt>{t.project.tools}</dt>
+                                <dd className="ph-case-facts-chips">
+                                    {project.tools.map(tool => <span key={tool} className="ph-tag">{tool}</span>)}
+                                </dd>
+                            </div>
+                        )}
+                    </dl>
                 </div>
-            )}
+            </div>
 
             {project.video && (
                 <div className="container ph-case-video">
