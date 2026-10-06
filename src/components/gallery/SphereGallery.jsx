@@ -7,7 +7,7 @@ import { projectsData } from '@/utlits/fackData/projectData'
 import { useLanguage } from '@/context/LanguageContext'
 import { luminance } from '@/components/projects/ProjectHero'
 
-export const GALLERY_ORDER = [24, 22, 23, 21, 18, 19, 20, 17, 16, 11, 12, 13, 14, 1, 15, 6, 2, 7, 5, 4, 3, 8, 9, 10]
+export const GALLERY_ORDER = [22, 24, 23, 21, 18, 19, 20, 17, 16, 11, 12, 13, 14, 1, 15, 6, 2, 7, 5, 4, 3, 8, 9, 10]
 
 export function getGalleryProjects() {
     return GALLERY_ORDER
