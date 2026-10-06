@@ -39,6 +39,18 @@ export const projectsData = [
         "ffmpeg",
         "Claude Code"
       ],
+      "prototypeLinks": [
+        {
+          "label": "Simuladores",
+          "label_en": "Calculators",
+          "url": "https://simuladores-daniele-guerra.vercel.app"
+        },
+        {
+          "label": "Site (protótipo)",
+          "label_en": "Website (prototype)",
+          "url": "https://site-daniele-guerra.vercel.app"
+        }
+      ],
       "accentColor": "#30426B",
       "pageType": "rich",
       "sections": [
