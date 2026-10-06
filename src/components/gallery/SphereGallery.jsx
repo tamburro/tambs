@@ -460,17 +460,24 @@ export default function SphereGallery({ activeFilter = null }) {
             mount.style.cursor = 'default'
             if (labelRef.current) labelRef.current.style.opacity = 0
 
-            // the gallery dissolves straight into the project colour, the same one the case opens on
+            // turn so the tile faces the camera and move in on it
+            const dir = tile.userData.centerDir
+            let ty = Math.atan2(dir.x, -dir.z)
+            while (ty - rot.y > Math.PI) ty -= Math.PI * 2
+            while (ty - rot.y < -Math.PI) ty += Math.PI * 2
+
+            // the gallery dissolves into the project colour, the same one the case opens on
             router.prefetch(`/works/${project.slug}`)
             overlayRef.current.style.background = project.accentColor || ''
             const tl = gsap.timeline({
                 onComplete: () => router.push(`/works/${project.slug}`),
             })
+            tl.to(target, { x: -Math.asin(dir.y), y: ty, duration: 0.8, ease: 'power3.inOut' }, 0)
             tl.to(camera, {
-                fov: 62, duration: 0.6, ease: 'power2.in',
+                fov: 28, duration: 1, ease: 'power3.inOut',
                 onUpdate: () => camera.updateProjectionMatrix(),
-            }, 0)
-            tl.to(overlayRef.current, { opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 0.05)
+            }, 0.1)
+            tl.to(overlayRef.current, { opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 0.6)
         }
 
         // wheel / trackpad rotates the sphere, like dragging sideways
