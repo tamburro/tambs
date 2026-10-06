@@ -151,7 +151,7 @@ export default function ProjectHero({ project }) {
                         loop
                         playsInline
                         preload="none"
-                        aria-label={`${project.title} — ${t.project.inMotion}`}
+                        aria-label={`${project.title}: ${t.project.inMotion}`}
                     />
                 </div>
             )}

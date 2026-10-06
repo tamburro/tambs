@@ -36,14 +36,14 @@ const PERSONAS_DATA = {
         avatar: 'R',
         cor: RED,
         bio: 'Trabalhou 6 anos como auxiliar de logística antes da pandemia. No iFood desde 2021, hoje é sua renda principal. Trabalha 10h/dia, terça a domingo, priorizando Moema e Vila Mariana.',
-        citacao: 'Quando chega num prédio alto sem elevador, eu já sei que vai custar. Subo, entrego, desço — sem nenhum centavo a mais por isso.',
+        citacao: 'Quando chega num prédio alto sem elevador, eu já sei que vai custar. Subo, entrego, desço, sem nenhum centavo a mais por isso.',
         stats: [
             { label: 'Jornada',       value: '10h/dia, Ter–Dom' },
             { label: 'Renda líquida', value: '~R$ 2.400/mês'   },
             { label: 'Na plataforma', value: '4 anos'           },
             { label: 'Dependentes',   value: '3 pessoas'        },
         ],
-        relacao: 'Aceitaria subidas com mais frequência se soubesse o valor antes de aceitar. Hoje ele tende a perguntar o andar no interfone — gerando atrito antes mesmo da entrega. Com o valor visível no card de aceite, a decisão passa a ser informada e sem constrangimento.',
+        relacao: 'Aceitaria subidas com mais frequência se soubesse o valor antes de aceitar. Hoje ele tende a perguntar o andar no interfone, gerando atrito antes mesmo da entrega. Com o valor visível no card de aceite, a decisão passa a ser informada e sem constrangimento.',
         fonte: 'Cebrap 2024 · UFPR/Clínica de Direito do Trabalho 2025 · Portal de Dados iFood',
     },
     usuario: {
@@ -61,7 +61,7 @@ const PERSONAS_DATA = {
             { label: 'Andar',       value: '11º (s/ elev.)' },
             { label: 'Plano',       value: 'Clube iFood' },
         ],
-        relacao: 'Nunca houve um momento de consciência sobre o esforço da subida — não por indiferença, mas porque o sistema nunca criou esse momento. A Subida no checkout cria. Ela vê, reconhece e age. Barreira zero: já está no fluxo, custa R$ 3 e vai direto pro entregador.',
+        relacao: 'Nunca houve um momento de consciência sobre o esforço da subida, não por indiferença, mas porque o sistema nunca criou esse momento. A Subida no checkout cria. Ela vê, reconhece e age. Barreira zero: já está no fluxo, custa R$ 3 e vai direto pro entregador.',
         fonte: 'Klavi Q1 2025 · Relatório iFood 2024 · Panorama Mobile Time dez/2024',
     },
 };
@@ -69,7 +69,7 @@ const PERSONAS_DATA = {
 const JOURNEY_STAGES = [
     { etapa: 'Pedido',
       c_a: { e:'🙂', t:'Animada. Pedido feito normalmente.'                                   },
-      c_d: { e:'🙂', t:'Igual — e a opção Subida aparece no checkout.'                        },
+      c_d: { e:'🙂', t:'Igual, e a opção Subida aparece no checkout.'                        },
       r_a: { e:'😐', t:'Online, aguardando corridas.'                                          },
       r_d: { e:'😐', t:'Online, aguardando corridas.'                                          },
     },
@@ -86,7 +86,7 @@ const JOURNEY_STAGES = [
       r_d: { e:'😐', t:'Busca o pedido. Já sabe que vai render bem.'                           },
     },
     { etapa: 'Chegada', novo: true,
-      c_a: { e:'😟', t:'"Vai subir ou não?" — ambiguidade constante.',              bad: true  },
+      c_a: { e:'😟', t:'"Vai subir ou não?" Ambiguidade constante.',              bad: true  },
       c_d: { e:'😊', t:'"Marcos confirmou a subida até sua porta." Zero atrito.',    ok: true  },
       r_a: { e:'😟', t:'Descobre o andar ao chegar. Decisão forçada na porta.',      bad: true },
       r_d: { e:'😐', t:'Sabia que ia subir desde o aceite. Para a moto e sobe.'                },
@@ -107,18 +107,18 @@ const JOURNEY_STAGES = [
 
 const DECISOES_UI = [
     {
-        tela: 'Checkout — bloco Subida',
+        tela: 'Checkout: bloco Subida',
         status: 'Novo componente',
         fluxo: 'usuario',
         itens: [
             { q: 'Por que no checkout, não pós-entrega?',
-              a: 'O entregador vê o valor antes de aceitar — isso transforma gorjeta em incentivo real. Gorjeta pós-entrega tem baixa adesão e não cria o diferencial pré-corrida.' },
+              a: 'O entregador vê o valor antes de aceitar: isso transforma gorjeta em incentivo real. Gorjeta pós-entrega tem baixa adesão e não cria o diferencial pré-corrida.' },
             { q: 'Por que stepper e não chips de valor fixo?',
               a: 'Chips criam âncora social que pode gerar pressão. O stepper é neutro, fluido e usa um padrão que o iFood já tem para quantidade de itens.' },
         ],
     },
     {
-        tela: 'Card da corrida — badge Subida',
+        tela: 'Card da corrida: badge Subida',
         status: 'Novo elemento',
         fluxo: 'entregador',
         itens: [
@@ -143,34 +143,34 @@ const DECISOES_UI = [
 
 const PIXTUDO_PERSONAS = [
     {
-        key: 'camila', label: 'Camila — Millennial',
+        key: 'camila', label: 'Camila · Millennial',
         nome: 'Camila, 28', sub: 'Analista de Marketing · São Paulo · CLT',
         avatar: 'C', cor: PGREEN,
         tags: ['Millennials', 'Já bancarizada', 'Nubank + Itaú', 'iOS', 'R$4.500/mês'],
         citacao: '"Odeio ter que abrir 4 apps diferentes pra resolver uma coisa só. Queria que tudo ficasse num lugar."',
         necessidades: ['Pagamentos rápidos sem burocracia', 'Investimentos automáticos e simples', 'Controle de gastos com amigos', 'Ofertas e cashback relevantes'],
         dores: ['Apps bancários lentos e confusos', 'Rateio manual de contas (restaurantes, viagens)', 'Promoções irrelevantes e spam', 'Medo de golpe financeiro digital'],
-        contexto: ['No transporte (metrô/ônibus) — rápido, 1 mão', 'Almoço — dividir conta na hora', 'À noite — revisar gastos do dia'],
+        contexto: ['No transporte (metrô/ônibus): rápido, 1 mão', 'Almoço: dividir conta na hora', 'À noite: revisar gastos do dia'],
     },
     {
-        key: 'jonas', label: 'Jonas — MEI',
+        key: 'jonas', label: 'Jonas · MEI',
         nome: 'Jonas, 42', sub: 'Eletricista autônomo · Recife · MEI',
         avatar: 'J', cor: '#FFD600',
         tags: ['Trabalhador informal', 'Semi-bancarizado', 'Android', 'Renda variável', '3 filhos'],
         citacao: '"Preciso de crédito pra comprar material, mas banco não me empresta. E cobrar cliente é um estresse."',
         necessidades: ['Cobrar clientes sem máquina cara', 'Crédito rápido pra capital de giro', 'Guardar dinheiro da renda variável', 'Nota fiscal e gestão simples (MEI)'],
         dores: ['Negado em todo crédito bancário', 'Taxa alta da maquininha de cartão', 'Dificuldade de separar conta pessoal/empresa', 'Medo de golpe do Pix falso'],
-        contexto: ['Na obra — mostrar QR pra cliente pagar', 'Entre serviços — checar o saldo', 'Fim do mês — organizar faturamento MEI'],
+        contexto: ['Na obra: mostrar QR pra cliente pagar', 'Entre serviços: checar o saldo', 'Fim do mês: organizar faturamento MEI'],
     },
     {
-        key: 'beatriz', label: 'Beatriz — Gen Z',
+        key: 'beatriz', label: 'Beatriz · Gen Z',
         nome: 'Beatriz, 19', sub: 'Estudante universitária · Porto Alegre · Estagiária',
         avatar: 'B', cor: '#FF4081',
         tags: ['Gen Z', 'Digital native', 'Primeiro emprego', 'iOS/Android', 'R$1.200/mês'],
         citacao: '"Nunca fui em agência bancária. Faço tudo pelo celular. Mas ainda não entendo de investimentos."',
         necessidades: ['Entender finanças de forma simples', 'Vaquinhas e grupos de pagamento com amigos', 'Primeiros investimentos com pouco dinheiro', 'Ofertas e benefícios do seu estilo de vida'],
         dores: ['Linguagem financeira inacessível', 'Cobrar amigos sem parecer chata', 'Gastos por impulso sem consciência', 'Desconfiança: "meu dinheiro tá seguro?"'],
-        contexto: ['Redes sociais → descoberta de ofertas', 'Social — pagar e cobrar amigos da faculdade', 'Gamificação — metas de economia com recompensas'],
+        contexto: ['Redes sociais → descoberta de ofertas', 'Social: pagar e cobrar amigos da faculdade', 'Gamificação: metas de economia com recompensas'],
     },
 ];
 
@@ -180,7 +180,7 @@ const PIXTUDO_COMPETITORS = [
     { nome: 'PicPay',        pag: 'g', inv: 'y', cred: 'y', mini: 'y', social: 'g', ux: '3.5/5', gap: 'Sem ancoragem financeira' },
     { nome: 'Itaú/Bradesco', pag: 'g', inv: 'g', cred: 'g', mini: 'r', social: 'r', ux: '2.7/5', gap: 'UX péssima, sem inovação' },
     { nome: 'PayPal',        pag: 'y', inv: 'r', cred: 'r', mini: 'r', social: 'r', ux: '3.1/5', gap: 'Global, sem localização' },
-    { nome: 'PixTudo ✦',     pag: 'g', inv: 'g', cred: 'g', mini: 'g', social: 'g', ux: '—',     gap: 'A proposta', destaque: true },
+    { nome: 'PixTudo ✦',     pag: 'g', inv: 'g', cred: 'g', mini: 'g', social: 'g', ux: '-',     gap: 'A proposta', destaque: true },
 ];
 
 const PIXTUDO_JOURNEY = [
@@ -203,7 +203,7 @@ const PIXTUDO_PRINCIPLES = [
 
 const PIXTUDO_KPIS = [
     { icon: '⏱️', label: 'Time to First Transaction', target: '< 3 min',   desc: 'Do download até o primeiro Pix enviado ou recebido' },
-    { icon: '📊', label: 'DAU / MAU Ratio',             target: '> 40%',    desc: 'Stickiness — usuários ativos diários vs mensais' },
+    { icon: '📊', label: 'DAU / MAU Ratio',             target: '> 40%',    desc: 'Stickiness: usuários ativos diários vs mensais' },
     { icon: '❤️', label: 'NPS Alvo',                    target: '> 70',     desc: 'Net Promoter Score (benchmark Nubank ~87)' },
     { icon: '💳', label: 'Produtos por Usuário',         target: '> 2,5',   desc: 'Média de produtos financeiros ativos por conta após 90 dias' },
     { icon: '🌱', label: 'Inclusão Financeira',          target: '20%',     desc: '% de usuários sem histórico bancário que acessam crédito' },
@@ -283,8 +283,8 @@ function PersonasSection() {
         <>
             <ToggleGroup
                 options={[
-                    { key: 'entregador', label: 'Rodrigo — Entregador', cor: RED  },
-                    { key: 'usuario',    label: 'Camila — Usuária',     cor: DRED },
+                    { key: 'entregador', label: 'Rodrigo · Entregador', cor: RED  },
+                    { key: 'usuario',    label: 'Camila · Usuária',     cor: DRED },
                 ]}
                 value={ativa}
                 onChange={setAtiva}
@@ -752,27 +752,27 @@ const ZAP_COMPETITORS = [
 
 const ZAP_PERSONAS = [
     {
-        key: 'bruna', label: 'Bruna — Persona Primária',
+        key: 'bruna', label: 'Bruna · Persona Primária',
         nome: 'Bruna Ferreira, 28', sub: 'Auxiliar administrativa · São Paulo, Zona Leste',
         avatar: 'B', cor: ZVERDE,
         tags: ['Persona Primária', 'CLT', 'Renda fam. R$3.200', 'Ensino Médio'],
-        citacao: '"Eu não tenho tempo pra ficar abrindo 10 apps diferentes. Quero pagar conta, falar com a minha família e pedir a janta — tudo num lugar só."',
+        citacao: '"Eu não tenho tempo pra ficar abrindo 10 apps diferentes. Quero pagar conta, falar com a minha família e pedir a janta, tudo num lugar só."',
         objetivos: ['Economizar tempo', 'Controlar gastos', 'Falar com família', 'Pagar contas fácil'],
         frustracoes: ['Muitos apps na memória', 'Fila no banco', 'Medo de golpe', 'App gov complicado'],
         apps: ['WhatsApp', 'Instagram', 'Nubank', 'iFood', 'YouTube'],
     },
     {
-        key: 'caua', label: 'Cauã — Early Adopter',
+        key: 'caua', label: 'Cauã · Early Adopter',
         nome: 'Cauã Mendonça, 22', sub: 'Estudante de TI · Fortaleza, CE',
         avatar: 'C', cor: ZAZUL,
         tags: ['Early Adopter', 'Freelancer', 'Renda R$800', 'Superior incompleto'],
-        citacao: '"Quero monetizar minha arte no app, ter minha lojinha, e ainda usar como portfólio. O WeChat fez isso — por que o Brasil não tem?"',
+        citacao: '"Quero monetizar minha arte no app, ter minha lojinha, e ainda usar como portfólio. O WeChat fez isso. Por que o Brasil não tem?"',
         objetivos: ['Renda extra', 'Construir audiência', 'Vender produtos digitais', 'Networking'],
         frustracoes: ['Taxa do Instagram Shop', 'Alcance orgânico baixo', 'Falta de integração', 'Sem mini-apps BR'],
         apps: ['TikTok', 'Discord', 'GitHub', 'Twitter/X', 'Mercado Livre'],
     },
     {
-        key: 'geraldo', label: 'Geraldo — Inclusão Digital',
+        key: 'geraldo', label: 'Geraldo · Inclusão Digital',
         nome: 'Seu Geraldo Lima, 62', sub: 'Aposentado · Belo Horizonte, MG',
         avatar: 'G', cor: ZAMARELO,
         tags: ['Inclusão Digital', 'Aposentado', 'INSS R$1.412', 'Fund. incompleto'],
@@ -789,7 +789,7 @@ const ZAP_JOURNEY = [
         acoes: 'Vê recomendação de amiga no grupo do WhatsApp',
         touchpoints: 'Boca a boca digital · Play Store',
         emoji: '🤔', emocao: 50, emocaoCor: '#888',
-        dores: '"Mais um app?" — desconfiança',
+        dores: 'Desconfiança: "mais um app?"',
         opor: 'Reputação social + prova de amigo',
     },
     {
@@ -821,7 +821,7 @@ const ZAP_JOURNEY = [
         acoes: 'Indica para 5 contatos, ganha R$10 de cashback',
         touchpoints: 'App · Programa de indicação',
         emoji: '🤩', emocao: 95, emocaoCor: ZVERDE,
-        dores: '—',
+        dores: '-',
         opor: 'Gamificação e cashback viral',
     },
 ];
@@ -836,9 +836,9 @@ const ZAP_IA = [
 
 const ZAP_FEATURES = [
     { num: '01', nome: 'Mensagens + Stickers Culturais', fase: 'MVP', faseCor: ZVERDE,   desc: 'Chat P2P e grupos com stickers temáticos do cotidiano brasileiro (carnaval, futebol, baile funk, sertanejo). Diferencial cultural inimitável.' },
-    { num: '02', nome: 'ZapPay — Pix Nativo + Carteira', fase: 'MVP', faseCor: ZVERDE,   desc: 'Envio de Pix dentro do chat, carteira digital, pagamento de boletos e recargas — sem sair do app.' },
+    { num: '02', nome: 'ZapPay: Pix Nativo + Carteira', fase: 'MVP', faseCor: ZVERDE,   desc: 'Envio de Pix dentro do chat, carteira digital, pagamento de boletos e recargas, sem sair do app.' },
     { num: '03', nome: 'Gov.br SSO + Serviços Públicos', fase: 'V2',  faseCor: ZAZUL,    desc: 'Login único com gov.br para acessar INSS, FGTS, Detran e CadÚnico dentro do ZapVida. Parceria federal que cria barreira de entrada.' },
-    { num: '04', nome: 'Mini-apps de Terceiros',         fase: 'V2',  faseCor: ZAZUL,    desc: 'SDK aberto para empresas criarem mini-apps dentro do ZapVida — como WeChat com suas 3M+ mini-apps.' },
+    { num: '04', nome: 'Mini-apps de Terceiros',         fase: 'V2',  faseCor: ZAZUL,    desc: 'SDK aberto para empresas criarem mini-apps dentro do ZapVida, como WeChat com suas 3M+ mini-apps.' },
     { num: '05', nome: 'Feed & Stories Comunitários',    fase: 'V3',  faseCor: ZAMARELO, desc: 'Conteúdo hiperlocal por bairro, cidade e comunidade. Algoritmo que respeita a diversidade regional do Brasil.' },
 ];
 
@@ -1007,7 +1007,7 @@ function ZapVidaIA() {
         <div>
             <div style={{ textAlign: 'center', marginBottom: 24 }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 24px', borderRadius: 12, background: ZVERDE, color: '#000', fontSize: 14, fontWeight: 700 }}>
-                    🇧🇷 ZapVida — Raiz
+                    🇧🇷 ZapVida · Raiz
                 </span>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
@@ -1056,7 +1056,7 @@ function ZapVidaKPIsRoadmap() {
         <>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14, marginBottom: 40 }}>
                 {[
-                    { icon: '📈', cor: ZVERDE,   label: 'North Star — TDAU',  target: '≥ 4,2x',  sub: 'Transações Diárias Ativas por usuário ao mês 12' },
+                    { icon: '📈', cor: ZVERDE,   label: 'North Star: TDAU',  target: '≥ 4,2x',  sub: 'Transações Diárias Ativas por usuário ao mês 12' },
                     { icon: '🎯', cor: ZAZUL,    label: 'Retenção D30',       target: '≥ 58%',   sub: 'Benchmark WhatsApp: 72%' },
                     { icon: '💬', cor: ZAMARELO, label: 'NPS Alvo',           target: '≥ 65',    sub: 'Com foco especial na classe C/D e Nordeste' },
                 ].map((k, i) => (
@@ -1069,7 +1069,7 @@ function ZapVidaKPIsRoadmap() {
                 ))}
             </div>
 
-            <MonoLabel>Roadmap — 18 meses</MonoLabel>
+            <MonoLabel>Roadmap: 18 meses</MonoLabel>
             <div style={{ marginTop: 16, position: 'relative', paddingLeft: 32 }}>
                 <div style={{ position: 'absolute', left: 8, top: 0, bottom: 0, width: 2, background: `linear-gradient(to bottom, ${ZVERDE}, transparent)`, opacity: 0.3 }} />
                 {ZAP_ROADMAP.map((fase, i) => (
@@ -1094,7 +1094,7 @@ function GloboLPComparison() {
         <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
             <Image
                 src="/images/projects/ab_test/oglb_full_intern.jpg"
-                alt="Comparação das duas landing pages — Cenário A e Cenário B"
+                alt="Comparação das duas landing pages: Cenário A e Cenário B"
                 width={1920}
                 height={1249}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

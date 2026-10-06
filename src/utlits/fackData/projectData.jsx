@@ -919,7 +919,7 @@ export const projectsData = [
           "title": "Resultados & Aprendizados",
           "title_en": "Outcomes & Learnings",
           "content": "A marca saiu do 'só Instagram' para um ecossistema próprio: uma landing que encanta, uma loja que vende e um painel que o dono opera sozinho. O principal aprendizado foi que, com orçamento de geração limitado, definir o escopo da imersão (número de cenas × qualidade) é uma decisão de produto, não de estética: calibrar uma cena antes de gerar a cadeia inteira economizou créditos e evitou retrabalho.",
-          "content_en": "The brand moved from 'Instagram only' to an ecosystem of its own: a landing that delights, a shop that sells and a panel the owner runs alone. The main learning: on a limited generation budget, scoping the immersion (number of scenes × quality) is a product decision, not an aesthetic one — calibrating a single scene before generating the whole chain saved credits and avoided rework.",
+          "content_en": "The brand moved from 'Instagram only' to an ecosystem of its own: a landing that delights, a shop that sells and a panel the owner runs alone. The main learning: on a limited generation budget, scoping the immersion (number of scenes × quality) is a product decision, not an aesthetic one: calibrating a single scene before generating the whole chain saved credits and avoided rework.",
           "highlights": [
             "O checkout via WhatsApp provou que dá para vender desde o dia um, sem esperar a infraestrutura de pagamento",
             "IA generativa foi usada como ferramenta de produção de uma experiência de marca real, não como enfeite"
@@ -949,8 +949,8 @@ export const projectsData = [
         "problem_en": "Brazilian children are among the most connected in the world, yet live in a country that became a showcase for WhatsApp, SMS and Pix scams. Surveys like TIC Kids Online Brasil expose the gap: very high access, low critical skills. Brazil's BNCC curriculum made digital literacy a required competency, but teachers lack the time and engaging material to teach it.",
         "role": "Product Designer & AI Engineer, solo: shaping, design system, código, integração de IA e deploy, do zero ao ar.",
         "role_en": "Product Designer & AI Engineer, solo: shaping, design system, code, AI integration and deploy, from zero to live.",
-        "outcome": "Um produto jogável dos dois lados no ar: o professor gera uma missão com IA real, o aluno joga no modo avião e o professor vê onde a turma tropeçou — e gera reforço a partir disso.",
-        "outcome_en": "A playable two-sided product, live: the teacher generates a mission with real AI, the student plays in airplane mode, and the teacher sees where the class stumbled — then generates reinforcement from it."
+        "outcome": "Um produto jogável dos dois lados no ar: o professor gera uma missão com IA real, o aluno joga no modo avião e o professor vê onde a turma tropeçou, e gera reforço a partir disso.",
+        "outcome_en": "A playable two-sided product, live: the teacher generates a mission with real AI, the student plays in airplane mode, and the teacher sees where the class stumbled, then generates reinforcement from it."
       },
       "description": "Produto edtech que reúne, num único fluxo, a tese inteira de uma plataforma: o professor descreve um objetivo pedagógico em linguagem natural, a IA (Gemini) gera uma missão gamificada de letramento digital alinhada à BNCC, o professor revisa e aprova, o responsável autoriza sem expor dados da criança, o aluno joga offline como um PWA, e os resultados sincronizam e viram insight. Um design system de duas vozes veste a mesma base para o professor (sóbrio) e para o aluno (lúdico), sem nunca trocar de produto.",
       "description_en": "An ed-tech product that brings a platform's entire thesis together in a single flow: the teacher describes a pedagogical goal in natural language, AI (Gemini) generates a gamified digital-literacy mission aligned to Brazil's BNCC curriculum, the teacher reviews and approves, the guardian consents without exposing the child's data, the student plays offline as a PWA, and results sync and turn into insight. A two-voice design system dresses the same base for the teacher (sober) and the student (playful), without ever switching products.",
@@ -975,33 +975,33 @@ export const projectsData = [
           "type": "text",
           "title": "O Problema",
           "title_en": "The Problem",
-          "content": "Crianças brasileiras crescem hiperconectadas, mas num ambiente hostil. O Brasil é um dos países que mais sofre golpes digitais, e fraudes por WhatsApp, SMS e Pix chegam todo dia ao celular da família — muitas vezes operado pela própria criança. Pesquisas como a TIC Kids Online Brasil (Cetic.br) mostram o mesmo descompasso ano após ano: acesso altíssimo, repertório crítico baixo. A criança sabe usar o aplicativo, mas não aprendeu a desconfiar dele.\n\nA BNCC respondeu tornando cultura digital uma competência obrigatória, mas jogou a conta no professor — que já está sobrecarregado e não tem tempo, material pronto nem repertório técnico para transformar 'ensinar a identificar um golpe' numa atividade que prenda uma turma do fundamental. Ainda por cima, boa parte das escolas públicas convive com internet instável ou inexistente, o que elimina a maioria das ferramentas online, e LGPD e ECA exigem proteção reforçada para dados de menores. A necessidade é enorme, e as ferramentas existentes ou são genéricas, ou dependem de conexão, ou tratam a criança como um cadastro.",
-          "content_en": "Brazilian children grow up hyperconnected, but in a hostile environment. Brazil is among the countries most hit by digital scams, and WhatsApp, SMS and Pix fraud reaches the family phone every day — often the very phone a child is using. Surveys like TIC Kids Online Brasil (Cetic.br) show the same gap year after year: very high access, low critical skills. The child knows how to use the app, but never learned to distrust it.\n\nBrazil's BNCC curriculum responded by making digital literacy a required competency, but pushed the burden onto the teacher — already overloaded, with no time, no ready-made material and no technical repertoire to turn 'teach how to spot a scam' into an activity that holds a primary-school class. On top of that, many public schools live with unstable or nonexistent internet, which rules out most online tools, and LGPD and the ECA (child statute) demand heightened protection for minors' data. The need is enormous, and existing tools are either generic, or depend on connectivity, or treat the child as a database record."
+          "content": "Crianças brasileiras crescem hiperconectadas, mas num ambiente hostil. O Brasil é um dos países que mais sofre golpes digitais, e fraudes por WhatsApp, SMS e Pix chegam todo dia ao celular da família, muitas vezes operado pela própria criança. Pesquisas como a TIC Kids Online Brasil (Cetic.br) mostram o mesmo descompasso ano após ano: acesso altíssimo, repertório crítico baixo. A criança sabe usar o aplicativo, mas não aprendeu a desconfiar dele.\n\nA BNCC respondeu tornando cultura digital uma competência obrigatória, mas jogou a conta no professor, que já está sobrecarregado e não tem tempo, material pronto nem repertório técnico para transformar 'ensinar a identificar um golpe' numa atividade que prenda uma turma do fundamental. Ainda por cima, boa parte das escolas públicas convive com internet instável ou inexistente, o que elimina a maioria das ferramentas online, e LGPD e ECA exigem proteção reforçada para dados de menores. A necessidade é enorme, e as ferramentas existentes ou são genéricas, ou dependem de conexão, ou tratam a criança como um cadastro.",
+          "content_en": "Brazilian children grow up hyperconnected, but in a hostile environment. Brazil is among the countries most hit by digital scams, and WhatsApp, SMS and Pix fraud reaches the family phone every day, often the very phone a child is using. Surveys like TIC Kids Online Brasil (Cetic.br) show the same gap year after year: very high access, low critical skills. The child knows how to use the app, but never learned to distrust it.\n\nBrazil's BNCC curriculum responded by making digital literacy a required competency, but pushed the burden onto the teacher, already overloaded, with no time, no ready-made material and no technical repertoire to turn 'teach how to spot a scam' into an activity that holds a primary-school class. On top of that, many public schools live with unstable or nonexistent internet, which rules out most online tools, and LGPD and the ECA (child statute) demand heightened protection for minors' data. The need is enormous, and existing tools are either generic, or depend on connectivity, or treat the child as a database record."
         },
         {
           "type": "image",
           "src": "/images/projects/detetives/detetives_cover.png",
-          "caption": "A landing conta a tese em uma frase: a IA prepara, o professor aprova, a turma aprende — até sem internet.",
-          "caption_en": "The landing tells the thesis in one line: AI prepares, the teacher approves, the class learns — even offline."
+          "caption": "A landing conta a tese em uma frase: a IA prepara, o professor aprova, a turma aprende, até sem internet.",
+          "caption_en": "The landing tells the thesis in one line: AI prepares, the teacher approves, the class learns, even offline."
         },
         {
           "type": "text",
           "title": "A tese em um fluxo",
           "title_en": "The thesis in one flow",
-          "content": "A resposta é um fluxo único que conecta os dois lados do produto: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o professor vê o resultado. É a tese inteira de uma plataforma de letramento digital num percurso só. E o tema é também o conteúdo: uma missão no formato 'esse recado é seguro? caça ao golpe', onde a criança avalia mensagens reais de SMS, WhatsApp e e-mail e decide o que é golpe e o que é seguro — praticando, na brincadeira, exatamente a desconfiança que a pesquisa aponta como o que falta.",
-          "content_en": "The answer is a single flow connecting both sides of the product: the teacher describes the goal, AI generates the mission, the student plays offline, and the teacher sees the result. It's the entire thesis of a digital-literacy platform in one journey. And the theme is also the content: a mission in a 'is this message safe? scam hunt' format, where the child evaluates real SMS, WhatsApp and email messages and decides what's a scam and what's safe — practicing, through play, exactly the distrust research points to as the missing skill."
+          "content": "A resposta é um fluxo único que conecta os dois lados do produto: o professor descreve o objetivo, a IA gera a missão, o aluno joga offline e o professor vê o resultado. É a tese inteira de uma plataforma de letramento digital num percurso só. E o tema é também o conteúdo: uma missão no formato 'esse recado é seguro? caça ao golpe', onde a criança avalia mensagens reais de SMS, WhatsApp e e-mail e decide o que é golpe e o que é seguro, praticando, na brincadeira, exatamente a desconfiança que a pesquisa aponta como o que falta.",
+          "content_en": "The answer is a single flow connecting both sides of the product: the teacher describes the goal, AI generates the mission, the student plays offline, and the teacher sees the result. It's the entire thesis of a digital-literacy platform in one journey. And the theme is also the content: a mission in a 'is this message safe? scam hunt' format, where the child evaluates real SMS, WhatsApp and email messages and decides what's a scam and what's safe, practicing, through play, exactly the distrust research points to as the missing skill."
         },
         {
           "type": "text",
           "title": "Decisões de produto",
           "title_en": "Product Decisions",
           "highlights": [
-            "Conversa, não formulário: O professor descreve a aula em linguagem natural — como contaria a um colega — em vez de preencher doze campos. O nível da turma é a única configuração.",
+            "Conversa, não formulário: O professor descreve a aula em linguagem natural, como contaria a um colega, em vez de preencher doze campos. O nível da turma é a única configuração.",
             "Human-in-the-loop: A IA propõe; o professor decide. Nada vai ao aluno sem revisão: editar o texto, trocar o nível e, se a IA errar a classificação, inverter golpe/seguro com um toque.",
             "Zero-PII vira mecânica: Em vez de pedir o nome da criança, o jogo pede um codinome de detetive. A exigência de LGPD deixou de ser fricção e virou parte da brincadeira."
           ],
           "highlights_en": [
-            "Conversation, not a form: The teacher describes the lesson in natural language — as they'd tell a colleague — instead of filling twelve fields. The class level is the only setting.",
+            "Conversation, not a form: The teacher describes the lesson in natural language, as they'd tell a colleague, instead of filling twelve fields. The class level is the only setting.",
             "Human-in-the-loop: AI proposes; the teacher decides. Nothing reaches the student without review: edit the text, change the level and, if the AI mislabels, flip scam/safe with one tap.",
             "Zero-PII becomes mechanic: Instead of asking for the child's name, the game asks for a detective codename. The LGPD requirement stopped being friction and became part of the play."
           ]
@@ -1016,8 +1016,8 @@ export const projectsData = [
           "type": "text",
           "title": "A palavra final é do professor",
           "title_en": "The teacher has the final word",
-          "content": "O Gemini devolve uma missão completa em JSON estruturado — recados, pistas, feedback e alinhamento BNCC — mas o design trata a IA como copiloto, não como piloto automático. A tela de revisão deixa o professor editar cada recado, regenerar por nível e, o gesto que mais conta, inverter a classificação da IA com um toque quando discorda dela. É a diferença entre 'a IA fez por você' e 'a IA fez com você'.",
-          "content_en": "Gemini returns a complete mission as structured JSON — messages, clues, feedback and BNCC alignment — but the design treats AI as a copilot, not autopilot. The review screen lets the teacher edit each message, regenerate by level and, the gesture that matters most, flip the AI's classification with one tap when they disagree. It's the difference between 'the AI did it for you' and 'the AI did it with you'."
+          "content": "O Gemini devolve uma missão completa em JSON estruturado (recados, pistas, feedback e alinhamento BNCC), mas o design trata a IA como copiloto, não como piloto automático. A tela de revisão deixa o professor editar cada recado, regenerar por nível e, o gesto que mais conta, inverter a classificação da IA com um toque quando discorda dela. É a diferença entre 'a IA fez por você' e 'a IA fez com você'.",
+          "content_en": "Gemini returns a complete mission as structured JSON (messages, clues, feedback and BNCC alignment), but the design treats AI as a copilot, not autopilot. The review screen lets the teacher edit each message, regenerate by level and, the gesture that matters most, flip the AI's classification with one tap when they disagree. It's the difference between 'the AI did it for you' and 'the AI did it with you'."
         },
         {
           "type": "gallery",
@@ -1032,8 +1032,8 @@ export const projectsData = [
             },
             {
               "src": "/images/projects/detetives/detetives_jogo_recado.png",
-              "caption": "A missão: um recado por vez, botões grandes, feedback que ensina. Errar não tira ponto — vira pista para o próximo.",
-              "caption_en": "The mission: one message at a time, big buttons, feedback that teaches. A wrong answer costs no points — it becomes a clue for the next."
+              "caption": "A missão: um recado por vez, botões grandes, feedback que ensina. Errar não tira ponto, vira pista para o próximo.",
+              "caption_en": "The mission: one message at a time, big buttons, feedback that teaches. A wrong answer costs no points; it becomes a clue for the next."
             }
           ]
         },
@@ -1041,8 +1041,8 @@ export const projectsData = [
           "type": "text",
           "title": "Offline de verdade",
           "title_en": "Truly offline",
-          "content": "O lado do aluno é um PWA offline-first real, não uma promessa de marketing. Cada resposta é gravada no aparelho (IndexedDB) antes de qualquer rede, então o feedback nunca depende de conexão; quando a internet volta, uma fila sincroniza sozinha com o backend. Testado no modo avião: a criança joga a missão inteira desplugada, ganha pontos, conclui — e nunca vê um spinner. Um service worker cacheia o app shell para que a missão abra mesmo sem sinal.",
-          "content_en": "The student side is a genuine offline-first PWA, not a marketing promise. Each answer is written to the device (IndexedDB) before any network call, so feedback never depends on connectivity; when the internet returns, a queue syncs itself with the backend. Tested in airplane mode: the child plays the whole mission unplugged, earns points, finishes — and never sees a spinner. A service worker caches the app shell so the mission opens even with no signal."
+          "content": "O lado do aluno é um PWA offline-first real, não uma promessa de marketing. Cada resposta é gravada no aparelho (IndexedDB) antes de qualquer rede, então o feedback nunca depende de conexão; quando a internet volta, uma fila sincroniza sozinha com o backend. Testado no modo avião: a criança joga a missão inteira desplugada, ganha pontos, conclui, e nunca vê um spinner. Um service worker cacheia o app shell para que a missão abra mesmo sem sinal.",
+          "content_en": "The student side is a genuine offline-first PWA, not a marketing promise. Each answer is written to the device (IndexedDB) before any network call, so feedback never depends on connectivity; when the internet returns, a queue syncs itself with the backend. Tested in airplane mode: the child plays the whole mission unplugged, earns points, finishes, and never sees a spinner. A service worker caches the app shell so the mission opens even with no signal."
         },
         {
           "type": "image",
@@ -1054,21 +1054,21 @@ export const projectsData = [
           "type": "text",
           "title": "Um design system, duas vozes",
           "title_en": "One design system, two voices",
-          "content": "O professor precisa de calma e credibilidade; o aluno, de energia e acolhimento. Em vez de dois sistemas, um só com tokens semânticos compartilhados e re-mapeamento por voz: um escopo CSS troca cor, raio de canto e tipografia, e os componentes não mudam. A voz do professor referencia o Notion (neutros quentes, roxo como único acento); a do aluno referencia o Miro (amarelo canário, pastéis de sticky-note, pílula preta). O mesmo Seguro/Golpe mantém a semântica de cor nos dois lados, porque a semântica é compartilhada — só o valor muda. A landing encena essa metamorfose no meio do scroll: a ferramenta séria do professor derrete na brincadeira do aluno.",
-          "content_en": "The teacher needs calm and credibility; the student, energy and warmth. Instead of two systems, a single one with shared semantic tokens and per-voice remapping: a CSS scope swaps color, corner radius and typography, and the components don't change. The teacher's voice references Notion (warm neutrals, violet as the only accent); the student's references Miro (canary yellow, sticky-note pastels, black pill). The same Safe/Scam keeps its color semantics on both sides, because the semantics are shared — only the value changes. The landing stages this metamorphosis mid-scroll: the teacher's serious tool melts into the student's play."
+          "content": "O professor precisa de calma e credibilidade; o aluno, de energia e acolhimento. Em vez de dois sistemas, um só com tokens semânticos compartilhados e re-mapeamento por voz: um escopo CSS troca cor, raio de canto e tipografia, e os componentes não mudam. A voz do professor referencia o Notion (neutros quentes, roxo como único acento); a do aluno referencia o Miro (amarelo canário, pastéis de sticky-note, pílula preta). O mesmo Seguro/Golpe mantém a semântica de cor nos dois lados, porque a semântica é compartilhada: só o valor muda. A landing encena essa metamorfose no meio do scroll: a ferramenta séria do professor derrete na brincadeira do aluno.",
+          "content_en": "The teacher needs calm and credibility; the student, energy and warmth. Instead of two systems, a single one with shared semantic tokens and per-voice remapping: a CSS scope swaps color, corner radius and typography, and the components don't change. The teacher's voice references Notion (warm neutrals, violet as the only accent); the student's references Miro (canary yellow, sticky-note pastels, black pill). The same Safe/Scam keeps its color semantics on both sides, because the semantics are shared: only the value changes. The landing stages this metamorphosis mid-scroll: the teacher's serious tool melts into the student's play."
         },
         {
           "type": "image",
           "src": "/images/projects/detetives/detetives_metamorfose.png",
-          "caption": "A metamorfose na landing: os mesmos tokens semânticos, valores re-mapeados — a ferramenta do professor vira brincadeira na mão do aluno.",
-          "caption_en": "The metamorphosis on the landing: the same semantic tokens, remapped values — the teacher's tool becomes the student's play."
+          "caption": "A metamorfose na landing: os mesmos tokens semânticos, valores re-mapeados: a ferramenta do professor vira brincadeira na mão do aluno.",
+          "caption_en": "The metamorphosis on the landing: the same semantic tokens, remapped values: the teacher's tool becomes the student's play."
         },
         {
           "type": "text",
           "title": "A jogada de mestre: reforço a partir do resultado",
           "title_en": "The master stroke: reinforcement from results",
-          "content": "O último slice é o que transforma um gerador em copiloto de verdade: em vez de só gerar frio, a IA reage ao desempenho da turma. No painel, cada recado que a turma mais errou ganha um botão de reforço; um clique monta o contexto (objetivo, BNCC, conceitos que a turma não pegou, remetentes a evitar) e gera uma nova missão focada exatamente nos pontos fracos — que cai no mesmo fluxo de revisão do professor, sem auto-publicar e sem coletar PII. O loop pedagógico deixa de ser linha reta e vira ciclo. Reuso, não fork: um segundo ponto de entrada que alimenta o pipeline que já existia.",
-          "content_en": "The final slice is what turns a generator into a real copilot: instead of only generating cold, the AI reacts to the class's performance. In the dashboard, each message the class missed most gets a reinforcement button; one click assembles the context (goal, BNCC, concepts the class didn't grasp, senders to avoid) and generates a new mission focused precisely on the weak spots — which lands in the same teacher review flow, without auto-publishing and without collecting PII. The pedagogical loop stops being a straight line and becomes a cycle. Reuse, not fork: a second entry point feeding the pipeline that already existed."
+          "content": "O último slice é o que transforma um gerador em copiloto de verdade: em vez de só gerar frio, a IA reage ao desempenho da turma. No painel, cada recado que a turma mais errou ganha um botão de reforço; um clique monta o contexto (objetivo, BNCC, conceitos que a turma não pegou, remetentes a evitar) e gera uma nova missão focada exatamente nos pontos fracos, que cai no mesmo fluxo de revisão do professor, sem auto-publicar e sem coletar PII. O loop pedagógico deixa de ser linha reta e vira ciclo. Reuso, não fork: um segundo ponto de entrada que alimenta o pipeline que já existia.",
+          "content_en": "The final slice is what turns a generator into a real copilot: instead of only generating cold, the AI reacts to the class's performance. In the dashboard, each message the class missed most gets a reinforcement button; one click assembles the context (goal, BNCC, concepts the class didn't grasp, senders to avoid) and generates a new mission focused precisely on the weak spots, which lands in the same teacher review flow, without auto-publishing and without collecting PII. The pedagogical loop stops being a straight line and becomes a cycle. Reuse, not fork: a second entry point feeding the pipeline that already existed."
         },
         {
           "type": "outcomes",
@@ -1120,10 +1120,10 @@ export const projectsData = [
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack", "Game Design"],
         title: "Profissões",
-        tagline: "Teste o quanto você realmente sabe da sua profissão — jogando.",
-        tagline_en: "Test how much you really know about your profession — by playing.",
+        tagline: "Teste o quanto você realmente sabe da sua profissão, jogando.",
+        tagline_en: "Test how much you really know about your profession, by playing.",
         description: "Um Duolingo para profissões: você testa seus conhecimentos de UX, front-end ou marketing em desafios diários de cinco minutos, vê seu nível real por competência num mapa visual e volta todo dia para subir esse nível. Feedback imediato, gamificação de verdade (XP, ofensiva, conquistas, ranking) e 100% gratuito, sem paywall nem limite diário.",
-        description_en: "A Duolingo for professions: you test your knowledge of UX, front-end, or marketing in five-minute daily challenges, see your real level per competency on a visual map, and come back every day to raise it. Immediate feedback, real gamification (XP, streak, achievements, leaderboard), and 100% free — no paywall, no daily limit.",
+        description_en: "A Duolingo for professions: you test your knowledge of UX, front-end, or marketing in five-minute daily challenges, see your real level per competency on a visual map, and come back every day to raise it. Immediate feedback, real gamification (XP, streak, achievements, leaderboard), and 100% free, no paywall, no daily limit.",
         year: "2026",
         role: "Product Designer & AI Engineer",
         timeline: "Concept a produção · pivô para gratuito",
@@ -1272,8 +1272,8 @@ export const projectsData = [
       "tagline": "SaaS B2B de avaliação de competências: radar, senioridade e PDI 70-20-10 para designers e times de UX.",
       "tagline_en": "B2B SaaS for competency assessment: radar, seniority and 70-20-10 development plans for UX designers and teams.",
       "tldr": {
-        "problem": "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível' — e gestores calibram senioridade no feeling, com planilhas soltas.",
-        "problem_en": "Brazilian designers can't answer 'where am I and what's missing for the next level' — and managers calibrate seniority by gut feeling, with loose spreadsheets.",
+        "problem": "Designers brasileiros não têm como responder 'onde estou e o que falta para o próximo nível', e gestores calibram senioridade no feeling, com planilhas soltas.",
+        "problem_en": "Brazilian designers can't answer 'where am I and what's missing for the next level', and managers calibrate seniority by gut feeling, with loose spreadsheets.",
         "role": "Product Designer & Full-Stack, solo: pesquisa de mercado, PRD, design system, código, infra e monetização, do zero ao deploy.",
         "role_en": "Product Designer & Full-Stack, solo: market research, PRD, design system, code, infra and monetization, from zero to deploy.",
         "outcome": "SaaS completo no ar, solo, do PRD ao deploy: autoavaliação de ~88 habilidades, radar, gap autoavaliação × gestor, PDI por pessoa e assinaturas com Stripe.",
@@ -1302,8 +1302,8 @@ export const projectsData = [
           "type": "text",
           "title": "O Problema",
           "title_en": "The Problem",
-          "content": "Profissionais de UX no Brasil não têm uma forma estruturada, confiável e barata de responder três perguntas: onde estou? O que me falta para o próximo nível? E como um gestor calibra isso de forma justa entre pessoas diferentes? Hoje isso é resolvido com planilhas soltas, autoavaliações informais e réguas de senioridade que variam de empresa para empresa. Para a pessoa, o custo é um plano de desenvolvimento genérico e negociações de senioridade sem argumento. Para o gestor, é decisão no feeling — promoções injustas, PDIs de copiar e colar, turnover. As ferramentas globais que atacam o problema (Uxcel, TalentGuard, Leapsome) são caras, em inglês e genéricas demais para a realidade brasileira.",
-          "content_en": "UX professionals in Brazil have no structured, trustworthy and affordable way to answer three questions: where am I? What's missing for the next level? And how does a manager calibrate this fairly across different people? Today this is solved with loose spreadsheets, informal self-assessments and seniority ladders that change from company to company. For the individual, the cost is a generic development plan and seniority negotiations without arguments. For the manager, it's gut-feeling decisions — unfair promotions, copy-paste development plans, turnover. The global tools attacking the problem (Uxcel, TalentGuard, Leapsome) are expensive, English-only and too generic for the Brazilian reality."
+          "content": "Profissionais de UX no Brasil não têm uma forma estruturada, confiável e barata de responder três perguntas: onde estou? O que me falta para o próximo nível? E como um gestor calibra isso de forma justa entre pessoas diferentes? Hoje isso é resolvido com planilhas soltas, autoavaliações informais e réguas de senioridade que variam de empresa para empresa. Para a pessoa, o custo é um plano de desenvolvimento genérico e negociações de senioridade sem argumento. Para o gestor, é decisão no feeling: promoções injustas, PDIs de copiar e colar, turnover. As ferramentas globais que atacam o problema (Uxcel, TalentGuard, Leapsome) são caras, em inglês e genéricas demais para a realidade brasileira.",
+          "content_en": "UX professionals in Brazil have no structured, trustworthy and affordable way to answer three questions: where am I? What's missing for the next level? And how does a manager calibrate this fairly across different people? Today this is solved with loose spreadsheets, informal self-assessments and seniority ladders that change from company to company. For the individual, the cost is a generic development plan and seniority negotiations without arguments. For the manager, it's gut-feeling decisions: unfair promotions, copy-paste development plans, turnover. The global tools attacking the problem (Uxcel, TalentGuard, Leapsome) are expensive, English-only and too generic for the Brazilian reality."
         },
         {
           "type": "image",
@@ -1327,21 +1327,21 @@ export const projectsData = [
             "Competitive benchmark: Uxcel, TalentGuard, Leapsome, NN/g spreadsheets and community matrices",
             "Brazilian market: salaries by seniority (CAGED, Glassdoor), the Junior->Specialist ladder and BRL price sensitivity"
           ],
-          "content": "A pesquisa apontou duas verdades que moldaram o produto. Primeira: autoavaliação sofre de viés sistemático — iniciantes superestimam, experientes subestimam — então uma nota isolada vale pouco; o antídoto é âncora comportamental em cada nível e o confronto com a leitura do gestor. Segunda: o motor de receita não é o indivíduo, é o time — o gestor que precisa calibrar senioridade e conduzir 1:1s com dado é quem paga. O indivíduo é topo de funil. Nenhum concorrente combina framework real de UX, português, régua brasileira e preço em BRL.",
-          "content_en": "Research surfaced two truths that shaped the product. First: self-assessment carries systematic bias — beginners overestimate, experts underestimate — so an isolated score is worth little; the antidote is a behavioral anchor at every level plus confrontation with the manager's reading. Second: the revenue engine is not the individual, it's the team — the manager who needs to calibrate seniority and run data-driven 1:1s is the one who pays. The individual is top of funnel. No competitor combines a real UX framework, Portuguese, the Brazilian ladder and BRL pricing."
+          "content": "A pesquisa apontou duas verdades que moldaram o produto. Primeira: autoavaliação sofre de viés sistemático (iniciantes superestimam, experientes subestimam), então uma nota isolada vale pouco; o antídoto é âncora comportamental em cada nível e o confronto com a leitura do gestor. Segunda: o motor de receita não é o indivíduo, é o time: o gestor que precisa calibrar senioridade e conduzir 1:1s com dado é quem paga. O indivíduo é topo de funil. Nenhum concorrente combina framework real de UX, português, régua brasileira e preço em BRL.",
+          "content_en": "Research surfaced two truths that shaped the product. First: self-assessment carries systematic bias (beginners overestimate, experts underestimate), so an isolated score is worth little; the antidote is a behavioral anchor at every level plus confrontation with the manager's reading. Second: the revenue engine is not the individual, it's the team: the manager who needs to calibrate seniority and run data-driven 1:1s is the one who pays. The individual is top of funnel. No competitor combines a real UX framework, Portuguese, the Brazilian ladder and BRL pricing."
         },
         {
           "type": "text",
           "title": "Decisões de produto",
           "title_en": "Product Decisions",
           "highlights": [
-            "N/A nunca é zero: Quem não faz motion não pode ser punido por isso. 'Não se aplica' é excluído da média — nunca conta como nota baixa.",
-            "Senioridade é estimativa: A régua varia entre empresas. O produto sempre rotula o resultado como sugestão orientativa — ponto de partida de conversa, não veredito.",
+            "N/A nunca é zero: Quem não faz motion não pode ser punido por isso. 'Não se aplica' é excluído da média, nunca conta como nota baixa.",
+            "Senioridade é estimativa: A régua varia entre empresas. O produto sempre rotula o resultado como sugestão orientativa: ponto de partida de conversa, não veredito.",
             "O gap é a feature: A divergência entre autoavaliação e leitura do gestor não é ruído: é o artefato central da calibração e o principal valor do plano de time."
           ],
           "highlights_en": [
-            "N/A is never zero: Someone who doesn't do motion can't be punished for it. 'Not applicable' is excluded from the average — it never counts as a low score.",
-            "Seniority is an estimate: The ladder varies across companies. The product always labels the result as an orientative suggestion — a conversation starter, not a verdict.",
+            "N/A is never zero: Someone who doesn't do motion can't be punished for it. 'Not applicable' is excluded from the average: it never counts as a low score.",
+            "Seniority is an estimate: The ladder varies across companies. The product always labels the result as an orientative suggestion: a conversation starter, not a verdict.",
             "The gap is the feature: The divergence between self-assessment and the manager's reading isn't noise: it's the core calibration artifact and the main value of the team plan."
           ]
         },
@@ -1366,21 +1366,21 @@ export const projectsData = [
         {
           "type": "image",
           "src": "/images/projects/maestria/maestria_resultado_heatmap.png",
-          "caption": "O toggle obrigatório: radar para a síntese, heatmap por habilidade para a nuance — a pesquisa mostra que o radar sozinho esconde onde agir.",
-          "caption_en": "The mandatory toggle: radar for synthesis, per-skill heatmap for nuance — research shows the radar alone hides where to act."
+          "caption": "O toggle obrigatório: radar para a síntese, heatmap por habilidade para a nuance. A pesquisa mostra que o radar sozinho esconde onde agir.",
+          "caption_en": "The mandatory toggle: radar for synthesis, per-skill heatmap for nuance. Research shows the radar alone hides where to act."
         },
         {
           "type": "text",
           "title": "Modo Time: o motor de receita",
           "title_en": "Team Mode: the revenue engine",
-          "content": "O gestor cria um time, convida por link e avalia cada pessoa com o mesmo fluxo da autoavaliação. O sistema então confronta as duas leituras: o gap autoavaliação × gestor por competência e por habilidade, ordenado pelas maiores divergências — divergência negativa significa que a pessoa se avaliou acima da leitura do gestor, e é exatamente por aí que a conversa de calibração começa. Completam o módulo o radar agregado do time (forças e lacunas coletivas) e o PDI por pessoa, gerado do mesmo motor 70-20-10 do plano individual: 70% prática no trabalho, 20% aprendizado social, 10% estudo formal.",
-          "content_en": "The manager creates a team, invites by link and assesses each person with the same flow as the self-assessment. The system then confronts both readings: the self × manager gap per competency and per skill, sorted by the largest divergences — a negative divergence means the person rated themselves above the manager's reading, and that's exactly where the calibration conversation starts. The module is completed by the aggregate team radar (collective strengths and gaps) and a per-person development plan generated by the same 70-20-10 engine as the individual plan: 70% on-the-job practice, 20% social learning, 10% formal study."
+          "content": "O gestor cria um time, convida por link e avalia cada pessoa com o mesmo fluxo da autoavaliação. O sistema então confronta as duas leituras: o gap autoavaliação × gestor por competência e por habilidade, ordenado pelas maiores divergências. Divergência negativa significa que a pessoa se avaliou acima da leitura do gestor, e é exatamente por aí que a conversa de calibração começa. Completam o módulo o radar agregado do time (forças e lacunas coletivas) e o PDI por pessoa, gerado do mesmo motor 70-20-10 do plano individual: 70% prática no trabalho, 20% aprendizado social, 10% estudo formal.",
+          "content_en": "The manager creates a team, invites by link and assesses each person with the same flow as the self-assessment. The system then confronts both readings: the self × manager gap per competency and per skill, sorted by the largest divergences. A negative divergence means the person rated themselves above the manager's reading, and that's exactly where the calibration conversation starts. The module is completed by the aggregate team radar (collective strengths and gaps) and a per-person development plan generated by the same 70-20-10 engine as the individual plan: 70% on-the-job practice, 20% social learning, 10% formal study."
         },
         {
           "type": "image",
           "src": "/images/projects/maestria/maestria_gap_membro.png",
-          "caption": "Gap autoavaliação × gestor: duas séries no radar e as maiores divergências com delta numérico — o antídoto ao viés Dunning-Kruger.",
-          "caption_en": "Self × manager gap: two radar series and the largest divergences with numeric deltas — the antidote to Dunning-Kruger bias."
+          "caption": "Gap autoavaliação × gestor: duas séries no radar e as maiores divergências com delta numérico, o antídoto ao viés Dunning-Kruger.",
+          "caption_en": "Self × manager gap: two radar series and the largest divergences with numeric deltas, the antidote to Dunning-Kruger bias."
         },
         {
           "type": "gallery",
@@ -1410,14 +1410,14 @@ export const projectsData = [
           "type": "text",
           "title": "Design system 'Cinematic Gradient'",
           "title_en": "'Cinematic Gradient' design system",
-          "content": "A linguagem visual nasceu de um estudo de DESIGN.md públicos (base Framer): canvas near-black, superfícies charcoal separadas por hairlines, tipografia display comprimida (Space Grotesk) e uma atmosfera gradient violeta→magenta→laranja usada como momento, nunca como fundo. Tudo é governado por um arquivo único de tokens que gera o CSS — zero hex hardcoded em componentes, com verificação no CI. A rampa de 6 cores dos níveis tem semântica própria (calor = em desenvolvimento, família da marca = proficiente+) e nunca comunica nível só por cor: o número mono está sempre junto. Na landing, GSAP conduz um scrollytelling contínuo e o 'radar vivo' em SVG morfa entre perfis de senioridade.",
-          "content_en": "The visual language came from a study of public DESIGN.md files (Framer base): near-black canvas, charcoal surfaces separated by hairlines, compressed display typography (Space Grotesk) and a violet->magenta->orange gradient atmosphere used as a moment, never as a background. Everything is governed by a single token file that generates the CSS — zero hardcoded hex in components, enforced in CI. The 6-color level ramp carries its own semantics (warmth = developing, brand family = proficient+) and never communicates level by color alone: the mono number is always beside it. On the landing, GSAP drives continuous scrollytelling and the SVG 'living radar' morphs between seniority profiles."
+          "content": "A linguagem visual nasceu de um estudo de DESIGN.md públicos (base Framer): canvas near-black, superfícies charcoal separadas por hairlines, tipografia display comprimida (Space Grotesk) e uma atmosfera gradient violeta→magenta→laranja usada como momento, nunca como fundo. Tudo é governado por um arquivo único de tokens que gera o CSS: zero hex hardcoded em componentes, com verificação no CI. A rampa de 6 cores dos níveis tem semântica própria (calor = em desenvolvimento, família da marca = proficiente+) e nunca comunica nível só por cor: o número mono está sempre junto. Na landing, GSAP conduz um scrollytelling contínuo e o 'radar vivo' em SVG morfa entre perfis de senioridade.",
+          "content_en": "The visual language came from a study of public DESIGN.md files (Framer base): near-black canvas, charcoal surfaces separated by hairlines, compressed display typography (Space Grotesk) and a violet->magenta->orange gradient atmosphere used as a moment, never as a background. Everything is governed by a single token file that generates the CSS: zero hardcoded hex in components, enforced in CI. The 6-color level ramp carries its own semantics (warmth = developing, brand family = proficient+) and never communicates level by color alone: the mono number is always beside it. On the landing, GSAP drives continuous scrollytelling and the SVG 'living radar' morphs between seniority profiles."
         },
         {
           "type": "image",
           "src": "/images/projects/maestria/proficia_ds_niveis.png",
-          "caption": "A rampa de níveis: calor para quem está em desenvolvimento, família da marca para quem já é proficiente — subir de nível é entrar na cor da marca. O número mono anda sempre junto da cor.",
-          "caption_en": "The level ramp: warmth for those still developing, brand family for the proficient — leveling up means entering the brand's color. The mono number always travels with the color."
+          "caption": "A rampa de níveis: calor para quem está em desenvolvimento, família da marca para quem já é proficiente: subir de nível é entrar na cor da marca. O número mono anda sempre junto da cor.",
+          "caption_en": "The level ramp: warmth for those still developing, brand family for the proficient: leveling up means entering the brand's color. The mono number always travels with the color."
         },
         {
           "type": "gallery",
@@ -1478,8 +1478,8 @@ export const projectsData = [
           "type": "text",
           "title": "Resultado",
           "title_en": "Outcome",
-          "content": "Um SaaS funcional de ponta a ponta: autenticação (Google + magic link), trial de 14 dias, assinaturas Pro e Time com Stripe, framework versionado no banco, avaliação com autosave e snapshot imutável, radar, heatmap, plano 70-20-10, histórico entre ciclos e o módulo B2B completo — times por convite, hetero-avaliação, gap, radar agregado e PDI. O projeto também virou um exercício de engenharia disciplinada: regras de negócio blindadas por testes E2E (N/A excluído da média, imutabilidade pós-conclusão, isolamento entre times) e design system wired em que editar um token propaga para produto e Storybook.",
-          "content_en": "An end-to-end functional SaaS: authentication (Google + magic link), 14-day trial, Pro and Team subscriptions with Stripe, a versioned framework in the database, assessment with autosave and immutable snapshots, radar, heatmap, 70-20-10 plan, cross-cycle history and the full B2B module — teams by invite link, manager assessment, gap, aggregate radar and per-person plans. The project also became an exercise in disciplined engineering: business rules locked by E2E tests (N/A excluded from averages, post-completion immutability, team isolation) and a wired design system where editing a token propagates to both product and Storybook."
+          "content": "Um SaaS funcional de ponta a ponta: autenticação (Google + magic link), trial de 14 dias, assinaturas Pro e Time com Stripe, framework versionado no banco, avaliação com autosave e snapshot imutável, radar, heatmap, plano 70-20-10, histórico entre ciclos e o módulo B2B completo: times por convite, hetero-avaliação, gap, radar agregado e PDI. O projeto também virou um exercício de engenharia disciplinada: regras de negócio blindadas por testes E2E (N/A excluído da média, imutabilidade pós-conclusão, isolamento entre times) e design system wired em que editar um token propaga para produto e Storybook.",
+          "content_en": "An end-to-end functional SaaS: authentication (Google + magic link), 14-day trial, Pro and Team subscriptions with Stripe, a versioned framework in the database, assessment with autosave and immutable snapshots, radar, heatmap, 70-20-10 plan, cross-cycle history and the full B2B module: teams by invite link, manager assessment, gap, aggregate radar and per-person plans. The project also became an exercise in disciplined engineering: business rules locked by E2E tests (N/A excluded from averages, post-completion immutability, team isolation) and a wired design system where editing a token propagates to both product and Storybook."
         }
       ]
     },
@@ -1505,8 +1505,8 @@ export const projectsData = [
         "outcome": "MVP no ar: vitrine própria por criador, waitlist priorizada, countdown e checkout próprio com cartão e Pix.",
         "outcome_en": "Live MVP: a storefront per creator, priority waitlist, countdown and in-house checkout with card and Pix."
       },
-      "description": "Plataforma de loja para criadores e marcas de nicho que lançam produtos em drops limitados — roupas, objetos, digitais. Cada criador ganha uma vitrine própria com lista de espera priorizada, countdown e checkout próprio com Pix, sem redirecionar para outra plataforma.",
-      "description_en": "Storefront platform for creators and niche brands that launch products in limited drops — apparel, objects, digital goods. Each creator gets their own storefront with a priority waitlist, countdown and an in-house checkout with Pix, without redirecting to another platform.",
+      "description": "Plataforma de loja para criadores e marcas de nicho que lançam produtos em drops limitados: roupas, objetos, digitais. Cada criador ganha uma vitrine própria com lista de espera priorizada, countdown e checkout próprio com Pix, sem redirecionar para outra plataforma.",
+      "description_en": "Storefront platform for creators and niche brands that launch products in limited drops: apparel, objects, digital goods. Each creator gets their own storefront with a priority waitlist, countdown and an in-house checkout with Pix, without redirecting to another platform.",
       "year": "2026",
       "role": "Product Designer & Full-Stack",
       "timeline": "MVP · iteração contínua",
@@ -1528,8 +1528,8 @@ export const projectsData = [
           "type": "text",
           "title": "O Problema",
           "title_en": "The Problem",
-          "content": "Criadores e marcas de nicho — streetwear, arte, objetos, digitais — vendem cada vez mais no formato de drop: tiragens limitadas, lançadas em data marcada, que esgotam em minutos. Mas a ferramenta certa para isso não existe de forma vertical. Quem lança drops hoje precisa remendar e-commerce genérico (Nuvemshop, Shopify) com apps avulsos de waitlist, ou codar o próprio fluxo. O ritual do drop — fila priorizada, escassez real, countdown, hype — fica sempre por conta do criador. E no Brasil falta o que mais importa para esse público: Pix no checkout.",
-          "content_en": "Creators and niche brands — streetwear, art, objects, digital goods — increasingly sell in the drop format: limited runs, launched on a set date, that sell out in minutes. But there's no vertical tool built for it. Whoever launches drops today has to patch generic e-commerce (Nuvemshop, Shopify) with one-off waitlist apps, or build their own flow. The drop ritual — priority queue, real scarcity, countdown, hype — is always left to the creator. And in Brazil, the thing that matters most for this audience is missing: Pix at checkout."
+          "content": "Criadores e marcas de nicho (streetwear, arte, objetos, digitais) vendem cada vez mais no formato de drop: tiragens limitadas, lançadas em data marcada, que esgotam em minutos. Mas a ferramenta certa para isso não existe de forma vertical. Quem lança drops hoje precisa remendar e-commerce genérico (Nuvemshop, Shopify) com apps avulsos de waitlist, ou codar o próprio fluxo. O ritual do drop (fila priorizada, escassez real, countdown, hype) fica sempre por conta do criador. E no Brasil falta o que mais importa para esse público: Pix no checkout.",
+          "content_en": "Creators and niche brands (streetwear, art, objects, digital goods) increasingly sell in the drop format: limited runs, launched on a set date, that sell out in minutes. But there's no vertical tool built for it. Whoever launches drops today has to patch generic e-commerce (Nuvemshop, Shopify) with one-off waitlist apps, or build their own flow. The drop ritual (priority queue, real scarcity, countdown, hype) is always left to the creator. And in Brazil, the thing that matters most for this audience is missing: Pix at checkout."
         },
         {
           "type": "research",
@@ -1545,8 +1545,8 @@ export const projectsData = [
             "Brazilian market mapping (Nuvemshop, Shopify)",
             "UX audit of real purchase flows"
           ],
-          "content": "O mercado se divide em três camadas: ferramentas de drop/engajamento (Laylo), lojas de criador (Fourthwall, Bonfire) e e-commerce genérico (Nuvemshop, Shopify). Nenhum player amarra bem a combinação waitlist priorizada + escassez real + checkout próprio — e nenhum tem Pix nativo. O território aberto: ser opinativo e vertical para drops, em PT-BR, com Pix. O posicionamento do Drop saiu direto dessa análise: 'Laylo avisa, Drop vende.'",
-          "content_en": "The market splits into three layers: drop/engagement tools (Laylo), creator shops (Fourthwall, Bonfire) and generic e-commerce (Nuvemshop, Shopify). No player ties together priority waitlist + real scarcity + in-house checkout well — and none has native Pix. The open territory: being opinionated and vertical for drops, in PT-BR, with Pix. Drop's positioning came straight out of this analysis: 'Laylo notifies, Drop sells.'",
+          "content": "O mercado se divide em três camadas: ferramentas de drop/engajamento (Laylo), lojas de criador (Fourthwall, Bonfire) e e-commerce genérico (Nuvemshop, Shopify). Nenhum player amarra bem a combinação waitlist priorizada + escassez real + checkout próprio, e nenhum tem Pix nativo. O território aberto: ser opinativo e vertical para drops, em PT-BR, com Pix. O posicionamento do Drop saiu direto dessa análise: 'Laylo avisa, Drop vende.'",
+          "content_en": "The market splits into three layers: drop/engagement tools (Laylo), creator shops (Fourthwall, Bonfire) and generic e-commerce (Nuvemshop, Shopify). No player ties together priority waitlist + real scarcity + in-house checkout well, and none has native Pix. The open territory: being opinionated and vertical for drops, in PT-BR, with Pix. Drop's positioning came straight out of this analysis: 'Laylo notifies, Drop sells.'",
           "highlights": [
             "Nenhum concorrente entrega waitlist priorizada, escassez e checkout próprio num só fluxo",
             "Players internacionais (Laylo, Fourthwall) não têm PT-BR nem Pix",
@@ -1570,8 +1570,8 @@ export const projectsData = [
           "type": "text",
           "title": "Solução & Produto",
           "title_en": "Solution & Product",
-          "content": "O Drop é dark-first e opinativo: o criador não monta um site do zero, ele ganha uma vitrine pronta e linda, customizando só o essencial — marca, cor de acento, bio, capa. A landing comunica o posicionamento com tipografia display, hero animado e o Pix em destaque. Cada vitrine herda o tema do Drop mais a cor do criador, mantendo identidade consistente sem virar construtor de loja genérico. A decisão central de produto: ser vertical de drops, não 'mais uma loja'.",
-          "content_en": "Drop is dark-first and opinionated: the creator doesn't build a site from scratch — they get a polished, ready-made storefront and customize only the essentials: brand, accent color, bio, cover. The landing communicates the positioning with display typography, an animated hero and Pix front and center. Each storefront inherits Drop's theme plus the creator's accent color, keeping a consistent identity without becoming a generic store builder. The core product decision: be vertical for drops, not 'just another store.'"
+          "content": "O Drop é dark-first e opinativo: o criador não monta um site do zero, ele ganha uma vitrine pronta e linda, customizando só o essencial: marca, cor de acento, bio, capa. A landing comunica o posicionamento com tipografia display, hero animado e o Pix em destaque. Cada vitrine herda o tema do Drop mais a cor do criador, mantendo identidade consistente sem virar construtor de loja genérico. A decisão central de produto: ser vertical de drops, não 'mais uma loja'.",
+          "content_en": "Drop is dark-first and opinionated: the creator doesn't build a site from scratch: they get a polished, ready-made storefront and customize only the essentials: brand, accent color, bio, cover. The landing communicates the positioning with display typography, an animated hero and Pix front and center. Each storefront inherits Drop's theme plus the creator's accent color, keeping a consistent identity without becoming a generic store builder. The core product decision: be vertical for drops, not 'just another store.'"
         },
         {
           "type": "image",
@@ -1630,15 +1630,15 @@ export const projectsData = [
           "type": "text",
           "title": "Arquitetura & Tecnologia",
           "title_en": "Architecture & Technology",
-          "content": "Stack full-stack em Next.js (App Router) com TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) e Stripe para pagamentos. Comprador é anônimo (sem cadastro, só email no checkout); criador é autenticado. A cor de acento de cada criador é injetada como CSS var por requisição, sem hex hardcoded — design system com tokens como fonte única de verdade, documentado em Storybook. Deploy contínuo na Vercel. Detalhe de produto: o checkout não usa trial no Stripe, então o criador vira Pro na hora ao passar o cartão.",
-          "content_en": "Full-stack on Next.js (App Router) with TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) and Stripe for payments. Buyers are anonymous (no signup, just an email at checkout); creators are authenticated. Each creator's accent color is injected as a per-request CSS variable, with no hardcoded hex — a token-driven design system as the single source of truth, documented in Storybook. Continuous deploy on Vercel. Product detail: checkout uses no Stripe trial, so a creator upgrades to Pro instantly when they pay."
+          "content": "Stack full-stack em Next.js (App Router) com TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) e Stripe para pagamentos. Comprador é anônimo (sem cadastro, só email no checkout); criador é autenticado. A cor de acento de cada criador é injetada como CSS var por requisição, sem hex hardcoded, design system com tokens como fonte única de verdade, documentado em Storybook. Deploy contínuo na Vercel. Detalhe de produto: o checkout não usa trial no Stripe, então o criador vira Pro na hora ao passar o cartão.",
+          "content_en": "Full-stack on Next.js (App Router) with TypeScript, Prisma + PostgreSQL (Neon), Auth.js v5 (Google + magic link via Resend) and Stripe for payments. Buyers are anonymous (no signup, just an email at checkout); creators are authenticated. Each creator's accent color is injected as a per-request CSS variable, with no hardcoded hex, a token-driven design system as the single source of truth, documented in Storybook. Continuous deploy on Vercel. Product detail: checkout uses no Stripe trial, so a creator upgrades to Pro instantly when they pay."
         },
         {
           "type": "text",
           "title": "Resultados & Aprendizados",
           "title_en": "Results & Learnings",
-          "content": "O projeto percorreu o ciclo completo: análise competitiva, posicionamento, breadboarding das partes, build em fatias verticais e deploy contínuo. O principal aprendizado: num espaço lotado de 'lojas genéricas', o ganho não está em ter mais features e sim em ser opinativo — vertical de drops, com Pix, em PT-BR. Foco vence completude quando o ritual de uso é o produto.",
-          "content_en": "The project covered the full cycle: competitive analysis, positioning, breadboarding the parts, building in vertical slices and continuous deploy. The key learning: in a space crowded with 'generic stores', the win isn't more features — it's being opinionated: vertical for drops, with Pix, in PT-BR. Focus beats completeness when the ritual of use is the product."
+          "content": "O projeto percorreu o ciclo completo: análise competitiva, posicionamento, breadboarding das partes, build em fatias verticais e deploy contínuo. O principal aprendizado: num espaço lotado de 'lojas genéricas', o ganho não está em ter mais features e sim em ser opinativo: vertical de drops, com Pix, em PT-BR. Foco vence completude quando o ritual de uso é o produto.",
+          "content_en": "The project covered the full cycle: competitive analysis, positioning, breadboarding the parts, building in vertical slices and continuous deploy. The key learning: in a space crowded with 'generic stores', the win isn't more features, it's being opinionated: vertical for drops, with Pix, in PT-BR. Focus beats completeness when the ritual of use is the product."
         },
         {
           "type": "outcomes",
@@ -1676,8 +1676,8 @@ export const projectsData = [
           "title": "Design System",
           "title_en": "Design System",
           "columns": 2,
-          "content": "Dark-first por natureza: o Drop foi construído para vivir na escuridão — onde o produto se destaca. A cor de acento de cada criador é injetada como CSS var por requisição, mantendo identidade consistente sem hardcoding. Tipografia display em Anton para os nomes de drop, Space Grotesk no corpo e Geist Mono nos dados numéricos (preço, estoque, countdown).",
-          "content_en": "Dark-first by nature: Drop was built to live in darkness — where the product pops. Each creator's accent color is injected as a per-request CSS variable, keeping consistent identity without hardcoding. Anton for drop display titles, Space Grotesk for body text and Geist Mono for numeric data (price, stock, countdown).",
+          "content": "Dark-first por natureza: o Drop foi construído para vivir na escuridão, onde o produto se destaca. A cor de acento de cada criador é injetada como CSS var por requisição, mantendo identidade consistente sem hardcoding. Tipografia display em Anton para os nomes de drop, Space Grotesk no corpo e Geist Mono nos dados numéricos (preço, estoque, countdown).",
+          "content_en": "Dark-first by nature: Drop was built to live in darkness, where the product pops. Each creator's accent color is injected as a per-request CSS variable, keeping consistent identity without hardcoding. Anton for drop display titles, Space Grotesk for body text and Geist Mono for numeric data (price, stock, countdown).",
           "images": [
             {
               "src": "/images/projects/drop/ds_tokens.png",
@@ -1845,8 +1845,8 @@ export const projectsData = [
           "type": "text",
           "title": "Resultados & Aprendizados",
           "title_en": "Results & Learnings",
-          "content": "O principal aprendizado foi sobre o valor de fechar o ciclo. Ferramentas de paleta existem aos montes, mas o diferencial do Sigil é conectar cor seed → tokens → exportação em código em um fluxo único. A decisão de incluir Component Preview foi a mais importante: foi desenhado para que o usuário veja os tokens funcionando em componentes reais antes de exportar — removendo a fricção entre gerar o sistema e confiar nele. O modelo de 14 dias de trial ilimitado foi escolhido para garantir que o usuário chegue ao 'aha moment', que só acontece quando ele exporta e vê o Tailwind config funcionando no projeto dele.",
-          "content_en": "The key learning was about the value of closing the loop. Palette tools are a dime a dozen, but Sigil's differentiator is connecting seed color, tokens, and code export in a single flow. The decision to include Component Preview was the most important one: it was designed so users see tokens working in real components before exporting — removing the friction between generating the system and trusting it. The 14-day unlimited trial model was chosen to ensure users reach the 'aha moment', which only happens when they export and see the Tailwind config working in their own project."
+          "content": "O principal aprendizado foi sobre o valor de fechar o ciclo. Ferramentas de paleta existem aos montes, mas o diferencial do Sigil é conectar cor seed → tokens → exportação em código em um fluxo único. A decisão de incluir Component Preview foi a mais importante: foi desenhado para que o usuário veja os tokens funcionando em componentes reais antes de exportar, removendo a fricção entre gerar o sistema e confiar nele. O modelo de 14 dias de trial ilimitado foi escolhido para garantir que o usuário chegue ao 'aha moment', que só acontece quando ele exporta e vê o Tailwind config funcionando no projeto dele.",
+          "content_en": "The key learning was about the value of closing the loop. Palette tools are a dime a dozen, but Sigil's differentiator is connecting seed color, tokens, and code export in a single flow. The decision to include Component Preview was the most important one: it was designed so users see tokens working in real components before exporting, removing the friction between generating the system and trusting it. The 14-day unlimited trial model was chosen to ensure users reach the 'aha moment', which only happens when they export and see the Tailwind config working in their own project."
         },
         {
           "type": "outcomes",
@@ -1929,10 +1929,10 @@ export const projectsData = [
         category: "Product Design & Full-Stack",
         tags: ["Product Design", "Full-Stack"],
         title: "Nota Fácil",
-        tagline: "Emita NFS-e, receba via Pix e mantenha o DAS em dia — sem virar contador.",
-        tagline_en: "Issue invoices, get paid via Pix and keep taxes current — without becoming an accountant.",
-        description: "SaaS para microempreendedores individuais (MEI) e autônomos emitirem NFS-e, cobrarem via Pix e acompanharem obrigações fiscais como o DAS — tudo em um fluxo único, dark-first e sem jargão contábil. Da emissão em três cliques à confirmação automática do pagamento, o Nota Fácil cobre o ciclo de faturar para quem trabalha por conta própria.",
-        description_en: "SaaS for Brazilian solo entrepreneurs (MEI) and freelancers to issue service invoices (NFS-e), charge via Pix and track tax obligations like the monthly DAS — all in a single, dark-first flow with no accounting jargon. From three-click issuing to automatic payment confirmation, Nota Fácil covers the whole billing cycle for the self-employed.",
+        tagline: "Emita NFS-e, receba via Pix e mantenha o DAS em dia, sem virar contador.",
+        tagline_en: "Issue invoices, get paid via Pix and keep taxes current, without becoming an accountant.",
+        description: "SaaS para microempreendedores individuais (MEI) e autônomos emitirem NFS-e, cobrarem via Pix e acompanharem obrigações fiscais como o DAS, tudo em um fluxo único, dark-first e sem jargão contábil. Da emissão em três cliques à confirmação automática do pagamento, o Nota Fácil cobre o ciclo de faturar para quem trabalha por conta própria.",
+        description_en: "SaaS for Brazilian solo entrepreneurs (MEI) and freelancers to issue service invoices (NFS-e), charge via Pix and track tax obligations like the monthly DAS, all in a single, dark-first flow with no accounting jargon. From three-click issuing to automatic payment confirmation, Nota Fácil covers the whole billing cycle for the self-employed.",
         year: "2026",
         role: "Product Designer & AI Engineer",
         timeline: "MVP · iteração contínua",
@@ -1957,15 +1957,15 @@ export const projectsData = [
                 content: "O mercado de PJ digital cresceu com contas como Cora, Conta Simples e os apps PJ dos grandes bancos, mas a emissão de NFS-e segue fragmentada por município e descolada da cobrança. Emissores dedicados resolvem a nota, mas não fecham o ciclo com Pix nem com o DAS. A oportunidade é clara: unir nota, recebimento e imposto em um produto enxuto, com a linguagem de quem não é contador.",
                 content_en: "The digital business-account market grew with players like Cora, Conta Simples and the big banks' PJ apps, but NFS-e issuing remains fragmented by municipality and disconnected from charging. Dedicated issuers solve the invoice but never close the loop with Pix or the DAS tax. The opportunity is clear: unite invoice, payment and tax in one lean product, in the language of someone who is not an accountant.",
                 highlights: [
-                    "A emissão de NFS-e é municipal e fragmentada — não há padrão nacional único de UX",
+                    "A emissão de NFS-e é municipal e fragmentada: não há padrão nacional único de UX",
                     "MEIs misturam cobrança no app do banco, nota no portal e controle em planilha",
-                    "Esquecer o DAS gera multa — cálculo e lembrete automáticos têm valor imediato",
+                    "Esquecer o DAS gera multa: cálculo e lembrete automáticos têm valor imediato",
                     "A barreira é operacional, não conceitual: ninguém quer aprender um ERP contábil"
                 ],
                 highlights_en: [
-                    "NFS-e issuing is municipal and fragmented — there is no single national UX standard",
+                    "NFS-e issuing is municipal and fragmented: there is no single national UX standard",
                     "MEIs juggle charging in the bank app, invoicing in a portal and tracking in a spreadsheet",
-                    "Missing the DAS means a fine — automatic calculation and reminders deliver instant value",
+                    "Missing the DAS means a fine: automatic calculation and reminders deliver instant value",
                     "The barrier is operational, not conceptual: nobody wants to learn an accounting ERP"
                 ]
             },
@@ -2020,8 +2020,8 @@ export const projectsData = [
                     { value: "R$29", label: "monthly PRO, everything unlimited" },
                     { value: "5", label: "modules in the billing cycle" }
                 ],
-                content: "O principal aprendizado foi que, para o MEI, o valor não está em emitir a nota isolada, mas em fechar o ciclo até o dinheiro cair e o imposto ficar em dia. Vincular a cobrança Pix à nota e confirmar o pagamento automaticamente foi a decisão que transformou um emissor em um controle financeiro. O segundo aprendizado foi de linguagem: cada termo contábil removido da interface reduziu a fricção. O trial de 14 dias com tudo liberado existe para o usuário chegar ao 'aha' — a primeira nota paga via Pix dentro do app.",
-                content_en: "The key learning was that, for the MEI, value is not in issuing the invoice alone but in closing the loop until the money lands and the tax is paid. Linking the Pix charge to the invoice and confirming payment automatically was the decision that turned an issuer into a financial control tool. The second learning was about language: every accounting term removed from the interface reduced friction. The 14-day fully unlocked trial exists so users reach the 'aha' moment — their first invoice paid via Pix inside the app."
+                content: "O principal aprendizado foi que, para o MEI, o valor não está em emitir a nota isolada, mas em fechar o ciclo até o dinheiro cair e o imposto ficar em dia. Vincular a cobrança Pix à nota e confirmar o pagamento automaticamente foi a decisão que transformou um emissor em um controle financeiro. O segundo aprendizado foi de linguagem: cada termo contábil removido da interface reduziu a fricção. O trial de 14 dias com tudo liberado existe para o usuário chegar ao 'aha': a primeira nota paga via Pix dentro do app.",
+                content_en: "The key learning was that, for the MEI, value is not in issuing the invoice alone but in closing the loop until the money lands and the tax is paid. Linking the Pix charge to the invoice and confirming payment automatically was the decision that turned an issuer into a financial control tool. The second learning was about language: every accounting term removed from the interface reduced friction. The 14-day fully unlocked trial exists so users reach the 'aha' moment: their first invoice paid via Pix inside the app."
             }
         ]
     },
@@ -2088,43 +2088,43 @@ export const projectsData = [
               "src": "/images/projects/pixtudo/pixtudo_mob_01.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Início — resumo financeiro e cashback",
-              "caption_en": "Home — financial summary & cashback"
+              "caption": "Início: resumo financeiro e cashback",
+              "caption_en": "Home: financial summary & cashback"
             },
             {
               "src": "/images/projects/pixtudo/pixtudo_mob_02.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Pix — envio com cashback automático",
-              "caption_en": "Pix — send with automatic cashback"
+              "caption": "Pix: envio com cashback automático",
+              "caption_en": "Pix: send with automatic cashback"
             },
             {
               "src": "/images/projects/pixtudo/pixtudo_mob_03.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Extrato — histórico e gráfico de movimentações",
-              "caption_en": "Statement — history & spending chart"
+              "caption": "Extrato: histórico e gráfico de movimentações",
+              "caption_en": "Statement: history & spending chart"
             },
             {
               "src": "/images/projects/pixtudo/pixtudo_mob_04.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Score — pontuação gamificada com níveis e metas",
-              "caption_en": "Score — gamified rating with levels & goals"
+              "caption": "Score: pontuação gamificada com níveis e metas",
+              "caption_en": "Score: gamified rating with levels & goals"
             },
             {
               "src": "/images/projects/pixtudo/pixtudo_mob_05.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Serviços — contas, recarga e transporte",
-              "caption_en": "Services — bills, top-up & transit"
+              "caption": "Serviços: contas, recarga e transporte",
+              "caption_en": "Services: bills, top-up & transit"
             },
             {
               "src": "/images/projects/pixtudo/pixtudo_mob_06.jpg",
               "width": 720,
               "height": 1560,
-              "caption": "Social — rateio e vaquinhas via Pix",
-              "caption_en": "Social — split bills & group payments"
+              "caption": "Social: rateio e vaquinhas via Pix",
+              "caption_en": "Social: split bills & group payments"
             }
           ]
         },
@@ -2370,8 +2370,8 @@ export const projectsData = [
         title: "ZapVida",
         tagline: "Pesquisa e design de um super-app nacional com Pix nativo, gov digital e mini-apps.",
         tagline_en: "Research and design of a national super-app with native Pix, digital gov and mini-apps.",
-        description: "Documento de UX Research & Design para o ZapVida — o WeChat do Brasil. O projeto une mensagens, pagamentos, serviços governamentais, delivery e entretenimento numa única plataforma pensada para a realidade brasileira. Abrange pesquisa primária (40 entrevistas, 1.200 respondentes), 3 personas, jornada, arquitetura de informação, wireframes e sistema de design.",
-        description_en: "UX Research & Design document for ZapVida — the Brazilian WeChat. The project unifies messaging, payments, government services, delivery, and entertainment in a single platform built for Brazilian reality. Covers primary research (40 interviews, 1,200 survey respondents), 3 personas, journey mapping, information architecture, wireframes, and design system.",
+        description: "Documento de UX Research & Design para o ZapVida, o WeChat do Brasil. O projeto une mensagens, pagamentos, serviços governamentais, delivery e entretenimento numa única plataforma pensada para a realidade brasileira. Abrange pesquisa primária (40 entrevistas, 1.200 respondentes), 3 personas, jornada, arquitetura de informação, wireframes e sistema de design.",
+        description_en: "UX Research & Design document for ZapVida, the Brazilian WeChat. The project unifies messaging, payments, government services, delivery, and entertainment in a single platform built for Brazilian reality. Covers primary research (40 interviews, 1,200 survey respondents), 3 personas, journey mapping, information architecture, wireframes, and design system.",
         year: "2026",
         role: "UX Researcher",
         timeline: "MVP · iteração contínua",
@@ -2387,8 +2387,8 @@ export const projectsData = [
                 title: "O Problema",
                 title_en: "The Problem",
                 type: "text",
-                content: "O Brasil tem o maior mercado de fintechs da América Latina, 170 milhões de smartphones ativos e os usuários mais engajados em apps do mundo — média de 5,4 horas diárias em apps, o maior do planeta. Mas nenhum super-app domina. O brasileiro usa WhatsApp para falar, Nubank para pagar, iFood para pedir comida, Instagram para se entreter e o app do INSS (quando consegue) para serviços públicos. 78% dos entrevistados usam 4 ou mais apps para tarefas que poderiam ser unificadas. 64% da classe C/D nunca usou um app de governo e não sabe como acessar serviços públicos digitais. O problema não é falta de infraestrutura ou de usuários — é a ausência de um produto que entenda a cultura e a realidade socioeconômica brasileira.",
-                content_en: "Brazil has Latin America's largest fintech market, 170 million active smartphones, and the world's most app-engaged users — averaging 5.4 daily hours in apps, the global #1. But no super-app dominates. Brazilians use WhatsApp to chat, Nubank to pay, iFood to order food, Instagram to entertain themselves, and the INSS app (when it works) for government services. 78% of interviewees use 4+ apps for tasks that could be unified. 64% of the C/D income bracket has never used a government app and doesn't know how to access public digital services. The problem isn't a lack of infrastructure or users — it's the absence of a product that understands Brazilian culture and socioeconomic reality."
+                content: "O Brasil tem o maior mercado de fintechs da América Latina, 170 milhões de smartphones ativos e os usuários mais engajados em apps do mundo: média de 5,4 horas diárias em apps, o maior do planeta. Mas nenhum super-app domina. O brasileiro usa WhatsApp para falar, Nubank para pagar, iFood para pedir comida, Instagram para se entreter e o app do INSS (quando consegue) para serviços públicos. 78% dos entrevistados usam 4 ou mais apps para tarefas que poderiam ser unificadas. 64% da classe C/D nunca usou um app de governo e não sabe como acessar serviços públicos digitais. O problema não é falta de infraestrutura ou de usuários, é a ausência de um produto que entenda a cultura e a realidade socioeconômica brasileira.",
+                content_en: "Brazil has Latin America's largest fintech market, 170 million active smartphones, and the world's most app-engaged users: averaging 5.4 daily hours in apps, the global #1. But no super-app dominates. Brazilians use WhatsApp to chat, Nubank to pay, iFood to order food, Instagram to entertain themselves, and the INSS app (when it works) for government services. 78% of interviewees use 4+ apps for tasks that could be unified. 64% of the C/D income bracket has never used a government app and doesn't know how to access public digital services. The problem isn't a lack of infrastructure or users, it's the absence of a product that understands Brazilian culture and socioeconomic reality."
             },
             {
                 title: "Análise Competitiva",
@@ -2465,8 +2465,8 @@ export const projectsData = [
                     { value: "1,200", label: "quantitative survey respondents" },
                     { value: "8", label: "deliverable sections (research to design system)" }
                 ],
-                content: "O projeto resultou em um documento completo cobrindo todas as fases do processo UX, desde a pesquisa de mercado até wireframes e sistema de design. O principal aprendizado foi sobre a necessidade de um produto genuinamente brasileiro — não uma adaptação de modelos globais. A decisão de incluir gov digital como pilar raiz (não como serviço secundário) foi o insight mais contraintuitivo e, possivelmente, o maior diferencial competitivo: nenhum super-app global tem incentivo para integrar serviços públicos brasileiros, mas esse é exatamente o lock-in que cria adoção na classe C/D e em usuários mais velhos. A arquitetura de 5 pilares nasceu diretamente do card sorting, que revelou que \"dinheiro\" e \"serviços\" são categorias mentais distintas para o brasileiro — ao contrário do que modelos ocidentais costumam assumir.",
-                content_en: "The project resulted in a complete document covering all UX process phases, from market research to wireframes and design system. The key learning was about the need for a genuinely Brazilian product — not an adaptation of global models. The decision to include digital gov as a root pillar (not a secondary service) was the most counterintuitive insight and possibly the biggest competitive differentiator: no global super-app has an incentive to integrate Brazilian public services, but this is exactly the lock-in that drives adoption among the C/D class and older users. The 5-pillar architecture emerged directly from the card sorting, which revealed that 'money' and 'services' are distinct mental categories for Brazilians — contrary to what Western models typically assume."
+                content: "O projeto resultou em um documento completo cobrindo todas as fases do processo UX, desde a pesquisa de mercado até wireframes e sistema de design. O principal aprendizado foi sobre a necessidade de um produto genuinamente brasileiro, não uma adaptação de modelos globais. A decisão de incluir gov digital como pilar raiz (não como serviço secundário) foi o insight mais contraintuitivo e, possivelmente, o maior diferencial competitivo: nenhum super-app global tem incentivo para integrar serviços públicos brasileiros, mas esse é exatamente o lock-in que cria adoção na classe C/D e em usuários mais velhos. A arquitetura de 5 pilares nasceu diretamente do card sorting, que revelou que \"dinheiro\" e \"serviços\" são categorias mentais distintas para o brasileiro, ao contrário do que modelos ocidentais costumam assumir.",
+                content_en: "The project resulted in a complete document covering all UX process phases, from market research to wireframes and design system. The key learning was about the need for a genuinely Brazilian product, not an adaptation of global models. The decision to include digital gov as a root pillar (not a secondary service) was the most counterintuitive insight and possibly the biggest competitive differentiator: no global super-app has an incentive to integrate Brazilian public services, but this is exactly the lock-in that drives adoption among the C/D class and older users. The 5-pillar architecture emerged directly from the card sorting, which revealed that 'money' and 'services' are distinct mental categories for Brazilians, contrary to what Western models typically assume."
             }
         ]
     },
@@ -2943,14 +2943,14 @@ export const projectsData = [
                 title_en: "The Problem",
                 type: "text",
                 content: "O Brasil tem um dos maiores déficits de alfabetização da América Latina: segundo o IBGE, cerca de 6% das crianças entre 6 e 14 anos não sabem ler nem escrever, e estudos do INEP mostram que apenas 53% dos alunos do 3º ano do ensino fundamental atingem o nível adequado de leitura. O problema não é só acesso à escola, mas engajamento. Apps educativos existentes são frequentemente repetitivos e perdem a atenção infantil rapidamente. A hipótese: combinar animais, curiosidades e mecânica de jogo cria um loop de aprendizado com recompensa intrínseca, onde a criança quer continuar não para ganhar pontos, mas porque a próxima curiosidade é interessante.",
-                content_en: "Brazil has one of the largest literacy deficits in Latin America: according to IBGE, around 6% of children aged 6 to 14 cannot read or write, and INEP studies show only 53% of 3rd-grade students reach adequate reading levels. The issue isn't just school access — it's engagement. Existing educational apps are often repetitive and quickly lose children's attention. The hypothesis: combining animals, fun facts, and game mechanics creates a learning loop with intrinsic rewards, where the child wants to continue not for points, but because the next fact is genuinely interesting."
+                content_en: "Brazil has one of the largest literacy deficits in Latin America: according to IBGE, around 6% of children aged 6 to 14 cannot read or write, and INEP studies show only 53% of 3rd-grade students reach adequate reading levels. The issue isn't just school access, it's engagement. Existing educational apps are often repetitive and quickly lose children's attention. The hypothesis: combining animals, fun facts, and game mechanics creates a learning loop with intrinsic rewards, where the child wants to continue not for points, but because the next fact is genuinely interesting."
             },
             {
                 title: "Solução & Mecânica",
                 title_en: "Solution & Mechanics",
                 type: "text",
-                content: "A criança vê a ilustração de um animal e monta o nome arrastando letras para os espaços corretos. O acerto imediato desbloqueia uma curiosidade sobre aquele animal — um micro-momento de descoberta que recompensa o esforço com conhecimento real. A dificuldade escala em três níveis: fácil (palavras curtas, sem tempo), médio (palavras maiores, letras-distração) e difícil (tempo limitado, palavras complexas). A progressão é bloqueada por nível, incentivando o domínio antes de avançar. O sistema de estrelas por rodada cria um objetivo de replay natural: terminar com desempenho perfeito.",
-                content_en: "The child sees an animal illustration and builds its name by dragging letters into the correct slots. A correct answer immediately unlocks a fun fact about that animal — a micro-moment of discovery that rewards effort with real knowledge. Difficulty scales across three levels: easy (short words, no timer), medium (longer words, distractor letters), and hard (time pressure, complex words). Progression is gated by level, encouraging mastery before moving on. The star rating system per round creates a natural replay objective: finishing with a perfect score."
+                content: "A criança vê a ilustração de um animal e monta o nome arrastando letras para os espaços corretos. O acerto imediato desbloqueia uma curiosidade sobre aquele animal, um micro-momento de descoberta que recompensa o esforço com conhecimento real. A dificuldade escala em três níveis: fácil (palavras curtas, sem tempo), médio (palavras maiores, letras-distração) e difícil (tempo limitado, palavras complexas). A progressão é bloqueada por nível, incentivando o domínio antes de avançar. O sistema de estrelas por rodada cria um objetivo de replay natural: terminar com desempenho perfeito.",
+                content_en: "The child sees an animal illustration and builds its name by dragging letters into the correct slots. A correct answer immediately unlocks a fun fact about that animal, a micro-moment of discovery that rewards effort with real knowledge. Difficulty scales across three levels: easy (short words, no timer), medium (longer words, distractor letters), and hard (time pressure, complex words). Progression is gated by level, encouraging mastery before moving on. The star rating system per round creates a natural replay objective: finishing with a perfect score."
             },
             {
                 title: "Construção com AI Coding",
@@ -3004,8 +3004,8 @@ export const projectsData = [
         title: "OrbiNum",
         tagline: "Missão espacial onde operações matemáticas abastecem um foguete e desbloqueiam planetas.",
         tagline_en: "Space mission where math operations fuel a rocket and unlock planets across the solar system.",
-        description: "Um foguete precisa viajar entre planetas, e para avançar a criança resolve operações matemáticas que abastecem a nave. Cada planeta representa um nível de dificuldade — Mercúrio para somas simples, Saturno para multiplicação. Acertos consecutivos ativam um turbo visual. Trabalha aritmética, raciocínio rápido e apresenta o sistema solar.",
-        description_en: "A rocket needs to travel between planets, and to advance the child solves math operations that fuel the ship. Each planet represents a difficulty level — Mercury for simple sums, Saturn for multiplication. Consecutive correct answers activate a visual turbo boost. Targets arithmetic, quick reasoning, and introduces the solar system.",
+        description: "Um foguete precisa viajar entre planetas, e para avançar a criança resolve operações matemáticas que abastecem a nave. Cada planeta representa um nível de dificuldade: Mercúrio para somas simples, Saturno para multiplicação. Acertos consecutivos ativam um turbo visual. Trabalha aritmética, raciocínio rápido e apresenta o sistema solar.",
+        description_en: "A rocket needs to travel between planets, and to advance the child solves math operations that fuel the ship. Each planet represents a difficulty level: Mercury for simple sums, Saturn for multiplication. Consecutive correct answers activate a visual turbo boost. Targets arithmetic, quick reasoning, and introduces the solar system.",
         year: "2026",
         role: "Game Designer & AI Engineer",
         timeline: "MVP · iteração contínua",
@@ -3018,15 +3018,15 @@ export const projectsData = [
                 title: "O Problema",
                 title_en: "The Problem",
                 type: "text",
-                content: "O Brasil ocupa a 65ª posição no ranking de matemática do PISA entre 81 países, com apenas 2% dos alunos atingindo níveis avançados. A raiz do problema não está em capacidade cognitiva — está em como a matemática é apresentada. Exercícios repetitivos sem contexto criam aversão antes mesmo da criança entender o que está aprendendo. Pesquisas da área de aprendizado gamificado (Gee, 2003; Mayer, 2019) mostram que crianças retêm mais quando o desafio está embebido em narrativa e consequência real dentro do jogo. A hipótese do OrbiNum: se cada operação matemática tem uma consequência visual imediata (o foguete avança ou não), a aritmética deixa de ser abstrata e passa a ser instrumental.",
-                content_en: "Brazil ranks 65th in the PISA mathematics ranking among 81 countries, with only 2% of students reaching advanced levels. The root isn't cognitive capacity — it's how math is presented. Repetitive, context-free exercises create aversion before the child even understands what they're learning. Research in gamified learning (Gee, 2003; Mayer, 2019) shows children retain more when challenges are embedded in narrative and have real in-game consequences. OrbiNum's hypothesis: if each math operation has an immediate visual consequence (the rocket advances or not), arithmetic stops being abstract and becomes instrumental."
+                content: "O Brasil ocupa a 65ª posição no ranking de matemática do PISA entre 81 países, com apenas 2% dos alunos atingindo níveis avançados. A raiz do problema não está em capacidade cognitiva, está em como a matemática é apresentada. Exercícios repetitivos sem contexto criam aversão antes mesmo da criança entender o que está aprendendo. Pesquisas da área de aprendizado gamificado (Gee, 2003; Mayer, 2019) mostram que crianças retêm mais quando o desafio está embebido em narrativa e consequência real dentro do jogo. A hipótese do OrbiNum: se cada operação matemática tem uma consequência visual imediata (o foguete avança ou não), a aritmética deixa de ser abstrata e passa a ser instrumental.",
+                content_en: "Brazil ranks 65th in the PISA mathematics ranking among 81 countries, with only 2% of students reaching advanced levels. The root isn't cognitive capacity, it's how math is presented. Repetitive, context-free exercises create aversion before the child even understands what they're learning. Research in gamified learning (Gee, 2003; Mayer, 2019) shows children retain more when challenges are embedded in narrative and have real in-game consequences. OrbiNum's hypothesis: if each math operation has an immediate visual consequence (the rocket advances or not), arithmetic stops being abstract and becomes instrumental."
             },
             {
                 title: "Solução & Mecânica",
                 title_en: "Solution & Mechanics",
                 type: "text",
-                content: "Um foguete viaja entre os planetas do sistema solar, e cada planeta representa um nível de dificuldade crescente: Mercúrio (somas simples) até Saturno (multiplicação e divisão). Para avançar entre planetas, a criança resolve operações que 'abastecem' a nave — a metáfora torna a consequência do acerto tangível. Três acertos consecutivos ativam o modo Turbo, um feedback visual que recompensa consistência sem criar dependência de recompensas externas. O sistema de vidas (3 corações) adiciona tensão saudável sem punição excessiva. Ao final de cada missão, o desempenho é pontuado em estrelas.",
-                content_en: "A rocket travels between solar system planets, each representing a progressively harder difficulty level: Mercury (simple addition) to Saturn (multiplication and division). To move between planets, the child solves operations that 'fuel' the ship — the metaphor makes the consequence of a correct answer tangible. Three consecutive correct answers activate Turbo mode, a visual feedback that rewards consistency without creating external reward dependency. A life system (3 hearts) adds healthy tension without excessive punishment. At the end of each mission, performance is scored with stars."
+                content: "Um foguete viaja entre os planetas do sistema solar, e cada planeta representa um nível de dificuldade crescente: Mercúrio (somas simples) até Saturno (multiplicação e divisão). Para avançar entre planetas, a criança resolve operações que 'abastecem' a nave: a metáfora torna a consequência do acerto tangível. Três acertos consecutivos ativam o modo Turbo, um feedback visual que recompensa consistência sem criar dependência de recompensas externas. O sistema de vidas (3 corações) adiciona tensão saudável sem punição excessiva. Ao final de cada missão, o desempenho é pontuado em estrelas.",
+                content_en: "A rocket travels between solar system planets, each representing a progressively harder difficulty level: Mercury (simple addition) to Saturn (multiplication and division). To move between planets, the child solves operations that 'fuel' the ship: the metaphor makes the consequence of a correct answer tangible. Three consecutive correct answers activate Turbo mode, a visual feedback that rewards consistency without creating external reward dependency. A life system (3 hearts) adds healthy tension without excessive punishment. At the end of each mission, performance is scored with stars."
             },
             {
                 title: "Construção com AI Coding",
@@ -3064,7 +3064,7 @@ export const projectsData = [
                     { value: "Turbo", label: "mode activated by 3 consecutive correct answers" }
                 ],
                 content: "O principal aprendizado foi sobre o papel da metáfora no aprendizado infantil. A operação matemática por si só é neutra; o foguete que precisa de combustível torna a resposta certa urgente e real. A maior descoberta durante o desenvolvimento: o Turbo mode não precisava de recompensa material, apenas de feedback audiovisual intenso. Crianças respondem à intensidade do feedback, não ao valor da recompensa. Isso sugere que muitos sistemas de gamificação erram ao focar em pontos e moedas quando o que motiva é a sensação de poder e velocidade.",
-                content_en: "The key learning was about the role of metaphor in children's learning. A math operation on its own is neutral; a rocket that needs fuel makes the correct answer urgent and real. The biggest discovery during development: the Turbo mode didn't need material rewards — just intense audiovisual feedback. Children respond to the intensity of feedback, not the value of the reward. This suggests many gamification systems err by focusing on points and coins when what motivates is the sensation of power and speed."
+                content_en: "The key learning was about the role of metaphor in children's learning. A math operation on its own is neutral; a rocket that needs fuel makes the correct answer urgent and real. The biggest discovery during development: the Turbo mode didn't need material rewards, just intense audiovisual feedback. Children respond to the intensity of feedback, not the value of the reward. This suggests many gamification systems err by focusing on points and coins when what motivates is the sensation of power and speed."
             }
         ]
     },
@@ -3095,8 +3095,8 @@ export const projectsData = [
                 title: "O Problema",
                 title_en: "The Problem",
                 type: "text",
-                content: "RPGs de texto no navegador costumam cair em dois extremos: ou são escolhas binárias simples sem profundidade (visual novels lineares) ou sistemas de regras tão complexos que o onboarding afasta quem não é jogador hardcore. O desafio era criar um jogo com profundidade mecânica real — classes, atributos, combate tático, progressão — mas que qualquer pessoa conseguisse jogar sem ler um manual. A hipótese central: um sistema narrativo híbrido que combina estrutura previsível (árvore de decisão) com variação imprevisível (templates dinâmicos + eventos aleatórios) consegue entregar tanto coerência quanto rejogabilidade.",
-                content_en: "Text-based browser RPGs tend to fall into two extremes: either they're simple binary choices without depth (linear visual novels) or rule systems so complex that the onboarding repels anyone who isn't a hardcore gamer. The challenge was to create a game with real mechanical depth — classes, attributes, tactical combat, progression — that anyone could play without reading a manual. The core hypothesis: a hybrid narrative system combining predictable structure (decision tree) with unpredictable variation (dynamic templates + random events) can deliver both coherence and replayability."
+                content: "RPGs de texto no navegador costumam cair em dois extremos: ou são escolhas binárias simples sem profundidade (visual novels lineares) ou sistemas de regras tão complexos que o onboarding afasta quem não é jogador hardcore. O desafio era criar um jogo com profundidade mecânica real (classes, atributos, combate tático, progressão), mas que qualquer pessoa conseguisse jogar sem ler um manual. A hipótese central: um sistema narrativo híbrido que combina estrutura previsível (árvore de decisão) com variação imprevisível (templates dinâmicos + eventos aleatórios) consegue entregar tanto coerência quanto rejogabilidade.",
+                content_en: "Text-based browser RPGs tend to fall into two extremes: either they're simple binary choices without depth (linear visual novels) or rule systems so complex that the onboarding repels anyone who isn't a hardcore gamer. The challenge was to create a game with real mechanical depth (classes, attributes, tactical combat, progression) that anyone could play without reading a manual. The core hypothesis: a hybrid narrative system combining predictable structure (decision tree) with unpredictable variation (dynamic templates + random events) can deliver both coherence and replayability."
             },
             {
                 title: "Sistema Híbrido de Narrativa",
@@ -3104,8 +3104,8 @@ export const projectsData = [
                 type: "research",
                 methods: ["Árvore de decisão com 5 atos", "Templates dinâmicos com placeholders", "Eventos aleatórios entre cenas", "Flags de estado entre sessões"],
                 methods_en: ["Decision tree with 5 acts", "Dynamic templates with placeholders", "Random events between scenes", "State flags across sessions"],
-                content: "A inovação central do Veradice é a camada tripla de narração. A primeira camada é a árvore de decisão — 40+ nós com escolhas que têm consequências reais no estado do jogo. A segunda é os templates dinâmicos: textos com placeholders ({name}, {race}, {time}, {weather}) que mudam a cada cena, criando variação sem custo de escrita. A terceira são eventos aleatórios com 40% de chance a cada 3-4 nós: mercadores, armadilhas, tesouros, enigmas e emboscadas que mantêm o jogador em alerta mesmo em caminhos já explorados. As flags de estado (sabe_do_ritual, conhece_lyria, sabe_fraqueza_verath) persistem e afetam diálogos, combates e os 4 finais possíveis.",
-                content_en: "Veradice's core innovation is the triple-layer narration system. The first layer is the decision tree — 40+ nodes with choices that have real consequences in the game state. The second is dynamic templates: texts with placeholders ({name}, {race}, {time}, {weather}) that change every scene, creating variation without extra writing cost. The third is random events with 40% chance every 3-4 nodes: merchants, traps, treasures, riddles, and ambushes that keep the player alert even on already-explored paths. State flags (knows_ritual, knows_lyria, knows_verath_weakness) persist and affect dialogues, combats, and all 4 possible endings.",
+                content: "A inovação central do Veradice é a camada tripla de narração. A primeira camada é a árvore de decisão: 40+ nós com escolhas que têm consequências reais no estado do jogo. A segunda é os templates dinâmicos: textos com placeholders ({name}, {race}, {time}, {weather}) que mudam a cada cena, criando variação sem custo de escrita. A terceira são eventos aleatórios com 40% de chance a cada 3-4 nós: mercadores, armadilhas, tesouros, enigmas e emboscadas que mantêm o jogador em alerta mesmo em caminhos já explorados. As flags de estado (sabe_do_ritual, conhece_lyria, sabe_fraqueza_verath) persistem e afetam diálogos, combates e os 4 finais possíveis.",
+                content_en: "Veradice's core innovation is the triple-layer narration system. The first layer is the decision tree: 40+ nodes with choices that have real consequences in the game state. The second is dynamic templates: texts with placeholders ({name}, {race}, {time}, {weather}) that change every scene, creating variation without extra writing cost. The third is random events with 40% chance every 3-4 nodes: merchants, traps, treasures, riddles, and ambushes that keep the player alert even on already-explored paths. State flags (knows_ritual, knows_lyria, knows_verath_weakness) persist and affect dialogues, combats, and all 4 possible endings.",
                 highlights: [
                     "40+ nós na árvore de decisão com caminhos ramificados por ato",
                     "Templates dinâmicos com tom adaptável: épico, humor, sombrio, mistério",
@@ -3132,8 +3132,8 @@ export const projectsData = [
                 title: "Design de Mecânicas",
                 title_en: "Mechanics Design",
                 type: "text",
-                content: "O sistema de combate por turnos usa d20 + modificador de atributo contra a defesa do inimigo — familiar para jogadores de D&D, mas simplificado o suficiente para novatos. Cada uma das 6 classes tem 3 habilidades únicas que refletem seu archetype: o Guerreiro bate mais forte, o Mago causa mais dano a distância, o Ladino aplica veneno, o Clérigo cura. A progressão de nível é visível e recompensadora: a cada nível, o HP cresce e um novo atributo melhora. O sistema de inventário com itens comprados, achados e craftados dá ao jogador sensação de crescimento além do combate. A dificuldade afeta a campanha inteira: modo Lendário reduz o ouro ganho e aumenta o HP dos inimigos em 30%.",
-                content_en: "The turn-based combat system uses d20 + attribute modifier against enemy defense — familiar for D&D players, simplified enough for newcomers. Each of the 6 classes has 3 unique abilities reflecting its archetype: the Warrior hits harder, the Mage deals ranged damage, the Rogue applies poison, the Cleric heals. Level progression is visible and rewarding: each level, HP grows and a new attribute improves. The inventory system with purchased, found, and crafted items gives the player a sense of growth beyond combat. Difficulty affects the entire campaign: Legendary mode reduces gold gained and increases enemy HP by 30%.",
+                content: "O sistema de combate por turnos usa d20 + modificador de atributo contra a defesa do inimigo, familiar para jogadores de D&D, mas simplificado o suficiente para novatos. Cada uma das 6 classes tem 3 habilidades únicas que refletem seu archetype: o Guerreiro bate mais forte, o Mago causa mais dano a distância, o Ladino aplica veneno, o Clérigo cura. A progressão de nível é visível e recompensadora: a cada nível, o HP cresce e um novo atributo melhora. O sistema de inventário com itens comprados, achados e craftados dá ao jogador sensação de crescimento além do combate. A dificuldade afeta a campanha inteira: modo Lendário reduz o ouro ganho e aumenta o HP dos inimigos em 30%.",
+                content_en: "The turn-based combat system uses d20 + attribute modifier against enemy defense, familiar for D&D players, simplified enough for newcomers. Each of the 6 classes has 3 unique abilities reflecting its archetype: the Warrior hits harder, the Mage deals ranged damage, the Rogue applies poison, the Cleric heals. Level progression is visible and rewarding: each level, HP grows and a new attribute improves. The inventory system with purchased, found, and crafted items gives the player a sense of growth beyond combat. Difficulty affects the entire campaign: Legendary mode reduces gold gained and increases enemy HP by 30%.",
                 images: [
                     {
                         src: "/images/projects/veradice/veradice2.jpg",
@@ -3157,8 +3157,8 @@ export const projectsData = [
                 type: "research",
                 methods: ["Claude API como pair programmer", "Next.js App Router", "Deploy contínuo via Vercel"],
                 methods_en: ["Claude API as pair programmer", "Next.js App Router", "Continuous deploy via Vercel"],
-                content: "O Veradice foi construído em 2 dias usando Claude como pair programmer em todas as etapas. A especificação do jogo foi escrita primeiro como documento de design completo — sistemas, inimigos, árvore de nós, eventos, mecânicas de progressão — e então usada como contexto para gerar o código de forma estruturada. A abordagem foi modular: estado global do jogo em um único objeto, funções puras para checks de atributo, sistema de renderização de nós separado da lógica de combate. O maior desafio foi manter coerência de estado em um jogo com tantas flags e caminhos — resolvido com um reducer centralizado.",
-                content_en: "Veradice was built in 2 days using Claude as pair programmer at every stage. The game specification was written first as a complete design document — systems, enemies, node tree, events, progression mechanics — and then used as context to generate code in a structured way. The approach was modular: global game state in a single object, pure functions for attribute checks, node rendering system separate from combat logic. The biggest challenge was maintaining state coherence in a game with so many flags and paths — solved with a centralized reducer.",
+                content: "O Veradice foi construído em 2 dias usando Claude como pair programmer em todas as etapas. A especificação do jogo foi escrita primeiro como documento de design completo (sistemas, inimigos, árvore de nós, eventos, mecânicas de progressão) e então usada como contexto para gerar o código de forma estruturada. A abordagem foi modular: estado global do jogo em um único objeto, funções puras para checks de atributo, sistema de renderização de nós separado da lógica de combate. O maior desafio foi manter coerência de estado em um jogo com tantas flags e caminhos, resolvido com um reducer centralizado.",
+                content_en: "Veradice was built in 2 days using Claude as pair programmer at every stage. The game specification was written first as a complete design document (systems, enemies, node tree, events, progression mechanics) and then used as context to generate code in a structured way. The approach was modular: global game state in a single object, pure functions for attribute checks, node rendering system separate from combat logic. The biggest challenge was maintaining state coherence in a game with so many flags and paths, solved with a centralized reducer.",
                 highlights: [
                     "Spec-first development: documento de design completo antes de uma linha de código",
                     "Estado do jogo em reducer centralizado para rastrear 20+ flags de estado",
@@ -3195,8 +3195,8 @@ export const projectsData = [
                     { value: "40+", label: "nodes in the decision tree" },
                     { value: "4", label: "distinct endings" }
                 ],
-                content: "O principal aprendizado foi sobre o valor de escrever a especificação antes do código. Em um projeto com tanta interdependência — flags que afetam diálogos que afetam finais — escrever o design doc completo primeiro permitiu que o Claude gerasse código coerente em toda a base, sem contradições de estado. A segunda descoberta: o sistema narrativo híbrido cumpriu a promessa. Jogadores que jogaram duas vezes reportaram experiências diferentes, não por sorte, mas por escolhas genuínas. A árvore de decisão garante a coerência; os eventos aleatórios e os templates dinâmicos garantem a surpresa.",
-                content_en: "The key learning was about the value of writing the specification before the code. In a project with so much interdependence — flags that affect dialogues that affect endings — writing the full design doc first allowed Claude to generate coherent code across the entire codebase, without state contradictions. The second discovery: the hybrid narrative system delivered on its promise. Players who played twice reported different experiences, not by chance, but through genuine choices. The decision tree ensures coherence; random events and dynamic templates ensure surprise."
+                content: "O principal aprendizado foi sobre o valor de escrever a especificação antes do código. Em um projeto com tanta interdependência (flags que afetam diálogos que afetam finais), escrever o design doc completo primeiro permitiu que o Claude gerasse código coerente em toda a base, sem contradições de estado. A segunda descoberta: o sistema narrativo híbrido cumpriu a promessa. Jogadores que jogaram duas vezes reportaram experiências diferentes, não por sorte, mas por escolhas genuínas. A árvore de decisão garante a coerência; os eventos aleatórios e os templates dinâmicos garantem a surpresa.",
+                content_en: "The key learning was about the value of writing the specification before the code. In a project with so much interdependence (flags that affect dialogues that affect endings), writing the full design doc first allowed Claude to generate coherent code across the entire codebase, without state contradictions. The second discovery: the hybrid narrative system delivered on its promise. Players who played twice reported different experiences, not by chance, but through genuine choices. The decision tree ensures coherence; random events and dynamic templates ensure surprise."
             }
         ]
     },
@@ -3652,8 +3652,8 @@ export const projectsData = [
         "outcome": "Plataforma funcional com orderbook ao vivo, candlestick, depth chart, watchlist, alertas e onboarding interativo.",
         "outcome_en": "A working platform with live order book, candlestick, depth chart, watchlist, alerts and interactive onboarding."
       },
-      "description": "Simulador de plataforma de negociação de ações brasileiras construído com Next.js e Lightweight Charts (TradingView). Inclui orderbook ao vivo, gráfico de candlestick, depth chart, watchlist, painel de ordens, gestão de portfolio, alertas de preço e histórico de negociações — com dados simulados e onboarding interativo.",
-      "description_en": "Simulated Brazilian stock trading platform built with Next.js and Lightweight Charts (TradingView). Includes live order book, candlestick chart, depth chart, watchlist, order panel, portfolio management, price alerts and trade history — with simulated data and interactive onboarding.",
+      "description": "Simulador de plataforma de negociação de ações brasileiras construído com Next.js e Lightweight Charts (TradingView). Inclui orderbook ao vivo, gráfico de candlestick, depth chart, watchlist, painel de ordens, gestão de portfolio, alertas de preço e histórico de negociações, com dados simulados e onboarding interativo.",
+      "description_en": "Simulated Brazilian stock trading platform built with Next.js and Lightweight Charts (TradingView). Includes live order book, candlestick chart, depth chart, watchlist, order panel, portfolio management, price alerts and trade history, with simulated data and interactive onboarding.",
       "year": "2025",
       "role": "Product Designer & Front-end",
       "timeline": "Projeto pessoal",
@@ -3801,8 +3801,8 @@ export const projectsData = [
         title: "Market Analytics",
         tagline: "Dashboard de indicadores macroeconômicos brasileiros com dados em tempo real do Banco Central.",
         tagline_en: "Brazilian macroeconomic indicators dashboard with real-time data from the Central Bank.",
-        description: "Dashboard de indicadores macroeconômicos em tempo real construído com Next.js, TypeScript e Recharts. Consome a API pública do Banco Central do Brasil (BCB) para exibir Selic, IPCA, Dólar PTAX, Euro, IGP-M e câmbio cruzado em múltiplos tipos de gráficos — área, linha, barra e compostos.",
-        description_en: "Real-time macroeconomic indicators dashboard built with Next.js, TypeScript and Recharts. Consumes the Brazilian Central Bank (BCB) public API to display Selic, IPCA, Dollar PTAX, Euro, IGP-M and cross-exchange rates across multiple chart types — area, line, bar and composed.",
+        description: "Dashboard de indicadores macroeconômicos em tempo real construído com Next.js, TypeScript e Recharts. Consome a API pública do Banco Central do Brasil (BCB) para exibir Selic, IPCA, Dólar PTAX, Euro, IGP-M e câmbio cruzado em múltiplos tipos de gráficos: área, linha, barra e compostos.",
+        description_en: "Real-time macroeconomic indicators dashboard built with Next.js, TypeScript and Recharts. Consumes the Brazilian Central Bank (BCB) public API to display Selic, IPCA, Dollar PTAX, Euro, IGP-M and cross-exchange rates across multiple chart types: area, line, bar and composed.",
         year: "2025",
         role: "Designer & Front-end Engineer",
         timeline: "Projeto pessoal",
@@ -3897,8 +3897,8 @@ export const projectsData = [
           "title": "O Problema",
           "title_en": "The Problem",
           "type": "text",
-          "content": "O Meu SUS Digital passou a oferecer agendamento de consultas em mar/2026, mas apenas em ~500 municípios e somente para atenção básica — e sem transparência alguma sobre a fila. O paciente entra na fila sem saber sua posição, sem previsão de atendimento e sem lembretes. A única forma de acompanhar é ligar para a UBS. Para idosos e pessoas de classe C/D, que dependem exclusivamente do SUS, essa opacidade gera ansiedade, faltas desnecessárias e perda de vaga.",
-          "content_en": "Meu SUS Digital began offering appointment scheduling in Mar/2026, but only in ~500 cities and only for basic care — and with zero queue transparency. Patients enter the queue without knowing their position, with no predicted date and no reminders. The only way to follow up is to call the UBS. For elderly and lower-income users who depend exclusively on the SUS, this opacity generates anxiety, unnecessary absences, and lost queue spots."
+          "content": "O Meu SUS Digital passou a oferecer agendamento de consultas em mar/2026, mas apenas em ~500 municípios e somente para atenção básica, e sem transparência alguma sobre a fila. O paciente entra na fila sem saber sua posição, sem previsão de atendimento e sem lembretes. A única forma de acompanhar é ligar para a UBS. Para idosos e pessoas de classe C/D, que dependem exclusivamente do SUS, essa opacidade gera ansiedade, faltas desnecessárias e perda de vaga.",
+          "content_en": "Meu SUS Digital began offering appointment scheduling in Mar/2026, but only in ~500 cities and only for basic care, and with zero queue transparency. Patients enter the queue without knowing their position, with no predicted date and no reminders. The only way to follow up is to call the UBS. For elderly and lower-income users who depend exclusively on the SUS, this opacity generates anxiety, unnecessary absences, and lost queue spots."
         },
         {
           "title": "Pesquisa & Personas",
@@ -3916,16 +3916,16 @@ export const projectsData = [
             "3 personas: Dona Marta (67 y.o.), Jeferson (34 y.o.), Cláudia (41 y.o.)",
             "Journey map + pain point map"
           ],
-          "content": "A pesquisa confirmou que a lacuna de transparência não é bug — é ausência de design. Sistemas de regulação como o SISREG têm dados de posição na fila, mas nenhuma interface os expõe ao paciente. O benchmark internacional prova que é possível: pacientes informados faltam menos e confiam mais no sistema.",
-          "content_en": "Research confirmed that the transparency gap is not a bug — it's an absence of design. Regulation systems like SISREG have queue position data, but no interface exposes it to the patient. International benchmarks prove it's possible: informed patients miss fewer appointments and trust the system more.",
+          "content": "A pesquisa confirmou que a lacuna de transparência não é bug, é ausência de design. Sistemas de regulação como o SISREG têm dados de posição na fila, mas nenhuma interface os expõe ao paciente. O benchmark internacional prova que é possível: pacientes informados faltam menos e confiam mais no sistema.",
+          "content_en": "Research confirmed that the transparency gap is not a bug, it's an absence of design. Regulation systems like SISREG have queue position data, but no interface exposes it to the patient. International benchmarks prove it's possible: informed patients miss fewer appointments and trust the system more.",
           "highlights": [
-            "Fila só existe em sistemas estaduais isolados — nenhum dado é exposto no app nacional",
+            "Fila só existe em sistemas estaduais isolados: nenhum dado é exposto no app nacional",
             "Dona Marta (67 a.) liga 3x por semana pra UBS perguntando da vez",
             "NHS 18-week tracker: transparência de fila reduz no-show em até 30%",
             "Benchmark Agenda Fácil SP: previsão de data aumenta adesão em 22%"
           ],
           "highlights_en": [
-            "Queue only exists in isolated state systems — no data is exposed in the national app",
+            "Queue only exists in isolated state systems: no data is exposed in the national app",
             "Dona Marta (67 y.o.) calls the UBS 3x per week asking about her spot",
             "NHS 18-week tracker: queue transparency reduces no-show by up to 30%",
             "Agenda Fácil SP benchmark: date prediction increases adherence by 22%"
@@ -3935,8 +3935,8 @@ export const projectsData = [
           "title": "Solução: Fila Transparente",
           "title_en": "Solution: Transparent Queue",
           "type": "text",
-          "content": "O redesign introduz o Card de Fila — tela-herói do protótipo. Exibe posição numérica (\"Você é o 12º\"), previsão de data (\"Previsão: meados de julho\"), uma timeline de 4 etapas com estado visual claro (concluído / ativo / futuro) e botão de remarcar. Notificações proativas avisam quando a posição muda e quando a consulta está próxima. O design system usa tokens gov.br auditados WCAG AA — azul #1351B4, verde SUS #0B6E17 — com tamanhos de fonte e toque acessíveis para o público sênior.",
-          "content_en": "The redesign introduces the Queue Card — the prototype's hero screen. It shows the numerical queue position (\"You are 12th\"), a date prediction (\"Expected: mid-July\"), a 4-step timeline with clear visual states (done / active / future), and a reschedule button. Proactive notifications alert when the position changes and when the appointment is near. The design system uses WCAG AA-audited gov.br tokens — blue #1351B4, SUS green #0B6E17 — with accessible font sizes and touch targets for the senior audience."
+          "content": "O redesign introduz o Card de Fila, tela-herói do protótipo. Exibe posição numérica (\"Você é o 12º\"), previsão de data (\"Previsão: meados de julho\"), uma timeline de 4 etapas com estado visual claro (concluído / ativo / futuro) e botão de remarcar. Notificações proativas avisam quando a posição muda e quando a consulta está próxima. O design system usa tokens gov.br auditados WCAG AA (azul #1351B4, verde SUS #0B6E17) com tamanhos de fonte e toque acessíveis para o público sênior.",
+          "content_en": "The redesign introduces the Queue Card, the prototype's hero screen. It shows the numerical queue position (\"You are 12th\"), a date prediction (\"Expected: mid-July\"), a 4-step timeline with clear visual states (done / active / future), and a reschedule button. Proactive notifications alert when the position changes and when the appointment is near. The design system uses WCAG AA-audited gov.br tokens (blue #1351B4, SUS green #0B6E17) with accessible font sizes and touch targets for the senior audience."
         },
         {
           "title": "Acessibilidade WCAG",
@@ -3952,8 +3952,8 @@ export const projectsData = [
             "Touch targets: 18/18 targets ≥ 44×44 px",
             "Typography: readable scale, minimum 14 px"
           ],
-          "content": "Auditoria completa com figma-cli a11y. Dois tokens corrigidos antes do deploy: muted #888 → #6E6E6E (ratio 4.6:1) e success #168821 → #0B6E17 (ratio 5.1:1). Correções aplicadas nos tokens-fonte — todos os componentes atualizam automaticamente.",
-          "content_en": "Full audit with figma-cli a11y. Two tokens corrected before deploy: muted #888 → #6E6E6E (ratio 4.6:1) and success #168821 → #0B6E17 (ratio 5.1:1). Corrections applied at the source tokens — all components update automatically."
+          "content": "Auditoria completa com figma-cli a11y. Dois tokens corrigidos antes do deploy: muted #888 → #6E6E6E (ratio 4.6:1) e success #168821 → #0B6E17 (ratio 5.1:1). Correções aplicadas nos tokens-fonte: todos os componentes atualizam automaticamente.",
+          "content_en": "Full audit with figma-cli a11y. Two tokens corrected before deploy: muted #888 → #6E6E6E (ratio 4.6:1) and success #168821 → #0B6E17 (ratio 5.1:1). Corrections applied at the source tokens: all components update automatically."
         },
         {
           "title": "Resultados & Aprendizados",
@@ -3987,8 +3987,8 @@ export const projectsData = [
               "label": "original flow pain points redesigned"
             }
           ],
-          "content": "O aprendizado central foi que transparência de fila não é feature opcional — é o produto inteiro para esse público. Mostrar \"Você é o 12º\" vale mais do que qualquer ornamento visual. Construir o protótipo em código além do Figma permitiu testar navegação real, estados ativos e acessibilidade no browser — impossível num protótipo estático.",
-          "content_en": "The key learning was that queue transparency is not an optional feature — it is the entire product for this audience. Showing \"You are 12th\" is worth more than any visual ornament. Building the prototype in code beyond Figma allowed testing real navigation, active states, and browser accessibility — impossible in a static prototype."
+          "content": "O aprendizado central foi que transparência de fila não é feature opcional, é o produto inteiro para esse público. Mostrar \"Você é o 12º\" vale mais do que qualquer ornamento visual. Construir o protótipo em código além do Figma permitiu testar navegação real, estados ativos e acessibilidade no browser, impossível num protótipo estático.",
+          "content_en": "The key learning was that queue transparency is not an optional feature, it is the entire product for this audience. Showing \"You are 12th\" is worth more than any visual ornament. Building the prototype in code beyond Figma allowed testing real navigation, active states, and browser accessibility, impossible in a static prototype."
         },
         {
           "title": "Telas do Protótipo",

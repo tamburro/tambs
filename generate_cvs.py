@@ -286,7 +286,7 @@ def draw_main(c, data):
         # Company + role
         c.setFillColor(TEXT_DARK)
         c.setFont("Arial-Bold", 9.5)
-        title_str = f"{exp['company']}  —  {exp['role']}"
+        title_str = f"{exp['company']}  ·  {exp['role']}"
         title_w = c.stringWidth(title_str, "Arial-Bold", 9.5)
         if title_w > MAIN_W:
             c.drawString(MAIN_X, y, f"{exp['company']}")
