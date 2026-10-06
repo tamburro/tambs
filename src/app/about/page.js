@@ -145,6 +145,63 @@ export default function AboutPage() {
                 </div>
 
                 <div className="ph-container ph-about-section">
+                    <p className="ph-eyebrow">{t.aiWorkflow.label}</p>
+                    <h2 className="ph-display ph-display--section" style={{ marginBottom: '64px' }}>
+                        {t.aiWorkflow.title}
+                    </h2>
+                    <div className="ph-about-grid">
+                        <div />
+                        <p className="ph-statement" style={{ fontSize: 'clamp(20px, 2.2vw, 30px)' }}>
+                            {t.aiWorkflow.sub}
+                        </p>
+                    </div>
+
+                    <div className="ph-stats ph-stats--3" style={{ marginBottom: '80px' }}>
+                        {t.aiWorkflow.stats.map(stat => (
+                            <div key={stat.label} className="ph-stat">
+                                <p className="ph-stat-value">{stat.value}</p>
+                                <p className="ph-stat-label">{stat.label}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div>
+                        {t.aiWorkflow.steps.map((step, i) => (
+                            <div key={step.title} className="ph-service-row">
+                                <span className="ph-service-index">{String(i + 1).padStart(2, '0')}</span>
+                                <h3 className="ph-service-title">{step.title}</h3>
+                                <p className="ph-body" style={{ margin: 0 }}>{step.description}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.guardrailsLabel}</p>
+                    <ul className="ph-ai-rules">
+                        {t.aiWorkflow.guardrails.map(rule => <li key={rule}>{rule}</li>)}
+                    </ul>
+
+                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.toolsLabel}</p>
+                    <div className="ph-chips">
+                        {t.aiWorkflow.tools.map(tool => (
+                            <span key={tool} className="ph-tag" style={{ fontSize: '11px', padding: '8px 16px' }}>
+                                {tool}
+                            </span>
+                        ))}
+                    </div>
+
+                    <p className="ph-eyebrow" style={{ marginTop: '90px' }}>{t.aiWorkflow.proofLabel}</p>
+                    <div>
+                        {t.aiWorkflow.proof.map(item => (
+                            <Link key={item.slug} href={`/works/${item.slug}`} className="ph-xp-row ph-ai-proof">
+                                <span className="ph-xp-period">{item.note}</span>
+                                <h3 className="ph-xp-role">{item.title}</h3>
+                                <span className="ph-xp-org">↗</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="ph-container ph-about-section">
                     <p className="ph-eyebrow">{t.aboutPage.experienceLabel}</p>
                     <div style={{ marginTop: '40px' }}>
                         {experience.map(item => (
