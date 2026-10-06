@@ -197,13 +197,30 @@ export default function SphereGallery({ activeFilter = null }) {
             return new THREE.Mesh(geo, mat)
         }
 
-        // project accent for the label strips, lifted when too dark to read on the ink background
-        const WHITE = new THREE.Color(0xffffff)
-        function accentTint(hex) {
-            if (!hex) return WHITE
-            const lum = luminance(hex)
-            const color = new THREE.Color(hex)
-            return lum < 0.16 ? color.lerp(WHITE, (0.16 - lum) / (1 - lum)) : color
+        // blurred copy of the cover, shown behind the whole cell on hover
+        const CELL_PHI = (Math.PI * 2) / COLS
+        const CELL_THETA = 0.34
+        const blurTexCache = {}
+        function makeBlurTexture(image) {
+            const small = document.createElement('canvas')
+            small.width = 24
+            small.height = 16
+            const scale = Math.max(small.width / image.width, small.height / image.height)
+            const w = image.width * scale
+            const h = image.height * scale
+            small.getContext('2d').drawImage(image, (small.width - w) / 2, (small.height - h) / 2, w, h)
+
+            const cv = document.createElement('canvas')
+            cv.width = 192
+            cv.height = 128
+            const ctx = cv.getContext('2d')
+            ctx.filter = 'blur(10px)'
+            ctx.drawImage(small, -16, -12, cv.width + 32, cv.height + 24)
+            const tex = new THREE.CanvasTexture(cv)
+            tex.colorSpace = THREE.SRGBColorSpace
+            tex.wrapS = THREE.RepeatWrapping
+            tex.repeat.x = -1
+            return tex
         }
 
         ROWS.forEach((lat, rowIdx) => {
@@ -225,12 +242,32 @@ export default function SphereGallery({ activeFilter = null }) {
                     transparent: true,
                     opacity: 0,
                 }))
+                // dimmed so the white labels stay readable on top
+                const bgMat = new THREE.MeshBasicMaterial({
+                    color: 0x969696,
+                    side: THREE.BackSide,
+                    transparent: true,
+                    opacity: 0,
+                    depthWrite: false,
+                })
+                const bg = new THREE.Mesh(new THREE.SphereGeometry(
+                    RADIUS + 0.5, 12, 8,
+                    lon - CELL_PHI / 2, CELL_PHI,
+                    thetaCenter - CELL_THETA / 2, CELL_THETA
+                ), bgMat)
+                bg.renderOrder = -1
+                bg.visible = false
+                group.add(bg)
+
                 loader.load(project.src, tex => {
                     tex.colorSpace = THREE.SRGBColorSpace
                     tex.wrapS = THREE.RepeatWrapping
                     tex.repeat.x = -1
                     mat.map = tex
                     mat.needsUpdate = true
+                    if (!blurTexCache[project.id]) blurTexCache[project.id] = makeBlurTexture(tex.image)
+                    bgMat.map = blurTexCache[project.id]
+                    bgMat.needsUpdate = true
                     loadedCount++
                     if (loadedCount === totalTiles) startIntro()
                 })
@@ -249,7 +286,7 @@ export default function SphereGallery({ activeFilter = null }) {
                     filterDim: 1,
                     filterActive: true,
                     introDone: false,
-                    tint: accentTint(project.accentColor),
+                    bg,
                 }
                 group.add(mesh)
                 tiles.push(mesh)
@@ -518,8 +555,9 @@ export default function SphereGallery({ activeFilter = null }) {
                 tile.userData.labelMeshes.forEach(label => {
                     label.material.opacity = tile.material.opacity * 0.85
                     label.material.userData.hover.value = tile.userData.hoverBoost
-                    label.material.color.lerpColors(WHITE, tile.userData.tint, tile.userData.hoverBoost)
                 })
+                tile.userData.bg.visible = tile.userData.hoverBoost > 0.001
+                tile.userData.bg.material.opacity = tile.material.opacity * tile.userData.hoverBoost
             })
 
             renderer.render(scene, camera)
@@ -538,12 +576,15 @@ export default function SphereGallery({ activeFilter = null }) {
                 tile.geometry.dispose()
                 if (tile.material.map) tile.material.map.dispose()
                 tile.material.dispose()
+                tile.userData.bg.geometry.dispose()
+                tile.userData.bg.material.dispose()
                 tile.userData.labelMeshes.forEach(label => {
                     label.geometry.dispose()
                     label.material.dispose()
                 })
             })
             Object.values(topTexCache).forEach(tex => tex.dispose())
+            Object.values(blurTexCache).forEach(tex => tex.dispose())
             Object.values(bottomTexCache).forEach(tex => tex.dispose())
             renderer.dispose()
             if (renderer.domElement.parentNode === mount) mount.removeChild(renderer.domElement)
