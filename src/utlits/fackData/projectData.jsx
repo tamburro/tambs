@@ -245,6 +245,7 @@ export const projectsData = [
     {
       "id": 22,
       "slug": "vira-ticketeria-propria",
+      "video": "/videos/cases/vira.mp4",
       "src": "/images/projects/vira/vira_full.jpg",
       "category": "Product Design & Full-Stack",
       "tags": [
@@ -459,6 +460,7 @@ export const projectsData = [
     {
       "id": 21,
       "slug": "alex-toys-loja-e-landing-imersiva",
+      "video": "/videos/cases/alextoys.mp4",
       "accentColor": "#6642AE",
       "src": "/images/projects/alextoys/alextoys_full.jpg",
       "category": "Product Design & Full-Stack",
@@ -683,6 +685,7 @@ export const projectsData = [
     {
       "id": 20,
       "slug": "detetives-digitais-letramento-ia",
+      "video": "/videos/cases/detetives.mp4",
       "src": "/images/projects/detetives_full.jpg",
       "category": "Product Design & AI Engineering",
       "tags": [
@@ -861,6 +864,7 @@ export const projectsData = [
     {
         id: 18,
         slug: "profissoes-teste-de-conhecimentos",
+        video: "/videos/cases/profissoes.mp4",
         accentColor: "#1DB954",
         pageType: "rich",
         src: "/images/projects/profissoes/capa.jpg",
@@ -1008,6 +1012,7 @@ export const projectsData = [
     {
       "id": 19,
       "slug": "proficia-avaliacao-competencias-ux",
+      "video": "/videos/cases/proficia.mp4",
       "src": "/images/projects/proficia_full.jpg",
       "category": "Product Design & Full-Stack",
       "tags": [
@@ -1232,6 +1237,7 @@ export const projectsData = [
     {
       "id": 16,
       "slug": "drop-marketplace-de-lancamentos",
+      "video": "/videos/cases/drop.mp4",
       "accentColor": "#12A8C4",
       "src": "/images/projects/drop_capa.jpg",
       "category": "Product Design & Full-Stack",
@@ -1441,6 +1447,7 @@ export const projectsData = [
     {
       "id": 1,
       "slug": "sigil-design-system-builder",
+      "video": "/videos/cases/sigil.mp4",
       "accentColor": "#2A428A",
       "src": "/images/projects/sigil/sigil_full.jpg",
       "category": "Product Design & AI Engineering",
@@ -1658,6 +1665,7 @@ export const projectsData = [
     {
         id: 15,
         slug: "notafacil-emissor-nfse-mei",
+        video: "/videos/cases/notafacil.mp4",
         accentColor: "#FD755B",
             tldr: {
                 problem: "14 milhões de MEIs emitem nota no site da prefeitura, cobram por WhatsApp e perdem o prazo do DAS, sem uma ferramenta que una tudo isso.",
@@ -1771,6 +1779,7 @@ export const projectsData = [
     {
       "id": 6,
       "slug": "pixtudo-super-app-ux-research",
+      "video": "/videos/cases/pixtudo.mp4",
       "pageType": "rich",
       "accentColor": "#00C853",
       "liveDemoLink": "https://app-src-two.vercel.app/",
@@ -1938,6 +1947,7 @@ export const projectsData = [
     {
         id: 2,
         slug: "listaai-gerador-de-descricoes",
+        video: "/videos/cases/listaai.mp4",
         accentColor: "#2A2A72",
             tldr: {
                 problem: "Vendedores de marketplace perdem horas escrevendo títulos e descrições que não performam na busca.",
@@ -2955,8 +2965,8 @@ export const projectsData = [
         "problem_en": "Acquisition pages must convert without attracting the subscriber who churns early, and each page took days to ship in limited low-code tools.",
         "role": "Product Designer & Front-end: design e código das páginas e das variantes de teste. Por iniciativa própria, levei a programação assistida por IA para o time de design.",
         "role_en": "Product Designer & Front-end: design and code of the pages and test variants. On my own initiative, I brought AI-assisted coding to the design team.",
-        "outcome": "Variantes vencedoras viram padrão nos canais das marcas. Em 2026, dezenas de landing pages feitas com IA e 7 designers treinados no Rio e em São Paulo.",
-        "outcome_en": "Winning variants become the standard across brand channels. In 2026, dozens of landing pages built with AI and 7 designers trained in Rio and São Paulo."
+        "outcome": "Variantes vencedoras viram padrão nos canais das marcas. Em 2026, dezenas de landing pages feitas com IA e 8 designers treinados no Rio e em São Paulo.",
+        "outcome_en": "Winning variants become the standard across brand channels. In 2026, dozens of landing pages built with AI and 8 designers trained in Rio and São Paulo."
       },
       "description": "Desde 2023 desenho e programo as páginas de aquisição de assinaturas da Editora Globo: O Globo, Valor Econômico e Clube O Globo, além de parcerias e campanhas. O trabalho começou com um programa contínuo de testes A/B, focado em aumentar a conversão sem sacrificar o LTV do assinante. Em 2026 levei a programação assistida por IA para o processo, o que reduziu o prazo de uma landing page de dias para menos de um dia, e treinei os designers de Marketing Institucional do Rio e de São Paulo para trabalhar da mesma forma.",
       "description_en": "Since 2023 I have designed and coded Editora Globo's subscription acquisition pages: O Globo, Valor Econômico and Clube O Globo, plus partnerships and campaigns. The work started with a continuous A/B testing program, focused on growing conversion without sacrificing subscriber LTV. In 2026 I brought AI-assisted coding into the process, which cut the lead time of a landing page from days to under a day, and I trained the Institutional Marketing designers in Rio and São Paulo to work the same way.",
@@ -3187,8 +3197,8 @@ export const projectsData = [
           "type": "text",
           "title": "Treinando o time",
           "title_en": "Training the team",
-          "content": "Um designer mais rápido não resolve o gargalo de um time. Montei um workshop de uma hora sobre construção de landing pages com programação assistida por IA e apliquei para os designers de Marketing Institucional: quatro no Rio de Janeiro e três em São Paulo.\n\nDepois do workshop, o time passou a produzir landing pages e e-mails marketing com mais qualidade e em menos tempo, usando o mesmo fluxo.",
-          "content_en": "One faster designer does not fix a team bottleneck. I put together a one-hour workshop on building landing pages with AI-assisted coding and ran it for the Institutional Marketing designers: four in Rio de Janeiro and three in São Paulo.\n\nAfter the workshop, the team started producing landing pages and marketing emails with higher quality and in less time, using the same workflow."
+          "content": "Um designer mais rápido não resolve o gargalo de um time. Montei um workshop de uma hora sobre construção de landing pages com programação assistida por IA e apliquei para os designers de Marketing Institucional: cinco no Rio de Janeiro e três em São Paulo.\n\nDepois do workshop, o time passou a produzir landing pages e e-mails marketing com mais qualidade e em menos tempo, usando o mesmo fluxo.",
+          "content_en": "One faster designer does not fix a team bottleneck. I put together a one-hour workshop on building landing pages with AI-assisted coding and ran it for the Institutional Marketing designers: five in Rio de Janeiro and three in São Paulo.\n\nAfter the workshop, the team started producing landing pages and marketing emails with higher quality and in less time, using the same workflow."
         },
         {
           "type": "outcomes",
@@ -3201,7 +3211,7 @@ export const projectsData = [
               "label_en": "day to ship a landing page; it used to take days"
             },
             {
-              "value": "7",
+              "value": "8",
               "label": "designers treinados, no Rio e em São Paulo",
               "label_en": "designers trained, in Rio and São Paulo"
             },
@@ -3528,6 +3538,7 @@ export const projectsData = [
     {
         id: 14,
         slug: "market-analytics-indicadores-macro",
+        video: "/videos/cases/marketanalytics.mp4",
         accentColor: "#E0C145",
         liveDemoLink: "https://market-analytics-alpha.vercel.app",
         src: "/images/projects/market_analytics_full2.jpg",

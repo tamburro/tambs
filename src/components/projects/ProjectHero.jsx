@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { RiExternalLinkLine } from '@remixicon/react'
@@ -24,6 +25,19 @@ export default function ProjectHero({ project }) {
     const accent = project.accentColor
     const style = accent ? { '--case-bg': accent, '--case-fg': readableOn(accent) } : undefined
     const cover = project.pageSrc || project.src
+    const videoRef = useRef(null)
+
+    // the loop only downloads and plays while it is on screen
+    useEffect(() => {
+        const video = videoRef.current
+        if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+        const io = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) video.play().catch(() => {})
+            else video.pause()
+        }, { threshold: 0.25 })
+        io.observe(video)
+        return () => io.disconnect()
+    }, [project.video])
 
     const meta = [
         [t.project.year, pick(project.year, project.year_en)],
@@ -87,6 +101,22 @@ export default function ProjectHero({ project }) {
             {project.tagline && (
                 <div className="container">
                     <p className="ph-statement ph-case-statement">{pick(project.tagline, project.tagline_en)}</p>
+                </div>
+            )}
+
+            {project.video && (
+                <div className="container ph-case-video">
+                    <p className="ph-eyebrow">{t.project.inMotion}</p>
+                    <video
+                        ref={videoRef}
+                        src={project.video}
+                        poster={project.video.replace('.mp4', '.jpg')}
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                        aria-label={`${project.title} — ${t.project.inMotion}`}
+                    />
                 </div>
             )}
         </>

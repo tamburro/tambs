@@ -1157,6 +1157,18 @@ a.ph-info-value:hover {
     overflow: hidden;
 }
 
+.ph-case-video {
+    padding-top: 72px;
+}
+
+.ph-case-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 6px;
+    background: var(--ph-ink-deep);
+}
+
 .ph-case-statement {
     padding-top: 88px;
     max-width: 1180px;

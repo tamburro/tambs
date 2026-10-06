@@ -142,6 +142,7 @@ export const translations = {
       hideGallery: 'Hide Images',
       backToProjects: 'Back to Works',
       related: 'Related work',
+      inMotion: 'In motion',
     },
     footer: {
       cta: "Let's Talk",
@@ -288,6 +289,7 @@ export const translations = {
       hideGallery: 'Ocultar Imagens',
       backToProjects: 'Voltar aos Trabalhos',
       related: 'Trabalhos relacionados',
+      inMotion: 'Em movimento',
     },
     footer: {
       cta: 'Vamos Conversar',
