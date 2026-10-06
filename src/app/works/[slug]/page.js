@@ -8,13 +8,13 @@ export async function generateMetadata({ params }) {
     if (!project) return {};
 
     const title = `${project.title} — Pedro Tambs`;
-    const description = project.tagline_en || project.tagline;
+    const description = project.tagline;
     const images = [project.pageSrc || project.src];
 
     return {
         title,
         description,
-        openGraph: { title, description, images, type: 'article' },
+        openGraph: { title, description, images, type: 'article', locale: 'pt_BR' },
         twitter: { card: 'summary_large_image', title, description, images },
     };
 }

@@ -4,15 +4,18 @@ import Image from 'next/image'
 import { RiExternalLinkLine } from '@remixicon/react'
 import { useLanguage } from '@/context/LanguageContext'
 
-// ink or paper, whichever reads better on the given #rrggbb background
-function readableOn(hex) {
+// relative luminance (WCAG) of a #rrggbb color
+export function luminance(hex) {
     const n = parseInt(hex.slice(1), 16)
     const [r, g, b] = [n >> 16, (n >> 8) & 255, n & 255].map(v => {
         v /= 255
         return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4
     })
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.22 ? '#161616' : '#FAFAFA'
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
 }
+
+// ink or paper, whichever reads better on the given background
+const readableOn = (hex) => luminance(hex) > 0.22 ? '#161616' : '#FAFAFA'
 
 export default function ProjectHero({ project }) {
     const { t, lang } = useLanguage()

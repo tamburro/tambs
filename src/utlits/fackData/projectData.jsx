@@ -218,6 +218,7 @@ export const projectsData = [
     {
       "id": 21,
       "slug": "alex-toys-loja-e-landing-imersiva",
+      "accentColor": "#6642AE",
       "src": "/images/projects/alextoys/alextoys_full.jpg",
       "category": "Product Design & Full-Stack",
       "tags": [
@@ -619,6 +620,7 @@ export const projectsData = [
     {
         id: 18,
         slug: "profissoes-teste-de-conhecimentos",
+        accentColor: "#1DB954",
         pageType: "rich",
         src: "/images/projects/profissoes/capa.jpg",
         category: "Product Design & Full-Stack",
@@ -989,6 +991,7 @@ export const projectsData = [
     {
       "id": 16,
       "slug": "drop-marketplace-de-lancamentos",
+      "accentColor": "#12A8C4",
       "src": "/images/projects/drop_capa.jpg",
       "category": "Product Design & Full-Stack",
       "tags": [
@@ -1197,6 +1200,7 @@ export const projectsData = [
     {
       "id": 1,
       "slug": "sigil-design-system-builder",
+      "accentColor": "#2A428A",
       "src": "/images/projects/sigil/sigil_full.jpg",
       "category": "Product Design & AI Engineering",
       "tags": [
@@ -1413,6 +1417,7 @@ export const projectsData = [
     {
         id: 15,
         slug: "notafacil-emissor-nfse-mei",
+        accentColor: "#FD755B",
             tldr: {
                 problem: "14 milhões de MEIs emitem nota no site da prefeitura, cobram por WhatsApp e perdem o prazo do DAS, sem uma ferramenta que una tudo isso.",
                 problem_en: "14 million Brazilian MEIs issue invoices on city-hall sites, charge clients over WhatsApp and miss tax deadlines, with no tool connecting it all.",
@@ -1692,6 +1697,7 @@ export const projectsData = [
     {
         id: 2,
         slug: "listaai-gerador-de-descricoes",
+        accentColor: "#2A2A72",
             tldr: {
                 problem: "Vendedores de marketplace perdem horas escrevendo títulos e descrições que não performam na busca.",
                 problem_en: "Marketplace sellers lose hours writing titles and descriptions that underperform in search.",
@@ -1967,6 +1973,7 @@ export const projectsData = [
     {
         id: 5,
         slug: "roteiro-de-viagens-colaborativo",
+        accentColor: "#42D296",
             tldr: {
                 problem: "Planejar viagem em grupo espalha decisões entre WhatsApp, planilhas e mapas; nenhum app resolve colaboração com permissões.",
                 problem_en: "Group trip planning scatters decisions across WhatsApp, spreadsheets and maps; no app solves collaboration with permissions.",
@@ -2165,6 +2172,7 @@ export const projectsData = [
     {
         id: 4,
         slug: "website-makeup-design",
+        accentColor: "#00C4FF",
         src: "/images/projects/estiloia_full.jpg",
         category: "Product Design",
         tags: ["Product Design", "UX Research"],
@@ -2294,6 +2302,7 @@ export const projectsData = [
     {
         id: 3,
         slug: "sustenta-plus-app-ux-design",
+        accentColor: "#31664A",
         src: "/images/projects/sustentamais_full2.jpg",
         category: "Product Design",
         tags: ["Product Design", "UX Research"],
@@ -2409,6 +2418,7 @@ export const projectsData = [
     {
         id: 8,
         slug: "palavra-selvagem",
+        accentColor: "#0B8A40",
         liveDemoLink: "https://palavraselvagem.vercel.app/",
         src: "/images/projects/palavraselvagem_full2.jpg",
         pageSrc: "/images/projects/palavraselvagem_full.jpg",
@@ -2484,6 +2494,7 @@ export const projectsData = [
     {
         id: 9,
         slug: "orbinum",
+        accentColor: "#622D96",
         liveDemoLink: "https://orbinum.vercel.app/",
         src: "/images/projects/orbinum_full.jpg",
         category: "Game Design & Full-Stack",
@@ -2558,6 +2569,7 @@ export const projectsData = [
     {
         id: 10,
         slug: "veradice",
+        accentColor: "#E5C05E",
         liveDemoLink: "https://veradice.vercel.app/",
         src: "/images/projects/veradice_full.jpg",
         pageSrc: "/images/projects/veradice_full2.jpg",
@@ -3034,6 +3046,7 @@ export const projectsData = [
     {
       "id": 13,
       "slug": "tradeview-plataforma-negociacao",
+      "accentColor": "#EFB928",
       "liveDemoLink": "https://orderbookfinancas.vercel.app",
       "src": "/images/projects/tradeview_full2.jpg",
       "pageSrc": "/images/projects/tradeview_full2.jpg",
@@ -3193,6 +3206,7 @@ export const projectsData = [
     {
         id: 14,
         slug: "market-analytics-indicadores-macro",
+        accentColor: "#E0C145",
         liveDemoLink: "https://market-analytics-alpha.vercel.app",
         src: "/images/projects/market_analytics_full2.jpg",
         pageSrc: "/images/projects/market_analytics_full2.jpg",

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import ProjectHero from '@/components/projects/ProjectHero';
+import ProjectHero, { luminance } from '@/components/projects/ProjectHero';
 import RelatedProjects from '@/components/projects/RelatedProjects';
 
 // ─── iFood accent ─────────────────────────────────────────────────────────────
@@ -1189,7 +1189,9 @@ const RichProjectPage = ({ project }) => {
     const { t, lang } = useLanguage();
     const pick = (pt, en) => lang === 'en' && en ? en : pt;
 
-    const accent = project.accentColor || RED;
+    // accents too dark to read on the ink background fall back to paper for labels
+    const accent = !project.accentColor ? RED
+        : luminance(project.accentColor) < 0.08 ? 'var(--ph-paper)' : project.accentColor;
 
     return (
         <div className="single-project-page-design">
@@ -1295,7 +1297,7 @@ const RichProjectPage = ({ project }) => {
                     return (
                         <SectionShell key={i} num={num} title={title} accent={accent}>
                             {section.content && (
-                                <p style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--mist)', margin: '0 0 24px' }}>
+                                <p className="ph-case-text" style={{ marginBottom: 24 }}>
                                     {pick(section.content, section.content_en)}
                                 </p>
                             )}
@@ -1337,7 +1339,7 @@ const RichProjectPage = ({ project }) => {
                             </div>
                         )}
                         {section.content && (
-                            <p style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--mist)', margin: '0' }}>
+                            <p className="ph-case-text">
                                 {pick(section.content, section.content_en)}
                             </p>
                         )}
