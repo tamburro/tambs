@@ -1157,9 +1157,13 @@ a.ph-info-value:hover {
     padding: 150px 0 96px;
 }
 
+.ph-case-hero > .container {
+    container-type: inline-size;
+}
+
 .ph-case-title {
     color: inherit;
-    font-size: clamp(44px, 10.5vw, 176px);
+    font-size: clamp(28px, min(10.5vw, calc(100cqw / (var(--ph-title-chars, 8) * 0.66))), 176px);
     text-align: center;
     overflow-wrap: break-word;
     text-wrap: balance;

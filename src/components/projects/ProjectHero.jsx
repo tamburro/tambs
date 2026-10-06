@@ -71,7 +71,12 @@ export default function ProjectHero({ project }) {
         <>
             <header className={`ph-case-hero ${fg === '#161616' ? 'ph-case-hero--light' : ''}`} style={style} ref={heroRef}>
                 <div className="container">
-                    <h1 className="ph-display ph-case-title ph-case-rise">{project.title}</h1>
+                    <h1
+                        className="ph-display ph-case-title ph-case-rise"
+                        style={{ '--ph-title-chars': Math.max(...project.title.split(/\s+/).map((w) => w.length)) }}
+                    >
+                        {project.title}
+                    </h1>
 
                     <div className="ph-case-bar ph-case-rise">
                         <div className="ph-case-bar-group">

@@ -385,17 +385,20 @@ PT_DATA = {
             "period": "Nov 2022 – Presente",
             "location": "Rio de Janeiro",
             "bullets": [
-                "Design de páginas de aquisição e fluxos de assinatura orientados a conversão e crescimento de receita para os produtos digitais da Editora Globo.",
-                "Implementação de landing pages em HTML/CSS/JS, otimização de jornadas com base em métricas de performance (CRO) e email marketing responsivo.",
+                "Lidero o design de páginas de aquisição e fluxos de assinatura para as marcas do grupo, como O Globo e Valor Econômico, com foco em conversão e receita.",
+                "Em 2026 levei a programação assistida por IA para o processo: landing pages que levavam dias vão ao ar em menos de um dia, e treinei 8 designers no Rio e em São Paulo para fazer o mesmo.",
+                "Transformo hipóteses de performance em testes A/B e construo as páginas em HTML, CSS e JavaScript, do Figma ao produto no ar.",
             ],
         },
         {
             "company": "Universo Observável",
-            "role": "Designer & Founder",
+            "role": "Product Designer & Founder",
             "period": "Dez 2017 – Presente",
             "location": "Rio de Janeiro",
             "bullets": [
-                "Marca autoral de design. Da ilustração e identidade visual à prototipação de SaaS, apps e produtos digitais de ponta a ponta, integrando UX, front-end e AI-driven design.",
+                "Estúdio autoral onde desenho e programo meus próprios produtos digitais, em paralelo à carreira em produto.",
+                "Vira (ticketeria, do zero ao primeiro evento pago em seis semanas), Proficia (SaaS B2B de avaliação de competências), Sigil (design system a partir de uma cor) e Drop (drops limitados para criadores).",
+                "Faço o ciclo inteiro, da pesquisa e UI no Figma ao front-end em React e Next.js, usando programação assistida por IA para ir da ideia ao deploy sozinho.",
             ],
         },
         {
@@ -503,17 +506,20 @@ EN_DATA = {
             "period": "Nov 2022 – Present",
             "location": "Rio de Janeiro",
             "bullets": [
-                "Design of acquisition pages and subscription flows focused on conversion and revenue growth for Editora Globo's digital products.",
-                "Landing page implementation in HTML/CSS/JS, conversion journey optimization based on performance metrics (CRO) and responsive email marketing.",
+                "I lead the design of acquisition pages and subscription flows for the group's brands, such as O Globo and Valor Econômico, focused on conversion and revenue.",
+                "In 2026 I brought AI-assisted coding into the process: landing pages that took days now go live in under a day, and I trained 8 designers in Rio and São Paulo to do the same.",
+                "I turn performance hypotheses into A/B tests and build the pages in HTML, CSS and JavaScript, from Figma to the live product.",
             ],
         },
         {
             "company": "Universo Observavel",
-            "role": "Designer & Founder",
+            "role": "Product Designer & Founder",
             "period": "Dec 2017 – Present",
             "location": "Rio de Janeiro",
             "bullets": [
-                "Independent design brand. From illustration and visual identity to prototyping SaaS, apps and end-to-end digital products, integrating UX, front-end and AI-driven design.",
+                "Independent studio where I design and code my own digital products, alongside my product career.",
+                "Vira (ticketing, from zero to the first paid event in six weeks), Proficia (B2B SaaS for skills assessment), Sigil (a design system from a single color) and Drop (limited drops for creators).",
+                "I run the whole cycle, from research and UI in Figma to the front end in React and Next.js, using AI-assisted coding to go from idea to deploy on my own.",
             ],
         },
         {
