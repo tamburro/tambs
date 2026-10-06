@@ -419,7 +419,17 @@ export default function SphereGallery({ activeFilter = null }) {
             tl.to({}, { duration: 0.35 }) // hold
         }
 
+        // wheel / trackpad rotates the sphere, like dragging sideways
+        function onWheel(e) {
+            if (e.ctrlKey) return // pinch-zoom
+            e.preventDefault()
+            if (transitioning || !introComplete) return
+            const unit = e.deltaMode === 1 ? 16 : 1
+            target.y += (e.deltaX + e.deltaY) * unit * 0.0012
+        }
+
         mount.style.cursor = 'grab'
+        mount.addEventListener('wheel', onWheel, { passive: false })
         mount.addEventListener('pointerdown', onPointerDown)
         window.addEventListener('pointermove', onPointerMove)
         window.addEventListener('pointerup', onPointerUp)
@@ -503,6 +513,7 @@ export default function SphereGallery({ activeFilter = null }) {
 
         return () => {
             cancelAnimationFrame(rafId)
+            mount.removeEventListener('wheel', onWheel)
             mount.removeEventListener('pointerdown', onPointerDown)
             window.removeEventListener('pointermove', onPointerMove)
             window.removeEventListener('pointerup', onPointerUp)
