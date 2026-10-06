@@ -66,6 +66,7 @@ body {
 
 .ph-header-logo {
     display: block;
+    flex-shrink: 0;
     line-height: 1;
 }
 
@@ -152,6 +153,8 @@ body {
     font-weight: 500;
     letter-spacing: -0.01em;
     padding: 14px 26px;
+    white-space: nowrap;
+    flex-shrink: 0;
     border-radius: 999px;
     border: none;
     cursor: pointer;
@@ -1267,7 +1270,8 @@ a.ph-info-value:hover {
 }
 
 @media (max-width: 767px) {
-    .ph-header { padding: 14px 16px; }
+    .ph-header { padding: 14px 16px; gap: 10px; }
+    .ph-header .ph-btn { padding: 11px 16px; }
     .ph-btn { font-size: 13px; padding: 11px 20px; }
     .ph-nav-item { font-size: 13px; padding: 9px 18px; }
     .ph-gallery-corner--left { left: 12px; bottom: 18px; }
