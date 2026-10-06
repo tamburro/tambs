@@ -139,9 +139,9 @@ export default function AboutPage() {
     ]
 
     const education = [
-        { period: t.resume.eduYear1, role: t.resume.eduTitle1, org: t.resume.eduOrg1 },
-        { period: t.resume.eduYear2, role: t.resume.eduTitle2, org: t.resume.eduOrg2 },
-        { period: t.resume.eduYear3, role: t.resume.eduTitle3, org: t.resume.eduOrg3 },
+        { period: t.resume.eduYear1, role: t.resume.eduTitle1, org: t.resume.eduOrg1, text: t.resume.eduDesc1 },
+        { period: t.resume.eduYear2, role: t.resume.eduTitle2, org: t.resume.eduOrg2, text: t.resume.eduDesc2 },
+        { period: t.resume.eduYear3, role: t.resume.eduTitle3, org: t.resume.eduOrg3, text: t.resume.eduDesc3 },
     ]
 
     const tools = [

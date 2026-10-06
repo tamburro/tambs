@@ -87,8 +87,9 @@ export const translations = {
       org1: 'Editora Globo',
       titleUniverso: 'Product Designer & Founder',
       desc1: [
-        "Design of acquisition pages and subscription flows focused on conversion and revenue growth for Editora Globo's digital products.",
-        'Landing page implementation in HTML/CSS/JS, conversion journey optimization based on performance metrics (CRO) and responsive email marketing.',
+        'I lead the design of acquisition pages and subscription flows for the group\'s brands, such as O Globo and Valor Econômico, focused on conversion and revenue.',
+        'In 2026 I brought AI-assisted coding into the process: landing pages that took days now go live in under a day, and I trained 8 designers in Rio and São Paulo to do the same.',
+        'I turn performance hypotheses into A/B tests and build the pages in HTML, CSS and JavaScript, from Figma to the live product.',
       ],
       descUniverso: [
         'Independent design brand. From illustration and visual identity to prototyping SaaS, apps and end-to-end digital products, integrating UX, front-end and AI-driven design.',
@@ -114,6 +115,9 @@ export const translations = {
       titleZion: 'Graphic Design Teacher',
       yearZion: 'Dec 2018 – Apr 2019',
       orgZion: 'Zion Escola de Entretenimento',
+      eduDesc1: ['Postgraduate degree in Innovation focused on Artificial Intelligence and User Experience.'],
+      eduDesc2: ['UX Design, Information Architecture and Usability.'],
+      eduDesc3: ["Bachelor's degree in Graphic Design."],
       eduTitle1: 'MBA in AI-Driven Innovation & UX',
       eduYear1: 'Jul 2025 – Sep 2026',
       eduOrg1: 'UX Unicórnio',
@@ -252,8 +256,9 @@ export const translations = {
       org1: 'Editora Globo',
       titleUniverso: 'Designer de produto & fundador',
       desc1: [
-        'Design de páginas de aquisição e fluxos de assinatura orientados a conversão e crescimento de receita para os produtos digitais da Editora Globo.',
-        'Implementação de landing pages em HTML/CSS/JS, otimização de jornadas com base em métricas de performance (CRO) e email marketing responsivo.',
+        'Lidero o design de páginas de aquisição e fluxos de assinatura para as marcas do grupo, como O Globo e Valor Econômico, com foco em conversão e receita.',
+        'Em 2026 levei a programação assistida por IA para o processo: landing pages que levavam dias vão ao ar em menos de um dia, e treinei 8 designers no Rio e em São Paulo para fazer o mesmo.',
+        'Transformo hipóteses de performance em testes A/B e construo as páginas em HTML, CSS e JavaScript, do Figma ao produto no ar.',
       ],
       descUniverso: [
         'Marca autoral de design. Da ilustração e identidade visual à prototipação de SaaS, apps e produtos digitais de ponta a ponta, integrando UX, front-end e AI-driven design.',
@@ -279,6 +284,9 @@ export const translations = {
       titleZion: 'Professor de Design Gráfico',
       yearZion: 'Dez 2018 – Abr 2019',
       orgZion: 'Zion Escola de Entretenimento',
+      eduDesc1: ['Pós-graduação em Inovação com foco em Inteligência Artificial e Experiência do Usuário.'],
+      eduDesc2: ['UX Design, Arquitetura da Informação e Usabilidade.'],
+      eduDesc3: ['Bacharelado em Design Gráfico.'],
       eduTitle1: 'MBA em Inovação Orientada à IA e UX',
       eduYear1: 'Jul 2025 – Set 2026',
       eduOrg1: 'UX Unicórnio',
