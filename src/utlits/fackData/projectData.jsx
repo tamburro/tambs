@@ -2,6 +2,255 @@
 
 export const projectsData = [
     {
+      "id": 24,
+      "slug": "vira-pinball",
+      "video": "/videos/cases/pinball.mp4",
+      "src": "/images/projects/pinball/pinball_full.jpg",
+      "category": "Game Design & Creative Coding",
+      "tags": [
+        "Game Design",
+        "Creative Coding"
+      ],
+      "title": "Vira Pinball",
+      "tagline": "Um pinball de navegador para ativação de marca: três fases que contam a noite de um evento, física escrita à mão, arte em 3D e narração por IA, sem engine nem biblioteca.",
+      "tagline_en": "A browser pinball built for brand activations: three stages that tell the story of an event night, hand-written physics, 3D art and AI narration, with no engine and no libraries.",
+      "tldr": {
+        "problem": "Ativação de marca em evento costuma ser brinde e cabine de foto, com o logo numa tela que todo mundo pula. A Vira queria o contrário: que a pessoa se divertisse de verdade e saísse associando a diversão à marca.",
+        "problem_en": "Brand activations at events are usually giveaways and photo booths, with the logo on a screen everyone skips. Vira wanted the opposite: people having real fun and walking away linking that fun to the brand.",
+        "role": "Design do jogo, direção de arte e de som e o código, com o Claude Code como par de engenharia e o Blender e a ElevenLabs na produção dos assets.",
+        "role_en": "Game design, art and sound direction, and the code, with Claude Code as an engineering partner and Blender and ElevenLabs producing the assets.",
+        "outcome": "Um protótipo jogável no celular e no computador, publicado e testado pelas sócias da Vira. Ainda não estreou em evento: é a primeira peça de uma linha de jogos de ativação.",
+        "outcome_en": "A playable prototype on phone and desktop, published and tested by Vira's partners. It hasn't debuted at an event yet: it's the first piece in a line of activation games."
+      },
+      "description": "Pinball de navegador com a identidade da Vira, pensado para totem, tablet e celular em ativações de marca. A máquina Palco Principal tem três fases, multibola, skill shot, combo e um bis final. Tudo roda em canvas 2D e JavaScript puro, com a arte renderizada no Blender a partir da geometria do próprio jogo e as falas geradas na ElevenLabs.",
+      "description_en": "A browser pinball carrying Vira's identity, designed for kiosks, tablets and phones at brand activations. The Main Stage machine has three stages, multiball, skill shot, combos and a final encore. Everything runs on 2D canvas and plain JavaScript, with art rendered in Blender from the game's own geometry and voice lines generated with ElevenLabs.",
+      "year": "2026",
+      "role": "Cofundador · Game design e engenharia",
+      "role_en": "Co-founder · Game design & Engineering",
+      "timeline": "Set 2026 · 2 dias até o protótipo jogável",
+      "timeline_en": "Sep 2026 · 2 days to a playable prototype",
+      "team": "Solo, com Claude Code",
+      "team_en": "Solo, with Claude Code",
+      "client": "Vira Entretenimento",
+      "tools": [
+        "JavaScript + Canvas 2D",
+        "Blender",
+        "ElevenLabs",
+        "Claude Code"
+      ],
+      "liveDemoLink": "https://vira-pinball.vercel.app",
+      "accentColor": "#E11D6B",
+      "pageType": "rich",
+      "sections": [
+        {
+          "type": "text",
+          "title": "O problema",
+          "title_en": "The problem",
+          "content": "A Vira é uma produtora de eventos com ticketeria própria. Em evento, marca disputa atenção com palco, bar e fila, e a ativação comum não ganha essa disputa: a pessoa pega o brinde, tira a foto e esquece de quem era o estande.\n\nA ideia foi fazer jogos simples e muito divertidos, com a marca dentro do jogo e não numa tela de abertura. O primeiro é um pinball, porque todo mundo entende em três segundos olhando alguém jogar, a partida é curta e dá vontade de jogar de novo.",
+          "content_en": "Vira is an events company with its own ticketing platform. At an event, a brand competes for attention with the stage, the bar and the queue, and the usual activation loses that fight: people grab the giveaway, take the photo and forget whose booth it was.\n\nThe idea was to make simple, genuinely fun games with the brand inside the game rather than on a splash screen. The first one is a pinball, because anyone understands it in three seconds by watching someone play, a match is short and it makes you want another go."
+        },
+        {
+          "type": "videos",
+          "title": "O jogo",
+          "title_en": "The game",
+          "content": "Dois trechos da mesma partida na máquina Palco Principal: os primeiros 34 segundos, em que a mesa passa pelas três fases, e o Bis Final. Para gravar, o jogo roda com relógio manual e sorteio com semente, e um jogador automático aciona os flippers: a mesma partida se repete quadro a quadro, sem perda de imagem. O link no topo da página abre o jogo de verdade.",
+          "content_en": "Two stretches of the same match on the Main Stage machine: the first 34 seconds, in which the table goes through all three stages, and the Final Encore. For recording, the game runs on a manual clock with seeded randomness while an automated player works the flippers: the same match replays frame by frame, with no loss of image quality. The link at the top of the page opens the real game.",
+          "videos": [
+            {
+              "src": "/images/projects/pinball/pinball_partida.mp4",
+              "poster": "/images/projects/pinball/pinball_partida_poster.jpg",
+              "caption": "Uma partida: do lançamento ao Headliner",
+              "caption_en": "One match: from launch to the Headliner"
+            },
+            {
+              "src": "/images/projects/pinball/pinball_bis.mp4",
+              "poster": "/images/projects/pinball/pinball_bis_poster.jpg",
+              "caption": "Bis Final: multibola com tudo valendo o triplo",
+              "caption_en": "Final Encore: multiball with everything worth triple"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Marca como mecânica, não como adesivo",
+          "title_en": "Brand as a mechanic, not a sticker",
+          "highlights": [
+            "As raias soletram a marca: As quatro raias do topo são V, I, R e A. Acender as quatro sobe o multiplicador, então soletrar o nome da empresa é a jogada que mais vale a pena repetir.",
+            "Vocabulário de evento: Os objetivos são DROP, CABINE, PÚBLICO, BIS e JACKPOT. A cabine do DJ prende a bola, o público é um alvo que anda de um lado para o outro e o bis é a multibola.",
+            "A noite como progressão: As três fases são Passagem de Som, Pista Enchendo e Headliner. Quem fecha a terceira ganha o Bis Final, com tudo valendo o triplo, e começa a Noite 2 com a mesa um pouco mais rápida.",
+            "O ponto magenta não muda: Cada fase troca a cor da mesa, mas o ponto da logo fica sempre no magenta da Vira. Cor de fase é clima, e o ponto é marca.",
+            "Sem cara de aposta: Roleta, caça-níquel e raspadinha ficaram fora de propósito. Uma empresa que mexe com pagamento não associa a marca a jogo de azar."
+          ],
+          "highlights_en": [
+            "The lanes spell the brand: The four top lanes are V, I, R and A. Lighting all four raises the multiplier, so spelling the company's name is the move most worth repeating.",
+            "Event vocabulary: The goals are DROP, BOOTH, CROWD, ENCORE and JACKPOT. The DJ booth traps the ball, the crowd is a target that moves from side to side and the encore is the multiball.",
+            "The night as progression: The three stages are Soundcheck, Dance Floor Filling Up and Headliner. Clear the third and you get the Final Encore, with everything worth triple, then Night 2 starts on a slightly faster table.",
+            "The magenta dot never changes: Each stage recolors the table, but the dot in the logo always stays in Vira's magenta. Stage color is mood, and the dot is brand.",
+            "Nothing that looks like gambling: Roulette, slot machines and scratch cards were left out on purpose. A company that handles payments doesn't tie its brand to games of chance."
+          ]
+        },
+        {
+          "type": "gallery",
+          "title": "Três fases, uma noite",
+          "title_en": "Three stages, one night",
+          "columns": 3,
+          "content": "A mesa é a mesma e o clima muda. A cada fase a gravidade sobe, os bumpers chutam mais forte e o tempo de salva-bola encurta: dez segundos na primeira, sete na segunda e quatro na terceira. A fase vale para o jogo todo, então perder a bola não devolve ninguém ao começo.",
+          "content_en": "Same table, different mood. With each stage gravity goes up, bumpers kick harder and the ball-save window shrinks: ten seconds in the first, seven in the second and four in the third. The stage belongs to the whole game, so losing a ball never sends anyone back to the start.",
+          "images": [
+            {
+              "src": "/images/projects/pinball/pinball_fase1.jpg",
+              "caption": "Fase 1 · Passagem de Som",
+              "caption_en": "Stage 1 · Soundcheck"
+            },
+            {
+              "src": "/images/projects/pinball/pinball_fase2.jpg",
+              "caption": "Fase 2 · Pista Enchendo",
+              "caption_en": "Stage 2 · Dance Floor Filling Up"
+            },
+            {
+              "src": "/images/projects/pinball/pinball_fase3.jpg",
+              "caption": "Fase 3 · Headliner",
+              "caption_en": "Stage 3 · Headliner"
+            }
+          ]
+        },
+        {
+          "type": "research",
+          "title": "Jogabilidade e replay",
+          "title_en": "Gameplay and replay value",
+          "methods": [
+            "Skill shot",
+            "Combo",
+            "Multibola",
+            "Kickback",
+            "Salva-bola",
+            "Bola extra"
+          ],
+          "methods_en": [
+            "Skill shot",
+            "Combo",
+            "Multiball",
+            "Kickback",
+            "Ball save",
+            "Extra ball"
+          ],
+          "content": "A primeira versão tinha mesa, flippers e placar, e cansava em duas partidas. Antes de investir em arte, estudei o que faz um pinball de verdade segurar o jogador e trouxe para a mesa o que cabia numa partida de um minuto.",
+          "content_en": "The first version had a table, flippers and a score, and got old after two matches. Before investing in art, I studied what makes a real pinball machine hold a player and brought to the table whatever fit into a one-minute match.",
+          "highlights": [
+            "Skill shot: Soltar o lançador na força certa, dentro de uma faixa que muda a cada bola, já rende pontos antes do primeiro flipper.",
+            "Combo: Tiros certos em sequência, com até três segundos entre um e outro, multiplicam o prêmio.",
+            "Missões por fase: Cada fase tem duas missões no placar, e cumprir as duas é o que troca a fase. O jogador sempre sabe o que falta.",
+            "Multibola: Travar a bola duas vezes na cabine solta todas de uma vez, e é aí que saem os jackpots.",
+            "Perdão calculado: Salva-bola no começo de cada bola, um kickback na saída lateral e uma bola extra para quem passa da segunda fase."
+          ],
+          "highlights_en": [
+            "Skill shot: Releasing the plunger at the right strength, inside a window that changes with every ball, scores before the first flip.",
+            "Combo: Clean shots in a row, up to three seconds apart, multiply the reward.",
+            "Missions per stage: Each stage shows two missions on the scoreboard, and completing both is what advances the stage. The player always knows what's left.",
+            "Multiball: Locking the ball twice in the booth releases them all at once, and that's when the jackpots come.",
+            "Measured forgiveness: A ball save at the start of each ball, a kickback on the outlane and an extra ball for clearing the second stage."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Física escrita à mão",
+          "title_en": "Hand-written physics",
+          "content": "O jogo não usa engine nem biblioteca de física. A mesa é descrita em unidades lógicas, num arquivo só, como paredes em segmentos e arcos, bumpers, alvos, estilingues e flippers, e a simulação avança 480 passos por segundo, o que impede a bola de atravessar um flipper em movimento.\n\nEscrever a física à mão deixou cada defeito visível e barato de corrigir. Um exemplo: a bola travava no V entre a guia e o flipper, e a solução foi encurtar a guia para ela terminar logo acima do eixo. Uma bola parada por tempo demais também é detectada e devolvida ao jogo.",
+          "content_en": "The game uses no engine and no physics library. The table is described in logical units, in a single file, as walls made of segments and arcs, bumpers, targets, slingshots and flippers, and the simulation advances 480 steps per second, which keeps the ball from tunneling through a moving flipper.\n\nWriting the physics by hand made every flaw visible and cheap to fix. One example: the ball used to get stuck in the V between the guide and the flipper, and the fix was to shorten the guide so it ends just above the pivot. A ball that sits still for too long is also detected and put back into play."
+        },
+        {
+          "type": "gallery",
+          "title": "Arte: o Blender lê a geometria do jogo",
+          "title_en": "Art: Blender reads the game's geometry",
+          "columns": 2,
+          "content": "A arte é renderizada no Blender por scripts que leem o mesmo arquivo de mesas que a física usa. Mudou uma parede no jogo, o render muda junto, e arte e colisão nunca desalinham. O jogo nasce desenhando a versão vetorial e troca para os renders quando eles terminam de carregar, então nunca fica esperando imagem.",
+          "content_en": "The art is rendered in Blender by scripts that read the same table file the physics uses. Move a wall in the game and the render moves with it, so art and collision never drift apart. The game starts by drawing the vector version and swaps to the renders once they finish loading, so it never waits on an image.",
+          "images": [
+            {
+              "src": "/images/projects/pinball/pinball_vetorial.jpg",
+              "caption": "Versão vetorial, desenhada pelo próprio jogo",
+              "caption_en": "Vector version, drawn by the game itself"
+            },
+            {
+              "src": "/images/projects/pinball/pinball_render.jpg",
+              "caption": "Com os renders do Blender",
+              "caption_en": "With the Blender renders"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Som e voz",
+          "title_en": "Sound and voice",
+          "content": "Os efeitos são sintetizados no navegador, sem nenhum arquivo de áudio: flipper, bumper, lançador e prêmio são gerados na hora. As falas são do DJ e da Produtora, dois personagens do elenco de unicórnios da Vira, geradas na ElevenLabs. São quatorze falas no Palco Principal, para início, fase nova, multibola, jackpot, bola salva e fim de jogo, e só uma toca por vez, para o DJ não se atropelar no meio da multibola.",
+          "content_en": "Sound effects are synthesized in the browser, with no audio files at all: flipper, bumper, plunger and reward sounds are generated on the fly. The voice lines belong to the DJ and the Producer, two characters from Vira's cast of unicorns, generated with ElevenLabs. The Main Stage has fourteen lines, for start, new stage, multiball, jackpot, ball saved and game over, and only one plays at a time so the DJ doesn't talk over himself in the middle of a multiball."
+        },
+        {
+          "type": "text",
+          "title": "Feito para o celular na mão",
+          "title_en": "Built for a phone in your hand",
+          "highlights": [
+            "A tela inteira é controle: Metade esquerda e metade direita, inclusive as faixas fora da mesa. Ninguém precisa mirar num botão.",
+            "O lançador não bate o flipper: Com a bola esperando na raia, o toque à direita só puxa o lançador.",
+            "Respeita o aparelho: A mesa desvia do notch, a tela não apaga durante a partida e o jogo pausa quando o celular deita.",
+            "Leve de propósito: Fundo, logo e paredes ficam numa camada pronta, refeita só quando a fase muda. No celular o brilho das luzes é desligado, que é o que mais pesa.",
+            "Placar na parede: O ranking guarda os cinco melhores do aparelho, com nome de até oito letras e até onde a pessoa chegou."
+          ],
+          "highlights_en": [
+            "The whole screen is the controller: Left half and right half, including the bands outside the table. Nobody has to aim at a button.",
+            "The plunger doesn't trigger the flipper: While the ball waits in the lane, a touch on the right only pulls the plunger.",
+            "Respects the device: The table avoids the notch, the screen stays awake during a match and the game pauses when the phone is turned sideways.",
+            "Light on purpose: Background, logo and walls live on a cached layer, redrawn only when the stage changes. On phones the light glow is turned off, since that's the heaviest part.",
+            "Scores on the wall: The leaderboard keeps the device's top five, with names up to eight letters and how far each player got."
+          ]
+        },
+        {
+          "type": "image",
+          "title": "A abertura",
+          "title_en": "The opening screen",
+          "src": "/images/projects/pinball/pinball_menu.jpg",
+          "caption": "O menu, com um vídeo de abertura renderizado no Blender ao fundo e as duas máquinas. A segunda, Fila Zero, ainda está na versão inicial.",
+          "caption_en": "The menu, with an opening video rendered in Blender in the background and the two machines. The second one, Fila Zero, is still in its first version."
+        },
+        {
+          "type": "text",
+          "title": "Como trabalhei com IA",
+          "title_en": "How I worked with AI",
+          "content": "Fiz o pinball com o Claude Code como par de engenharia, em conversa. Eu trouxe a ideia, as referências, o vocabulário da marca e as decisões de jogo; a IA escreveu a física, as regras e os scripts de arte. O Blender e a ElevenLabs entraram como ferramentas da própria conversa, então mesa, sprites, vídeo de abertura e falas saíram do mesmo lugar que o código.\n\nO que eu não deleguei foi jogar. Cada rodada de ajuste começou comigo jogando e dizendo o que estava errado: a bola que travava, a fase que demorava, o flipper que disparava junto com o lançador no celular.",
+          "content_en": "I built the pinball with Claude Code as an engineering partner, in conversation. I brought the idea, the references, the brand vocabulary and the game decisions; the AI wrote the physics, the rules and the art scripts. Blender and ElevenLabs came in as tools inside that same conversation, so the table, sprites, opening video and voice lines came from the same place as the code.\n\nWhat I didn't delegate was playing. Every round of tuning started with me playing and saying what was wrong: the ball that got stuck, the stage that dragged, the flipper that fired along with the plunger on the phone."
+        },
+        {
+          "type": "outcomes",
+          "title": "Resultado e próximos jogos",
+          "title_en": "Outcome and what's next",
+          "content": "Em dois dias o pinball saiu da ideia para um jogo completo no navegador, que as sócias da Vira testaram no celular. Ele ainda não foi a um evento, e a segunda máquina está na versão inicial.\n\nA linha de ativações já tem os próximos desenhados: um jogo de acertar o cambista, uma torre de copos do bar e uma corrida de unicórnios no telão, em que a plateia inteira joga pelo celular. As regras valem para todos: partida de até um minuto, recomeço instantâneo, ranking do dia à vista e a marca dentro do cenário.",
+          "content_en": "In two days the pinball went from idea to a complete browser game, which Vira's partners tested on their phones. It hasn't been to an event yet, and the second machine is still in its first version.\n\nThe activation line already has its next games sketched: a whack-the-scalper game, a tower of bar cups and a unicorn race on the big screen, where the whole crowd plays from their phones. The same rules apply to all of them: matches of up to one minute, instant restart, the day's leaderboard in plain sight and the brand inside the scenery.",
+          "metrics": [
+            {
+              "value": "3",
+              "label": "fases numa mesma mesa",
+              "label_en": "stages on a single table"
+            },
+            {
+              "value": "480",
+              "label": "passos de física por segundo",
+              "label_en": "physics steps per second"
+            },
+            {
+              "value": "0",
+              "label": "engines ou bibliotecas",
+              "label_en": "engines or libraries"
+            },
+            {
+              "value": "14",
+              "label": "falas geradas por IA",
+              "label_en": "AI-generated voice lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": 23,
       "slug": "daniele-guerra-contabilidade",
       "src": "/images/projects/danieleguerra/danieleguerra_full.jpg",
