@@ -149,23 +149,33 @@ export default function SphereGallery({ activeFilter = null }) {
         let loadedCount = 0
         const totalTiles = ROWS.length * COLS
 
-        // assign projects so no tile repeats its left or upper neighbor
-        // offset so the tile facing the camera on load (middle row, lon = 3π/2) is the first project
-        const centerRow = Math.floor(ROWS.length / 2)
-        const centerSeed = centerRow * 5 + (COLS * 3 / 4) * 3
-        const offset = projects.length - (centerSeed % projects.length)
-        const assignments = []
+        // assign projects by proximity to the view axis: the tile facing the camera on load gets the
+        // first project of GALLERY_ORDER, its neighbours the next ones, and so on around the sphere.
+        // a project is never repeated on tiles close to each other.
+        const tileDir = (rowIdx, c) => {
+            const lat = ROWS[rowIdx]
+            const lon = (c / COLS) * Math.PI * 2 + (rowIdx % 2 === 0 ? 0 : Math.PI / COLS)
+            return new THREE.Vector3(-Math.cos(lon) * Math.cos(lat), Math.sin(lat), Math.sin(lon) * Math.cos(lat))
+        }
+        const front = new THREE.Vector3(0, 0, -1)
+        const slots = []
         ROWS.forEach((_, rowIdx) => {
-            assignments[rowIdx] = []
-            for (let c = 0; c < COLS; c++) {
-                let idx = (rowIdx * 5 + c * 3 + offset) % projects.length
-                const left = assignments[rowIdx][(c - 1 + COLS) % COLS]
-                const above = rowIdx > 0 ? assignments[rowIdx - 1][c] : -1
-                while (idx === left || idx === above || (c === COLS - 1 && idx === assignments[rowIdx][0])) {
-                    idx = (idx + 1) % projects.length
-                }
-                assignments[rowIdx][c] = idx
-            }
+            for (let c = 0; c < COLS; c++) slots.push({ rowIdx, c, dir: tileDir(rowIdx, c) })
+        })
+        // ties go to the upper tiles, which the bottom chrome doesn't cover
+        const rank = slot => Math.round(slot.dir.dot(front) * 1000)
+        slots.sort((a, b) => rank(b) - rank(a) || b.dir.y - a.dir.y)
+
+        const assignments = ROWS.map(() => [])
+        const placed = []
+        let next = 0
+        slots.forEach(slot => {
+            const nearby = placed.filter(p => p.dir.dot(slot.dir) > 0.73).map(p => p.idx)
+            let idx = next % projects.length
+            while (nearby.includes(idx)) idx = (idx + 1) % projects.length
+            next++
+            assignments[slot.rowIdx][slot.c] = idx
+            placed.push({ dir: slot.dir, idx })
         })
 
         const topTexCache = {}
