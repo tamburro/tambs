@@ -39,7 +39,6 @@ export const translations = {
       approachIntro: 'I cover the full product design cycle. Every project goes from the first insight to a tested, shipped interface, with research, prototype and code as a single continuous craft.',
       services: [
         { title: 'Product Design', description: 'End-to-end product design: research, information architecture, UI, prototype and validation. From the first insight to a tested interface.' },
-        { title: 'Brand Identity', description: 'From logo to full design system, creating a visual identity that scales across every digital and physical touchpoint.' },
         { title: 'Design Engineering', description: 'I turn Figma into production-ready code. React, Next.js and modern front-end that actually ships.' },
       ],
       brandsLabel: "Brands I've been part of",
@@ -210,7 +209,6 @@ export const translations = {
       approachIntro: 'Cubro o ciclo completo de design de produto. Cada projeto vai do primeiro insight à interface testada e entregue, com pesquisa, protótipo e código como um único ofício contínuo.',
       services: [
         { title: 'Product Design', description: 'Design de produto do início ao fim: pesquisa, arquitetura da informação, UI, protótipo e validação. Do primeiro insight à interface testada.' },
-        { title: 'Identidade Visual', description: 'Do logo ao design system, com uma identidade visual que escala em todos os pontos de contato digitais e físicos.' },
         { title: 'Design Engineering', description: 'Transformo Figma em código. React, Next.js e front-end moderno que vai para produção de verdade.' },
       ],
       brandsLabel: 'Marcas em que atuei',
