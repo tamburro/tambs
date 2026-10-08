@@ -357,7 +357,7 @@ PT_DATA = {
         {
             "institution": "UX Unicórnio",
             "degree": "MBA em Inovação Orientada a IA e UX",
-            "period": "Jul 2025 – Set 2026",
+            "period": "Jul 2025 – Nov 2026",
         },
         {
             "institution": "Instituto Infnet",
@@ -478,7 +478,7 @@ EN_DATA = {
         {
             "institution": "UX Unicornio",
             "degree": "MBA in AI-Driven Innovation & UX",
-            "period": "Jul 2025 – Sep 2026",
+            "period": "Jul 2025 – Nov 2026",
         },
         {
             "institution": "Instituto Infnet",
