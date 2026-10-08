@@ -197,7 +197,7 @@ export default function AboutPage() {
                         <div className="ph-stats">
                             {t.aboutPage.stats.map(stat => (
                                 <div key={stat.label} className="ph-stat">
-                                    <p className="ph-stat-value">{stat.value}</p>
+                                    <p className="ph-stat-value">{stat.key === 'projects' ? projects.length : stat.value}</p>
                                     <p className="ph-stat-label">{stat.label}</p>
                                 </div>
                             ))}
