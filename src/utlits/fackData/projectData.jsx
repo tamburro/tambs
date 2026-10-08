@@ -3263,10 +3263,10 @@ export const projectsData = [
         "outcome": "Variantes vencedoras viram padrão nos canais das marcas. Em 2026, dezenas de landing pages feitas com IA e 8 designers treinados no Rio e em São Paulo.",
         "outcome_en": "Winning variants become the standard across brand channels. In 2026, dozens of landing pages built with AI and 8 designers trained in Rio and São Paulo."
       },
-      "description": "Desde 2023 desenho e programo as páginas de aquisição de assinaturas da Editora Globo: O Globo, Valor Econômico e Clube O Globo, além de parcerias e campanhas. O trabalho começou com um programa contínuo de testes A/B, focado em aumentar a conversão sem sacrificar o LTV do assinante. Em 2026 levei a programação assistida por IA para o processo, o que reduziu o prazo de uma landing page de dias para menos de um dia, e treinei os designers de Marketing Institucional do Rio e de São Paulo para trabalhar da mesma forma.",
-      "description_en": "Since 2023 I have designed and coded Editora Globo's subscription acquisition pages: O Globo, Valor Econômico and Clube O Globo, plus partnerships and campaigns. The work started with a continuous A/B testing program, focused on growing conversion without sacrificing subscriber LTV. In 2026 I brought AI-assisted coding into the process, which cut the lead time of a landing page from days to under a day, and I trained the Institutional Marketing designers in Rio and São Paulo to work the same way.",
-      "year": "Desde 2023",
-      "year_en": "Since 2023",
+      "description": "Desde novembro de 2022 desenho e programo as páginas de aquisição de assinaturas da Editora Globo: O Globo, Valor Econômico e Clube O Globo, além de parcerias e campanhas. O trabalho começou com um programa contínuo de testes A/B, focado em aumentar a conversão sem sacrificar o LTV do assinante. Em 2026 levei a programação assistida por IA para o processo, o que reduziu o prazo de uma landing page de dias para menos de um dia, e treinei os designers de Marketing Institucional do Rio e de São Paulo para trabalhar da mesma forma.",
+      "description_en": "Since November 2022 I have designed and coded Editora Globo's subscription acquisition pages: O Globo, Valor Econômico and Clube O Globo, plus partnerships and campaigns. The work started with a continuous A/B testing program, focused on growing conversion without sacrificing subscriber LTV. In 2026 I brought AI-assisted coding into the process, which cut the lead time of a landing page from days to under a day, and I trained the Institutional Marketing designers in Rio and São Paulo to work the same way.",
+      "year": "Desde 2022",
+      "year_en": "Since 2022",
       "role": "Product Designer & Front-end",
       "timeline": "Trabalho contínuo",
       "timeline_en": "Ongoing work",
@@ -3320,8 +3320,8 @@ export const projectsData = [
         },
         {
           "type": "text",
-          "content": "Cada ciclo dura cerca de duas semanas. O programa roda desde 2023, com sempre um ou dois testes ativos por mês, cobrindo O Globo, Valor Econômico e o Clube O Globo.",
-          "content_en": "Each cycle takes about two weeks. The program has run since 2023, with one or two active tests every month, covering O Globo, Valor Econômico and Clube O Globo."
+          "content": "Cada ciclo dura cerca de duas semanas. O programa roda desde 2022, com sempre um ou dois testes ativos por mês, cobrindo O Globo, Valor Econômico e o Clube O Globo.",
+          "content_en": "Each cycle takes about two weeks. The program has run since 2022, with one or two active tests every month, covering O Globo, Valor Econômico and Clube O Globo."
         },
         {
           "type": "research",
