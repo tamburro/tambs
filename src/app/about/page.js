@@ -9,7 +9,7 @@ import { useLanguage } from '@/context/LanguageContext'
 const STRIP_COUNT = 5
 
 // logo files are /images/client-logos/partner1.png … partner9.png, in this order
-const BRANDS = ['O Globo', 'Globo+', 'Clube O Globo', 'Extra', 'Valor One', 'Valor Econômico', 'YDUQS', 'EnsineMe', 'Estácio']
+const BRANDS = ['O Globo', 'Globo+', 'Clube O Globo', 'Extra', 'Valor One', 'Valor Econômico', 'Edições Globo Condé Nast', 'YDUQS', 'EnsineMe', 'Estácio']
 
 // full-width statement with the label sitting in the first-line indent
 // only the first sentence is set big; the rest follows as body copy

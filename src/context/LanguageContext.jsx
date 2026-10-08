@@ -87,7 +87,7 @@ export const translations = {
       org1: 'Editora Globo',
       titleUniverso: 'Product Designer & Founder',
       desc1: [
-        'I lead the design of acquisition pages and subscription flows for the group\'s brands, such as O Globo and Valor Econômico, focused on conversion and revenue.',
+        'I lead the design of acquisition pages and subscription flows for the group\'s brands, such as O Globo, Valor Econômico, Clube O Globo and Edições Globo Condé Nast, focused on conversion and revenue.',
         'In 2026 I brought AI-assisted coding into the process: landing pages that took days now go live in under a day, and I trained 8 designers in Rio and São Paulo to do the same.',
         'I turn performance hypotheses into A/B tests and build the pages in HTML, CSS and JavaScript, from Figma to the live product.',
       ],
@@ -258,7 +258,7 @@ export const translations = {
       org1: 'Editora Globo',
       titleUniverso: 'Product Designer & Founder',
       desc1: [
-        'Lidero o design de páginas de aquisição e fluxos de assinatura para as marcas do grupo, como O Globo e Valor Econômico, com foco em conversão e receita.',
+        'Lidero o design de páginas de aquisição e fluxos de assinatura para as marcas do grupo, como O Globo, Valor Econômico, Clube O Globo e Edições Globo Condé Nast, com foco em conversão e receita.',
         'Em 2026 levei a programação assistida por IA para o processo: landing pages que levavam dias vão ao ar em menos de um dia, e treinei 8 designers no Rio e em São Paulo para fazer o mesmo.',
         'Transformo hipóteses de performance em testes A/B e construo as páginas em HTML, CSS e JavaScript, do Figma ao produto no ar.',
       ],
