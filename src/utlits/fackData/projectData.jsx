@@ -1156,6 +1156,14 @@ export const projectsData = [
     {
         id: 18,
         slug: "profissoes-teste-de-conhecimentos",
+        tldr: {
+            problem: "Curso de quarenta horas morre no módulo dois e certificado atesta presença, não competência. Falta um jeito rápido e gratuito de responder onde estão as próprias lacunas.",
+            problem_en: "A forty-hour course dies in module two, and a certificate proves attendance, not skill. There was no quick, free way to answer where your own gaps are.",
+            role: "Product Designer & AI Engineer, solo: shaping, design, código e deploy, incluindo o pivô de freemium para gratuito.",
+            role_en: "Product Designer & AI Engineer, solo: shaping, design, code and deploy, including the pivot from freemium to free.",
+            outcome: "App no ar com mapa de competências em vez de trilha, desafios de cinco minutos em cinco formatos e barra de domínio por skill, sem paywall nem limite diário.",
+            outcome_en: "A live app with a competency map instead of a linear track, five-minute challenges in five formats and a mastery bar per skill, with no paywall or daily limit.",
+        },
         video: "/videos/cases/profissoes.mp4",
         accentColor: "#1DB954",
         pageType: "rich",
@@ -2407,6 +2415,14 @@ export const projectsData = [
     {
         id: 7,
         slug: "zapvida-super-app-ux-research",
+        tldr: {
+            problem: "O brasileiro passa 5,4 horas por dia em apps, a maior média do mundo, e usa um app para falar, outro para pagar e outro para pedir comida. 78% dos entrevistados abrem quatro ou mais apps para tarefas que caberiam em um só.",
+            problem_en: "Brazilians spend 5.4 hours a day in apps, the highest average in the world, using one app to talk, another to pay and another to order food. 78% of interviewees open four or more apps for tasks that could live in one.",
+            role: "UX Researcher, solo: pesquisa primária, personas, jornada, arquitetura de informação, wireframes e design system.",
+            role_en: "UX Researcher, solo: primary research, personas, journey, information architecture, wireframes and design system.",
+            outcome: "Documento completo de pesquisa e design de um super-app brasileiro, com 40 entrevistas, 1.200 respondentes e gov digital como pilar raiz, não como serviço secundário.",
+            outcome_en: "A full research and design document for a Brazilian super-app, with 40 interviews, 1,200 survey respondents and digital government as a root pillar rather than a side service.",
+        },
         src: "/images/projects/zapvida_full.jpg",
         category: "Product Design",
         tags: ["Product Design", "UX Research"],
@@ -2715,6 +2731,14 @@ export const projectsData = [
     {
         id: 4,
         slug: "website-makeup-design",
+        tldr: {
+            problem: "Consultoria de moda é cara e inacessível, e 69% dos pesquisados gostariam de ajuda para se vestir. O desafio era a IA aprender o estilo de alguém sem parecer formulário de cadastro.",
+            problem_en: "Fashion consulting is expensive and out of reach, and 69% of those surveyed would like help dressing better. The challenge was teaching an AI someone's style without it feeling like a signup form.",
+            role: "UX Designer & Researcher, em equipe de 6: benchmark, hipóteses, os dois protótipos e os testes moderados.",
+            role_en: "UX Designer & Researcher in a team of 6: benchmarking, hypotheses, both prototypes and the moderated tests.",
+            outcome: "Teste A/B com 10 usuários apontou o modelo de escolha binária como vencedor, e o fluxo recomendado combina intenção de uso, escolha visual e coleta progressiva de medidas.",
+            outcome_en: "An A/B test with 10 users picked the binary-choice model, and the recommended flow combines intent, visual choice and progressive body-measurement capture.",
+        },
         accentColor: "#00C4FF",
         src: "/images/projects/estiloia_full.jpg",
         category: "Product Design",
@@ -2845,6 +2869,14 @@ export const projectsData = [
     {
         id: 3,
         slug: "sustenta-plus-app-ux-design",
+        tldr: {
+            problem: "O Brasil está entre os dez países que mais desperdiçam alimento, e na cozinha isso vira geladeira cheia de item esquecido, compra por impulso e dieta que falha por falta de planejamento.",
+            problem_en: "Brazil is among the ten countries that waste the most food, and in the kitchen that becomes a fridge full of forgotten items, impulse buying and diets that fail for lack of planning.",
+            role: "UX Designer & Researcher, em equipe de 4: entrevistas, benchmark, mapa de empatia, proto-persona e fluxo principal.",
+            role_en: "UX Designer & Researcher in a team of 4: interviews, benchmarking, empathy map, proto-persona and the main flow.",
+            outcome: "Protótipo navegável validado com usuários e apresentado à banca, com registro de compra por nota fiscal, alerta de vencimento e receitas a partir do que já existe em casa.",
+            outcome_en: "A navigable prototype validated with users and presented to the evaluation panel, with receipt-scanned purchases, expiry alerts and recipes from what is already at home.",
+        },
         accentColor: "#31664A",
         src: "/images/projects/sustentamais_full2.jpg",
         category: "Product Design",
@@ -2961,6 +2993,14 @@ export const projectsData = [
     {
         id: 8,
         slug: "palavra-selvagem",
+        tldr: {
+            problem: "Cerca de 6% das crianças brasileiras de 6 a 14 anos não leem nem escrevem, e app educativo costuma perder a atenção infantil por ser repetitivo.",
+            problem_en: "Around 6% of Brazilian children aged 6 to 14 can neither read nor write, and educational apps tend to lose children's attention by being repetitive.",
+            role: "Game Designer & AI Engineer, solo: mecânica, código e curadoria da base de animais com a API do Claude.",
+            role_en: "Game Designer & AI Engineer, solo: mechanics, code and curation of the animal database with the Claude API.",
+            outcome: "Jogo no ar em um dia, onde montar o nome do animal desbloqueia uma curiosidade real sobre ele. A recompensa é informação, não ponto nem ranking.",
+            outcome_en: "A game live in one day, where spelling the animal's name unlocks a real fact about it. The reward is information, not points or leaderboards.",
+        },
         video: "/videos/cases/palavraselvagem.mp4",
         accentColor: "#0B8A40",
         liveDemoLink: "https://palavraselvagem.vercel.app/",
@@ -3038,6 +3078,14 @@ export const projectsData = [
     {
         id: 9,
         slug: "orbinum",
+        tldr: {
+            problem: "O Brasil é 65º entre 81 países no ranking de matemática do PISA, e exercício repetitivo sem contexto cria aversão antes de a criança entender o que está aprendendo.",
+            problem_en: "Brazil ranks 65th of 81 countries in PISA mathematics, and repetitive, context-free exercises build aversion before a child understands what they are learning.",
+            role: "Game Designer & AI Engineer, solo: mecânica, geração procedural das operações e código.",
+            role_en: "Game Designer & AI Engineer, solo: mechanics, procedural generation of the operations and code.",
+            outcome: "Jogo no ar em um dia, com oito planetas de dificuldade crescente e o turbo por três acertos seguidos, que recompensa com feedback visual em vez de multiplicador de pontos.",
+            outcome_en: "A game live in one day, with eight planets of rising difficulty and a turbo mode on three answers in a row that rewards with visual feedback instead of a point multiplier.",
+        },
         video: "/videos/cases/orbinum.mp4",
         accentColor: "#622D96",
         liveDemoLink: "https://orbinum.vercel.app/",
@@ -3114,6 +3162,14 @@ export const projectsData = [
     {
         id: 10,
         slug: "veradice",
+        tldr: {
+            problem: "RPG de texto no navegador costuma ser escolha binária sem profundidade ou um sistema de regras que afasta quem não é jogador hardcore.",
+            problem_en: "Browser text RPGs tend to be either shallow binary choices or a rules system that scares off anyone who isn't a hardcore player.",
+            role: "Game Designer & AI Engineer, solo: documento de design completo antes do código, sistemas e implementação.",
+            role_en: "Game Designer & AI Engineer, solo: a full design document before any code, systems and implementation.",
+            outcome: "RPG no ar em dois dias, com narrativa em três camadas: árvore de 40 nós para a coerência, templates dinâmicos e eventos aleatórios para a surpresa, e quatro finais.",
+            outcome_en: "An RPG live in two days, with narration in three layers: a 40-node tree for coherence, dynamic templates and random events for surprise, and four endings.",
+        },
         video: "/videos/cases/veradice.mp4",
         accentColor: "#E5C05E",
         liveDemoLink: "https://veradice.vercel.app/",
@@ -3834,6 +3890,14 @@ export const projectsData = [
     {
         id: 14,
         slug: "market-analytics-indicadores-macro",
+        tldr: {
+            problem: "Acompanhar Selic, inflação e câmbio significa abrir o site do Banco Central e ler série temporal em tabela, um formato que esconde a tendência.",
+            problem_en: "Following the Selic rate, inflation and FX means opening the Central Bank site and reading time series in a table, a format that hides the trend.",
+            role: "Designer & Front-end Engineer, solo: integração com a API do BCB, escolha dos gráficos e interface.",
+            role_en: "Designer & Front-end Engineer, solo: BCB API integration, chart selection and interface.",
+            outcome: "Dashboard no ar com seis indicadores em tempo real do Banco Central, cada um no tipo de gráfico que cabe à sua natureza, com TypeScript de ponta a ponta.",
+            outcome_en: "A live dashboard with six real-time Central Bank indicators, each in the chart type that suits its nature, with end-to-end TypeScript.",
+        },
         video: "/videos/cases/marketanalytics.mp4",
         accentColor: "#E0C145",
         liveDemoLink: "https://market-analytics-alpha.vercel.app",
@@ -3892,6 +3956,21 @@ export const projectsData = [
                     "Integration with Brazilian Central Bank public API",
                     "Historical series: 5 years (Selic), 24 months (IPCA/IGP-M), 12 months (FX)",
                     "End-to-end TypeScript with BCB API data typing",
+                ],
+            },
+            {
+                type: "outcomes",
+                title: "Em números",
+                title_en: "In numbers",
+                metrics: [
+                    { value: "6", label: "indicadores em tempo real da API do BCB" },
+                    { value: "4", label: "tipos de gráfico, um por natureza de dado" },
+                    { value: "5", label: "anos de série histórica da Selic" },
+                ],
+                metrics_en: [
+                    { value: "6", label: "real-time indicators from the BCB API" },
+                    { value: "4", label: "chart types, one per data nature" },
+                    { value: "5", label: "years of Selic historical series" },
                 ],
             },
         ],
